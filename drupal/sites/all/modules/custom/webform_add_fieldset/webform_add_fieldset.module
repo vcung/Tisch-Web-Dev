@@ -1,0 +1,16 @@
+<?php
+/**
+*@file
+*Webform Add Fieldset
+*/
+
+function webform_add_fieldset_form_alter(&$form, $form_state, $form_id){
+  if ($form_id == '200'){
+	drupal_add_js(/sites/all/themes/tischzen/js/add_field.js);
+     $form['Add'] = array(
+        '#type'=>'button',
+        '#value' => t('Add more'),
+        '#id' => 'webform-client-form-200',
+       );
+    }	
+}

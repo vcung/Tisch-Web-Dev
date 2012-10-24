@@ -1,0 +1,9 @@
+name = view interlibrary loan tab a
+description = for interlibrary loan page
+core = 7.x
+package = Features
+dependencies[] = ctools
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:1
+features[views_view][] = interlibrary_loan_tab_a

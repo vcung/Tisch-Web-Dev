@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the view interlibrary loan tab a feature.
+ */
+
+include_once 'view_interlibrary_loan_tab_a.features.inc';

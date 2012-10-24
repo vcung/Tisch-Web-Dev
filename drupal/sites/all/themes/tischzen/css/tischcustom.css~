@@ -1,0 +1,10 @@
+/**
+*@file
+*Tisch Custom CSS for tischzen
+*/
+
+
+.floatRightFooter {
+float:right;
+color:orange;
+}

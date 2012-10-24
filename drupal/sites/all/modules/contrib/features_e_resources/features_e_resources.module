@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the features - e-resources feature.
+ */
+
+include_once 'features_e_resources.features.inc';

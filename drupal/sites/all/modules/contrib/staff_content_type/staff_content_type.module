@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Staff content type feature.
+ */
+
+include_once 'staff_content_type.features.inc';

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the view other equipment feature.
+ */
+
+include_once 'view_other_equipment.features.inc';

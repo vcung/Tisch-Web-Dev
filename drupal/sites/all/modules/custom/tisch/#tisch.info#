@@ -1,0 +1,8 @@
+name = Tisch
+description = "Custom code for Tisch site"
+package = Custom
+core = 7.x
+files[] = tisch.module
+files[] = tisch.install
+files[] = tisch.admin.inc
+configure = admin/config/content/tisch/settings

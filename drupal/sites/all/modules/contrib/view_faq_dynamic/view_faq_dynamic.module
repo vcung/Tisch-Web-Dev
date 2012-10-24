@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the view faq dynamic feature.
+ */
+
+include_once 'view_faq_dynamic.features.inc';

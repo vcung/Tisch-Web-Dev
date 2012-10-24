@@ -1,0 +1,5 @@
+name = Webform Add Fieldset
+description = Adds dynamic fieldset to a webform
+core = 7.x
+package = Webform
+dependencies[]= webform

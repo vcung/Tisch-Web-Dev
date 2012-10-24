@@ -1,0 +1,8 @@
+name = Resource Type
+description = Resource Type vocabulary
+core = 7.x
+package = Features - vocab
+dependencies[] = features
+dependencies[] = taxonomy
+features[features_api][] = api:1
+features[taxonomy][] = resource_type

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the view print copy scan page feature.
+ */
+
+include_once 'view_print_copy_scan_page.features.inc';
