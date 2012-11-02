@@ -1,0 +1,399 @@
+
+
+/*
+*Nice Menu CSS with edits and addiions by Jasper Degens
+*/
+
+/*
+  This is the default layout template for nice menus fused with customization 
+  that changes the size of the drop down and accounts for when custom jQuery
+  adds div tags to organize links into columns.
+*/
+
+
+/******************************
+ Global CSS for ALL menu types
+******************************/
+
+ul.nice-menu,
+ul.nice-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color:#323297;
+  width: 940px;
+}
+
+/* The links that hold drop down menus */
+ul.nice-menu li {
+ /* border-right: 1px solid #aaa;*/
+  float: left; /* LTR */
+  background: #fff;
+  color:#32327C;
+  font-size:1.5em !important;
+}
+
+ 
+ul.nice-menu li ul,
+ul.nice-menu li li{
+  font-size:.8em !important;
+}
+
+
+ul.nice-menu li ul a,
+ul.nice-menu li li a{
+  padding:5px;
+  display:block;
+}
+
+/* Spaces out main links. If you want to add another category adjust this */
+ul.nice-menu a {
+  padding: 0 40px 0 40px;
+  color:#32327C !important;
+}
+
+/* The drop down menus themselves. Gives them a border and a few other things */
+ul.nice-menu ul {
+  top: 1.8em;
+  left: -1px; /* LTR */
+  border: 1px solid #ddd;
+  border-right: 1px solid #ccc;
+  border-bottom: 2px solid #ccc;
+
+  margin-right:- 0; /* LTR */
+}
+
+
+ul.nice-menu ul li {
+ /* width: 12.5em;*/
+  color:#323297;
+}
+
+/* Adjusts color of main links when hovered upon */
+ul.nice-menu li:hover {
+  background:#ccc;
+}
+
+/*Makes sure no other background changes */
+ul.nice-menu li:hover li,
+ul.nice-menu li:hover ul{
+  background:#fff;
+}
+
+/*
+*SPECIAL FORMAT FOR MAIN DRUPAL MENU and Format for columns
+ */
+
+
+/*
+*FOR THREE COLUMNS SMALLER COLUMNS
+*
+*/
+
+
+/* This adjusts the size of the drop down menus. 
+* 444px Coresponds to 3 columns of 147px width */
+#nice-menu-2 li ul{
+  width:444px;
+  z-index:50;
+  padding:0;
+  background:#fff;
+  border:1px solid #ccc;
+  border-top:2px solid #888;
+}
+
+/*Gives all of the columns the same width.
+* If you would like to increase the width of a column, you
+* can take one of these columns and respecify the width after this 
+*/
+.col_1, 
+.col_2, 
+.col_3,
+.col_4{
+  width:147px;
+  z-index:50;
+  padding:3px 0px 1px 1px;
+  display:inline;
+  float:left;
+  background:#fff;
+}
+
+/* Padds the link inside of the column */
+#nice-menu-2 li ul li a{
+  padding:5px;
+  width:135px;
+  background:#fff; 
+}
+
+/*
+* FOR FOUR COLUMNS--OR Columns of longer length
+*/
+
+/* Specifies specific drop downs that need 4 columns instead of three */
+#nice-menu-2 li.menu-3006 ul,
+#nice-menu-2 li.menu-3009 ul{
+  width:592px;
+}
+
+
+
+/*
+* FOR LAST ITEM IN MENU TO FORMAT TO THE RIGHT
+*/
+
+.nice-menu li.last ul li{
+  float:right !important;
+}
+
+/* Overrides superfish settings */
+.nice-menu li.last:hover ul,
+.nice-menu li.menu-3077:hover ul {
+	left:auto;
+	right:-1px;
+	top:30px;
+}
+
+
+/* Fixes so when no longer hovering the drop downs remain in ths same space
+this also makes the last two menus hover right. Automatic for last, specify
+for second to last */
+.nice-menu li.last ul,
+.nice-menu li.menu-3077 ul{
+  left:auto;
+  right:-1px;
+  top:30px;
+}
+
+#nice-menu-2 h1{
+  font-size:.9em !important;
+  padding:0px;
+  margin:0 !important;
+}
+
+#nice-menu-2 p{
+  font-size:.7em !important;
+  padding:0px;
+  margin:0 !important;
+}
+
+
+
+
+/*FOR THE CUSTOM MEGAMENU IN STATIC HTML/CSS
+* NOT IN USE ******************************
+*/
+/* Stylesheet for Megameny and feature section block */
+/*
+#megamenu {
+        z-index:10;
+	height: 43px;
+	max-width:;
+	margin:0px auto 0px 0;
+	padding:0px 20px 0px 20px;
+	list-style: none;
+	/* Rounded corners
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;*/
+	
+	/*Background Color 
+	background: #fff;
+	/*background: -moz-linear-gradient(top,#32327C, #417CC1);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#32327C), to(#417CC1)); 
+	*/
+	/*Shadow 
+	-moz-box-shadow:inset 0px 0px 1px  0px #000000;  
+   	-webkit-box-shadow:inset 0px 0px 1px 0px #000000;  
+   	box-shadow:inset 0px 0px 1px 0px #000000; 
+}
+
+#megamenu li{
+	float:left;
+	display:block;
+	text-align:center;
+	position:relative;
+	padding:4px 25px 4px 25px;
+	margin-right:50px;
+	margin-top:7px;
+	border:none;
+}
+
+#megamenu li:hover{
+	border:1px solid #25177A;
+	padding: 4px 24px 4px 24px;
+	
+	-mox-border-radius: 5px 5px 0px 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	border-radius: 5px 5px 0px 0px;
+
+	background:white;
+	/*background: -moz-linear-gradient(top, #EEE, #EEE);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#EEE), to(#EEE));
+}
+
+#megamenu li a{
+	color:#25177A;
+	display:block;
+	font-size:20px;
+	/*text-shadow:1px 1px 1px #000;
+	text-decoration:none;
+	outline:0;
+}
+#megamenu li:hover a{
+	color:#000;
+	text-shadow: 1px 1px 1px #FFF;
+}
+
+#megamenu li ul{
+	list-style:none;
+	padding:0;
+	margin:0 0 12px 0;
+}
+
+#megamenu li:hover ul li{
+	font-size:13px;
+	line-height:24px;
+	position:relative;
+	/*text-shadow:1px 1px 1px #000000;
+	padding:0;
+	margin:0;
+	float:none;
+	text-align:center;
+}
+
+#megamenu li:hover ul li:hover{
+	background:none;
+	border:none;
+	padding:0;
+	margin:0;
+}
+
+#megamenu li:hover div a{
+	font-size:13px;
+	color:#000;
+	text-shadow:none;
+}
+
+#megamenu li:hover div h2{
+	font-size: 14px;
+	color:#000;
+	text-shadow:none;
+}
+
+#megamenu li:hover div a:hover{
+	color:#25177A;
+}
+	
+
+
+.find,
+.use,
+.get_help,
+.about_us,
+.manage_my_account{
+	margin:4px auto;
+	position:absolute;
+	left:-999em;
+	text-align:center;
+	border:1px solid #777777;
+	/*border-top: none;
+	padding: 8px 8px 8px 8px;
+	background:#fff;
+	/*background: -moz-linear-gradient(top, #EEEFFF, #BBBAAA);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#EEEFFF), to(#BBBAAA));
+
+	-moz-bodeer-radius: 0px 5px 5px 5px;
+	-webkit-border-radius: 0px 5px 5px 5px;
+	border-radius: 0px 5px 5px 5px;
+	
+	width:300px;
+}
+
+#megamenu li:hover .find,
+#megamenu li:hover .use,
+#megamenu li:hover .get_help,
+#megamenu li:hover .about_us,
+#megamenu li:hover .manage_my_account{
+        position: absolute;
+        z-index:10;
+	left:-1px; 
+	top:auto;
+	
+}
+
+/*Fix rounded courner of Manage My Account */
+/*
+.manage_my_account{
+	-moz-border.radius: 0px 0px 5px 5px;
+	-webkit-border-radius: 0px 0px 5px 5px;
+	border-radius: 0px 0px 5px 5px;
+}
+
+<!--Size of find. Set for 3 columns of width col_1 --->
+
+.about_us{
+	width:0px;
+}
+
+.use{
+	width:420px;
+}
+
+.find{
+	width:510px;
+}
+
+.get_help{
+	width:560px;
+}
+
+.manage_my_account{
+	width:201px;
+}
+
+.col_1,
+.col_2,
+.col_3{
+	display:inline;
+	float:left;
+	position:relative;
+	margin-left: 5px;
+	margin-right:5px;
+}
+
+.col_1 {
+	width:130px;
+}
+
+.col_2{
+	width:80px;
+}
+
+.col_3{
+	width:186px;
+}
+
+#megamenu .static:hover {
+	-moz-bodeer-radius: 5px 5px 5px 5px;
+	-webkit-border-radius: 5px 5px 5px 5px;
+	border-radius: 5px 5px 5px 5px;
+}
+
+/* For aligning drop downs to the right side of the screen 
+#megamenu .align_right{
+	float:right;
+	margin-right:0px;
+	-moz-border-radius: 5px 0px 5px 5px;
+	-webkit-border-radius: 5px 0px 5px 5px;
+	border-radius: 5px 0px 5px 5px;
+	width:370px;
+}
+
+#megamenu li:hover .align_right{
+	left:auto;
+	right:-1px;
+	top:auto;
+}
+*/
+
+
