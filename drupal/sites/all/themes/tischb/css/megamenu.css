@@ -30,7 +30,7 @@ ul.nice-menu li {
   float: left; /* LTR */
   background: #fff;
   color:#32327C;
-  font-size:1.5em !important;
+  font-size:1.7em !important;
 }
 
  
@@ -59,8 +59,10 @@ ul.nice-menu ul {
   border: 1px solid #ddd;
   border-right: 1px solid #ccc;
   border-bottom: 2px solid #ccc;
-
+  
   margin-right:- 0; /* LTR */
+  
+  width: 300px;
 }
 
 
@@ -96,10 +98,16 @@ ul.nice-menu li:hover ul{
 #nice-menu-2 li ul{
   width:444px;
   z-index:50;
-  padding:0;
+  padding:5px 2px 5px 20px;
   background:#fff;
   border:1px solid #ccc;
   border-top:2px solid #888;
+  -moz-column-count:3;
+  -moz-column-gap:10px;
+  -webkit-column-count:3;
+  -webkit-column-gap:10px;
+  
+  
 }
 
 /*Gives all of the columns the same width.
@@ -142,7 +150,7 @@ ul.nice-menu li:hover ul{
 */
 
 .nice-menu li.last ul li{
-  float:right !important;
+  /*float:right !important;*/
 }
 
 /* Overrides superfish settings */
@@ -171,11 +179,41 @@ for second to last */
 }
 
 #nice-menu-2 p{
-  font-size:.7em !important;
+  font-size:.8em !important;
   padding:0px;
   margin:0 !important;
 }
 
+#nice-menu-2 p:hover{
+  color:#2A5576;
+}
+
+/*differentiates links with submenus*/
+#nice-menu-2 li li.menuparent {
+    font-weight: bold;
+}
+
+#nice-menu-2 li.menu-697 ul {
+    height: 164px;
+    -moz-column-count: 4;
+    -moz-column-gap: 7px;
+	-webkit-column-count: 4;
+    -webkit-column-gap: 7px;
+    width: 580px;
+    margin: 5px;
+}
+/*assigns smaller width to get single column */
+/*#nice-menu-2 li.menu-697 ul,  #nice-menu-2 li.menu-698 ul {
+    width: 160px;
+    padding: 5px 5px 5px 20px;
+}*/
+/*sub menu drops to the right to fix 
+ sub menu covering text with multiple lines*/
+/*#nice-menu-2 li.menu-697 ul ul {
+    position: absolute;
+    left: 160px;
+    top: -7px;
+}*/
 
 
 

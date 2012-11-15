@@ -93,7 +93,7 @@ ul.nice-menu li:hover ul{
 
 /* This adjusts the size of the drop down menus. 
 * 444px Coresponds to 3 columns of 147px width */
-#nice-menu-2 li ul{
+#nice-menu-1 li ul{
   width:444px;
   z-index:50;
   padding:0;
@@ -130,8 +130,8 @@ ul.nice-menu li:hover ul{
 */
 
 /* Specifies specific drop downs that need 4 columns instead of three */
-#nice-menu-2 li.menu-3006 ul,
-#nice-menu-2 li.menu-3009 ul{
+#nice-menu-1 li.menu-3006 ul,
+#nice-menu-1 li.menu-3009 ul{
   width:592px;
 }
 
@@ -154,21 +154,23 @@ ul.nice-menu li:hover ul{
 }
 
 
-/* Fixes so when no longer hovering the drop downs remain in ths same space */
+/* Fixes so when no longer hovering the drop downs remain in ths same space
+this also makes the last two menus hover right. Automatic for last, specify
+for second to last */
 .nice-menu li.last ul,
-.nice-menu li.menu-3011 ul{
+.nice-menu li.menu-3077 ul{
   left:auto;
   right:-1px;
   top:30px;
 }
 
-#nice-menu-2 h1{
+#nice-menu-1 h1{
   font-size:.9em !important;
   padding:0px;
   margin:0 !important;
 }
 
-#nice-menu-2 p{
+#nice-menu-1 p{
   font-size:.7em !important;
   padding:0px;
   margin:0 !important;
