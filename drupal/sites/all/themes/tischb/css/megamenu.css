@@ -37,6 +37,7 @@ ul.nice-menu li {
 ul.nice-menu li ul,
 ul.nice-menu li li{
   font-size:.8em !important;
+  float:none;
 }
 
 
@@ -98,7 +99,7 @@ ul.nice-menu li:hover ul{
 #nice-menu-2 li ul{
   width:444px;
   z-index:50;
-  padding:5px 2px 5px 20px;
+  padding:5px;
   background:#fff;
   border:1px solid #ccc;
   border-top:2px solid #888;
@@ -200,7 +201,11 @@ for second to last */
 	-webkit-column-count: 4;
     -webkit-column-gap: 7px;
     width: 580px;
-    margin: 5px;
+    padding: 5px;
+}
+
+#nice-menu-2 li.menu-698 ul {
+	height: 190px;
 }
 /*assigns smaller width to get single column */
 /*#nice-menu-2 li.menu-697 ul,  #nice-menu-2 li.menu-698 ul {

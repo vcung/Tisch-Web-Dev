@@ -6,10 +6,15 @@ version = VERSION
 core = 7.x
 
 stylesheets[all][] = css/layout.css
-stylesheets[all][] = css/style.css
+stylesheets[all][] = css/normalize.css                                          stylesheets[all][] = css/style.css
 stylesheets[all][] = css/colors.css
+stylesheets[all][] = css/megamenu.css
+stylesheets[all][] = css/om_maximenu.css
 stylesheets[print][] = css/print.css
 
+scripts[] = js/megamenu.js
+
+regions[top_search] = Top Search
 regions[header] = Header
 regions[help] = Help
 regions[page_top] = Page top

@@ -5,10 +5,15 @@ package = Core
 version = VERSION
 core = 7.x
 
+
+;took out normalize temporarily
+;stylesheets[all][] = css/normalize.css
+
 stylesheets[all][] = css/layout.css
 stylesheets[all][] = css/style.css
 stylesheets[all][] = css/colors.css
 stylesheets[all][] = css/megamenu.css
+stylesheets[all][] = css/om_maximenu.css
 stylesheets[print][] = css/print.css
 
 scripts[] = js/megamenu.js

@@ -1,0 +1,15 @@
+name = Synonyms
+description = "Provides synonyms feature for working with Drupal Taxonomy"
+package = Taxonomy
+core = 7.x
+dependencies[] = taxonomy
+dependencies[] = text
+
+files[] = synonyms.test
+
+; Information added by drupal.org packaging script on 2012-11-17
+version = "7.x-1.0"
+core = "7.x"
+project = "synonyms"
+datestamp = "1353130382"
+

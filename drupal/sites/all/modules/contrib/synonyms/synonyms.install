@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Install, update, and uninstall functions for the Synonyms module.
+ */
+
+/**
+ * Implements hook_uninstall().
+ */
+function synonyms_uninstall() {
+  field_delete_field('synonyms_synonyms');
+  // Cleaning all configure variables.
+  $results = db_select('variable', 'var')
+    ->fields('var', array('name'))
+    ->condition('var.name', db_like('synonyms_') . '%', 'LIKE')
+    ->execute();
+  foreach ($results as $var) {
+    variable_del($var->name);
+  }
+}

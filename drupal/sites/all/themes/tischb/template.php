@@ -4,6 +4,10 @@
  * Add body classes if certain regions have content.
  */
 
+function tischb_preprocess_page(&$variables) {
+  //kpr($variables);
+}
+
 function tischb_preprocess_html(&$variables) {
   if (!empty($variables['page']['featured'])) {
     $variables['classes_array'][] = 'featured';
@@ -238,5 +242,6 @@ function tischb_nice_menu_build($menu) {
   }
   $is_child = false;
   return $output;
+
 }
 */
