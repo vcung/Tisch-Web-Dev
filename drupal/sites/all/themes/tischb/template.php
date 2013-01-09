@@ -49,6 +49,7 @@ function tischb_process_html(&$variables) {
  * Override or insert variables into the page template.
  */
 function tischb_process_page(&$variables) {
+  kpr($variables);
   // Hook into color.module.
   if (module_exists('color')) {
     _color_page_alter($variables);
@@ -95,6 +96,10 @@ function tischb_preprocess_maintenance_page(&$variables) {
     unset($variables['site_name']);
   }
   drupal_add_css(drupal_get_path('theme', 'tischb') . '/css/maintenance-page.css');
+  
+  
+    
+
 }
 
 /**
@@ -122,6 +127,18 @@ function tischb_preprocess_node(&$variables) {
   if ($variables['view_mode'] == 'full' && node_is_page($variables['node'])) {
     $variables['classes_array'][] = 'node-full';
   }
+  //added to see variables
+ 
+  /*if($variables['type']=='libguide'){
+    
+   $variables['subjectpath'] = '../subject-resources/';	
+	$variables['subjectpath'] .= $variables['field_libguide_subject']['0']['tid'];
+	$variables['subjectname'] = $variables['field_libguide_subject']['0']['taxonomy_term']->name;
+	$variables['subjectname'] .= " subject guide";
+    //kpr($variables);
+	 $node = $variables['node'];
+    kpr($node);
+  }*/
 }
 
 /**
@@ -142,6 +159,7 @@ function tischb_preprocess_block(&$variables) {
 function tischb_menu_tree($variables) {
   return '<ul class="menu clearfix">' . $variables['tree'] . '</ul>';
 }
+
 
 /**
  * Implements theme_field__field_type().
@@ -167,81 +185,11 @@ function tischb_field__taxonomy_term_reference($variables) {
   return $output;
 }
 
-
-
-
-
-/*
-* Turning nice_menus into a table tree structure
-*/
-/*
-function tischb_nice_menu($id, $menu_name, $mlid, $direction = 'right', $menu = NULL) {
-  $output = array();
-  if ($menu_tree = theme('nice_menu_tree', $menu_name, $mlid, $menu)) {
-    if ($menu_tree['content']) {
-      $output['content'] = '<table-width="100%" class="site-menu"><tr>'.$menu_tree['content'] .'</tr></table>'."\n";
-      $output['subject'] = $menu_tree['subject'];
-    }
-  }
-  return $output;
-}
-
-/*
-function tischb_nice_menu_build($menu) {
-  $output = '';
-  global $is_child;
-  foreach ($menu as $menu_item) {
-    $mlid = $menu_item['link']['mlid'];
-    //check to see if it is a visible menu item.
-    if ($menu_item['link']['hidden'] == 0) {
-      //Build class name based on menu path--give each menu item individual style
-      $clean_path = str_replace(array('http://', '<', '>', '&', '=', '?', ':'), '', $menu_item['link']['href']);
-      $clean_path = str_replace('/', '-', $clean_path);
-      $current_node = str_replace('node-', '', $clean_path);
-      $path_class = 'menu-path'. $clean_path;
-      if($current_node == $GLOBALS['active-node']) {
-	$path_class.= ' active-content';
-      }
-      //If it has children build a nice little tree under it
-      if ((!empty($menu_item['link']['has_children'])) && (!empty($menu_item['below']))) {
-	$is_child = true;
-	//keep passing children into the function til we get them all
-	$children = theme('nice_menu_build', $menu_item['below']);
-	//set the class to parent only if children are displayed
-	$parent_class = $children ? 'menuparent ' : '';
-	if (isset($parent_class)):
-	  $output .= '<td id="menu-'. $mlid .'" class="'. $parent_class . $path_class .'">'. theme('menu_item_link', $memu_item['link']);
-	else:
-	  $output .= '<li id="menu-' .$mlid /'" class="'. $patent_class . $path_class .'">' . theme('menu_item_link', $menu_item['link']);
-	endif;
-	//build the child ul only if there is a child menu
-	if ($children) {
-	  $output .= '<ul>';
-	  $output .= $children;
-	  $output .= "</ul>\n";
+/*function tischb_link($variables) {
+ if($variables['type']=='libguide'){
+    $variables['path'] = 'subject-resources/'.$variables['field_libguide_subject']['taxonomy_term']['tid'];
 	}
-	if (isset($parent_class)):
-	  $output .= "</td>";
-	  //adds some seperator values after each td
-	  $output .= '<td><span class="sep1></span></td>'."\n";
-	else:
-	  $output .= "</li>\n";
-	endif;
-      }
-      else {
-	if ($is_child == false) {
-	  $output .= '<td id="menu-'. $mlid .'" class ="'. $path_class .'">'. theme('menu_item_link', $menu_item['link']) .'</td>'."\n";
-	 //adds some extra seperators after each td
-	  $output .= '<td><span class ="sep1"></span></td>'."\n";
-	}
-	else {
-	  $output .= '<li id="menu-'. $mlid.'" class="'. $path_class .'">'. theme('menu_item_link', $menu_item['link']) .'</li>'."\n";
-	}
-      }
-    }
-  }
-  $is_child = false;
-  return $output;
-
-}
-*/
+  return '<a href="' . check_plain(url($variables['path'], $variables['options'])) .
+  '"' . drupal_attributes($variables['options']['attributes']) . '>' . 
+  ($variables['options']['html'] ? $variables['text'] : check_plain($variables['text'])) . '</a>';
+}*/
