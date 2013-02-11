@@ -184,6 +184,19 @@ function tischb_field__taxonomy_term_reference($variables) {
 
   return $output;
 }
+//function to simplify webform data in email responses
+//created by Vivian Cung, 1/25/13
+function tischb_webform_element_text($variables) {
+  $element = $variables['element'];
+  $value = $variables['element']['#children'];
+ 
+    // Check if there is any value to print out at all, if not, return an empty string.
+  if (strlen(trim($value)) == 0) {
+    return '';
+  }
+  // Call the default theme function if there is a value.
+  return theme_webform_element_text($variables);
+}
 
 /*function tischb_link($variables) {
  if($variables['type']=='libguide'){
