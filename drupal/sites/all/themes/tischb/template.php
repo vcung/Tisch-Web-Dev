@@ -164,7 +164,7 @@ function tischb_menu_tree($variables) {
 /**
  * Implements theme_field__field_type().
  */
-function tischb_field__taxonomy_term_reference($variables) {
+/*function tischb_field__taxonomy_term_reference($variables) {
   $output = '';
 
   // Render the label, if it's not hidden.
@@ -184,6 +184,8 @@ function tischb_field__taxonomy_term_reference($variables) {
 
   return $output;
 }
+*/
+
 //function to simplify webform data in email responses
 //created by Vivian Cung, 1/25/13
 function tischb_webform_element_text($variables) {
