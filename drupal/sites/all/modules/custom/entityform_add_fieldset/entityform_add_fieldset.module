@@ -1,0 +1,171 @@
+
+<?php
+
+/**
+* Implements Entityform's hook_form_alter().
+*/
+
+function entityform_add_fieldset_form_alter(&$form, &$form_state, $form_id) {
+    switch ($form_id) {
+	    case 'also_course_reserves_entityform_edit_form' :
+		/*  $form['#fieldgroups']['group_add_phys_items ']
+			
+			  if ($form['field_add_another_button']['und']['#value_key'] == 1) {
+			    echo 'yes';
+			}
+		
+			$form['field_add_another_button']['#type'] = 'button';
+			$form['field_add_another_button']['#value'] = 'Add Another';
+			
+		$form['Add'] = array(
+        '#type'=>'button',
+        '#value' => t('Add more'),
+        '#id' => 'webform-client-form-200',
+       );*/
+        drupal_get_path('module', 'entityform_add_fieldset') . '/entityform_add_fieldset.js';
+		krumo($form);
+	
+		break;
+	}
+}
+
+
+
+/**
+* Implements Field Group's hook_field_group_formatter_info().
+*/
+function entityform_add_fieldset_field_group_formatter_info() {
+  return array(
+    'form' => array(
+     'Newfieldset' => array(
+        'label' => t('New Fieldset'),
+     //   'description' => t('This fieldgroup renders the inner content in a fieldset with the titel as legend.'),
+      //  'format_types' => array('open', 'collapsible', 'collapsed'),
+        'instance_settings' => array('description' => '', 'classes' => '', 'page_header' => 3, 'page_counter' => 1, 'more_button' => 1),
+        'default_formatter' => 'collapsible',
+      ),
+    ),
+  );
+  
+} 
+
+
+function entityform_add_fieldset_field_group_format_settings($group) {
+  // Add a wrapper for extra settings to use by others.
+    $form = array(
+    'instance_settings' => array(
+      '#tree' => TRUE,
+      '#weight' => 2,
+    ),
+  );
+   
+  $field_group_types = field_group_formatter_info();
+  $mode = $group->mode == 'form' ? 'form' : 'display';
+  $formatter = $field_group_types[$mode]["Newfieldset"];
+  /////redundant?
+   // Add the required formatter type selector.
+  if (isset($formatter['format_types'])) {
+    $form['formatter'] = array(
+      '#title' => t('Fieldgroup settings'),
+      '#type' => 'select',
+      '#options' => drupal_map_assoc($formatter['format_types']),
+      '#default_value' => isset($group->format_settings['formatter']) ? $group->format_settings['formatter'] : $formatter['default_formatter'],
+      '#weight' => 1,
+    );
+  }
+
+if (isset($formatter['instance_settings']['required_fields']) && $mode == 'form') {
+    $form['instance_settings']['required_fields'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Mark group for required fields.'),
+      '#default_value' => isset($group->format_settings['instance_settings']['required_fields']) ? $group->format_settings['instance_settings']['required_fields'] : (isset($formatter['instance_settings']['required_fields']) ? $formatter['instance_settings']['required_fields'] : ''),
+      '#weight' => 2,
+    );
+  }
+
+  if (isset($formatter['instance_settings']['classes'])) {
+    $form['instance_settings']['classes'] = array(
+      '#title' => t('Extra CSS classes'),
+      '#type' => 'textfield',
+      '#default_value' => isset($group->format_settings['instance_settings']['classes']) ? $group->format_settings['instance_settings']['classes'] : (isset($formatter['instance_settings']['classes']) ? $formatter['instance_settings']['classes'] : ''),
+      '#weight' => 3,
+      '#element_validate' => array('field_group_validate_css_class'),
+    );
+  }
+  if (isset($formatter['instance_settings']['description'])) {
+    $form['instance_settings']['description'] = array(
+      '#title' => t('Description'),
+      '#type' => 'textarea',
+      '#default_value' => isset($group->format_settings['instance_settings']['description']) ? $group->format_settings['instance_settings']['description'] : (isset($formatter['instance_settings']['description']) ? $formatter['instance_settings']['description'] : ''),
+      '#weight' => 0,
+    );
+  }
+  
+  switch ($group->format_type) {
+    case 'Newfieldset':
+	  $form['format-settings']['instance_settings']['more_button'] = array(
+        '#title' => t('Move submit button to last multipage'),
+        '#type' => 'button',
+        '#options' => array(0 => t('No'), 1 => t('Yes')),
+        '#default_value' => isset($group->format_settings['instance_settings']['more_button']) ? $group->format_settings['instance_settings']['more_button'] : $formatter['instance_settings']['more_button'],
+        '#weight' => 3,
+      );
+	break;
+	default:
+  }
+  return $form;  
+  }
+/*
+function entityform_add_fieldset_field_group_pre_render(&$element, $group, &$form) {
+  $add = array(
+        '#type' => 'button',
+        '#weight' => $group->weight,
+      );
+	  
+  $add['#prefix'] = 'var item = "<span class="more-button"></span><input type="button" class="form-submit entityform-add-book" value="" />"';
+        $add['#suffix'] = '$("body").find("#NewFieldsetTest").append(item);';
+      }
+  $element += $add;
+}*/
+function entityform_add_fieldset_field_group_pre_render_alter(&$element, $group, &$form) {
+//add_element = array(
+  $element += array(
+    '#type' => 'fieldset',
+    '#title' => check_plain(t($group->label)),
+    '#collapsible' => $group->collapsible,
+    '#collapsed' => $group->collapsed,
+   // '#pre_render' => array(),
+	'#prefix' => '<div id = "NewFieldsetTest" class="field-group-' . $group->format_type . '-wrapper ' . $group->classes . '">',
+    '#suffix' => '<input type="button" class="form-submit entityform-add-book" value="AddAnother" /></div>',
+//	'#theme_wrappers' => array(''),
+	 
+    '#attributes' => array('class' => explode(' ', $group->classes)),
+    '#description' => $group->description,
+  );
+
+  $more_button = isset($group->format_settings['instance_settings']['more_button']) ? $group->format_settings['instance_settings']['more_button'] : 1;
+
+  drupal_add_js(array(
+    'field_group' => array(
+      'addmore_button' => (bool) $more_button
+	  )
+  ), 'setting');
+  
+  //$group->format_settings['instance_settings']['more_button']['#type']= button;
+   $element['#attached']['js'][] = drupal_get_path('module', 'entityform_add_fieldset') . '/entityform_add_fieldset.js';
+  $element['#attached']['js'][] = 'misc/form.js';
+  $element['#attached']['js'][] = 'misc/collapse.js';
+}
+
+
+
+ /*What needs to be done: create a module that lets users add more books to clean up current method
+ * which uses another module, so as to simplify updating drupal
+*the plan: 1. edit the entityform directly.- maybe put a wrapper around all the children within a fieldset
+*   .... but the button is issue..
+   
+*2. create a new fieldgroup that duplicates contained fields
+
+*/
+
+?>
