@@ -12,9 +12,9 @@
 @import "base";
 
 
-// We are going to create a 980px wide, 5 column grid with 20px gutters between
+// We are going to create a 980px wide, 7 column grid with 20px gutters between
 // columns (applied as 10px of left/right padding on each column).
-$zen-column-count:  5;
+$zen-column-count:  7;
 $zen-gutter-width:  20px;
 
 
@@ -129,16 +129,16 @@ $zen-auto-include-item-base: false;
    */
 
   .two-sidebars {
-    #content { /* Span 2 columns, starting in 2nd column from left. */
-      @include zen-grid-item(2, 2);
+    #content { /* Span 4 columns, starting in 2nd column from left. */
+      @include zen-grid-item(4, 2);
     }
 
     .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
       @include zen-grid-item(1, 1);
     }
 
-    .region-sidebar-second { /* Start a new row and span all 3 columns. */
-      @include zen-grid-item(3, 1);
+    .region-sidebar-second { /* Start a new row and span last 2 columns. */
+      @include zen-grid-item(2, 6);
       @include zen-nested-container(); // Since we're making every block in this region be a grid item.
       @include zen-clear();
 
@@ -163,7 +163,7 @@ $zen-auto-include-item-base: false;
   /*
    * Use 5 grid columns for larger screens.
    */
-  $zen-column-count: 5;
+  $zen-column-count: 7;
 
   /*
    * The layout when there is only one sidebar, the left one.
@@ -198,16 +198,16 @@ $zen-auto-include-item-base: false;
    */
 
   .two-sidebars {
-    #content { /* Span 3 columns, starting in 2nd column from left. */
-      @include zen-grid-item(3, 2);
+    #content { /* Span 4 columns, starting in 2nd column from left. */
+      @include zen-grid-item(4, 2);
     }
 
     .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
       @include zen-grid-item(1, 1);
     }
 
-    .region-sidebar-second { /* Span 1 column, starting in 5th column from left. */
-      @include zen-grid-item(1, 5);
+    .region-sidebar-second { /* Span 2 columns, starting in 6th column from left. */
+      @include zen-grid-item(2, 6);
     }
   }
 }
