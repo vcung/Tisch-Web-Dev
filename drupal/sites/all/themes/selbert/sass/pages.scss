@@ -187,12 +187,12 @@ tr.error { /* High priority messages. See also the .error declaration below. */
   margin: 0;
   padding: 1%;
   width: 47%;
-  border: gray 1px dashed;
+  border: $light-gray 1px dashed;
 }
 
 .lastBlock {
   margin-left:1.2%;
-  background-color:green;
+  border: 1px dashed $light-gray;
 }
 #highlightArea {
   float:left;
@@ -248,6 +248,11 @@ span.field-label { /* The inline field label used by the Fences module */
  * (see the layout.css file.)
  */
 
+
+.region-sidebar-first {
+  background-color: $light-gray;
+}
+
 .region-sidebar-first, .region-sidebar-second {
  font-size: 0.5em;
    
@@ -273,9 +278,19 @@ span.field-label { /* The inline field label used by the Fences module */
  */
 
 .region-sidebar-second {
-
+    
 }
 
+.happening {
+
+  hr {border-color: $light-gray;
+  border-style: dashed;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 0 0 20px;
+  height: 0;
+  }
+}
 /*
  * Footer
  */
