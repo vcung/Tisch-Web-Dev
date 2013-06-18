@@ -90,3 +90,24 @@
   text-align: center;
   word-wrap: break-word;
 }
+
+/*KB added this to style the search box on the home page; node 2 in quicktab */
+/* line 68, ../sass/nodes.scss */
+.homeSearch input#searcharg {
+  width: 80%;
+  height: 20px;
+  margin-top: 20px;
+}
+/* line 73, ../sass/nodes.scss */
+.homeSearch input#submit {
+  height: 27px;
+  font-weight: bold;
+  margin-left: -5px;
+}
+
+/* line 80, ../sass/nodes.scss */
+#searchtypes {
+  float: right;
+  margin-top: -50px;
+  margin-right: 15%;
+}
