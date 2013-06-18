@@ -33,8 +33,8 @@
       <div>
   		<h3>Today's Hours</h3>
   		<p>8:30am - 10:00pm</p>
-		<p style="text-align:right">
-		<a href="http://www.library.tufts.edu/tisch/hours.htm">More Hours</p>
+		<p>
+		<a href="http://www.library.tufts.edu/tisch/hours.htm">More Hours</a></p>
        </div>
       <div>
         <h3>Ask a Librarian</h3>

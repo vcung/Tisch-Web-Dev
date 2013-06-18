@@ -211,13 +211,13 @@ tr.error {
   margin: 0;
   padding: 1%;
   width: 47%;
-  border: gray 1px dashed;
+  border: gainsboro 1px dashed;
 }
 
 /* line 193, ../sass/pages.scss */
 .lastBlock {
   margin-left: 1.2%;
-  background-color: green;
+  border: 1px dashed gainsboro;
 }
 
 /* line 197, ../sass/pages.scss */
@@ -287,21 +287,26 @@ span.field-label {
  * Remember to NOT add padding or margin to your .region-sidebar-first
  * (see the layout.css file.)
  */
-/* line 251, ../sass/pages.scss */
+/* line 252, ../sass/pages.scss */
+.region-sidebar-first {
+  background-color: gainsboro;
+}
+
+/* line 256, ../sass/pages.scss */
 .region-sidebar-first, .region-sidebar-second {
   font-size: 0.5em;
 }
 
-/* line 256, ../sass/pages.scss */
+/* line 261, ../sass/pages.scss */
 #frontLeftSide {
   background-color: gainsboro;
   font-size: 0.5em;
 }
-/* line 259, ../sass/pages.scss */
+/* line 264, ../sass/pages.scss */
 #frontLeftSide ul li {
   list-style: none;
 }
-/* line 262, ../sass/pages.scss */
+/* line 267, ../sass/pages.scss */
 #frontLeftSide a {
   text-decoration: none;
 }
@@ -312,13 +317,23 @@ span.field-label {
  * Remember to NOT add padding or margin to your .region-sidebar-second
  * (see the layout.css file.)
  */
+/* line 286, ../sass/pages.scss */
+.happening hr {
+  border-color: gainsboro;
+  border-style: dashed;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 0 0 20px;
+  height: 0;
+}
+
 /*
  * Footer
  */
 /*
  * Page bottom
  */
-/* line 290, ../sass/pages.scss */
+/* line 305, ../sass/pages.scss */
 .region-bottom {
   /* Wrapper for any blocks placed in the page bottom region */
 }

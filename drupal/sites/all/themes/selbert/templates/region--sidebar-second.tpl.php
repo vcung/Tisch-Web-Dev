@@ -29,21 +29,30 @@
 
   <section class="<?php print $classes; ?>">
   	<?php if ($is_front): ?>
+    <div class="happening">
     <h3>Happening Now</h3>
+    <hr>
      <div class="tweet">
 <h4>TWITTER</h4>
       <p>Are you using RefWorks yet? Don't waste any more time doing citations on your own.
        RefWorks class at 4:30 today. http://bit.ly/xsUvyH @TischLibrary 22 Apr</p>
       </div>
+      <hr>
      <div class="news">
 <h4>NEWS</h4>
       <p>
 Database Multisearch Being Retired: Friday, June 28, 2013
 On Friday, June 28, Database Multisearch will no longer be available...</p>
-<h4>EVENTS</h4>
+<div>
+<hr>
 <div class="event">
+<h4>EVENTS</h4>
+
 <p>RefWorks Class, ERC 4:30 - 5:30<p>
 </div>
+<hr>
+</div>
+
   	<!--<div id = "frontRightSide">
       <div>
   		<h3>Happening Now</h3>
