@@ -190,6 +190,14 @@ tr.error { /* High priority messages. See also the .error declaration below. */
   border: $light-gray 1px dashed;
 }
 
+/** Hide chat if small screen. With box id. Using 9 on dev**/
+@media all and (max-width:480px){
+   .chat {
+   display: none;
+   }
+
+  
+}
 .lastBlock {
   margin-left:1.2%;
   border: 1px dashed $light-gray;
@@ -198,7 +206,13 @@ tr.error { /* High priority messages. See also the .error declaration below. */
 
 /*KB added some grid items for the highlight area on the home page*/
 
-@media all and (min-width: 480px) and (max-width: 959px) {
+@media all and (max-width:480px){
+  #highlightArea {
+  display: none;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 600px) {
 #highlightArea {
   $zen-column-count:1;
   $zen-gutter-width: 1%;
@@ -206,6 +220,7 @@ tr.error { /* High priority messages. See also the .error declaration below. */
 
 .region-highlight-one, .region-highlight-two, .region-highlight-three {
   height: 150px;
+  border: 1px blue dotted;
   
 }
 .region-highlight-one {
@@ -225,9 +240,14 @@ tr.error { /* High priority messages. See also the .error declaration below. */
 }
 
 }
+
+
+
+
 /*end narrow screen for homepage highlight area, start larger screen */
-@media all and (min-width: 960px) {
+@media all and (min-width: 601px) {
 #highlightArea {
+@include zen-clear();
    $zen-column-count: 3;
   $zen-gutter-width: 10px;
   @include zen-grid-container;
@@ -247,7 +267,7 @@ tr.error { /* High priority messages. See also the .error declaration below. */
 .region-highlight-two {
   @include zen-grid-item(1, 2);
   border-right:2.5px solid white;
-  boder-left: 2.5px solid white;
+  border-left: 2.5px solid white;
 
 } 
 

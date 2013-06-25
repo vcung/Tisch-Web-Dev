@@ -140,6 +140,8 @@
        
 
       <?php print $feed_icons; ?>
+      
+
       <div id="highlightArea">
          <?php print render($page['highlight_one']); ?>
          <?php print render($page['highlight_two']); ?>
