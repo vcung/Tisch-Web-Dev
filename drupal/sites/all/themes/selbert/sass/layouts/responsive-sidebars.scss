@@ -124,6 +124,21 @@ $zen-auto-include-item-base: false;
     }
   }
 
+/*
+   * The layout of the front page when there are two sidebars, but it's the
+    *front page.
+   */
+ .front  .two-sidebars {
+  #content {/*Span 5 columns, starting in 2nd column from left */
+    @include zen-grid-item(5,2); 
+    background-color: green;
+  }
+  .region-sidebar-first { /*Span 1 column, starting in 1st column from left.*/
+     @include zen-grid-item(1,1);
+  }
+ }
+
+
   /*
    * The layout when there are two sidebars.
    */
