@@ -128,14 +128,14 @@ $zen-auto-include-item-base: false;
    * The layout of the front page when there are two sidebars, but it's the
     *front page.
    */
- .front  .two-sidebars {
-  #content {/*Span 5 columns, starting in 2nd column from left */
-    @include zen-grid-item(5,2); 
-    background-color: green;
-  }
+ .front {
+      #content {/*Span 2 columns, starting in 2nd column from left */
+        @include zen-grid-item(2,2); 
+        }
   .region-sidebar-first { /*Span 1 column, starting in 1st column from left.*/
      @include zen-grid-item(1,1);
-  }
+        }
+     
  }
 
 
@@ -144,16 +144,16 @@ $zen-auto-include-item-base: false;
    */
 
   .two-sidebars {
-    #content { /* Span 4 columns, starting in 2nd column from left. */
-      @include zen-grid-item(4, 2);
+    #content { /* Span 2 columns, starting in 2nd column from left. */
+      @include zen-grid-item(2, 2);
     }
 
     .region-sidebar-first { /* Span 1 column, starting in 1st column from left. */
       @include zen-grid-item(1, 1);
     }
 
-    .region-sidebar-second { /* Start a new row and span last 2 columns. */
-      @include zen-grid-item(2, 6);
+    .region-sidebar-second { /* Start a new row and span all 3 columns. */
+      @include zen-grid-item(3, 1);
       @include zen-nested-container(); // Since we're making every block in this region be a grid item.
       @include zen-clear();
 
