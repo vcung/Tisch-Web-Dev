@@ -114,6 +114,11 @@
 
   <div id="main">
 
+    <?php if ($mobile_hours): ?>
+      <div id="mobile-hours">
+        <?php print $mobile_hours; ?>
+      </div>
+    <?php endif; ?>
     <div id="content" class="column" role="main">
       <?php print $breadcrumb; ?>
       <a id="main-content"></a>
