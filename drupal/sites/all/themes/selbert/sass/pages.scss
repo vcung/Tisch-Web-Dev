@@ -182,6 +182,14 @@ tr.error { /* High priority messages. See also the .error declaration below. */
 .region-content { /* Wrapper for the actual page content */
 }
 
+#mobile-hours {
+  background: gainsboro;
+  
+  @media all and (min-width:480px){
+    display: none;
+  }
+}
+
 .lowerMainContent {
   float: left;
   margin: 0;
