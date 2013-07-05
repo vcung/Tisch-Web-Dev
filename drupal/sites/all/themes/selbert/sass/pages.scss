@@ -220,7 +220,7 @@ tr.error { /* High priority messages. See also the .error declaration below. */
   }
 }
 
-@media all and (min-width: 480px) and (max-width: 600px) {
+@media all and (min-width: 480px) and (max-width: 750px) {
 #highlightArea {
   $zen-column-count:1;
   $zen-gutter-width: 1%;
@@ -253,7 +253,7 @@ tr.error { /* High priority messages. See also the .error declaration below. */
 
 
 /*end narrow screen for homepage highlight area, start larger screen */
-@media all and (min-width: 601px) {
+@media all and (min-width: 751px) {
 #highlightArea {
 @include zen-clear();
    $zen-column-count: 3;
@@ -263,7 +263,6 @@ tr.error { /* High priority messages. See also the .error declaration below. */
   margin: 0 auto;
 
 .region-highlight-one, .region-highlight-two, .region-highlight-three {
-  height: 150px;
   background-color: $light-gray;
 }
 .region-highlight-one {
@@ -344,7 +343,7 @@ span.field-label { /* The inline field label used by the Fences module */
 
 
 .region-sidebar-first {
-  background-color: $light-gray;
+  
 }
 
 .region-sidebar-first, .region-sidebar-second {
@@ -352,18 +351,22 @@ span.field-label { /* The inline field label used by the Fences module */
    
 }
 
+.frontSideBlock {
+  background-color: $light-gray;
+  padding: 0.5px 1px 0.5px 5px;
+  margin: 5px 0px 10px 0px;
+}
+
 #frontLeftSide {
-  background-color:$light-gray;
-  font-size:0.5em;
+  font-size:0.75em;
+
   ul li {
   list-style: none;
   }
   a {
   text-decoration: none;
-
   }
-}
-
+ } 
 /*
  * Second sidebar (on right in LTR languages, on left in RTL)
  *
