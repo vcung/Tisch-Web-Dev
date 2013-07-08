@@ -192,15 +192,28 @@ tr.error { /* High priority messages. See also the .error declaration below. */
 
 .lowerMainContent {
   float: left;
-  margin: 0;
-  padding: 1%;
-  width: 47%;
+  margin: 0 0.5% 2% 0;
+  padding: 0;
+  width: 48%;
   border: $light-gray 1px dashed;
-}
+
+  h4 {
+    margin: 0px 0px 2px 0px;
+    
+  }
+
+  ul {
+    list-style-type:none;
+    margin: 0px 0px 1% 0px;
+    padding:0px;
+  }
+
+  
+ }
 
 /** Hide chat if small screen. With box id. Using 9 on dev**/
 @media all and (max-width:480px){
-   .chat {
+   #frontChat {
    display: none;
    }
 
