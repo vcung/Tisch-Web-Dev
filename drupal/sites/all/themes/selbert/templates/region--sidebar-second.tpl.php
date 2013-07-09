@@ -50,9 +50,14 @@ On Friday, June 28, Database Multisearch will no longer be available...</p>
 
 <p>RefWorks Class, ERC 4:30 - 5:30<p>
 </div>
-<hr>
 </div>
 
+<div class="recentArrival">
+  <hr>
+  <h4>RECENT ARRIVALS</h4>
+</div>  
+
+<?php endif; ?>
   	<!--<div id = "frontRightSide">
       <div>
   		<h3>Happening Now</h3>
@@ -67,4 +72,4 @@ On Friday, June 28, Database Multisearch will no longer be available...</p>
     
     
   </section><!-- region__sidebar -->
-<?php endif; ?>
+

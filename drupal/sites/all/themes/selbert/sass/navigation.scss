@@ -47,6 +47,10 @@ li a.active {
 #navigation {
   /* overflow: hidden; */ /* Sometimes you want to prevent overlapping with main div. */
 
+@media all and (max-width:480px){
+  display:none;
+}
+
   .block {
     margin-bottom: 0;
   }
