@@ -174,7 +174,10 @@
         <?php print render($page['sidebar_second']);?>
       </aside><!-- /.sidebars -->
     
-
+   <div class="mobileResources">
+   <?php print $front_resources; ?>
+   </div>
+  
   </div><!-- /#main -->
 
   <?php print render($page['footer']); ?>

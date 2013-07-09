@@ -191,6 +191,11 @@ tr.error { /* High priority messages. See also the .error declaration below. */
 }
 
 .lowerMainContent {
+
+@media all and (max-width:480px){
+  display:none
+}
+
   float: left;
   margin: 0 0.5% 2% 0;
   padding: 0;
@@ -209,16 +214,13 @@ tr.error { /* High priority messages. See also the .error declaration below. */
   }
 
   
- }
+ 
 
-/** Hide chat if small screen. With box id. Using 9 on dev**/
-@media all and (max-width:480px){
-   #frontChat {
-   display: none;
-   }
+
 
   
 }
+
 .lastBlock {
   margin-left:1.2%;
   border: 1px dashed $light-gray;
@@ -356,7 +358,13 @@ span.field-label { /* The inline field label used by the Fences module */
 
 
 .region-sidebar-first {
-  
+  .frontHours{
+    //hide sidebar hours on smaller screen, see #mobile-hours
+    //for hours on mobile screen.
+    @media all and (max-width:480px){
+      display:none;
+    }
+  }
 }
 
 .region-sidebar-first, .region-sidebar-second {
@@ -401,9 +409,27 @@ span.field-label { /* The inline field label used by the Fences module */
   height: 0;
   }
 }
+
+.recentArrival {
+
+//hide recentArrivals on smaller screen, 
+    @media all and (max-width:480px){
+      display:none;
+    }
+
+}
 /*
  * Footer
  */
+
+.mobileResources {
+//hide mobileResources on bigger screens
+@media all and (min-width:480px){
+      display:none;
+    }
+
+
+}
 
 #footer {
 }
