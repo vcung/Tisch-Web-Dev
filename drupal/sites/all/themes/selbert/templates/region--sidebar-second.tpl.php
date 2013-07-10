@@ -57,16 +57,8 @@ On Friday, June 28, Database Multisearch will no longer be available...</p>
   <h4>RECENT ARRIVALS</h4>
 </div>  
 
-<?php endif; ?>
-  	<!--<div id = "frontRightSide">
-      <div>
-  		<h3>Happening Now</h3>
-  		
-         <div>
-    	<h3>Recent Arrivals</h3>
-    	<p>xx Group Study Rooms</p>
-        </div>    
-    </div>	-->
+<?php endif; ?><!--end content for front page-->
+  	
   	
     <?php print $content; ?>
     
