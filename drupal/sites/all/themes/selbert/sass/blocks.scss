@@ -8,6 +8,9 @@
 
 .block { /* Block wrapper */
   margin-bottom: 1.5em;
+  //kate added font-size for block text
+  font-size:.5em;
+  line-height:1em;
 
   &.first { /* The first block in the region */
   }
@@ -20,9 +23,17 @@
 
   &.even { /* Zebra striping for each block in the region */
   }
-
+//font-size changed by kate
   h2.block-title { /* Block title */
+  font-size:.75em;
   }
+  
+  li {
+    list-style-type: none;
+    padding: 0 1em 0 0;
+    margin-left: 0;
+  }
+  
 }
 
 
@@ -33,6 +44,7 @@
 }
 
 #block-block-1 { /* First block created with "Add block" link */
+height:10%;
 }
 
 #block-blog-recent { /* "Recent blog posts" block */
@@ -53,6 +65,21 @@
 #block-locale-language { /* Language switcher block */
 }
 
+#block-menu-block-1{
+font-size:1em;
+@media all and (min-width:700px){
+
+  font-size:1.5em;
+ }
+}
+
+ #block-menu-block-1 ul li{
+ 
+    margin: 1% 5% 0% 0%;
+  } 
+
+
+
 #block-menu-menu-NAME { /* Custom menu block */
 }
 
@@ -68,7 +95,26 @@
 #block-profile-author-information { /* "Author information" block for the profile of the page's author */
 }
 
+//kate added this for the utility menu
+#block-menu-block-2 {
+ visibility:hidden;
+ @media all and (min-width:600px) {
+ visibility: visible;
+ float:right;
+ margin-top: -1%;
+ }
+ @media all and (min-width: 1000px){
+ margin-top:-5%;
+ } 
+}
+
+//kate added this for the site search
 #block-search-form { /* "Search form" block */
+visibility:hidden;
+@media all and (min-width:600px) {
+ visibility:visible;
+ float:right;
+ }
 }
 
 #block-shortcut-shortcuts { /* "Shortcuts" block */
