@@ -1,0 +1,2293 @@
+
+/* line 2, ../sass/primary-menu-block.scss */
+#siteNavigation a {
+  text-decoration: none;
+}
+
+/* LEVEL ONE */
+/* line 4, ../sass/primary-menu-block.scss */
+#siteNavigation ul.menu {
+  position: relative;
+  /*LEVEL TWO*/
+}
+/* line 6, ../sass/primary-menu-block.scss */
+#siteNavigation ul.menu li {
+  padding-left: 5px;
+  padding-right: 5px;
+  float: left;
+  background: #fff;
+}
+/* line 11, ../sass/primary-menu-block.scss */
+#siteNavigation ul.menu li a {
+  display: block;
+  color: #222;
+}
+/* line 16, ../sass/primary-menu-block.scss */
+#siteNavigation ul.menu a:hover {
+  color: #000;
+}
+/* line 17, ../sass/primary-menu-block.scss */
+#siteNavigation ul.menu a:active {
+  color: #fff;
+}
+/* line 18, ../sass/primary-menu-block.scss */
+#siteNavigation ul.menu li.hover, #siteNavigation ul.menu li:hover {
+  background: #ccc;
+  color: black;
+  position: relative;
+}
+/* line 23, ../sass/primary-menu-block.scss */
+#siteNavigation ul.menu li.hover a {
+  color: black;
+}
+/* line 26, ../sass/primary-menu-block.scss */
+#siteNavigation ul.menu ul {
+  width: 220px;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+}
+/* line 31, ../sass/primary-menu-block.scss */
+#siteNavigation ul.menu ul li {
+  background: #f6f6f6;
+  color: #000;
+  border-bottom: 1px solid #ccc;
+  float: none;
+  font-size: 0.7em;
+  padding: 5px;
+  margin: 0px;
+}
+/* line 39, ../sass/primary-menu-block.scss */
+#siteNavigation ul.menu ul li a {
+  width: 100%;
+  display: inline-block;
+  /* IE 6 & 7 Needs Inline Block */
+}
+
+/*LEVEL THREE*/
+/* line 49, ../sass/primary-menu-block.scss */
+#siteNavigation ul.menu ul ul {
+  left: 100%;
+  top: 0;
+}
+
+/* line 50, ../sass/primary-menu-block.scss */
+#siteNavigation ul.menu li:hover > ul {
+  visibility: visible;
+}
+
+/**
+ * @file
+ * Positioning for responsive layout .
+ *
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+/*
+ * Center the page.
+ */
+/* line 44, ../../sass/layouts/responsive-sidebars.scss */
+#page,
+.region-bottom {
+  /* For screen sizes larger than 1200px, prevent excessively long lines of text
+     by setting a max-width. */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+/*
+ * Apply the shared properties of grid items in a single, efficient ruleset.
+ */
+/* line 62, ../../sass/layouts/responsive-sidebars.scss */
+#header,
+#content,
+#navigation,
+.region-sidebar-first,
+.region-sidebar-second,
+#footer {
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/*
+ * Containers for grid items and flow items.
+ */
+/* line 52, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+#header:before, #header:after,
+#main:before,
+#main:after,
+#footer:before,
+#footer:after {
+  content: "";
+  display: table;
+}
+/* line 56, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+#header:after,
+#main:after,
+#footer:after {
+  clear: both;
+}
+
+/*
+ * Navigation bar
+ */
+@media all and (min-width: 480px) {
+  /* line 81, ../../sass/layouts/responsive-sidebars.scss */
+  #main {
+    padding-top: 3em;
+    /* Move all the children of #main down to make room. */
+    position: relative;
+  }
+
+  /* line 85, ../../sass/layouts/responsive-sidebars.scss */
+  #navigation {
+    position: absolute;
+    top: 0;
+    /* Move the navbar up inside #main's padding. */
+    height: 3em;
+    width: 100%;
+  }
+}
+@media all and (min-width: 480px) and (max-width: 959px) {
+  /*
+   * Use 3 grid columns for smaller screens.
+   */
+  /*
+   * The layout when there is only one sidebar, the left one.
+   */
+  /* line 104, ../../sass/layouts/responsive-sidebars.scss */
+  .sidebar-first #content {
+    /* Span 2 columns, starting in 2nd column from left. */
+    float: left;
+    width: 66.66667%;
+    margin-left: 33.33333%;
+    margin-right: -100%;
+  }
+  /* line 108, ../../sass/layouts/responsive-sidebars.scss */
+  .sidebar-first .region-sidebar-first {
+    /* Span 1 column, starting in 1st column from left. */
+    float: left;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: -33.33333%;
+  }
+
+  /*
+   * The layout when there is only one sidebar, the right one.
+   */
+  /* line 118, ../../sass/layouts/responsive-sidebars.scss */
+  .sidebar-second #content {
+    /* Span 2 columns, starting in 1st column from left. */
+    float: left;
+    width: 66.66667%;
+    margin-left: 0%;
+    margin-right: -66.66667%;
+  }
+  /* line 122, ../../sass/layouts/responsive-sidebars.scss */
+  .sidebar-second .region-sidebar-second {
+    /* Span 1 column, starting in 3rd column from left. */
+    float: left;
+    width: 33.33333%;
+    margin-left: 66.66667%;
+    margin-right: -100%;
+  }
+
+  /*
+     * The layout of the front page when there are two sidebars, but it's the
+      *front page.
+     */
+  /* line 132, ../../sass/layouts/responsive-sidebars.scss */
+  .front #content {
+    /*Span 2 columns, starting in 2nd column from left */
+    float: left;
+    width: 66.66667%;
+    margin-left: 33.33333%;
+    margin-right: -100%;
+  }
+  /* line 135, ../../sass/layouts/responsive-sidebars.scss */
+  .front .region-sidebar-first {
+    /*Span 1 column, starting in 1st column from left.*/
+    float: left;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: -33.33333%;
+  }
+
+  /*
+   * The layout when there are two sidebars.
+   */
+  /* line 147, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars #content {
+    /* Span 2 columns, starting in 2nd column from left. */
+    float: left;
+    width: 66.66667%;
+    margin-left: 33.33333%;
+    margin-right: -100%;
+  }
+  /* line 151, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars .region-sidebar-first {
+    /* Span 1 column, starting in 1st column from left. */
+    float: left;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: -33.33333%;
+  }
+  /* line 155, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars .region-sidebar-second {
+    /* Start a new row and span all 3 columns. */
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    clear: left;
+  }
+  /* line 160, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars .region-sidebar-second .block {
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+  /* line 163, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
+    /* Span 1 column, starting in the 1st column from left. */
+    float: left;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: -33.33333%;
+    clear: left;
+  }
+  /* line 167, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
+    /* Span 1 column, starting in the 2nd column from left. */
+    float: left;
+    width: 33.33333%;
+    margin-left: 33.33333%;
+    margin-right: -66.66667%;
+  }
+  /* line 170, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars .region-sidebar-second .block:nth-child(3n) {
+    /* Span 1 column, starting in the 3rd column from left. */
+    float: left;
+    width: 33.33333%;
+    margin-left: 66.66667%;
+    margin-right: -100%;
+  }
+}
+@media all and (min-width: 960px) {
+  /*
+   * Use 5 grid columns for larger screens.
+   */
+  /*
+   * The layout when there is only one sidebar, the left one.
+   */
+  /* line 188, ../../sass/layouts/responsive-sidebars.scss */
+  .sidebar-first #content {
+    /* Span 4 columns, starting in 2nd column from left. */
+    float: left;
+    width: 57.14286%;
+    margin-left: 14.28571%;
+    margin-right: -71.42857%;
+  }
+  /* line 192, ../../sass/layouts/responsive-sidebars.scss */
+  .sidebar-first .region-sidebar-first {
+    /* Span 1 column, starting in 1st column from left. */
+    float: left;
+    width: 14.28571%;
+    margin-left: 0%;
+    margin-right: -14.28571%;
+  }
+
+  /*
+   * The layout when there is only one sidebar, the right one.
+   */
+  /* line 202, ../../sass/layouts/responsive-sidebars.scss */
+  .sidebar-second #content {
+    /* Span 4 columns, starting in 1st column from left. */
+    float: left;
+    width: 57.14286%;
+    margin-left: 0%;
+    margin-right: -57.14286%;
+  }
+  /* line 206, ../../sass/layouts/responsive-sidebars.scss */
+  .sidebar-second .region-sidebar-second {
+    /* Span 1 column, starting in 5th column from left. */
+    float: left;
+    width: 14.28571%;
+    margin-left: 57.14286%;
+    margin-right: -71.42857%;
+  }
+
+  /*
+   * The layout when there are two sidebars.
+   */
+  /* line 216, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars #content {
+    /* Span 4 columns, starting in 2nd column from left. */
+    float: left;
+    width: 57.14286%;
+    margin-left: 14.28571%;
+    margin-right: -71.42857%;
+  }
+  /* line 220, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars .region-sidebar-first {
+    /* Span 1 column, starting in 1st column from left. */
+    float: left;
+    width: 14.28571%;
+    margin-left: 0%;
+    margin-right: -14.28571%;
+  }
+  /* line 224, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars .region-sidebar-second {
+    /* Span 2 columns, starting in 6th column from left. */
+    float: left;
+    width: 28.57143%;
+    margin-left: 71.42857%;
+    margin-right: -100%;
+  }
+}
+
+/**
+ * @file
+ * Wireframes Styling
+ *
+ * Add wireframes to the basic layout elements.
+ */
+/* line 19, ../sass/wireframes.scss */
+.with-wireframes #header,
+.with-wireframes #main,
+.with-wireframes #content,
+.with-wireframes #navigation,
+.with-wireframes .region-sidebar-first,
+.with-wireframes .region-sidebar-second,
+.with-wireframes #footer,
+.with-wireframes .region-bottom {
+  outline: 1px solid #ccc;
+}
+
+/* normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
+/* =============================================================================
+   Normalize.css is intended to be used as an alternative to CSS resets.
+
+   It is suggested that you read through the normalize.css file and customise it
+   to meet the design requirements of a project rather including it as a "black
+   box". @see http://nicolasgallagher.com/about-normalize-css/
+
+   Also: @see http://meiert.com/en/blog/20080419/reset-style-sheets-are-bad/
+         @see http://snook.ca/archives/html_and_css/no_css_reset/
+   ========================================================================== */
+/* =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects block display not defined in IE6/7/8/9 & FF3
+ */
+/* line 35, ../sass/normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/*
+ * Corrects inline-block display not defined in IE6/7/8/9 & FF3
+ */
+/* line 45, ../sass/normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/*
+ * Prevents modern browsers from displaying 'audio' without controls
+ * Remove excess height in iOS5 devices
+ */
+/* line 58, ../sass/normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/*
+ * Addresses styling for 'hidden' attribute not present in IE7/8/9, FF3, S4
+ * Known issue: no IE6 support
+ */
+/* line 68, ../sass/normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+/* Instead of relying on the fonts that are available on a user's computer, you
+   can use web fonts which, like images, are resources downloaded to the user's
+   browser. Because of the bandwidth and rendering resources required, web fonts
+   should be used with care.
+
+   Numerous resources for web fonts can be found on Google. Here are a few
+   websites where you can find Open Source fonts to download:
+   - http://www.fontsquirrel.com/fontface
+   - http://www.theleagueofmoveabletype.com
+
+   In order to use these fonts, you will need to convert them into formats
+   suitable for web fonts. We recommend the free-to-use Font Squirrel's
+   Font-Face Generator:
+     http://www.fontsquirrel.com/fontface/generator
+
+   The following is an example @font-face declaration. This font can then be
+   used in any ruleset using a property like this:  font-family: Example, serif;
+
+   Since we're using Sass, you'll need to declare your font faces here, then you
+   can add them to the font variables in the _base.scss partial.
+*/
+/*
+@font-face {
+  font-family: 'Example';
+  src: url('../fonts/example.eot');
+  src: url('../fonts/example.eot?iefix') format('eot'),
+    url('../fonts/example.woff') format('woff'),
+    url('../fonts/example.ttf') format('truetype'),
+    url('../fonts/example.svg#webfontOkOndcij') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+*/
+/*
+ * 1. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Prevents iOS text size adjust after orientation change, without disabling user zoom
+ *    www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ */
+/* line 119, ../sass/normalize.scss */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  /* Establishes a vertical rhythm unit using $base-line-height. */
+  line-height: 1.5em;
+}
+
+/*
+ * Addresses font-family inconsistency between 'textarea' and other form elements.
+ */
+/* line 135, ../sass/normalize.scss */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
+}
+
+/*
+ * Addresses margins handled incorrectly in IE6/7
+ */
+/* line 143, ../sass/normalize.scss */
+body {
+  margin: 0;
+}
+
+/* =============================================================================
+   Links
+   ========================================================================== */
+/*
+ * The order of link states are based on Eric Meyer's article:
+ * http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
+ */
+/*
+ * Addresses outline displayed oddly in Chrome
+ */
+/* line 174, ../sass/normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+/* line 184, ../sass/normalize.scss */
+a:hover,
+a:active {
+  outline: 0;
+}
+
+/* =============================================================================
+   Typography
+
+   To achieve a pleasant vertical rhythm, we use Compass' Vertical Rhythm mixins
+   so that the line height of our base font becomes the basic unit of vertical
+   measurement. We use multiples of that unit to set the top and bottom margins
+   for our block level elements and to set the line heights of any fonts.
+   For more information, see http://24ways.org/2006/compose-to-a-vertical-rhythm
+   ========================================================================== */
+/*
+ * Addresses font sizes and margins set differently in IE6/7
+ * Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
+ */
+/* line 204, ../sass/normalize.scss */
+h1 {
+  /* Sets the font-size and line-height while keeping a proper vertical rhythm. */
+  font-size: 2em;
+  line-height: 1.5em;
+  /* Sets 1 unit of vertical rhythm on the top and bottom margins. */
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+/* line 213, ../sass/normalize.scss */
+h2 {
+  font-size: 1.5em;
+  line-height: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* line 219, ../sass/normalize.scss */
+h3 {
+  font-size: 1.17em;
+  line-height: 1.28205em;
+  margin-top: 1.28205em;
+  margin-bottom: 1.28205em;
+}
+
+/* line 225, ../sass/normalize.scss */
+h4 {
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+/* line 231, ../sass/normalize.scss */
+h5 {
+  font-size: 0.83em;
+  line-height: 1.80723em;
+  margin-top: 1.80723em;
+  margin-bottom: 1.80723em;
+}
+
+/* line 237, ../sass/normalize.scss */
+h6 {
+  font-size: 0.75em;
+  line-height: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+/* Thematic break */
+/* line 244, ../sass/normalize.scss */
+hr {
+  height: 1px;
+  border: 1px solid #666;
+  padding-bottom: -1px;
+  margin: 1.5em 0;
+}
+
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome
+ */
+/* line 255, ../sass/normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+  white-space: nowrap;
+}
+
+/*
+ * Addresses style set to 'bolder' in FF3+, S4/5, Chrome
+*/
+/* line 266, ../sass/normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 270, ../sass/normalize.scss */
+blockquote {
+  /* Sets 1 unit of vertical rhythm on the top and bottom margin. */
+  margin: 1.5em 30px;
+}
+
+/*
+ * Addresses styling not present in S5, Chrome
+ */
+/* line 279, ../sass/normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/*
+ * Addresses styling not present in IE6/7/8/9
+ */
+/* line 287, ../sass/normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/*
+ * Addresses margins set differently in IE6/7
+ */
+/* line 297, ../sass/normalize.scss */
+p,
+pre {
+  /* Sets 1 unit of vertical rhythm on the top and bottom margin. */
+  margin: 1.5em 0;
+}
+
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+/* line 312, ../sass/normalize.scss */
+pre,
+code,
+kbd,
+samp,
+tt,
+var {
+  font-family: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+  /* The $font-monospace value ends with ", serif". */
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+/*
+ * Improves readability of pre-formatted text in all browsers
+ */
+/* line 324, ../sass/normalize.scss */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/*
+ * 1. Addresses CSS quotes not supported in IE6/7
+ * 2. Addresses quote property not supported in S4
+ */
+/* 1 */
+/* line 337, ../sass/normalize.scss */
+q {
+  quotes: none;
+}
+
+/* 2 */
+/* line 344, ../sass/normalize.scss */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/* @todo Determine how big element affects vertical rhythm. */
+/* line 350, ../sass/normalize.scss */
+small {
+  font-size: 75%;
+}
+
+/*
+ * Prevents sub and sup affecting line-height in all browsers
+ * gist.github.com/413930
+ */
+/* line 360, ../sass/normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 367, ../sass/normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 371, ../sass/normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* =============================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE6/7
+ */
+/* line 388, ../sass/normalize.scss */
+dl,
+menu,
+ol,
+ul,
+.item-list ul {
+  /* Sets 1 unit of vertical rhythm on the top and bottom margin. */
+  margin: 1.5em 0;
+}
+
+/* line 393, ../sass/normalize.scss */
+.item-list ul li {
+  /* Drupal override */
+  margin: 0;
+}
+
+/* line 397, ../sass/normalize.scss */
+dd {
+  margin: 0 0 0 30px;
+}
+
+/* line 402, ../sass/normalize.scss */
+ul ul, ul ol, ol ul, ol ol, .item-list ul ul, .item-list ul ol, .item-list ol ul, .item-list ol ol {
+  margin: 0;
+  /* Turn off margins on nested lists. */
+}
+
+/*
+ * Addresses paddings set differently in IE6/7
+ */
+/* line 414, ../sass/normalize.scss */
+menu,
+ol,
+ul,
+.item-list ul {
+  padding: 0 0 0 30px;
+}
+
+/*
+ * Corrects list images handled incorrectly in IE7
+ */
+/* line 423, ../sass/normalize.scss */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
+/* =============================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Removes border when inside 'a' element in IE6/7/8/9, FF3
+ * 2. Improves image quality when scaled in IE7
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+/* line 439, ../sass/normalize.scss */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+  /* vertical-align: bottom; */
+  /* Suppress the space beneath the baseline */
+  /* Responsive images */
+  /* @todo Add responsive embedded video. */
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+ * Corrects overflow displayed oddly in IE9
+ */
+/* line 455, ../sass/normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* =============================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE6/7/8/9, S5, O11
+ */
+/* line 468, ../sass/normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE6/7
+ */
+/* line 481, ../sass/normalize.scss */
+form {
+  margin: 0;
+}
+
+/*
+ * Define consistent border, margin, and padding
+ */
+/* line 489, ../sass/normalize.scss */
+fieldset {
+  border-color: #c0c0c0;
+  margin: 0 2px;
+  /* Apply borders and padding that keep the vertical rhythm. */
+  border-top-style: solid;
+  border-top-width: 0.0625em;
+  padding-top: 0.4625em;
+  border-bottom-style: solid;
+  border-bottom-width: 0.0625em;
+  padding-bottom: 0.9125em;
+  border-left-style: solid;
+  border-left-width: 0.0625em;
+  padding-left: 0.9125em;
+  border-right-style: solid;
+  border-right-width: 0.0625em;
+  padding-right: 0.9125em;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE6/7/8/9
+ * 2. Corrects text not wrapping in FF3
+ * 3. Corrects alignment displayed oddly in IE6/7
+ */
+/* line 505, ../sass/normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+}
+
+/*
+ * 1. Corrects font size not being inherited in all browsers
+ * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
+ * 3. Improves appearance and consistency in all browsers
+ */
+/* line 523, ../sass/normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+}
+
+/*
+ * Addresses FF3/4 setting line-height on 'input' using !important in the UA stylesheet
+ */
+/* line 537, ../sass/normalize.scss */
+button,
+input {
+  line-height: normal;
+  /* 1 */
+}
+
+/*
+ * 1. Improves usability and consistency of cursor style between image-type 'input' and others
+ * 2. Corrects inability to style clickable 'input' types in iOS
+ * 3. Removes inner spacing in IE7 without affecting normal text inputs
+ *    Known issue: inner spacing remains in IE6
+ */
+/* line 551, ../sass/normalize.scss */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  /* 1 */
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/*
+ * Re-set default cursor for disabled elements
+ */
+/* line 564, ../sass/normalize.scss */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/*
+ * 1. Addresses box sizing set to content-box in IE8/9
+ * 2. Removes excess padding in IE8/9
+ * 3. Removes excess padding in IE7
+      Known issue: excess padding remains in IE6
+ */
+/* line 576, ../sass/normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/*
+ * 1. Addresses appearance set to searchfield in S5, Chrome
+ * 2. Addresses box-sizing set to border-box in S5, Chrome (include -moz to future-proof)
+ */
+/* line 590, ../sass/normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  /* 2 */
+}
+
+/*
+ * Removes inner padding and search cancel button in S5, Chrome on OS X
+ */
+/* line 600, ../sass/normalize.scss */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in FF3+
+ * www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+ */
+/* line 610, ../sass/normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9
+ * 2. Improves readability and alignment in all browsers
+ */
+/* line 620, ../sass/normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells
+ */
+/* line 634, ../sass/normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  /* width: 100%; */
+  /* Prevent cramped-looking tables */
+  /* Add vertical rhythm margins. */
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+/*
+ * Drupal provides table styling which is only useful for its admin section
+ * forms, so we override this default CSS. (We set it back in forms.css.)
+ */
+/* line 648, ../sass/normalize.scss */
+th {
+  text-align: left;
+  padding: 0;
+  border-bottom: none;
+}
+
+/* line 654, ../sass/normalize.scss */
+tbody {
+  border-top: none;
+}
+/**
+ * @file
+ * Page Styling
+ *
+ * Style the markup found in page.tpl.php. Also includes some styling of
+ * miscellaneous Drupal elements that appear in the $content variable, such as
+ * ul.links, .pager, .more-link, etc.
+ */
+/*
+ * Body
+ */
+/* line 17, ../sass/pages.scss */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * The skip-link link will be completely hidden until a user tabs to the link.
+ * See the element-focusable rule in system.base.css.
+ */
+/* line 30, ../sass/pages.scss */
+#skip-link {
+  margin: 0;
+}
+/* line 34, ../sass/pages.scss */
+#skip-link a,
+#skip-link a:visited {
+  display: block;
+  width: 100%;
+  padding: 2px 0 3px 0;
+  text-align: center;
+  background-color: #666;
+  color: #fff;
+}
+
+/*
+ * Header
+ */
+/* line 51, ../sass/pages.scss */
+#logo {
+  /* Wrapping link for logo */
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+/* line 56, ../sass/pages.scss */
+#logo img {
+  vertical-align: bottom;
+}
+
+/* line 61, ../sass/pages.scss */
+#name-and-slogan {
+  /* Wrapper for website name and slogan */
+  float: left;
+}
+
+/* line 65, ../sass/pages.scss */
+#site-name {
+  /* The name of the website */
+  margin: 0;
+  font-size: 2em;
+  line-height: 1.5em;
+}
+/* line 71, ../sass/pages.scss */
+#site-name a:link,
+#site-name a:visited {
+  color: #000;
+  text-decoration: none;
+}
+/* line 77, ../sass/pages.scss */
+#site-name a:hover,
+#site-name a:focus {
+  text-decoration: underline;
+}
+
+/* line 82, ../sass/pages.scss */
+#site-slogan {
+  /* The slogan (or tagline) of a website */
+  margin: 0;
+  font-size: 1em;
+}
+
+/* line 87, ../sass/pages.scss */
+.region-header {
+  /* Wrapper for any blocks placed in the header region */
+  clear: both;
+  /* Clear the logo */
+}
+
+/*
+ * Main (container for everything else)
+ */
+/*
+ * Content
+ */
+/* line 105, ../sass/pages.scss */
+#content #quicktabs-home_page_search_box {
+  border: 1px black solid;
+}
+
+/* line 114, ../sass/pages.scss */
+.breadcrumb {
+  /* The path to the current page in the form of a list of links */
+}
+/* line 115, ../sass/pages.scss */
+.breadcrumb ol {
+  margin: 0;
+  padding: 0;
+}
+/* line 119, ../sass/pages.scss */
+.breadcrumb li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 132, ../sass/pages.scss */
+h1.title,
+h2.node-title,
+h2.block-title,
+h2.title,
+h2.comment-form,
+h3.title {
+  /* Comment title */
+  margin: 0;
+}
+
+/* line 136, ../sass/pages.scss */
+tr.even {
+  /* Some tables have rows marked even or odd. */
+  /* background-color: #eee; */
+  /* Drupal core uses a #eee background */
+}
+
+/* line 140, ../sass/pages.scss */
+tr.odd {
+  /* background-color: #eee; */
+  /* Drupal core uses a #eee background */
+}
+
+/* line 144, ../sass/pages.scss */
+div.messages {
+  /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */
+  margin: 1.5em 0;
+  /* Drupal core uses "6px 0" margin */
+}
+/* line 147, ../sass/pages.scss */
+div.messages ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* line 153, ../sass/pages.scss */
+div.status {
+  /* Normal priority messages */
+}
+
+/* line 157, ../sass/pages.scss */
+div.warning,
+tr.warning {
+  /* Medium priority messages */
+  /* border: 1px solid #f0c020; */
+  /* Drupal core uses: 1px solid #f0c020 */
+}
+
+/* line 162, ../sass/pages.scss */
+div.error,
+tr.error {
+  /* High priority messages. See also the .error declaration below. */
+}
+
+/* line 165, ../sass/pages.scss */
+.error {
+  /* Errors that are separate from div.messages status messages. */
+  /* color: #e55; */
+  /* Drupal core uses a #e55 background */
+}
+
+/* line 169, ../sass/pages.scss */
+.warning {
+  /* Warnings that are separate from div.messages status messages. */
+  /* color: #e09010; */
+  /* Drupal core uses a #e09010 background */
+}
+
+/* line 173, ../sass/pages.scss */
+.tabs {
+  /* See also the tabs.css file. */
+}
+
+/* line 176, ../sass/pages.scss */
+.region-help {
+  /* Help text on a page */
+}
+
+/* line 179, ../sass/pages.scss */
+.more-help-link {
+  /* Link to more help */
+}
+
+/* line 182, ../sass/pages.scss */
+.region-content {
+  /* Wrapper for the actual page content */
+}
+
+/* line 185, ../sass/pages.scss */
+#mobile-hours {
+  background: gainsboro;
+}
+@media all and (min-width: 480px) {
+  /* line 185, ../sass/pages.scss */
+  #mobile-hours {
+    display: none;
+  }
+}
+
+/* line 193, ../sass/pages.scss */
+.lowerMainContent {
+  float: left;
+  margin: 0 0.5% 2% 0;
+  padding: 0;
+  width: 48%;
+  border: gainsboro 1px dashed;
+}
+@media all and (max-width: 480px) {
+  /* line 193, ../sass/pages.scss */
+  .lowerMainContent {
+    display: none;
+  }
+}
+/* line 205, ../sass/pages.scss */
+.lowerMainContent h4 {
+  margin: 0px 0px 2px 0px;
+}
+/* line 210, ../sass/pages.scss */
+.lowerMainContent ul {
+  list-style-type: none;
+  margin: 0px 0px 1% 0px;
+  padding: 0px;
+}
+
+/* line 224, ../sass/pages.scss */
+.lastBlock {
+  margin-left: 1.2%;
+  border: 1px dashed gainsboro;
+}
+
+/*KB added some grid items for the highlight area on the home page*/
+@media all and (max-width: 480px) {
+  /* line 233, ../sass/pages.scss */
+  #highlightArea {
+    display: none;
+  }
+}
+@media all and (min-width: 480px) and (max-width: 750px) {
+  /* line 244, ../sass/pages.scss */
+  .region-highlight-one, .region-highlight-two, .region-highlight-three {
+    height: 150px;
+    border: 1px blue dotted;
+  }
+
+  /* line 249, ../sass/pages.scss */
+  .region-highlight-one {
+    clear: left;
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+
+  /* line 254, ../sass/pages.scss */
+  .region-highlight-two {
+    clear: left;
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+
+  /* line 259, ../sass/pages.scss */
+  .region-highlight-three {
+    clear: left;
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+}
+/*end narrow screen for homepage highlight area, start larger screen */
+@media all and (min-width: 751px) {
+  /* line 272, ../sass/pages.scss */
+  #highlightArea {
+    clear: left;
+    width: 99.5%;
+    margin: 0 auto;
+  }
+  /* line 52, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+  #highlightArea:before, #highlightArea:after {
+    content: "";
+    display: table;
+  }
+  /* line 56, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+  #highlightArea:after {
+    clear: both;
+  }
+  /* line 280, ../sass/pages.scss */
+  #highlightArea .region-highlight-one, #highlightArea .region-highlight-two, #highlightArea .region-highlight-three {
+    background-color: gainsboro;
+  }
+  /* line 283, ../sass/pages.scss */
+  #highlightArea .region-highlight-one {
+    float: left;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: -33.33333%;
+    padding-left: 5px;
+    padding-right: 5px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    border-right: 5px solid white;
+  }
+  /* line 289, ../sass/pages.scss */
+  #highlightArea .region-highlight-two {
+    float: left;
+    width: 33.33333%;
+    margin-left: 33.33333%;
+    margin-right: -66.66667%;
+    padding-left: 5px;
+    padding-right: 5px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    border-right: 2.5px solid white;
+    border-left: 2.5px solid white;
+  }
+  /* line 296, ../sass/pages.scss */
+  #highlightArea .region-highlight-three {
+    float: left;
+    width: 33.33333%;
+    margin-left: 66.66667%;
+    margin-right: -100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    border-left: 5px solid white;
+  }
+}
+/**
+*#highlightArea {
+*  float:left;
+*  
+*}
+*.region-highlight-one, .region-highlight-two, .region-highlight-three{
+* background-color: $light-gray;
+*  width:30%;
+*  float: left;
+*  margin: 0;
+*  padding: 1%;
+*  max-height: 125px;
+*  margin-bottom: 1%;
+*
+*}
+*
+*
+*.region-highlight-three, .region-highlight-two {
+*  margin-left: 2%;
+*}
+*/
+/* line 324, ../sass/pages.scss */
+ul.inline {
+  /* List of links generated by theme_links() */
+  display: inline;
+  padding: 0;
+}
+/* line 328, ../sass/pages.scss */
+ul.inline li {
+  display: inline;
+  list-style-type: none;
+  padding: 0 1em 0 0;
+}
+
+/* line 334, ../sass/pages.scss */
+span.field-label {
+  /* The inline field label used by the Fences module */
+  padding: 0 1em 0 0;
+}
+
+/* line 338, ../sass/pages.scss */
+.item-list .pager {
+  /* A list of page numbers when more than 1 page of content is available */
+  padding: 0;
+}
+/* line 341, ../sass/pages.scss */
+.item-list .pager li {
+  /* Each page number in the pager list */
+  padding: 0 0.5em;
+}
+
+/* line 346, ../sass/pages.scss */
+.feed-icon {
+  /* The link to the RSS or Atom feed for the current list of content */
+}
+
+/* line 349, ../sass/pages.scss */
+.more-link {
+  /* Aggregator, blog, and forum more link */
+}
+
+/*
+ * First sidebar (on left in LTR languages, on right in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-first
+ * (see the layout.css file.)
+ */
+@media all and (max-width: 480px) {
+  /* line 361, ../sass/pages.scss */
+  .region-sidebar-first .frontHours {
+    display: none;
+  }
+}
+
+/* line 370, ../sass/pages.scss */
+.region-sidebar-first, .region-sidebar-second {
+  font-size: 0.5em;
+}
+
+/* line 375, ../sass/pages.scss */
+.frontSideBlock {
+  background-color: gainsboro;
+  padding: 0.5px 1px 0.5px 5px;
+  margin: 5px 0px 10px 0px;
+}
+
+/* line 381, ../sass/pages.scss */
+#frontLeftSide {
+  font-size: 0.75em;
+}
+/* line 384, ../sass/pages.scss */
+#frontLeftSide ul li {
+  list-style: none;
+}
+/* line 387, ../sass/pages.scss */
+#frontLeftSide a {
+  text-decoration: none;
+}
+
+/*
+ * Second sidebar (on right in LTR languages, on left in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-second
+ * (see the layout.css file.)
+ */
+/* line 404, ../sass/pages.scss */
+.happening hr {
+  border-color: gainsboro;
+  border-style: dashed;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 0 0 20px;
+  height: 0;
+}
+
+@media all and (max-width: 480px) {
+  /* line 413, ../sass/pages.scss */
+  .recentArrival {
+    display: none;
+  }
+}
+
+/*
+ * Footer
+ */
+@media all and (min-width: 480px) {
+  /* line 425, ../sass/pages.scss */
+  .mobileResources {
+    display: none;
+  }
+}
+
+/*
+ * Page bottom
+ */
+/* line 441, ../sass/pages.scss */
+.region-bottom {
+  /* Wrapper for any blocks placed in the page bottom region */
+}
+/**
+ * @file
+ * Block Styling
+ */
+/* line 9, ../sass/blocks.scss */
+.block {
+  /* Block wrapper */
+  margin-bottom: 1.5em;
+  font-size: .5em;
+  line-height: 1em;
+}
+/* line 15, ../sass/blocks.scss */
+.block.first {
+  /* The first block in the region */
+}
+/* line 18, ../sass/blocks.scss */
+.block.last {
+  /* The last block in the region */
+}
+/* line 21, ../sass/blocks.scss */
+.block.odd {
+  /* Zebra striping for each block in the region */
+}
+/* line 24, ../sass/blocks.scss */
+.block.even {
+  /* Zebra striping for each block in the region */
+}
+/* line 27, ../sass/blocks.scss */
+.block h2.block-title {
+  /* Block title */
+  font-size: .75em;
+}
+/* line 31, ../sass/blocks.scss */
+.block li {
+  list-style-type: none;
+  padding: 0 1em 0 0;
+  margin-left: 0;
+}
+
+/* line 40, ../sass/blocks.scss */
+#block-aggregator-category-1 {
+  /* Block for the latest news items in the first category */
+}
+
+/* line 43, ../sass/blocks.scss */
+#block-aggregator-feed-1 {
+  /* Block for the latest news items in the first feed */
+}
+
+/* line 46, ../sass/blocks.scss */
+#block-block-1 {
+  /* First block created with "Add block" link */
+  height: 10%;
+}
+
+/* line 50, ../sass/blocks.scss */
+#block-blog-recent {
+  /* "Recent blog posts" block */
+}
+
+/* line 53, ../sass/blocks.scss */
+#block-book-navigation {
+  /* "Book navigation" block for the current book's table of contents */
+}
+
+/* line 56, ../sass/blocks.scss */
+#block-comment-recent {
+  /* "Recent comments" block */
+}
+
+/* line 59, ../sass/blocks.scss */
+#block-forum-active {
+  /* "Active forum topics" block */
+}
+
+/* line 62, ../sass/blocks.scss */
+#block-forum-new {
+  /* "New forum topics" block */
+}
+
+/* line 65, ../sass/blocks.scss */
+#block-locale-language {
+  /* Language switcher block */
+}
+
+/* line 68, ../sass/blocks.scss */
+#block-menu-block-1 {
+  font-size: 1em;
+}
+@media all and (min-width: 700px) {
+  /* line 68, ../sass/blocks.scss */
+  #block-menu-block-1 {
+    font-size: 1.5em;
+  }
+}
+
+/* line 76, ../sass/blocks.scss */
+#block-menu-block-1 ul li {
+  margin: 1% 5% 0% 0%;
+}
+
+/* line 83, ../sass/blocks.scss */
+#block-menu-menu-NAME {
+  /* Custom menu block */
+}
+
+/* line 86, ../sass/blocks.scss */
+#block-node-recent {
+  /* "Recent content" block */
+}
+
+/* line 89, ../sass/blocks.scss */
+#block-node-syndicate {
+  /* "Syndicate" block for primary RSS feed; see also page.css's .feed-icon */
+}
+
+/* line 92, ../sass/blocks.scss */
+#block-poll-recent {
+  /* "Most recent poll" block */
+}
+
+/* line 95, ../sass/blocks.scss */
+#block-profile-author-information {
+  /* "Author information" block for the profile of the page's author */
+}
+
+/* line 99, ../sass/blocks.scss */
+#block-menu-block-2 {
+  visibility: hidden;
+}
+@media all and (min-width: 600px) {
+  /* line 99, ../sass/blocks.scss */
+  #block-menu-block-2 {
+    visibility: visible;
+    float: right;
+    margin-top: -1%;
+  }
+}
+@media all and (min-width: 1000px) {
+  /* line 99, ../sass/blocks.scss */
+  #block-menu-block-2 {
+    margin-top: -5%;
+  }
+}
+
+/* line 112, ../sass/blocks.scss */
+#block-search-form {
+  /* "Search form" block */
+  visibility: hidden;
+}
+@media all and (min-width: 600px) {
+  /* line 112, ../sass/blocks.scss */
+  #block-search-form {
+    visibility: visible;
+    float: right;
+  }
+}
+
+/* line 120, ../sass/blocks.scss */
+#block-shortcut-shortcuts {
+  /* "Shortcuts" block */
+}
+
+/* line 123, ../sass/blocks.scss */
+#block-statistics-popular {
+  /* "Popular content" block */
+}
+
+/* line 126, ../sass/blocks.scss */
+#block-system-main-menu {
+  /* "Main menu" block */
+}
+
+/* line 129, ../sass/blocks.scss */
+#block-system-management {
+  /* "Management" block for Drupal management menu */
+}
+
+/* line 132, ../sass/blocks.scss */
+#block-system-navigation {
+  /* "Navigation" block for Drupal navigation menu */
+}
+
+/* line 135, ../sass/blocks.scss */
+#block-system-user-menu {
+  /* "User menu" block for Drupal user menu */
+}
+
+/* line 138, ../sass/blocks.scss */
+#block-system-help {
+  /* "System help" block */
+}
+
+/* line 141, ../sass/blocks.scss */
+#block-system-main {
+  /* "Main page content" block */
+}
+
+/* line 144, ../sass/blocks.scss */
+#block-system-powered-by {
+  /* "Powered by Drupal" block */
+}
+
+/* line 147, ../sass/blocks.scss */
+#block-user-login {
+  /* "User login form" block */
+}
+
+/* line 150, ../sass/blocks.scss */
+#block-user-new {
+  /* "Who's new" block for a list of the newest users */
+}
+
+/* line 153, ../sass/blocks.scss */
+#block-user-online {
+  /* "Who's online" block for a list of the online users */
+}
+/**
+ * @file
+ * Positioning for responsive layout .
+ *
+ * Define CSS classes to create a table-free, 3-column, 2-column, or single
+ * column layout depending on whether blocks are enabled in the left or right
+ * columns.
+ *
+ * This layout uses the Zen Grids plugin for Compass: http://zengrids.com
+ */
+/*
+ * Center the page.
+ */
+/* line 44, ../../sass/layouts/responsive-sidebars.scss */
+#page,
+.region-bottom {
+  /* For screen sizes larger than 1200px, prevent excessively long lines of text
+     by setting a max-width. */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+/*
+ * Apply the shared properties of grid items in a single, efficient ruleset.
+ */
+/* line 62, ../../sass/layouts/responsive-sidebars.scss */
+#header,
+#content,
+#navigation,
+.region-sidebar-first,
+.region-sidebar-second,
+#footer {
+  padding-left: 10px;
+  padding-right: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+/*
+ * Containers for grid items and flow items.
+ */
+/* line 52, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+#header:before, #header:after,
+#main:before,
+#main:after,
+#footer:before,
+#footer:after {
+  content: "";
+  display: table;
+}
+/* line 56, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+#header:after,
+#main:after,
+#footer:after {
+  clear: both;
+}
+
+/*
+ * Navigation bar
+ */
+@media all and (min-width: 480px) {
+  /* line 81, ../../sass/layouts/responsive-sidebars.scss */
+  #main {
+    padding-top: 3em;
+    /* Move all the children of #main down to make room. */
+    position: relative;
+  }
+
+  /* line 85, ../../sass/layouts/responsive-sidebars.scss */
+  #navigation {
+    position: absolute;
+    top: 0;
+    /* Move the navbar up inside #main's padding. */
+    height: 3em;
+    width: 100%;
+  }
+}
+@media all and (min-width: 480px) and (max-width: 959px) {
+  /*
+   * Use 3 grid columns for smaller screens.
+   */
+  /*
+   * The layout when there is only one sidebar, the left one.
+   */
+  /* line 104, ../../sass/layouts/responsive-sidebars.scss */
+  .sidebar-first #content {
+    /* Span 2 columns, starting in 2nd column from left. */
+    float: left;
+    width: 66.66667%;
+    margin-left: 33.33333%;
+    margin-right: -100%;
+  }
+  /* line 108, ../../sass/layouts/responsive-sidebars.scss */
+  .sidebar-first .region-sidebar-first {
+    /* Span 1 column, starting in 1st column from left. */
+    float: left;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: -33.33333%;
+  }
+
+  /*
+   * The layout when there is only one sidebar, the right one.
+   */
+  /* line 118, ../../sass/layouts/responsive-sidebars.scss */
+  .sidebar-second #content {
+    /* Span 2 columns, starting in 1st column from left. */
+    float: left;
+    width: 66.66667%;
+    margin-left: 0%;
+    margin-right: -66.66667%;
+  }
+  /* line 122, ../../sass/layouts/responsive-sidebars.scss */
+  .sidebar-second .region-sidebar-second {
+    /* Span 1 column, starting in 3rd column from left. */
+    float: left;
+    width: 33.33333%;
+    margin-left: 66.66667%;
+    margin-right: -100%;
+  }
+
+  /*
+     * The layout of the front page when there are two sidebars, but it's the
+      *front page.
+     */
+  /* line 132, ../../sass/layouts/responsive-sidebars.scss */
+  .front #content {
+    /*Span 2 columns, starting in 2nd column from left */
+    float: left;
+    width: 66.66667%;
+    margin-left: 33.33333%;
+    margin-right: -100%;
+  }
+  /* line 135, ../../sass/layouts/responsive-sidebars.scss */
+  .front .region-sidebar-first {
+    /*Span 1 column, starting in 1st column from left.*/
+    float: left;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: -33.33333%;
+  }
+
+  /*
+   * The layout when there are two sidebars.
+   */
+  /* line 147, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars #content {
+    /* Span 2 columns, starting in 2nd column from left. */
+    float: left;
+    width: 66.66667%;
+    margin-left: 33.33333%;
+    margin-right: -100%;
+  }
+  /* line 151, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars .region-sidebar-first {
+    /* Span 1 column, starting in 1st column from left. */
+    float: left;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: -33.33333%;
+  }
+  /* line 155, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars .region-sidebar-second {
+    /* Start a new row and span all 3 columns. */
+    float: left;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: -100%;
+    padding-left: 0;
+    padding-right: 0;
+    clear: left;
+  }
+  /* line 160, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars .region-sidebar-second .block {
+    padding-left: 10px;
+    padding-right: 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+  /* line 163, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
+    /* Span 1 column, starting in the 1st column from left. */
+    float: left;
+    width: 33.33333%;
+    margin-left: 0%;
+    margin-right: -33.33333%;
+    clear: left;
+  }
+  /* line 167, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
+    /* Span 1 column, starting in the 2nd column from left. */
+    float: left;
+    width: 33.33333%;
+    margin-left: 33.33333%;
+    margin-right: -66.66667%;
+  }
+  /* line 170, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars .region-sidebar-second .block:nth-child(3n) {
+    /* Span 1 column, starting in the 3rd column from left. */
+    float: left;
+    width: 33.33333%;
+    margin-left: 66.66667%;
+    margin-right: -100%;
+  }
+}
+@media all and (min-width: 960px) {
+  /*
+   * Use 5 grid columns for larger screens.
+   */
+  /*
+   * The layout when there is only one sidebar, the left one.
+   */
+  /* line 188, ../../sass/layouts/responsive-sidebars.scss */
+  .sidebar-first #content {
+    /* Span 4 columns, starting in 2nd column from left. */
+    float: left;
+    width: 57.14286%;
+    margin-left: 14.28571%;
+    margin-right: -71.42857%;
+  }
+  /* line 192, ../../sass/layouts/responsive-sidebars.scss */
+  .sidebar-first .region-sidebar-first {
+    /* Span 1 column, starting in 1st column from left. */
+    float: left;
+    width: 14.28571%;
+    margin-left: 0%;
+    margin-right: -14.28571%;
+  }
+
+  /*
+   * The layout when there is only one sidebar, the right one.
+   */
+  /* line 202, ../../sass/layouts/responsive-sidebars.scss */
+  .sidebar-second #content {
+    /* Span 4 columns, starting in 1st column from left. */
+    float: left;
+    width: 57.14286%;
+    margin-left: 0%;
+    margin-right: -57.14286%;
+  }
+  /* line 206, ../../sass/layouts/responsive-sidebars.scss */
+  .sidebar-second .region-sidebar-second {
+    /* Span 1 column, starting in 5th column from left. */
+    float: left;
+    width: 14.28571%;
+    margin-left: 57.14286%;
+    margin-right: -71.42857%;
+  }
+
+  /*
+   * The layout when there are two sidebars.
+   */
+  /* line 216, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars #content {
+    /* Span 4 columns, starting in 2nd column from left. */
+    float: left;
+    width: 57.14286%;
+    margin-left: 14.28571%;
+    margin-right: -71.42857%;
+  }
+  /* line 220, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars .region-sidebar-first {
+    /* Span 1 column, starting in 1st column from left. */
+    float: left;
+    width: 14.28571%;
+    margin-left: 0%;
+    margin-right: -14.28571%;
+  }
+  /* line 224, ../../sass/layouts/responsive-sidebars.scss */
+  .two-sidebars .region-sidebar-second {
+    /* Span 2 columns, starting in 6th column from left. */
+    float: left;
+    width: 28.57143%;
+    margin-left: 71.42857%;
+    margin-right: -100%;
+  }
+}
+/**
+ * @file
+ * Navigation Styling
+ */
+/*
+ * Markup generated by theme_menu_tree().
+ */
+/* line 13, ../sass/navigation.scss */
+ul li.expanded {
+  list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABJJREFUeJxj+MdQw2DBIMAABgAUsAHD3c3BpwAAAABJRU5ErkJggg==');
+  list-style-type: circle;
+}
+
+/* line 20, ../sass/navigation.scss */
+ul li.collapsed {
+  list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABFJREFUCB1jVmCGQClmEWYOAAZ8AMy3HPLXAAAAAElFTkSuQmCC');
+  list-style-type: disc;
+}
+
+/* line 27, ../sass/navigation.scss */
+ul li.leaf {
+  list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHBAMAAAA2fErgAAAAD1BMVEX///+/v7+Li4sAAADAwMBFvsw8AAAAAXRSTlMAQObYZgAAAB1JREFUCFtjYAADYwMGBmYVZSDhKAwkFJWhYiAAAB2+Aa/9ugeaAAAAAElFTkSuQmCC');
+  list-style-type: square;
+}
+
+/*
+ * The active item in a Drupal menu
+ */
+/* line 39, ../sass/navigation.scss */
+li a.active {
+  color: #000;
+}
+
+/*
+ * Navigation bar
+ */
+/* line 47, ../sass/navigation.scss */
+#navigation {
+  /* overflow: hidden; */
+  /* Sometimes you want to prevent overlapping with main div. */
+}
+@media all and (max-width: 480px) {
+  /* line 47, ../sass/navigation.scss */
+  #navigation {
+    display: none;
+  }
+}
+/* line 54, ../sass/navigation.scss */
+#navigation .block {
+  margin-bottom: 0;
+}
+/* line 59, ../sass/navigation.scss */
+#navigation .block-menu .block-title,
+#navigation .block-menu-block .block-title {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+/* line 64, ../sass/navigation.scss */
+#navigation ul.links,
+#navigation ul.menu {
+  /* Menu block links */
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+/* line 69, ../sass/navigation.scss */
+#navigation ul.links li,
+#navigation ul.menu li {
+  /* A simple method to get navigation links to appear in one line. */
+  float: left;
+  padding: 0 10px 0 0;
+  list-style-type: none;
+  list-style-image: none;
+}
+
+/*
+ * Main menu and Secondary menu links
+ */
+/* line 88, ../sass/navigation.scss */
+#secondary-menu {
+  float: right;
+}
+
+/*
+ * Menu blocks
+ */
+/*
+ * "Menu block" blocks
+ *
+ * Drupal core has limited ways in which it can display its menus. To get around
+ * these limitations, see http://drupal.org/project/menu_block
+ */
+/* line 106, ../sass/navigation.scss */
+.block-menu-block {
+  /* overflow: hidden; */
+  /* Sometimes you want to prevent overlapping with main div. */
+}
+/* line 109, ../sass/navigation.scss */
+.block-menu-block .block {
+  margin-bottom: 0;
+}
+/* line 114, ../sass/navigation.scss */
+.block-menu-block .block-menu .block-title,
+.block-menu-block .block-menu-block .block-title {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+/* line 119, ../sass/navigation.scss */
+.block-menu-block ul.links,
+.block-menu-block ul.menu {
+  /* Menu block links */
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+/* line 124, ../sass/navigation.scss */
+.block-menu-block ul.links li,
+.block-menu-block ul.menu li {
+  /* A simple method to get navigation links to appear in one line. */
+  float: left;
+  padding: 0 10px 0 0;
+  list-style-type: none;
+  list-style-image: none;
+}
+/**
+ * @file
+ * Node Styling
+ *
+ * Style anything that isn't in the $content variable.
+ */
+/* line 11, ../sass/nodes.scss */
+.node {
+  /* Node wrapper */
+}
+/* line 13, ../sass/nodes.scss */
+.preview .node {
+  /* Preview of the content before submitting new or updated content */
+  /* background-color: #ffffea; */
+  /* Drupal core uses a #ffffea background */
+}
+/* line 17, ../sass/nodes.scss */
+.node .node-title {
+  /* Node title */
+}
+/* line 20, ../sass/nodes.scss */
+.node .user-picture {
+  /* The picture of the node author */
+}
+/* line 23, ../sass/nodes.scss */
+.node .submitted {
+  /* The "posted by" information */
+}
+/* line 26, ../sass/nodes.scss */
+.node .content {
+  /* Node's content wrapper */
+}
+/* line 29, ../sass/nodes.scss */
+.node ul.links {
+  /* Node links. See also the ul.links declaration in the pages.css. */
+}
+
+/* line 34, ../sass/nodes.scss */
+.node-promoted {
+  /* A node that has been promoted to the front page */
+}
+
+/* line 37, ../sass/nodes.scss */
+.node-sticky {
+  /* A sticky node (displayed before others in a list) */
+}
+
+/* line 40, ../sass/nodes.scss */
+.node-by-viewer {
+  /* A node created by the current user */
+}
+
+/* line 43, ../sass/nodes.scss */
+.node-teaser {
+  /* A node displayed as teaser */
+}
+
+/*
+ * All nodes are given a node-FOO class that describes the type of content that
+ * it is. If you create a new content type called "my-custom-type", it will
+ * receive a "node-my-custom-type" class.
+ */
+/* line 52, ../sass/nodes.scss */
+.node-page {
+  /* Page content node */
+}
+
+/* line 55, ../sass/nodes.scss */
+.node-article {
+  /* Article content node */
+}
+
+/* line 58, ../sass/nodes.scss */
+.node-unpublished {
+  /* Unpublished nodes */
+  /* background-color: #fff4f4; */
+  /* Drupal core uses a #fff4f4 background */
+}
+/* line 61, ../sass/nodes.scss */
+.node-unpublished p.unpublished {
+  /* The word "Unpublished" displayed underneath the content. */
+  height: 0;
+  overflow: visible;
+  color: #d8d8d8;
+  font-size: 75px;
+  line-height: 1;
+  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+/*KB added this to style the search box on the home page; node 2 in quicktab */
+/* line 68, ../sass/nodes.scss */
+.homeSearch input#searcharg {
+  width: 80%;
+  height: 20px;
+  margin-top: 20px;
+}
+/* line 73, ../sass/nodes.scss */
+.homeSearch input#submit {
+  height: 27px;
+  font-weight: bold;
+  margin-left: -5px;
+}
+
+/* line 80, ../sass/nodes.scss */
+#searchtypes {
+  float: right;
+  margin-top: -50px;
+  margin-right: 15%;
+}
