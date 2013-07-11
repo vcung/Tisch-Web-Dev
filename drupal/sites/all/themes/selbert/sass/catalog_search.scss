@@ -1,0 +1,46 @@
+#quicktabs-home_page_search_box {
+	background: #24578C;
+	padding: 10px;
+}
+
+.item-list ul {
+	margin: 0px;
+	padding: 0px;
+	li {
+		background: #0B3659;
+		padding: 0px;
+		a {
+			color: #9EB0BE;
+			text-decoration: none;
+			font-size: 1.5em;
+		}
+	}
+	li.active {
+		background: #24578C;
+		a { color: #fff; }
+	}
+ 
+}
+.homeSearch {
+	ul {
+		float: right;
+		li {
+			display: inline;
+			a {
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+	}
+	#submit {
+		background: none repeat scroll 0 0 #104C80;
+		border: medium none;
+		color: white;
+	}
+}
+
+#searchtypes {
+	color: #fff;
+}
+
+
