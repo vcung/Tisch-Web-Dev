@@ -1,8 +1,8 @@
 ;$Id$
 
 name = entityform_add_fieldset
-description = adds fieldset for entityforms.
+description = adds dynamic fieldset for entityforms.
 core = 7.x
 
 files[] = entityform_add_fieldset.module
-
+dependencies[] = field_group
