@@ -52,14 +52,13 @@
 <!-- End Springshare Chat code //-->
     </div><!--end front chat-->
     </div><!--end first box lowerMainContent-->
-    <?php if ($front_resources): ?>
+ 
     <div class="lowerMainContent lastBlock">
 
-<?php print $front_resources; ?>
     	
 	</div> <!--end 2nd/last block for lowerMainContent-->	
 <?php endif; ?><!--end block for top resources on front page-->
-<?php endif; ?> <!--end if Front-->
+
   		</div><!-- /.region -->
 
 <?php endif; ?>
