@@ -6,3 +6,26 @@
 *including chat widget
 *
 */
+
+/**
+* Implementation of hook_preprocess_HOOK().
+*/
+function tisch_preprocess_page(&$variables){
+  $variables['mobile_hours'] = "<h3>Today's Hours</h3><p>8:30am - 10:00pm</p>";
+}
+//added by KB to feed a variable to content region
+function tisch_preprocess(&$variables){
+  $variables['front_resources'] = "<h4>Resources</h4>
+    	<ul>
+		<li>Databases A-Z</li>
+		<li>Journals & Newspapers A-Z</li>
+		<li>E-books</li>
+        </ul>
+		<h4>Services</h4>
+		<ul>
+	    <li>Course Reserves</li>
+		<li>Research Guides by Subject</li>
+		<li>Interlibrary Loan (IILiad)</li>
+		
+	</ul>";
+}
