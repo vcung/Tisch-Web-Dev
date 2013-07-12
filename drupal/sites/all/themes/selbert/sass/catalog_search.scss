@@ -1,27 +1,71 @@
+$active_bg: #2C69A2;
+$inactive_bg: #0B3659;
+$fontcolor: #fff;
+$inactive_font: #C5CCD2;
+$tab_pad: 10px;
+
 #quicktabs-home_page_search_box {
-	background: #24578C;
-	padding: 10px;
+	background: $active_bg;
+	//padding: 10px;
 }
 
-.item-list ul {
-	margin: 0px;
-	padding: 0px;
-	li {
-		background: #0B3659;
+.item-list {
+	margin-bottom: $tab_pad + 25;
+	background: $active_bg;
+	color: $active_bg;
+	.quicktabs-tabs {
+		margin: 0px;
 		padding: 0px;
-		a {
-			color: #9EB0BE;
-			text-decoration: none;
-			font-size: 1.5em;
+		//padding-top: 5px;
+		//background: $inactive_bg;
+		
+	}
+	ul { 
+	
+		li {
+		
+			background: $inactive_bg;
+			padding: {
+				top: $tab_pad+2;
+				bottom: $tab_pad;
+			}
+			
+			a {
+				color: $inactive_font;
+				text-decoration: none;
+				font-size: 2.6em;
+				padding: $tab_pad;
+				
+			}
+			
+		}
+		li.active {
+
+			background: $active_bg;
+			a { color: #fff; }
+		}
+		.first {
+			//width:100 px;
+			float:left;
+			a{ padding: { 
+				right:100px;
+				}}
+		}
+		.last{
+		float: right;
+			//width: 200px;
+			a{ padding: { right:20px;}}
 		}
 	}
-	li.active {
-		background: #24578C;
-		a { color: #fff; }
-	}
- 
 }
 .homeSearch {
+	fieldset {
+		margin-left:30px;
+		border: none;
+		padding: 10px;
+		margin-top:50px;
+		
+	}
 	ul {
 		float: right;
 		li {
@@ -29,18 +73,20 @@
 			a {
 				color: #fff;
 				text-decoration: none;
+				font-size: 1.5em;
 			}
 		}
 	}
 	#submit {
 		background: none repeat scroll 0 0 #104C80;
 		border: medium none;
-		color: white;
+		color: #fff;
 	}
 }
 
 #searchtypes {
 	color: #fff;
+	font-size: 1.5em;
 }
 
 
