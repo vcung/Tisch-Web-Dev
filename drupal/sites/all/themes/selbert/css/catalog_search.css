@@ -14,22 +14,23 @@
   margin: 0px;
   padding: 0px;
 }
-/* line 25, ../sass/catalog_search.scss */
+/* line 23, ../sass/catalog_search.scss */
 .item-list ul li {
   background: #0b3659;
   padding-top: 12px;
   padding-bottom: 10px;
 }
-/* line 33, ../sass/catalog_search.scss */
+/* line 32, ../sass/catalog_search.scss */
 .item-list ul li a {
   color: #c5ccd2;
   text-decoration: none;
   font-size: 2.6em;
   padding: 10px;
 }
-/* line 42, ../sass/catalog_search.scss */
+/* line 41, ../sass/catalog_search.scss */
 .item-list ul li.active {
   background: #2c69a2;
+  box-shadow: none;
 }
 /* line 45, ../sass/catalog_search.scss */
 .item-list ul li.active a {
@@ -37,50 +38,52 @@
 }
 /* line 47, ../sass/catalog_search.scss */
 .item-list ul .first {
+  box-shadow: -3px -2px 2px 1px #062746 inset;
   float: left;
 }
 /* line 50, ../sass/catalog_search.scss */
 .item-list ul .first a {
   padding-right: 100px;
 }
-/* line 54, ../sass/catalog_search.scss */
+/* line 55, ../sass/catalog_search.scss */
 .item-list ul .last {
+  box-shadow: 3px -2px 2px 1px #062746 inset;
   float: right;
 }
-/* line 57, ../sass/catalog_search.scss */
+/* line 58, ../sass/catalog_search.scss */
 .item-list ul .last a {
   padding-right: 20px;
 }
 
-/* line 62, ../sass/catalog_search.scss */
+/* line 66, ../sass/catalog_search.scss */
 .homeSearch fieldset {
   margin-left: 30px;
   border: none;
   padding: 10px;
   margin-top: 50px;
 }
-/* line 69, ../sass/catalog_search.scss */
+/* line 73, ../sass/catalog_search.scss */
 .homeSearch ul {
   float: right;
 }
-/* line 71, ../sass/catalog_search.scss */
+/* line 75, ../sass/catalog_search.scss */
 .homeSearch ul li {
   display: inline;
 }
-/* line 73, ../sass/catalog_search.scss */
+/* line 77, ../sass/catalog_search.scss */
 .homeSearch ul li a {
   color: #fff;
   text-decoration: none;
   font-size: 1.5em;
 }
-/* line 80, ../sass/catalog_search.scss */
+/* line 84, ../sass/catalog_search.scss */
 .homeSearch #submit {
   background: none repeat scroll 0 0 #104C80;
   border: medium none;
   color: #fff;
 }
 
-/* line 87, ../sass/catalog_search.scss */
+/* line 91, ../sass/catalog_search.scss */
 #searchtypes {
   color: #fff;
   font-size: 1.5em;

@@ -6,7 +6,7 @@ $tab_pad: 10px;
 
 #quicktabs-home_page_search_box {
 	background: $active_bg;
-	//padding: 10px;
+
 }
 
 .item-list {
@@ -16,15 +16,14 @@ $tab_pad: 10px;
 	.quicktabs-tabs {
 		margin: 0px;
 		padding: 0px;
-		//padding-top: 5px;
-		//background: $inactive_bg;
-		
+
 	}
 	ul { 
 	
 		li {
 		
 			background: $inactive_bg;
+			
 			padding: {
 				top: $tab_pad+2;
 				bottom: $tab_pad;
@@ -42,19 +41,24 @@ $tab_pad: 10px;
 		li.active {
 
 			background: $active_bg;
+			box-shadow: none;
 			a { color: #fff; }
 		}
 		.first {
-			//width:100 px;
+			box-shadow: -3px -2px 2px 1px #062746 inset;
 			float:left;
 			a{ padding: { 
 				right:100px;
-				}}
+				}
+			}
 		}
 		.last{
-		float: right;
-			//width: 200px;
-			a{ padding: { right:20px;}}
+			box-shadow: 3px -2px 2px 1px #062746 inset;
+			float: right;
+			a{ padding: { 
+				right:20px;
+				}
+			}
 		}
 	}
 }
