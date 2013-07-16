@@ -1,86 +1,87 @@
-/* line 7, ../sass/catalog_search.scss */
+/* line 6, ../sass/catalog_search.scss */
 #quicktabs-home_page_search_box {
   background: #2c69a2;
 }
 
-/* line 12, ../sass/catalog_search.scss */
-.item-list {
-  margin-bottom: 35px;
-  background: #2c69a2;
-  color: #2c69a2;
+/* line 15, ../sass/catalog_search.scss */
+ul.quicktabs-tabs {
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
-/* line 16, ../sass/catalog_search.scss */
-.item-list .quicktabs-tabs {
-  margin: 0px;
-  padding: 0px;
-}
-/* line 25, ../sass/catalog_search.scss */
-.item-list ul li {
+/* line 19, ../sass/catalog_search.scss */
+ul.quicktabs-tabs li {
+  float: left;
+  font-weight: normal;
+  list-style: none;
+  height: 2.5em;
+  min-height: 2.6em;
+  padding: 0;
   background: #0b3659;
-  padding-top: 12px;
-  padding-bottom: 10px;
+  font-size: 2.2em;
+  margin: 0px;
 }
-/* line 33, ../sass/catalog_search.scss */
-.item-list ul li a {
+/* line 29, ../sass/catalog_search.scss */
+ul.quicktabs-tabs li a {
   color: #c5ccd2;
   text-decoration: none;
-  font-size: 2.6em;
-  padding: 10px;
-}
-/* line 42, ../sass/catalog_search.scss */
-.item-list ul li.active {
-  background: #2c69a2;
-}
-/* line 45, ../sass/catalog_search.scss */
-.item-list ul li.active a {
-  color: #fff;
-}
-/* line 47, ../sass/catalog_search.scss */
-.item-list ul .first {
   float: left;
+  display: block;
+  height: 2.5em;
+  min-height: 2.6em;
+  line-height: 2.6em;
+  padding: 0 8px;
+  text-decoration: none;
+  position: relative;
 }
-/* line 50, ../sass/catalog_search.scss */
-.item-list ul .first a {
-  padding-right: 100px;
+/* line 43, ../sass/catalog_search.scss */
+ul.quicktabs-tabs li.active {
+  background: #2c69a2;
+  box-shadow: none;
+}
+/* line 48, ../sass/catalog_search.scss */
+ul.quicktabs-tabs li.active a {
+  color: #fff;
+  font-weight: normal;
 }
 /* line 54, ../sass/catalog_search.scss */
-.item-list ul .last {
-  float: right;
+ul.quicktabs-tabs .first {
+  box-shadow: -3px -2px 2px 1px #062746 inset;
 }
-/* line 57, ../sass/catalog_search.scss */
-.item-list ul .last a {
-  padding-right: 20px;
+/* line 59, ../sass/catalog_search.scss */
+ul.quicktabs-tabs .last {
+  box-shadow: 3px -2px 2px 1px #062746 inset;
 }
 
-/* line 62, ../sass/catalog_search.scss */
-.homeSearch fieldset {
-  margin-left: 30px;
-  border: none;
-  padding: 10px;
-  margin-top: 50px;
-}
 /* line 69, ../sass/catalog_search.scss */
-.homeSearch ul {
+.quicktabs_main {
+  clear: both;
+  padding: 20px 5px 0 5px;
+  position: relative;
+  background: #2c69a2;
+}
+/* line 74, ../sass/catalog_search.scss */
+.quicktabs_main fieldset {
+  border: none;
+}
+/* line 77, ../sass/catalog_search.scss */
+.quicktabs_main ul {
   float: right;
 }
-/* line 71, ../sass/catalog_search.scss */
-.homeSearch ul li {
-  display: inline;
-}
-/* line 73, ../sass/catalog_search.scss */
-.homeSearch ul li a {
+/* line 81, ../sass/catalog_search.scss */
+.quicktabs_main ul li a {
   color: #fff;
   text-decoration: none;
   font-size: 1.5em;
 }
-/* line 80, ../sass/catalog_search.scss */
-.homeSearch #submit {
+/* line 88, ../sass/catalog_search.scss */
+.quicktabs_main #submit {
   background: none repeat scroll 0 0 #104C80;
   border: medium none;
   color: #fff;
 }
 
-/* line 87, ../sass/catalog_search.scss */
+/* line 95, ../sass/catalog_search.scss */
 #searchtypes {
   color: #fff;
   font-size: 1.5em;
