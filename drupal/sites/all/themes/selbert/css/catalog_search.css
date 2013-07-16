@@ -34,60 +34,54 @@ ul.quicktabs-tabs li a {
   text-decoration: none;
   position: relative;
 }
-/* line 44, ../sass/catalog_search.scss */
+/* line 43, ../sass/catalog_search.scss */
 ul.quicktabs-tabs li.active {
   background: #2c69a2;
   box-shadow: none;
 }
-/* line 49, ../sass/catalog_search.scss */
+/* line 48, ../sass/catalog_search.scss */
 ul.quicktabs-tabs li.active a {
   color: #fff;
   font-weight: normal;
 }
-/* line 56, ../sass/catalog_search.scss */
+/* line 54, ../sass/catalog_search.scss */
 ul.quicktabs-tabs .first {
   box-shadow: -3px -2px 2px 1px #062746 inset;
-  float: left;
 }
-/* line 61, ../sass/catalog_search.scss */
+/* line 59, ../sass/catalog_search.scss */
 ul.quicktabs-tabs .last {
   box-shadow: 3px -2px 2px 1px #062746 inset;
-  float: right;
-}
-/* line 66, ../sass/catalog_search.scss */
-ul.quicktabs-tabs .last.active {
-  float: left;
 }
 
-/* line 71, ../sass/catalog_search.scss */
+/* line 69, ../sass/catalog_search.scss */
 .quicktabs_main {
   clear: both;
   padding: 20px 5px 0 5px;
   position: relative;
   background: #2c69a2;
 }
-/* line 76, ../sass/catalog_search.scss */
+/* line 74, ../sass/catalog_search.scss */
 .quicktabs_main fieldset {
   border: none;
 }
-/* line 79, ../sass/catalog_search.scss */
+/* line 77, ../sass/catalog_search.scss */
 .quicktabs_main ul {
   float: right;
 }
-/* line 83, ../sass/catalog_search.scss */
+/* line 81, ../sass/catalog_search.scss */
 .quicktabs_main ul li a {
   color: #fff;
   text-decoration: none;
   font-size: 1.5em;
 }
-/* line 90, ../sass/catalog_search.scss */
+/* line 88, ../sass/catalog_search.scss */
 .quicktabs_main #submit {
   background: none repeat scroll 0 0 #104C80;
   border: medium none;
   color: #fff;
 }
 
-/* line 97, ../sass/catalog_search.scss */
+/* line 95, ../sass/catalog_search.scss */
 #searchtypes {
   color: #fff;
   font-size: 1.5em;

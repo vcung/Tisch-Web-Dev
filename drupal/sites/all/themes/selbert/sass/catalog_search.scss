@@ -37,7 +37,6 @@ $inactive_font: #C5CCD2;
 				padding: 0 8px;
 				text-decoration: none;
 				position: relative;
-			//	font-size: .95em;
 			}
 			
 		}
@@ -50,21 +49,20 @@ $inactive_font: #C5CCD2;
 
 				color: #fff;
 				font-weight: normal;
-			//	font-size: .95em;
 			}
 		}
 		.first {
 			box-shadow: -3px -2px 2px 1px #062746 inset;
-			float:left;
+			//float:left;
 
 		}
 		.last{
 			box-shadow: 3px -2px 2px 1px #062746 inset;
-			float:right;
+		//	float:right;
 			
 		}
 		.last.active{
-			float: left;
+	//		float: left;
 		}
 	}
 
