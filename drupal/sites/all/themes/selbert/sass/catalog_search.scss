@@ -2,78 +2,84 @@ $active_bg: #2C69A2;
 $inactive_bg: #0B3659;
 $fontcolor: #fff;
 $inactive_font: #C5CCD2;
-$tab_pad: 10px;
 
 #quicktabs-home_page_search_box {
 	background: $active_bg;
-
 }
 
 .item-list {
-	margin-bottom: $tab_pad + 25;
-	background: $active_bg;
-	color: $active_bg;
-	.quicktabs-tabs {
-		margin: 0px;
-		padding: 0px;
+	//height: 7.6em;	
+	//background: #fff;
 
-	}
-	ul { 
-	
+}
+	ul.quicktabs-tabs { 
+		margin: 0;
+		padding: 0;
+		width: 100%;
 		li {
-		
+			float: left;
+			font-weight: normal;
+			list-style: none;
+			height: 2.5em;
+			min-height: 2.95em;
+			padding: 0;
 			background: $inactive_bg;
-			
-			padding: {
-				top: $tab_pad+2;
-				bottom: $tab_pad;
-			}
-			
+			font-size: 2.6em;
+			margin: 0px;
 			a {
 				color: $inactive_font;
 				text-decoration: none;
-				font-size: 2.6em;
-				padding: $tab_pad;
-				
+				float: left;
+				display: block;
+				height: 2.5em;
+				min-height: 2.95em;
+				line-height: 2.95em;
+				padding: 0 8px;
+				text-decoration: none;
+				position: relative;
+			//	font-size: .95em;
 			}
 			
 		}
 		li.active {
-
+			
 			background: $active_bg;
 			box-shadow: none;
-			a { color: #fff; }
+			
+			a { 
+
+				color: #fff;
+				font-weight: normal;
+			//	font-size: .95em;
+			}
 		}
 		.first {
 			box-shadow: -3px -2px 2px 1px #062746 inset;
 			float:left;
-			a{ padding: { 
-				right:100px;
-				}
-			}
+
 		}
 		.last{
 			box-shadow: 3px -2px 2px 1px #062746 inset;
-			float: right;
-			a{ padding: { 
-				right:20px;
-				}
-			}
+			float:right;
+			
+		}
+		.last.active{
+			float: left;
 		}
 	}
-}
-.homeSearch {
-	fieldset {
-		margin-left:30px;
+
+.quicktabs_main  {
+	clear: both;
+	padding: 20px 5px 0 5px;
+	position: relative;
+	background: $active_bg;
+	fieldset{
 		border: none;
-		padding: 10px;
-		margin-top:50px;
-		
 	}
 	ul {
 		float: right;
 		li {
-			display: inline;
+	
 			a {
 				color: #fff;
 				text-decoration: none;
