@@ -15,10 +15,10 @@ ul.quicktabs-tabs li {
   font-weight: normal;
   list-style: none;
   height: 2.5em;
-  min-height: 2.95em;
+  min-height: 2.6em;
   padding: 0;
   background: #0b3659;
-  font-size: 2.6em;
+  font-size: 2.2em;
   margin: 0px;
 }
 /* line 29, ../sass/catalog_search.scss */
@@ -28,8 +28,8 @@ ul.quicktabs-tabs li a {
   float: left;
   display: block;
   height: 2.5em;
-  min-height: 2.95em;
-  line-height: 2.95em;
+  min-height: 2.6em;
+  line-height: 2.6em;
   padding: 0 8px;
   text-decoration: none;
   position: relative;
