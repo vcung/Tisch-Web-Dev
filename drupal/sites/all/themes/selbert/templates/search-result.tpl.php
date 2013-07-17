@@ -70,12 +70,12 @@
     <a href="<?php print $url; ?>"><?php print $title; ?></a>
   </h3>
   <?php print render($title_suffix); ?>
-  <div class="search-snippet-info">
+    <?php if ($thumbnail_image): ?>
+      <?php print $thumbnail_image; ?>
+    <?php endif; ?>
+    <div class="search-snippet-info">
     <?php if ($snippet): ?>
       <p class="search-snippet"<?php print $content_attributes; ?>><?php print $snippet; ?></p>
-    <?php endif; ?>
-    <?php if ($info): ?>
-      <p class="search-info"><?php print $info; ?></p>
     <?php endif; ?>
   </div>
 </li>

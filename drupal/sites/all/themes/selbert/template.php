@@ -224,3 +224,32 @@ function selbert_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
+
+/**
+* Process variables for search-result.tpl.php.
+*
+* @see search-result.tpl.php
+*/
+function selbert_preprocess_search_result(&$variables) {
+  $node = $variables['result']['node'];
+  switch($node->type) {
+    case 'article':
+      if($node->field_image) {
+        // Display node-specific image with thumbnail image style
+        $image_field = field_get_items('node', $node, 'field_image');
+        $variables['thumbnail_image'] = theme('image_style', array('path' => $image_field['0']['uri'], 'style_name' => 'thumbnail'));
+      }
+      else {
+        // Display default thumbnail image for article content type
+        $variables['thumbnail_image'] = theme('image', array('path' => drupal_get_path('theme', 'selbert') . '/images/article_thumbnail.png'));        
+      }
+      break;
+    case 'page':
+      // Page content type styles go here
+      // $variables['thumbnail_image'] = ...
+      break;
+    default:
+      // Default for remaining content type styles go here
+      // $variables['thumbnail_image'] = ...
+  }
+}
