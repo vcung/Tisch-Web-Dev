@@ -175,7 +175,7 @@
       </aside><!-- /.sidebars -->
     
    <div class="mobileResources">
-   <?php print $front_resources; ?>
+   <?php print $mobile_hours; ?>
    </div>
   
   </div><!-- /#main -->
