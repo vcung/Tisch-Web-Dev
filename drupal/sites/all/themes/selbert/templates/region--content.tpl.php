@@ -52,7 +52,7 @@
 <!-- End Springshare Chat code //-->
     </div><!--end front chat-->
     </div><!--end first box lowerMainContent-->
-    <?php if ($front_resources): ?>
+    <?php if ($front_resources): ?><!--note from kate: took out variable for now-->
     <div class="lowerMainContent lastBlock">
 
 <?php print $front_resources; ?>
