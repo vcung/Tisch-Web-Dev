@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Top resource box feature.
+ */
+
+include_once 'top_resource_box.features.inc';

@@ -1,0 +1,9 @@
+name = Top resource box
+description = top resources for home page
+core = 7.x
+package = Features
+dependencies[] = boxes
+dependencies[] = ctools
+features[box][] = top_resources
+features[ctools][] = boxes:box:1
+features[features_api][] = api:1
