@@ -34,6 +34,7 @@
     <div id="frontChat">
     <!-- Springshare Chat code //-->
 <!-- Springshare Chat code //-->
+
 <div id="libchat_inline_widget"></div>
 <script type="text/javascript">
  var libchat_inline = {
@@ -51,13 +52,9 @@
 <script type="text/javascript" src="//libanswers.com/js/chat_load_client_in.js"></script>
 <!-- End Springshare Chat code //-->
     </div><!--end front chat-->
-    </div><!--end first box lowerMainContent-->
+    </div><!--end lowerMainContent-->
      <!--note from kate: took out variable for now-->
-    <div class="lowerMainContent lastBlock">
-
-
-    	
-	</div> <!--end 2nd/last block for lowerMainContent-->	
+    <!--end 2nd/last block for lowerMainContent-->	
 <!--end block for top resources on front page-->
 <?php endif; ?> <!--end if Front-->
   		</div><!-- /.region -->
