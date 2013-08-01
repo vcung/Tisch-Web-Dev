@@ -26,9 +26,9 @@
  * @see template_process()
  */
 ?>
-
+<?php if ($is_front): ?>
   <section class="<?php print $classes; ?>">
-    <?php if ($is_front): ?>
+    
     <div id = "frontLeftSide">
       <div class="frontSideBlock frontHours">
       <h3>Today's Hours</h3>
@@ -64,4 +64,10 @@
     
     <?php print $content; ?>
   </section><!-- region__sidebar -->
+
+
+<?php elseif ($content): ?>
+  <div class="<?php print $classes; ?>">
+    <?php print $content; ?>
+  </div><!-- /.region -->
 <?php endif; ?>
