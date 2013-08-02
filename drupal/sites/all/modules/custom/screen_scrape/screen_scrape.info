@@ -1,0 +1,5 @@
+name = Screen Scrape
+description = "Custom code to scrape data from Acquisitions"
+package = Custom
+core = 7.x
+files[] = screen_scrape.module
