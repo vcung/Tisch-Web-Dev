@@ -42,7 +42,7 @@ function screen_scrape_feeds_parser_sources_alter(&$sources, $content_type) {
 
 
 /**
-*Callback functions for custom mapping sources
+*Callback functions for custom mapping sources, customized to work with the format of new acquisitions feed
 *$source: The FeedsSource object being imported.
 *$result: The FeedsParserResult object being mapped from.
 *$key: The key specified in the $sources array in hook_feeds_parser_sources_alter().
@@ -84,7 +84,7 @@ function screen_scrape_get_creationTime(FeedsSource $source, FeedsParserResult $
 
 /************************************************/
 
-//returns the matches to $entryMatch from the html page
+//returns the matches to $entryMatch from the web page
 function return_html_content(&$node, $url, $section, $toSplit, $count, $entryMatch, $name) {
 	$html = file_get_contents($url);
 	//Get only the section of the page that you want
@@ -106,7 +106,7 @@ function return_html_content(&$node, $url, $section, $toSplit, $count, $entryMat
 	}
 }
 
-//returns information on location, call number, and status of the items on the page
+//returns information on location, call number, and status of the items from the source
 function get_availability(&$node, $url, $section, $toSplit, $count, $location, $callNo, $status, $name) {
 	$html = file_get_contents($url);
 	//Get only the section of the page that you want
@@ -114,8 +114,7 @@ function get_availability(&$node, $url, $section, $toSplit, $count, $location, $
 
 	//Separate the page via the explode function into an array
 	$itemsArray = explode($toSplit, $matches[1]);
-		//May not be accurate depending on explode(), $count not used	
-	//echo $itemsCount;
+
 	if (empty($count)) {
 		$itemsCount = count($itemsArray);
 	} else {
@@ -139,6 +138,7 @@ function get_availability(&$node, $url, $section, $toSplit, $count, $location, $
 
 function screen_scrape_node_view($node, $view_mode, $langcode) {
 
+	//switch ($node->nid) {
 	switch ($node->title) {
 	  case 'New Acquisitions' : //Node for New Acquisition
 		$url = 'http://www.library.tufts.edu/SearchResults.asp?library=Tisch+Library&OrderBy=item.author&Search=Search';
