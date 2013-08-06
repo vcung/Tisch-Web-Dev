@@ -108,7 +108,7 @@ function return_html_content(&$node, $url, $section, $toSplit, $count, $entryMat
 }
 
 //returns information on location, call number, and status of the items from the source
-function get_availability(&$node, $url, $section, $toSplit, $count, $location, $callNo, $status, $name) {
+function get_availability(&$node, $url, $section, $toSplit, $offset, $count, $location, $callNo, $status, $name) {
 	$html = drupal_http_request($url)->data;
 	//Get only the section of the page that you want
 	preg_match($section, $html, $matches);
@@ -123,17 +123,27 @@ function get_availability(&$node, $url, $section, $toSplit, $count, $location, $
 	}
 	$node->content[$name] = array();
 
-	for ($i=0; $i< $itemsCount; $i++) {
+	$available = 0;
+	
+	for ($i=$offset; $i< $itemsCount; $i++) {
 		preg_match($location, $itemsArray[$i], $loc);
 		preg_match($callNo, $itemsArray[$i], $no);
 		preg_match($status, $itemsArray[$i], $stat);
-
-		$node->content[$name][$i] = array (
+		
+		if (trim($stat[1]) == 'AVAILABLE') {
+			$available+=1;
+		}
+		
+	/***	$node->content[$name][$i] = array (
 			'#type' => 'markup',
 			'#prefix' => '<p>'. $loc[1] . '<br>' . $no[1] . '<br>' . $stat[1],
 			'#suffix' => '</p>'
 		);
+		***/
 	}
+	
+	return $available;
+	//$node->content['num_available']=array( '#prefix'=>'<p>'.$available.'</p>');
 }
 
 
@@ -185,12 +195,14 @@ function screen_scrape_node_view($node, $view_mode, $langcode) {
 		$status = '/<!-- field % -->&nbsp\;(.*?)<\/td>/s';
 		
 		//return_html_content($node, $url, $section, $toSplit, $count, $entryMatch, $name);
-		get_availability($node, $url, $section, $toSplit, $count, $location, $callNo, $status, $name);
-		
+		$bike=get_availability($node, $url, $section, $toSplit, 0, $count, $location, $callNo, $status, $name);
+		$node->content['tech']=array(
+			'#prefix' => '<p>'.$bike.' Bikes</p>'
+			);
 		break;
 	  
 	  case 'Laptops':
-		$url = 'http://library.tufts.edu/search~S1?/tlaptop/tlaptop/1%2C12%2C13%2CB/frameset&FF=tlaptop+and+peripherals&1%2C1%2C';
+		$url = 'http://library.tufts.edu/record=b1684189~S1';
 		$section = '/<tr  class=\"bibItemsEntry\">(.*)<\/tr>/s';
 		$toSplit = '<tr  class="bibItemsEntry">';
 	
@@ -201,15 +213,128 @@ function screen_scrape_node_view($node, $view_mode, $langcode) {
 		$name='laptop';
 		$count = ''; 
 	
-		get_availability($node, $url, $section, $toSplit, $count, $location, $callNo, $status, $name);
+		$laptop=get_availability($node, $url, $section, $toSplit, 5, $count, $location, $callNo, $status, $name);
+		$node->content['tech']=array(
+			'#prefix' => '<p>'.$laptop.' Laptops</p>'
+			);
 		break;
 	  
-	  
+	  case 'Available Technology':
+		/**Bike**/
+		$url = 'http://library.tufts.edu/search~S1?/.b2133185/.b2133185/1,1,1,B/holdings~2133185&FF=&1,0,';
+		$section = '/<tr  class=\"bibItemsEntry\">(.*)<\/tr>/s';
+		$toSplit = '<tr  class="bibItemsEntry">';
+		$count = 30;
+		$name='bike';
+		$location = '/<!-- field 1 -->&nbsp\;(.*?)<\/td>/s';
+		$callNo = '/<!-- field C -->&nbsp\;(.*?)<!-- field # -->&nbsp\;<\/td>/s';
+		$status = '/<!-- field % -->&nbsp\;(.*?)<\/td>/s';
+		$bike = get_availability($node, $url, $section, $toSplit, 0, $count, $location, $callNo, $status, $name);
+		
+		/**Laptop**/
+		$url = 'http://library.tufts.edu/record=b1684189~S1';
+		$callNo = '/<!-- field v -->&nbsp\;(.*?)<!-- field # -->&nbsp\;<\/td>/s';
+		$name='laptop';
+		$count = ''; 
+		$laptop= get_availability($node, $url, $section, $toSplit, 5, $count, $location, $callNo, $status, $name);
+		
+		/**Ipad**/
+		$url = 'http://library.tufts.edu/record=b2307230~S2';
+		$callNo = '/<!-- field C -->&nbsp\;(.*?)<!-- field # -->&nbsp\;<\/td>/s';
+		$name='laptop';
+		$count = ''; 
+		$ipad= get_availability($node, $url, $section, $toSplit, 0, $count, $location, $callNo, $status, $name);
+		
+		/**Video Camera (Camcorder)**/
+		$url = 'http://library.tufts.edu/record=b2032147~S1';
+		$callNo = '/<!-- field v -->&nbsp\;(.*?)<!-- field # -->&nbsp\;<\/td>/s';
+		$name='laptop';
+		$count = ''; 
+		$camcorder= get_availability($node, $url, $section, $toSplit, 0, $count, $location, $callNo, $status, $name);
+		
+		/**External Hard Drive**/
+		$url = 'http://library.tufts.edu/record=b2321148~S1';
+		$callNo = '/<!-- field v -->&nbsp\;(.*?)<!-- field # -->&nbsp\;<\/td>/s';
+		$name='harddrive';
+		$count = ''; 
+		$harddrive= get_availability($node, $url, $section, $toSplit, 0, $count, $location, $callNo, $status, $name);
+		
+		$node->content['tech']=array(
+			'#markup' => '<p>'.$bike.' Bikes</p>
+						<p>'.$camcorder.' Video Cameras</p>
+						<p>'.$harddrive.' External Hard Drive</p>
+						<p>'.$ipad.' Ipads</p>
+						<p>'.$laptop.' Laptops</p>	
+							'
+			);
+	  break;
 	  default:
 	}
 	
 }
 
+function screen_scrape_block_view_alter(&$data, $block) {
+	
+	switch ($block->title) {
+		case ('Available Technology'): //delta - 12
+		
+		/**Bike**/
+		$url = 'http://library.tufts.edu/search~S1?/.b2133185/.b2133185/1,1,1,B/holdings~2133185&FF=&1,0,';
+		$section = '/<tr  class=\"bibItemsEntry\">(.*)<\/tr>/s';
+		$toSplit = '<tr  class="bibItemsEntry">';
+		$count = 30;
+		$name='bike';
+		$location = '/<!-- field 1 -->&nbsp\;(.*?)<\/td>/s';
+		$callNo = '/<!-- field C -->&nbsp\;(.*?)<!-- field # -->&nbsp\;<\/td>/s';
+		$status = '/<!-- field % -->&nbsp\;(.*?)<\/td>/s';
+		$bike = sprintf("%02s", get_availability($node, $url, $section, $toSplit, 0, $count, $location, $callNo, $status, $name));
+		
+		/**Laptop**/
+		$url = 'http://library.tufts.edu/record=b1684189~S1';
+		$callNo = '/<!-- field v -->&nbsp\;(.*?)<!-- field # -->&nbsp\;<\/td>/s';
+		$name='laptop';
+		$count = ''; 
+		$num = 
+		$laptop= sprintf("%02s", get_availability($node, $url, $section, $toSplit, 5, $count, $location, $callNo, $status, $name));
+		
+		/**Ipad**/
+		$url = 'http://library.tufts.edu/record=b2307230~S2';
+		$callNo = '/<!-- field C -->&nbsp\;(.*?)<!-- field # -->&nbsp\;<\/td>/s';
+		$name='laptop';
+		$count = ''; 
+		$ipad= sprintf("%02s", get_availability($node, $url, $section, $toSplit, 0, $count, $location, $callNo, $status, $name));
+		
+		/**Video Camera (Camcorder)**/
+		$url = 'http://library.tufts.edu/record=b2032147~S1';
+		$callNo = '/<!-- field v -->&nbsp\;(.*?)<!-- field # -->&nbsp\;<\/td>/s';
+		$name='laptop';
+		$count = ''; 
+		$camcorder= sprintf("%02s", get_availability($node, $url, $section, $toSplit, 0, $count, $location, $callNo, $status, $name));
+		
+		/**External Hard Drive**/
+		$url = 'http://library.tufts.edu/record=b2321148~S1';
+		$callNo = '/<!-- field v -->&nbsp\;(.*?)<!-- field # -->&nbsp\;<\/td>/s';
+		$name='harddrive';
+		$count = ''; 
+		$harddrive= sprintf("%02s", get_availability($node, $url, $section, $toSplit, 0, $count, $location, $callNo, $status, $name));
+		
+		$data['content']=array(
+			'#markup' => '<p>'.$bike.' Bikes</p>
+						<p>'.$camcorder.' Video Cameras</p>
+						<p>'.$harddrive.' External Hard Drive</p>
+						<p>'.$ipad.' Ipads</p>
+						<p>'.$laptop.' Laptops</p>	
+							'
+			);
+			
+		break;
+	
+	
+	default:
+	}
+
+
+}
 
 
 
