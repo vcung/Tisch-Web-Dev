@@ -83,14 +83,14 @@ function event_content_type_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-event-field_audience_event'.
-  $fields['node-event-field_audience_event'] = array(
+  // Exported field: 'node-event-field_audience'.
+  $fields['node-event-field_audience'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_audience_event',
+      'field_name' => 'field_audience',
       'foreign keys' => array(
         'tid' => array(
           'columns' => array(
@@ -119,16 +119,15 @@ function event_content_type_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'event',
-      'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'What type of user are you gearing this event towards? For example, is it meant for an undergraduate audience? Or perhaps for people who aren\'t currently at Tufts? I',
+      'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'above',
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 5,
+          'weight' => 6,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -138,18 +137,18 @@ function event_content_type_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_audience_event',
+      'field_name' => 'field_audience',
       'label' => 'Audience',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
       'widget' => array(
-        'active' => 1,
-        'module' => 'options',
+        'active' => 0,
+        'module' => 'multiselect',
         'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '1',
+        'type' => 'multiselect',
+        'weight' => '2',
       ),
     ),
   );
@@ -466,7 +465,6 @@ function event_content_type_field_default_fields() {
   t('Image');
   t('Location');
   t('Type of event');
-  t('What type of user are you gearing this event towards? For example, is it meant for an undergraduate audience? Or perhaps for people who aren\'t currently at Tufts? I');
 
   return $fields;
 }
