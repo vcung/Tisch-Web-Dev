@@ -1,21 +1,21 @@
 <?php
 /**
  * @file
- * features_libguides.features.taxonomy.inc
+ * features_test.features.taxonomy.inc
  */
 
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function features_libguides_taxonomy_default_vocabularies() {
+function features_test_taxonomy_default_vocabularies() {
   return array(
-    'specialty' => array(
-      'name' => 'Subjects',
-      'machine_name' => 'specialty',
-      'description' => '',
-      'hierarchy' => '1',
+    'taxonomy_features_test' => array(
+      'name' => 'Taxonomy Features Test',
+      'machine_name' => 'taxonomy_features_test',
+      'description' => 'Taxonomy vocabulary',
+      'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => '0',
+      'weight' => 0,
       'rdf_mapping' => array(
         'rdftype' => array(
           0 => 'skos:ConceptScheme',

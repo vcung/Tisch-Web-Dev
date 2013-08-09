@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Features - news or event feature.
- */
-
-include_once 'features_news_or_event.features.inc';
