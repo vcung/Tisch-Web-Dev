@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Feature - content type equipment feature.
- */
-
-include_once 'feature_content_type_equipment.features.inc';
