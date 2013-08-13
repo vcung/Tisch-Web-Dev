@@ -77,9 +77,25 @@ font-size:1em;
  
     margin: 1% 5% 0% 0%;
   } 
-
-
-
+//added by Kate to theme third-level menus in sidebars
+#block-menu-block-3 ul.menu{
+    position: relative; 
+    left: 0; 
+    z-index:1;
+    li {
+      background: #f6f6f6;
+      color: #000; 
+      border-bottom: 1px solid #ccc;
+      float: left; 
+      font-size:0.7em;
+      padding:5%;
+      width:100%;
+      a {
+        width: 100%;
+        display: inline-block;  /* IE 6 & 7 Needs Inline Block */
+      }
+}
+}
 #block-menu-menu-NAME { /* Custom menu block */
 }
 
