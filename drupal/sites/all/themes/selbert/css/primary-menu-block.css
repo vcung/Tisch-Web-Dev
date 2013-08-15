@@ -1,62 +1,54 @@
-/* line 2, ../sass/primary-menu-block.scss */
+@media all and (max-width: 480px) {
+  /* line 4, ../sass/primary-menu-block.scss */
+  #siteNavigation {
+    display: none;
+  }
+}
+
+/* line 10, ../sass/primary-menu-block.scss */
 #siteNavigation a {
   text-decoration: none;
 }
 
 /* LEVEL ONE */
-/* line 5, ../sass/primary-menu-block.scss */
+/* line 13, ../sass/primary-menu-block.scss */
 #siteNavigation ul.menu {
+  text-transform: Uppercase;
   position: relative;
   /*LEVEL TWO*/
 }
-/* line 7, ../sass/primary-menu-block.scss */
+/* line 16, ../sass/primary-menu-block.scss */
 #siteNavigation ul.menu li {
   padding-left: 5px;
   padding-right: 5px;
   float: left;
-  background: #fff;
 }
-/* line 12, ../sass/primary-menu-block.scss */
+/* line 21, ../sass/primary-menu-block.scss */
 #siteNavigation ul.menu li a {
   display: block;
-  color: #222;
-}
-/* line 17, ../sass/primary-menu-block.scss */
-#siteNavigation ul.menu a:hover {
-  color: #000;
-}
-/* line 18, ../sass/primary-menu-block.scss */
-#siteNavigation ul.menu a:active {
-  color: #fff;
-}
-/* line 19, ../sass/primary-menu-block.scss */
-#siteNavigation ul.menu li.hover, #siteNavigation ul.menu li:hover {
-  background: #ccc;
-  color: black;
-  position: relative;
-}
-/* line 24, ../sass/primary-menu-block.scss */
-#siteNavigation ul.menu li.hover a {
-  color: black;
 }
 /* line 27, ../sass/primary-menu-block.scss */
+#siteNavigation ul.menu li.hover, #siteNavigation ul.menu li:hover {
+  position: relative;
+}
+/* line 34, ../sass/primary-menu-block.scss */
 #siteNavigation ul.menu ul {
   width: 220px;
   visibility: hidden;
   position: absolute;
+  z-index: 9999;
   left: 0;
 }
-/* line 32, ../sass/primary-menu-block.scss */
+/* line 41, ../sass/primary-menu-block.scss */
 #siteNavigation ul.menu ul li {
   background: #f6f6f6;
-  color: #000;
   border-bottom: 1px solid #ccc;
   float: none;
   font-size: 0.7em;
   padding: 5px;
   margin: 0px;
 }
-/* line 40, ../sass/primary-menu-block.scss */
+/* line 49, ../sass/primary-menu-block.scss */
 #siteNavigation ul.menu ul li a {
   width: 100%;
   display: inline-block;
@@ -64,13 +56,13 @@
 }
 
 /*LEVEL THREE*/
-/* line 49, ../sass/primary-menu-block.scss */
+/* line 58, ../sass/primary-menu-block.scss */
 #siteNavigation ul.menu ul ul {
   left: 100%;
   top: 0;
 }
 
-/* line 50, ../sass/primary-menu-block.scss */
+/* line 60, ../sass/primary-menu-block.scss */
 #siteNavigation ul.menu li:hover > ul {
   visibility: visible;
 }

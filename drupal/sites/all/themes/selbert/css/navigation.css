@@ -38,18 +38,17 @@ li a.active {
 #navigation {
   /* overflow: hidden; */
   /* Sometimes you want to prevent overlapping with main div. */
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #808080), color-stop(100%, #000000));
+  background-image: -webkit-linear-gradient(#808080, #000000);
+  background-image: -moz-linear-gradient(#808080, #000000);
+  background-image: -o-linear-gradient(#808080, #000000);
+  background-image: linear-gradient(#808080, #000000);
 }
-@media all and (max-width: 480px) {
-  /* line 47, ../sass/navigation.scss */
-  #navigation {
-    display: none;
-  }
-}
-/* line 54, ../sass/navigation.scss */
+/* line 58, ../sass/navigation.scss */
 #navigation .block {
   margin-bottom: 0;
 }
-/* line 59, ../sass/navigation.scss */
+/* line 63, ../sass/navigation.scss */
 #navigation .block-menu .block-title,
 #navigation .block-menu-block .block-title {
   position: absolute !important;
@@ -58,7 +57,7 @@ li a.active {
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }
-/* line 64, ../sass/navigation.scss */
+/* line 68, ../sass/navigation.scss */
 #navigation ul.links,
 #navigation ul.menu {
   /* Menu block links */
@@ -66,7 +65,7 @@ li a.active {
   padding: 0;
   text-align: left;
 }
-/* line 69, ../sass/navigation.scss */
+/* line 74, ../sass/navigation.scss */
 #navigation ul.links li,
 #navigation ul.menu li {
   /* A simple method to get navigation links to appear in one line. */
@@ -79,7 +78,7 @@ li a.active {
 /*
  * Main menu and Secondary menu links
  */
-/* line 88, ../sass/navigation.scss */
+/* line 94, ../sass/navigation.scss */
 #secondary-menu {
   float: right;
 }
@@ -93,16 +92,16 @@ li a.active {
  * Drupal core has limited ways in which it can display its menus. To get around
  * these limitations, see http://drupal.org/project/menu_block
  */
-/* line 106, ../sass/navigation.scss */
+/* line 112, ../sass/navigation.scss */
 .block-menu-block {
   /* overflow: hidden; */
   /* Sometimes you want to prevent overlapping with main div. */
 }
-/* line 109, ../sass/navigation.scss */
+/* line 115, ../sass/navigation.scss */
 .block-menu-block .block {
   margin-bottom: 0;
 }
-/* line 114, ../sass/navigation.scss */
+/* line 120, ../sass/navigation.scss */
 .block-menu-block .block-menu .block-title,
 .block-menu-block .block-menu-block .block-title {
   position: absolute !important;
@@ -111,7 +110,7 @@ li a.active {
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }
-/* line 119, ../sass/navigation.scss */
+/* line 125, ../sass/navigation.scss */
 .block-menu-block ul.links,
 .block-menu-block ul.menu {
   /* Menu block links */
@@ -119,7 +118,7 @@ li a.active {
   padding: 0;
   text-align: left;
 }
-/* line 124, ../sass/navigation.scss */
+/* line 130, ../sass/navigation.scss */
 .block-menu-block ul.links li,
 .block-menu-block ul.menu li {
   /* A simple method to get navigation links to appear in one line. */

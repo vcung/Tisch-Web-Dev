@@ -46,10 +46,14 @@ li a.active {
 
 #navigation {
   /* overflow: hidden; */ /* Sometimes you want to prevent overlapping with main div. */
+//added by KB 
 
-@media all and (max-width:480px){
-  display:none;
-}
+  @include background-image(linear-gradient(gray, black));
+//background-color: black;
+//@media all and (max-width:480px){
+  //..display:none;
+//}
+
 
   .block {
     margin-bottom: 0;
@@ -66,6 +70,7 @@ li a.active {
     padding: 0;
     text-align: left;
 
+
     li { /* A simple method to get navigation links to appear in one line. */
       float: left;
       padding: 0 10px 0 0;
@@ -76,6 +81,7 @@ li a.active {
 }
 
 .region-navigation {
+  
 }
 
 /*
