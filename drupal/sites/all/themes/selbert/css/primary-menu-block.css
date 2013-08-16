@@ -48,21 +48,26 @@
   padding: 5px;
   margin: 0px;
 }
-/* line 49, ../sass/primary-menu-block.scss */
+/* line 48, ../sass/primary-menu-block.scss */
 #siteNavigation ul.menu ul li a {
   width: 100%;
+  color: black;
   display: inline-block;
   /* IE 6 & 7 Needs Inline Block */
 }
+/* line 53, ../sass/primary-menu-block.scss */
+#siteNavigation ul.menu ul li a:hover {
+  color: orange;
+}
 
 /*LEVEL THREE*/
-/* line 58, ../sass/primary-menu-block.scss */
+/* line 61, ../sass/primary-menu-block.scss */
 #siteNavigation ul.menu ul ul {
   left: 100%;
   top: 0;
 }
 
-/* line 60, ../sass/primary-menu-block.scss */
+/* line 63, ../sass/primary-menu-block.scss */
 #siteNavigation ul.menu li:hover > ul {
   visibility: visible;
 }

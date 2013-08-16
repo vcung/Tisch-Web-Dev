@@ -40,7 +40,6 @@
 
 		li {
 			background: #f6f6f6;
-			//color: #000;
 			border-bottom: 1px solid #ccc;
 			float: none; 
 			font-size:0.7em;
@@ -48,7 +47,11 @@
 			margin:0px;
 			a {
 			  width: 100%;
+			  color: black;
 			  display: inline-block;  /* IE 6 & 7 Needs Inline Block */
+			}
+			a:hover {
+				color:orange;
 			}
 		}
     }
