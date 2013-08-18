@@ -141,21 +141,24 @@ li a.active {
   margin: 0;
   padding: 0;
   text-align: left;
+  font-size: 0.8125em;
+  line-height: 1.84615em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003118}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003119}}
 #navigation ul.links li,
 #navigation ul.menu li {
   /* A simple method to get navigation links to appear in one line. */
   float: left;
-  padding: 0 10px 0 0;
+  padding: 5px 10px 0 0;
   list-style-type: none;
   list-style-image: none;
+  border-right: 1px solid black;
 }
 
 /*
  * Main menu and Secondary menu links
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003138}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003140}}
 #secondary-menu {
   float: right;
 }
@@ -169,16 +172,16 @@ li a.active {
  * Drupal core has limited ways in which it can display its menus. To get around
  * these limitations, see http://drupal.org/project/menu_block
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003156}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003158}}
 .block-menu-block {
   /* overflow: hidden; */
   /* Sometimes you want to prevent overlapping with main div. */
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003159}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003161}}
 .block-menu-block .block {
   margin-bottom: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003164}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003166}}
 .block-menu-block .block-menu .block-title,
 .block-menu-block .block-menu-block .block-title {
   position: absolute !important;
@@ -187,7 +190,7 @@ li a.active {
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003169}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003171}}
 .block-menu-block ul.links,
 .block-menu-block ul.menu {
   /* Menu block links */
@@ -195,7 +198,7 @@ li a.active {
   padding: 0;
   text-align: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003174}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003176}}
 .block-menu-block ul.links li,
 .block-menu-block ul.menu li {
   /* A simple method to get navigation links to appear in one line. */
