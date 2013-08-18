@@ -62,6 +62,11 @@ height:10%;
 #block-forum-new { /* "New forum topics" block */
 }
 
+.happeningBlock {
+
+  //background-color:white;
+}
+
 #block-locale-language { /* Language switcher block */
 }
 
@@ -162,8 +167,23 @@ color:white;
 #block-search-form { /* "Search form" block */
 visibility:hidden;
 @media all and (min-width:600px) {
+  /* Span 2 column, starting in 6th column from left. */
+  @include zen-clear();
+   $zen-column-count: 2;
+  $zen-gutter-width: 5px;
+  @include zen-grid-container;
+  width: 29%;
+  
+  float: right;
+
+  margin-right:-8px;
  visibility:visible;
  float:right;
+ input[type="text"], textarea {
+  background-color: $header_bg_blue;
+  width: 80%;
+  height: 2em;
+ }
  }
 }
 
@@ -202,3 +222,6 @@ visibility:hidden;
 
 #block-user-online { /* "Who's online" block for a list of the online users */
 }
+//#block-views-latest-tweet-block, #block-views-news-block-for-first-page-block, #block-views-96336209a120729401f35b3836b5ef54, #block-views-recently-arrived-block-block{
+  //background-color: white;
+//}

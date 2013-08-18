@@ -9,14 +9,14 @@
 /*
  * Body
  */
-/* line 17, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\0000317}}
 body {
   margin: 0;
   padding: 0;
   background-color: #e5e4e2;
 }
 
-/* line 23, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\0000323}}
 #page {
   background-color: #e5e4e2;
 }
@@ -25,11 +25,11 @@ body {
  * The skip-link link will be completely hidden until a user tabs to the link.
  * See the element-focusable rule in system.base.css.
  */
-/* line 32, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\0000332}}
 #skip-link {
   margin: 0;
 }
-/* line 36, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\0000336}}
 #skip-link a,
 #skip-link a:visited {
   display: block;
@@ -43,7 +43,7 @@ body {
 /*
  * Header
  */
-/* line 50, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\0000350}}
 #header {
   background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #6699cc), color-stop(100%, #3172ae));
   background-image: -webkit-linear-gradient(left, #6699cc, #3172ae);
@@ -52,58 +52,58 @@ body {
   background-image: linear-gradient(left, #6699cc, #3172ae);
 }
 
-/* line 55, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\0000355}}
 #logo {
   /* Wrapping link for logo */
   float: left;
   margin: 0;
   padding: 0;
 }
-/* line 60, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\0000360}}
 #logo img {
   vertical-align: bottom;
 }
 
-/* line 65, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\0000365}}
 #name-and-slogan {
   /* Wrapper for website name and slogan */
   float: left;
 }
 
-/* line 69, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\0000369}}
 #site-name {
   /* The name of the website */
   margin: 0;
   font-size: 2em;
   line-height: 1.5em;
 }
-/* line 75, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\0000375}}
 #site-name a:link,
 #site-name a:visited {
   color: #000;
   text-decoration: none;
 }
-/* line 81, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\0000381}}
 #site-name a:hover,
 #site-name a:focus {
   text-decoration: underline;
 }
 
-/* line 86, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\0000386}}
 #site-slogan {
   /* The slogan (or tagline) of a website */
   margin: 0;
   font-size: 1em;
 }
 
-/* line 91, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\0000391}}
 .region-header {
   /* Wrapper for any blocks placed in the header region */
   clear: both;
   /* Clear the logo */
 }
 
-/* line 95, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\0000395}}
 #askHeader {
   float: right;
 }
@@ -114,25 +114,25 @@ body {
 /*
  * Content
  */
-/* line 110, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003110}}
 #content {
   background-color: white;
 }
-/* line 113, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003113}}
 #content #quicktabs-home_page_search_box {
   border: 1px black solid;
 }
 
-/* line 122, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003122}}
 .breadcrumb {
   /* The path to the current page in the form of a list of links */
 }
-/* line 123, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003123}}
 .breadcrumb ol {
   margin: 0;
   padding: 0;
 }
-/* line 127, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003127}}
 .breadcrumb li {
   display: inline;
   list-style-type: none;
@@ -140,7 +140,7 @@ body {
   padding: 0;
 }
 
-/* line 140, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003140}}
 h1.title,
 h2.node-title,
 h2.block-title,
@@ -151,37 +151,37 @@ h3.title {
   margin: 0;
 }
 
-/* line 144, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003144}}
 tr.even {
   /* Some tables have rows marked even or odd. */
   /* background-color: #eee; */
   /* Drupal core uses a #eee background */
 }
 
-/* line 148, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003148}}
 tr.odd {
   /* background-color: #eee; */
   /* Drupal core uses a #eee background */
 }
 
-/* line 152, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003152}}
 div.messages {
   /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */
   margin: 1.5em 0;
   /* Drupal core uses "6px 0" margin */
 }
-/* line 155, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003155}}
 div.messages ul {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-/* line 161, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003161}}
 div.status {
   /* Normal priority messages */
 }
 
-/* line 165, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003165}}
 div.warning,
 tr.warning {
   /* Medium priority messages */
@@ -189,58 +189,58 @@ tr.warning {
   /* Drupal core uses: 1px solid #f0c020 */
 }
 
-/* line 170, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003170}}
 div.error,
 tr.error {
   /* High priority messages. See also the .error declaration below. */
 }
 
-/* line 173, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003173}}
 .error {
   /* Errors that are separate from div.messages status messages. */
   /* color: #e55; */
   /* Drupal core uses a #e55 background */
 }
 
-/* line 177, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003177}}
 .warning {
   /* Warnings that are separate from div.messages status messages. */
   /* color: #e09010; */
   /* Drupal core uses a #e09010 background */
 }
 
-/* line 181, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003181}}
 .tabs {
   /* See also the tabs.css file. */
 }
 
-/* line 184, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003184}}
 .region-help {
   /* Help text on a page */
 }
 
-/* line 187, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003187}}
 .more-help-link {
   /* Link to more help */
 }
 
-/* line 190, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003190}}
 .region-content {
   /* Wrapper for the actual page content */
 }
 
-/* line 193, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003193}}
 #mobile-hours {
   background: gainsboro;
 }
 @media all and (min-width: 480px) {
-  /* line 193, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003193}}
   #mobile-hours {
     display: none;
   }
 }
 
-/* line 201, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003201}}
 .lowerMainContent {
   float: left;
   margin: 0 0.5% 2% 0;
@@ -249,23 +249,23 @@ tr.error {
   border: gainsboro 1px dashed;
 }
 @media all and (max-width: 480px) {
-  /* line 201, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003201}}
   .lowerMainContent {
     display: none;
   }
 }
-/* line 213, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003213}}
 .lowerMainContent h4 {
   margin: 0px 0px 2px 0px;
 }
-/* line 218, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003218}}
 .lowerMainContent ul {
   list-style-type: none;
   margin: 0px 0px 1% 0px;
   padding: 0px;
 }
 
-/* line 232, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003232}}
 .lastBlock {
   margin-left: 1.2%;
   border: 1px dashed gainsboro;
@@ -274,19 +274,19 @@ tr.error {
 
 /*KB added some grid items for the highlight area on the home page*/
 @media all and (max-width: 480px) {
-  /* line 242, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003242}}
   #highlightArea {
     display: none;
   }
 }
 @media all and (min-width: 480px) and (max-width: 750px) {
-  /* line 253, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003253}}
   .region-highlight-one, .region-highlight-two, .region-highlight-three {
     height: 150px;
     border: 1px blue dotted;
   }
 
-  /* line 258, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003258}}
   .region-highlight-one {
     clear: left;
     float: left;
@@ -302,7 +302,7 @@ tr.error {
     word-wrap: break-word;
   }
 
-  /* line 263, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003263}}
   .region-highlight-two {
     clear: left;
     float: left;
@@ -318,7 +318,7 @@ tr.error {
     word-wrap: break-word;
   }
 
-  /* line 268, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003268}}
   .region-highlight-three {
     clear: left;
     float: left;
@@ -336,26 +336,26 @@ tr.error {
 }
 /*end narrow screen for homepage highlight area, start larger screen */
 @media all and (min-width: 751px) {
-  /* line 281, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003281}}
   #highlightArea {
     clear: left;
     width: 99.5%;
     margin: 0 auto;
   }
-  /* line 52, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass-extensions\/zen-grids\/stylesheets\/zen\/_grids\.scss}line{font-family:\0000352}}
   #highlightArea:before, #highlightArea:after {
     content: "";
     display: table;
   }
-  /* line 56, ../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass-extensions\/zen-grids\/stylesheets\/zen\/_grids\.scss}line{font-family:\0000356}}
   #highlightArea:after {
     clear: both;
   }
-  /* line 289, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003289}}
   #highlightArea .region-highlight-one, #highlightArea .region-highlight-two, #highlightArea .region-highlight-three {
     background-color: gainsboro;
   }
-  /* line 292, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003292}}
   #highlightArea .region-highlight-one {
     float: left;
     width: 33.33333%;
@@ -370,7 +370,7 @@ tr.error {
     word-wrap: break-word;
     border-right: 5px solid white;
   }
-  /* line 298, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003298}}
   #highlightArea .region-highlight-two {
     float: left;
     width: 33.33333%;
@@ -386,7 +386,7 @@ tr.error {
     border-right: 2.5px solid white;
     border-left: 2.5px solid white;
   }
-  /* line 305, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003305}}
   #highlightArea .region-highlight-three {
     float: left;
     width: 33.33333%;
@@ -423,42 +423,42 @@ tr.error {
 *  margin-left: 2%;
 *}
 */
-/* line 333, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003333}}
 ul.inline {
   /* List of links generated by theme_links() */
   display: inline;
   padding: 0;
 }
-/* line 337, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003337}}
 ul.inline li {
   display: inline;
   list-style-type: none;
   padding: 0 1em 0 0;
 }
 
-/* line 343, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003343}}
 span.field-label {
   /* The inline field label used by the Fences module */
   padding: 0 1em 0 0;
 }
 
-/* line 347, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003347}}
 .item-list .pager {
   /* A list of page numbers when more than 1 page of content is available */
   padding: 0;
 }
-/* line 350, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003350}}
 .item-list .pager li {
   /* Each page number in the pager list */
   padding: 0 0.5em;
 }
 
-/* line 355, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003355}}
 .feed-icon {
   /* The link to the RSS or Atom feed for the current list of content */
 }
 
-/* line 358, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003358}}
 .more-link {
   /* Aggregator, blog, and forum more link */
 }
@@ -469,29 +469,29 @@ span.field-label {
  * Remember to NOT add padding or margin to your .region-sidebar-first
  * (see the layout.css file.)
  */
-/* line 369, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003369}}
 .region-sidebar-first {
   outline: none;
 }
 @media all and (max-width: 480px) {
-  /* line 372, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003372}}
   .region-sidebar-first .frontHours {
     display: none;
   }
 }
 
-/* line 387, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003387}}
 .frontSideBlock {
   background-color: gainsboro;
   padding: 0.5px 1px 0.5px 5px;
   margin: 5px 0px 10px 0px;
 }
 
-/* line 396, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003396}}
 #frontLeftSide ul li {
   list-style: none;
 }
-/* line 399, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003399}}
 #frontLeftSide a {
   text-decoration: none;
 }
@@ -502,7 +502,15 @@ span.field-label {
  * Remember to NOT add padding or margin to your .region-sidebar-second
  * (see the layout.css file.)
  */
-/* line 416, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003414}}
+.happening {
+  background-color: #e5e4e2;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003416}}
+.happening div {
+  background-color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003422}}
 .happening hr {
   border-color: gainsboro;
   border-style: dashed;
@@ -513,8 +521,8 @@ span.field-label {
 }
 
 @media all and (max-width: 480px) {
-  /* line 425, ../sass/pages.scss */
-  .recentArrival {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003431}}
+  #block-views-recently-arrived-block-block {
     display: none;
   }
 }
@@ -523,7 +531,7 @@ span.field-label {
  * Footer
  */
 @media all and (min-width: 480px) {
-  /* line 437, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003443}}
   .mobileResources {
     display: none;
   }
@@ -532,7 +540,7 @@ span.field-label {
 /*
  * Page bottom
  */
-/* line 453, ../sass/pages.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003459}}
 .region-bottom {
   /* Wrapper for any blocks placed in the page bottom region */
 }

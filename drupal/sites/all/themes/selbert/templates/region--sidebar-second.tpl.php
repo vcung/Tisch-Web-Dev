@@ -34,12 +34,12 @@
     <?php print $content; ?>
 
 </div>
-
+<!-- Taken out; replaced by view block
 <div class="recentArrival">
   <hr>
   <h4>RECENT ARRIVALS</h4>
 </div>  
-
+-->
 <?php endif; ?><!--end content for front page-->
   	
   	

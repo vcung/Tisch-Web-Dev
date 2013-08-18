@@ -408,10 +408,16 @@ span.field-label { /* The inline field label used by the Fences module */
  */
 
 .region-sidebar-second {
-    
+
 }
 
 .happening {
+
+  div {
+   background-color: white;
+  }
+
+  background-color:$page-color;
 
   hr {border-color: $light-gray;
   border-style: dashed;
@@ -422,7 +428,7 @@ span.field-label { /* The inline field label used by the Fences module */
   }
 }
 
-.recentArrival {
+#block-views-recently-arrived-block-block, {
 
 //hide recentArrivals on smaller screen, 
     @media all and (max-width:480px){
