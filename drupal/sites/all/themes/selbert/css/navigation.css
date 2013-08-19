@@ -9,11 +9,17 @@
 #askHeader {
   /* Span 2 column, starting in 6th column from left. */
   clear: left;
-  width: 29%;
-  background-color: black;
-  margin: 2px;
-  float: right;
+  width: 28.80%;
+  background-color: gray;
+  margin-bottom: 3px;
   margin-right: -8px;
+  margin-top: 5px;
+  float: right;
+  padding: 5px 0px 5px 0px;
+  text-align: center;
+  font-size: 0.75em;
+  line-height: 2em;
+  line-height: 1.2em;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass-extensions\/zen-grids\/stylesheets\/zen\/_grids\.scss}line{font-family:\0000352}}
 #askHeader:before, #askHeader:after {
@@ -24,13 +30,28 @@
 #askHeader:after {
   clear: both;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\0000327}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\0000332}}
+#askHeader div {
+  display: inline;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\0000335}}
+#askHeader a:link {
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\0000341}}
 #askHeader #ask {
   background-color: gray;
-  text-align: center;
-  margin-bottom: 1px;
+  color: white;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\0000346}}
+#askHeader #ask hr {
+  border: 0;
+  height: 1px;
+  background: #333;
+  margin: 0px;
+  padding: 0px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\0000356}}
 #askHeader #audtopic {
   /* Span 2 column, starting in 6th column from left. */
   float: left;
@@ -44,9 +65,8 @@
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
-  background-color: gray;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\0000337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\0000363}}
 #askHeader #aud {
   float: left;
   width: 50%;
@@ -62,9 +82,8 @@
   border: 1px black;
   background-color: gray;
   width: 50%;
-  border-right: 1px black;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\0000374}}
 #askHeader #topic {
   float: left;
   width: 50%;
@@ -77,24 +96,28 @@
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
-  border: 1px black;
+  color: white;
   background-color: gray;
   width: 50%;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\0000381}}
+#askHeader #topic a:link {
+  color: white;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\0000357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\0000389}}
 ul li.expanded {
   list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABJJREFUeJxj+MdQw2DBIMAABgAUsAHD3c3BpwAAAABJRU5ErkJggg==');
   list-style-type: circle;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\0000364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\0000396}}
 ul li.collapsed {
   list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHAQMAAAD+nMWQAAAABlBMVEX///8AAABVwtN+AAAAAXRSTlMAQObYZgAAABFJREFUCB1jVmCGQClmEWYOAAZ8AMy3HPLXAAAAAElFTkSuQmCC');
   list-style-type: disc;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\0000371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003103}}
 ul li.leaf {
   list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHBAMAAAA2fErgAAAAD1BMVEX///+/v7+Li4sAAADAwMBFvsw8AAAAAXRSTlMAQObYZgAAAB1JREFUCFtjYAADYwMGBmYVZSDhKAwkFJWhYiAAAB2+Aa/9ugeaAAAAAElFTkSuQmCC');
   list-style-type: square;
@@ -103,7 +126,7 @@ ul li.leaf {
 /*
  * The active item in a Drupal menu
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\0000383}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003115}}
 li a.active {
   color: #000;
 }
@@ -111,7 +134,7 @@ li a.active {
 /*
  * Navigation bar
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\0000391}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003123}}
 #navigation {
   /* overflow: hidden; */
   /* Sometimes you want to prevent overlapping with main div. */
@@ -121,11 +144,11 @@ li a.active {
   background-image: -o-linear-gradient(#4d4d4d, #000000);
   background-image: linear-gradient(#4d4d4d, #000000);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003102}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003134}}
 #navigation .block {
   margin-bottom: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003107}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003139}}
 #navigation .block-menu .block-title,
 #navigation .block-menu-block .block-title {
   position: absolute !important;
@@ -134,7 +157,7 @@ li a.active {
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003112}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003144}}
 #navigation ul.links,
 #navigation ul.menu {
   /* Menu block links */
@@ -144,7 +167,7 @@ li a.active {
   font-size: 0.8125em;
   line-height: 1.84615em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003119}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003151}}
 #navigation ul.links li,
 #navigation ul.menu li {
   /* A simple method to get navigation links to appear in one line. */
@@ -158,7 +181,7 @@ li a.active {
 /*
  * Main menu and Secondary menu links
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003140}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003172}}
 #secondary-menu {
   float: right;
 }
@@ -172,16 +195,16 @@ li a.active {
  * Drupal core has limited ways in which it can display its menus. To get around
  * these limitations, see http://drupal.org/project/menu_block
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003158}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003190}}
 .block-menu-block {
   /* overflow: hidden; */
   /* Sometimes you want to prevent overlapping with main div. */
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003161}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003193}}
 .block-menu-block .block {
   margin-bottom: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003166}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003198}}
 .block-menu-block .block-menu .block-title,
 .block-menu-block .block-menu-block .block-title {
   position: absolute !important;
@@ -190,7 +213,7 @@ li a.active {
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003171}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003203}}
 .block-menu-block ul.links,
 .block-menu-block ul.menu {
   /* Menu block links */
@@ -198,7 +221,7 @@ li a.active {
   padding: 0;
   text-align: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003176}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\00003208}}
 .block-menu-block ul.links li,
 .block-menu-block ul.menu li {
   /* A simple method to get navigation links to appear in one line. */

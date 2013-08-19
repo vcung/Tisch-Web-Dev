@@ -32,13 +32,14 @@
   	<div id="askHeader">
     	<div id="ask">
     	<a href="">Ask a Librarian</a>
+    	<hr>
     </div>
        <div id="audtopic">
        	<div id="aud">
-       		I'm a...
+       		<a href="">I'm a...</a>
          </div>
          <div id="topic">
-         	My subject is...
+         	<a href="">My subject is...</a>
          </div>
     </div>
     </div>

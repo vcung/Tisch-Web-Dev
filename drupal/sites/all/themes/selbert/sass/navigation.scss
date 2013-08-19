@@ -16,39 +16,71 @@
    $zen-column-count: 2;
   $zen-gutter-width: 1px;
   @include zen-grid-container;
-  width: 29%;
-  background-color: black;
-   margin:2px;
+  width: 28.80%;
+  background-color: gray;
+   margin-bottom:3px;
+   //margin-left: 4px;
+   margin-right:-8px;
+   margin-top: 5px;
   float: right;
+  padding: 5px 0px 5px 0px;
+  
+   text-align:center;
+   @include adjust-font-size-to(12px);
+   line-height: 1.2em;
 
-  margin-right:-8px;
+     div {
+      display: inline;
+     }
+ a:link {
+      color: white;
+    }
+  
   //width: 99.5%;
   
   #ask{
     background-color:gray;
-    text-align:center;
-    margin-bottom:1px;
+   
+    //border: 3px solid black;
+    color: white;
+    hr{
+      border: 0;
+    height: 1px;
+    background: #333;
+    margin:0px;
+    padding:0px;
+    }
+   
   }
+  
   #audtopic{/* Span 2 column, starting in 6th column from left. */
   @include zen-grid-item(2, 1);
-  background-color:gray;
+  //background-color:gray;
+  //margin-top:15px;
+
 }
 
   #aud{
  @include zen-grid-item(1, 1);
  border: 1px black;
- background-color:gray;
+background-color:gray;
  width:50%;
- border-right:1px black;
+
+ //margin-right:1px;
+ //border-right:1px black;
  //margin-right:1px;
   }
 
   #topic{
   @include zen-grid-item(1, 2);  
-   
-   border: 1px black;
+   color: white;
+   //margin-left: 0.5px black;
    background-color:gray;
    width: 50%;
+  
+   a:link {
+    color: white;
+   }
   }
 
 

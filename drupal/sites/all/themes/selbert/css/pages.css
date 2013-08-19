@@ -537,10 +537,16 @@ span.field-label {
   }
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003452}}
+#footer {
+  background-color: #363d4a;
+  color: white;
+}
+
 /*
  * Page bottom
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003459}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/pages\.scss}line{font-family:\00003461}}
 .region-bottom {
   /* Wrapper for any blocks placed in the page bottom region */
 }
