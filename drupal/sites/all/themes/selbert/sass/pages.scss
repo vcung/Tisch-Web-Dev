@@ -17,11 +17,13 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: $page-color;
+  //background-color: $page-color;
+  background-image: url("../images/background.png");
 }
 
 #page {
-  background-color: $page-color;
+ // background-color: $page-color;
+ background-image: url("../images/background.png");
 }
 
 /*
@@ -417,7 +419,8 @@ span.field-label { /* The inline field label used by the Fences module */
    background-color: white;
   }
 
-  background-color:$page-color;
+  //background-color:$page-color;
+  background-image: url("../images/background.png");
 
   hr {border-color: $light-gray;
   border-style: dashed;

@@ -111,7 +111,8 @@ color:white;
     
     li {
       text-transform:uppercase;
-      background-color: $page-color;
+      background-image: url("../images/background.png");
+      //background-color: $page-color;
       color: black;
       border-bottom: 1px solid #ccc;
       float: left; 
