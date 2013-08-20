@@ -31,36 +31,19 @@
   	<?php if ($is_front): ?>
     <div class="happening">
     <h3>Happening Now</h3>
-    <hr>
-     <div class="tweet">
-<h4>TWITTER</h4>
-      <p>Are you using RefWorks yet? Don't waste any more time doing citations on your own.
-       RefWorks class at 4:30 today. http://bit.ly/xsUvyH @TischLibrary 22 Apr</p>
-      </div>
-      <hr>
-     <div class="news">
-<h4>NEWS</h4>
-      <p>
-Database Multisearch Being Retired: Friday, June 28, 2013
-On Friday, June 28, Database Multisearch will no longer be available...</p>
-<div>
-<hr>
-<div class="event">
-<h4>EVENTS</h4>
+    <?php print $content; ?>
 
-<p>RefWorks Class, ERC 4:30 - 5:30<p>
 </div>
-</div>
-
+<!-- Taken out; replaced by view block
 <div class="recentArrival">
   <hr>
   <h4>RECENT ARRIVALS</h4>
 </div>  
-
+-->
 <?php endif; ?><!--end content for front page-->
   	
   	
-    <?php print $content; ?>
+    
     
     
   </section><!-- region__sidebar -->

@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the View - subject experts dynamic feature.
- */
-
-include_once 'view_subject_experts_dynamic.features.inc';

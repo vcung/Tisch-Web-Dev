@@ -1,76 +1,74 @@
-/* line 2, ../sass/primary-menu-block.scss */
+@media all and (max-width: 480px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/primary-menu-block\.scss}line{font-family:\000034}}
+  #siteNavigation {
+    display: none;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/primary-menu-block\.scss}line{font-family:\0000310}}
 #siteNavigation a {
   text-decoration: none;
 }
 
 /* LEVEL ONE */
-/* line 5, ../sass/primary-menu-block.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/primary-menu-block\.scss}line{font-family:\0000313}}
 #siteNavigation ul.menu {
+  text-transform: Uppercase;
   position: relative;
   /*LEVEL TWO*/
 }
-/* line 7, ../sass/primary-menu-block.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/primary-menu-block\.scss}line{font-family:\0000316}}
 #siteNavigation ul.menu li {
-  padding-left: 5px;
-  padding-right: 5px;
+  margin-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   float: left;
-  background: #fff;
 }
-/* line 12, ../sass/primary-menu-block.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/primary-menu-block\.scss}line{font-family:\0000323}}
 #siteNavigation ul.menu li a {
   display: block;
-  color: #222;
 }
-/* line 17, ../sass/primary-menu-block.scss */
-#siteNavigation ul.menu a:hover {
-  color: #000;
-}
-/* line 18, ../sass/primary-menu-block.scss */
-#siteNavigation ul.menu a:active {
-  color: #fff;
-}
-/* line 19, ../sass/primary-menu-block.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/primary-menu-block\.scss}line{font-family:\0000329}}
 #siteNavigation ul.menu li.hover, #siteNavigation ul.menu li:hover {
-  background: #ccc;
-  color: black;
   position: relative;
 }
-/* line 24, ../sass/primary-menu-block.scss */
-#siteNavigation ul.menu li.hover a {
-  color: black;
-}
-/* line 27, ../sass/primary-menu-block.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/primary-menu-block\.scss}line{font-family:\0000336}}
 #siteNavigation ul.menu ul {
   width: 220px;
   visibility: hidden;
   position: absolute;
+  z-index: 9999;
   left: 0;
 }
-/* line 32, ../sass/primary-menu-block.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/primary-menu-block\.scss}line{font-family:\0000343}}
 #siteNavigation ul.menu ul li {
   background: #f6f6f6;
-  color: #000;
   border-bottom: 1px solid #ccc;
   float: none;
   font-size: 0.7em;
   padding: 5px;
   margin: 0px;
 }
-/* line 40, ../sass/primary-menu-block.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/primary-menu-block\.scss}line{font-family:\0000350}}
 #siteNavigation ul.menu ul li a {
   width: 100%;
+  color: black;
   display: inline-block;
   /* IE 6 & 7 Needs Inline Block */
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/primary-menu-block\.scss}line{font-family:\0000355}}
+#siteNavigation ul.menu ul li a:hover {
+  color: orange;
+}
 
 /*LEVEL THREE*/
-/* line 49, ../sass/primary-menu-block.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/primary-menu-block\.scss}line{font-family:\0000363}}
 #siteNavigation ul.menu ul ul {
   left: 100%;
   top: 0;
 }
 
-/* line 50, ../sass/primary-menu-block.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/primary-menu-block\.scss}line{font-family:\0000365}}
 #siteNavigation ul.menu li:hover > ul {
   visibility: visible;
 }

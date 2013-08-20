@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 ﻿/*
 Copyright (c) 2003-2013, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.html or http://ckeditor.com/license
 */
 
 CKEDITOR.plugins.setLang('placeholder','pt-br',{placeholder:{title:'Propriedades do Espaço Reservado',toolbar:'Criar Espaço Reservado',text:'Texto do Espaço Reservado',edit:'Editar Espaço Reservado',textMissing:'O espaço reservado deve conter texto.'}});
+=======
+﻿/*
+Copyright (c) 2003-2013, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.html or http://ckeditor.com/license
+*/
+
+CKEDITOR.plugins.setLang('placeholder','pt-br',{placeholder:{title:'Propriedades do Espaço Reservado',toolbar:'Criar Espaço Reservado',text:'Texto do Espaço Reservado',edit:'Editar Espaço Reservado',textMissing:'O espaço reservado deve conter texto.'}});
+>>>>>>> 3c233a519e8546032631f6d31915c0a728a8cd53
