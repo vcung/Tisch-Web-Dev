@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Featured Resource content type feature.
+ */
+
+include_once 'featured_resource_content_type.features.inc';

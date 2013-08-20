@@ -4,7 +4,7 @@
  */
 
 @import "base";
-
+@include font-face ("Circle Things", font-files("circlethings.woff", "circlethings.ttf", "circlethings.eot"));
 
 /*
  * Views' admin tabs
@@ -14,7 +14,28 @@
  * pages. If your sub-theme isn't used for admin pages, you can remove this
  * entire section.
  */
+
+ //added for circle font used in pagers
+.views-slideshow-controls-top {
+  //position:absolute;
+  //right:0;
+  //top: -2.4em;
+  //width: 5em;
+  div {
+    display: inline;
+  }
+  .views-content-nothing {
+    color: $pager_item_grey;
+    cursor: pointer;
+    font-family: "Circle Things";
+    font-size: 9px;
+  }
+  .active .views-content-nothing {
+    color: $pager_item_active;
+  }
+}
 .views-displays .secondary {
+
   li {
     float: none;
     margin: 0 6px 0;
@@ -42,4 +63,8 @@
       @include border-radius(0 0 7px 7px);
     }
   }
+
+
+
+
 }

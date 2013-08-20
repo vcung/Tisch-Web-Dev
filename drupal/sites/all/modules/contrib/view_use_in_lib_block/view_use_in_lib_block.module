@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the view use in lib block feature.
- */
-
-include_once 'view_use_in_lib_block.features.inc';

@@ -1,9 +1,0 @@
-name = view print copy scan page
-description = page view with anything tagged print, copy or scan
-core = 7.x
-package = Features
-dependencies[] = ctools
-dependencies[] = views
-features[ctools][] = views:views_default:3.0
-features[features_api][] = api:1
-features[views_view][] = print_copy_scan

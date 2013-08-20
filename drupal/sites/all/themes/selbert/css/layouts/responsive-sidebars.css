@@ -11,7 +11,7 @@
 /*
  * Center the page.
  */
-/* line 44, ../../sass/layouts/responsive-sidebars.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\0000344}}
 #page,
 .region-bottom {
   /* For screen sizes larger than 1200px, prevent excessively long lines of text
@@ -24,7 +24,7 @@
 /*
  * Apply the shared properties of grid items in a single, efficient ruleset.
  */
-/* line 62, ../../sass/layouts/responsive-sidebars.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\0000362}}
 #header,
 #content,
 #navigation,
@@ -43,7 +43,7 @@
 /*
  * Containers for grid items and flow items.
  */
-/* line 52, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass-extensions\/zen-grids\/stylesheets\/zen\/_grids\.scss}line{font-family:\0000352}}
 #header:before, #header:after,
 #main:before,
 #main:after,
@@ -52,7 +52,7 @@
   content: "";
   display: table;
 }
-/* line 56, ../../sass-extensions/zen-grids/stylesheets/zen/_grids.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass-extensions\/zen-grids\/stylesheets\/zen\/_grids\.scss}line{font-family:\0000356}}
 #header:after,
 #main:after,
 #footer:after {
@@ -63,14 +63,14 @@
  * Navigation bar
  */
 @media all and (min-width: 480px) {
-  /* line 81, ../../sass/layouts/responsive-sidebars.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\0000381}}
   #main {
     padding-top: 3em;
     /* Move all the children of #main down to make room. */
     position: relative;
   }
 
-  /* line 85, ../../sass/layouts/responsive-sidebars.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\0000385}}
   #navigation {
     position: absolute;
     top: 0;
@@ -86,7 +86,7 @@
   /*
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 104, ../../sass/layouts/responsive-sidebars.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003104}}
   .sidebar-first #content {
     /* Span 2 columns, starting in 2nd column from left. */
     float: left;
@@ -94,7 +94,7 @@
     margin-left: 33.33333%;
     margin-right: -100%;
   }
-  /* line 108, ../../sass/layouts/responsive-sidebars.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003108}}
   .sidebar-first .region-sidebar-first {
     /* Span 1 column, starting in 1st column from left. */
     float: left;
@@ -106,7 +106,7 @@
   /*
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 118, ../../sass/layouts/responsive-sidebars.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003118}}
   .sidebar-second #content {
     /* Span 2 columns, starting in 1st column from left. */
     float: left;
@@ -114,7 +114,7 @@
     margin-left: 0%;
     margin-right: -66.66667%;
   }
-  /* line 122, ../../sass/layouts/responsive-sidebars.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003122}}
   .sidebar-second .region-sidebar-second {
     /* Span 1 column, starting in 3rd column from left. */
     float: left;
@@ -127,7 +127,7 @@
      * The layout of the front page when there are two sidebars, but it's the
       *front page.
      */
-  /* line 132, ../../sass/layouts/responsive-sidebars.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003132}}
   .front #content {
     /*Span 2 columns, starting in 2nd column from left */
     float: left;
@@ -135,7 +135,7 @@
     margin-left: 33.33333%;
     margin-right: -100%;
   }
-  /* line 135, ../../sass/layouts/responsive-sidebars.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003135}}
   .front .region-sidebar-first {
     /*Span 1 column, starting in 1st column from left.*/
     float: left;
@@ -147,7 +147,7 @@
   /*
    * The layout when there are two sidebars.
    */
-  /* line 147, ../../sass/layouts/responsive-sidebars.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003147}}
   .two-sidebars #content {
     /* Span 2 columns, starting in 2nd column from left. */
     float: left;
@@ -155,7 +155,7 @@
     margin-left: 33.33333%;
     margin-right: -100%;
   }
-  /* line 151, ../../sass/layouts/responsive-sidebars.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003151}}
   .two-sidebars .region-sidebar-first {
     /* Span 1 column, starting in 1st column from left. */
     float: left;
@@ -163,7 +163,7 @@
     margin-left: 0%;
     margin-right: -33.33333%;
   }
-  /* line 155, ../../sass/layouts/responsive-sidebars.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003155}}
   .two-sidebars .region-sidebar-second {
     /* Start a new row and span all 3 columns. */
     float: left;
@@ -174,7 +174,7 @@
     padding-right: 0;
     clear: left;
   }
-  /* line 160, ../../sass/layouts/responsive-sidebars.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003160}}
   .two-sidebars .region-sidebar-second .block {
     padding-left: 10px;
     padding-right: 10px;
@@ -184,7 +184,7 @@
     box-sizing: border-box;
     word-wrap: break-word;
   }
-  /* line 163, ../../sass/layouts/responsive-sidebars.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003163}}
   .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
     /* Span 1 column, starting in the 1st column from left. */
     float: left;
@@ -193,7 +193,7 @@
     margin-right: -33.33333%;
     clear: left;
   }
-  /* line 167, ../../sass/layouts/responsive-sidebars.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003167}}
   .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
     /* Span 1 column, starting in the 2nd column from left. */
     float: left;
@@ -201,7 +201,7 @@
     margin-left: 33.33333%;
     margin-right: -66.66667%;
   }
-  /* line 170, ../../sass/layouts/responsive-sidebars.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003170}}
   .two-sidebars .region-sidebar-second .block:nth-child(3n) {
     /* Span 1 column, starting in the 3rd column from left. */
     float: left;
@@ -217,7 +217,7 @@
   /*
    * The layout when there is only one sidebar, the left one.
    */
-  /* line 188, ../../sass/layouts/responsive-sidebars.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003188}}
   .sidebar-first #content {
     /* Span 4 columns, starting in 2nd column from left. */
     float: left;
@@ -225,7 +225,7 @@
     margin-left: 14.28571%;
     margin-right: -71.42857%;
   }
-  /* line 192, ../../sass/layouts/responsive-sidebars.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003192}}
   .sidebar-first .region-sidebar-first {
     /* Span 1 column, starting in 1st column from left. */
     float: left;
@@ -237,7 +237,7 @@
   /*
    * The layout when there is only one sidebar, the right one.
    */
-  /* line 202, ../../sass/layouts/responsive-sidebars.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003202}}
   .sidebar-second #content {
     /* Span 4 columns, starting in 1st column from left. */
     float: left;
@@ -245,7 +245,7 @@
     margin-left: 0%;
     margin-right: -57.14286%;
   }
-  /* line 206, ../../sass/layouts/responsive-sidebars.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003206}}
   .sidebar-second .region-sidebar-second {
     /* Span 1 column, starting in 5th column from left. */
     float: left;
@@ -257,7 +257,7 @@
   /*
    * The layout when there are two sidebars.
    */
-  /* line 216, ../../sass/layouts/responsive-sidebars.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003216}}
   .two-sidebars #content {
     /* Span 4 columns, starting in 2nd column from left. */
     float: left;
@@ -265,7 +265,7 @@
     margin-left: 14.28571%;
     margin-right: -71.42857%;
   }
-  /* line 220, ../../sass/layouts/responsive-sidebars.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003220}}
   .two-sidebars .region-sidebar-first {
     /* Span 1 column, starting in 1st column from left. */
     float: left;
@@ -273,7 +273,7 @@
     margin-left: 0%;
     margin-right: -14.28571%;
   }
-  /* line 224, ../../sass/layouts/responsive-sidebars.scss */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/layouts\/responsive-sidebars\.scss}line{font-family:\00003224}}
   .two-sidebars .region-sidebar-second {
     /* Span 2 columns, starting in 6th column from left. */
     float: left;

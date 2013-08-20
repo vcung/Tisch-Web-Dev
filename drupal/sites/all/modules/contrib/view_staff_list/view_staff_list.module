@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the view staff list feature.
- */
-
-include_once 'view_staff_list.features.inc';

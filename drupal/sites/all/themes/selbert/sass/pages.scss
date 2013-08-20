@@ -17,9 +17,11 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: $page-color;
 }
 
 #page {
+  background-color: $page-color;
 }
 
 /*
@@ -46,6 +48,8 @@ body {
  */
 
 #header {
+  @include background-image(linear-gradient(left, $tufts-classic, $tufts-info-blue)); 
+ 
 }
 
 #logo { /* Wrapping link for logo */
@@ -88,6 +92,9 @@ body {
   clear: both; /* Clear the logo */
 }
 
+#askHeader {
+  float: right;
+}
 
 /*
  * Main (container for everything else)
@@ -101,6 +108,7 @@ body {
  */
 
 #content {
+  background-color:white;
 
 #quicktabs-home_page_search_box {
   border: 1px black solid;
@@ -359,6 +367,8 @@ span.field-label { /* The inline field label used by the Fences module */
 
 
 .region-sidebar-first {
+  outline: none;
+
   .frontHours{
     //hide sidebar hours on smaller screen, see #mobile-hours
     //for hours on mobile screen.
@@ -369,7 +379,8 @@ span.field-label { /* The inline field label used by the Fences module */
 }
 
 .region-sidebar-first, .region-sidebar-second {
- font-size: 0.5em;
+ //font-size: 0.5em;
+
    
 }
 
@@ -380,7 +391,7 @@ span.field-label { /* The inline field label used by the Fences module */
 }
 
 #frontLeftSide {
-  font-size:0.75em;
+  //font-size:0.75em;
 
   ul li {
   list-style: none;
@@ -397,10 +408,16 @@ span.field-label { /* The inline field label used by the Fences module */
  */
 
 .region-sidebar-second {
-    
+
 }
 
 .happening {
+
+  div {
+   background-color: white;
+  }
+
+  background-color:$page-color;
 
   hr {border-color: $light-gray;
   border-style: dashed;
@@ -411,7 +428,7 @@ span.field-label { /* The inline field label used by the Fences module */
   }
 }
 
-.recentArrival {
+#block-views-recently-arrived-block-block, {
 
 //hide recentArrivals on smaller screen, 
     @media all and (max-width:480px){
@@ -433,6 +450,8 @@ span.field-label { /* The inline field label used by the Fences module */
 }
 
 #footer {
+  background-color: $footer-gray;
+  color: white;
 }
 
 /*
