@@ -120,7 +120,6 @@
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003112}}
 #block-menu-block-3 ul.menu li {
   text-transform: uppercase;
-  background-image: url("../images/background.png");
   color: black;
   border-bottom: 1px solid #ccc;
   float: left;

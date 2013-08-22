@@ -19,10 +19,11 @@ body {
   padding: 0;
   //background-color: $page-color;
   background-image: url("../images/background.png");
+  //background-position: 25% 75%;
 }
 
 #page {
- // background-color: $page-color;
+//background-color: $page-color;
  background-image: url("../images/background.png");
 }
 
@@ -86,12 +87,16 @@ body {
 }
 
 #site-slogan { /* The slogan (or tagline) of a website */
-  margin: 0;
+  margin: 3em 0 0 0;
   font-size: 1em;
+  color: white;
+  font-weight: normal;
 }
 
 .region-header { /* Wrapper for any blocks placed in the header region */
   clear: both; /* Clear the logo */
+  //display: inline;
+  
 }
 
 #askHeader {
@@ -419,8 +424,7 @@ span.field-label { /* The inline field label used by the Fences module */
    background-color: white;
   }
 
-  //background-color:$page-color;
-  background-image: url("../images/background.png");
+  background-color:$page-color;
 
   hr {border-color: $light-gray;
   border-style: dashed;
@@ -453,9 +457,87 @@ span.field-label { /* The inline field label used by the Fences module */
 }
 
 #footer {
+   @include adjust-font-size-to (12px);
+  line-height: 1.5em;
+
   background-color: $footer-gray;
-  color: white;
-}
+  color: $light-gray;
+  
+
+    h3 {
+      @include adjust-font-size-to (13px);
+    color: white;
+    text-transform: uppercase;
+    font-weight:normal;
+    margin-bottom: 0px;
+  }
+
+  ul {
+    margin:0 0 0 3%;
+    padding:0 0 0 2%;
+  }
+  li a {
+    color: $light-gray;
+    text-decoration: none;
+    
+  }
+
+
+
+  //@media all and (min-width: 480px) and (max-width: 750px) {
+    
+   @include zen-clear();
+   $zen-column-count: 7;
+  $zen-gutter-width: 10px;
+  @include zen-grid-container;
+  width: 100%;
+
+
+  #footerLogo{/* Span 1 columns, starting in 1st column from left. */
+   
+  @include zen-grid-item(1, 1);
+  //width: 15%
+
+  }
+  
+  #otherFooterLibs {/* Span 1 columns, starting in 2nd column from left. */
+  
+  @include zen-grid-item(2, 2);
+  ul {
+    
+  
+  }
+
+  //width: 25%;
+  }
+
+  #otherFooterTufts {/* Span 1 column, starting in 4th column from left. */
+  @include zen-grid-item(1, 4);
+  //width: 25%
+  }
+  
+  #footerContact {/* Span 1 columns, starting in 5th column from left. */
+  @include zen-grid-item(1, 5);
+  p.address{
+    margin:0px;
+  }
+  p {
+    margin:0.5em 0 0.5em 0;
+  }
+  //width: 25%;
+  }
+
+  #footerSocial {/* Span 2 columns, starting in 6th column from left. */
+  //width: 25%;
+  @include zen-grid-item(2, 6);
+  }
+
+
+//}//end larger media screens
+
+}//end footer
+  
+  
 
 /*
  * Page bottom

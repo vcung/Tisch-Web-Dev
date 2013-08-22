@@ -55,6 +55,22 @@
 .node-article { /* Article content node */
 }
 
+/*KB added*/
+.node-basic-content .field-name-body{
+
+  
+   ul + h5 {
+     //color: green;
+     padding-top: $base-line-height * 5;
+   }
+ 
+  //+inline-block-list
+   @include column-count(2);
+  width: 100%;
+  margin-bottom: 0px;
+
+}
+
 .node-unpublished { /* Unpublished nodes */
   /* background-color: #fff4f4; */ /* Drupal core uses a #fff4f4 background */
 
@@ -62,6 +78,8 @@
     @include unpublished-div;
   }
 }
+
+
 
 /*KB added this to style the search box on the home page; node 2 in quicktab */
 .homeSearch {
