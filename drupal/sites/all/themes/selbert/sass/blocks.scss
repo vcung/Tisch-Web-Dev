@@ -90,10 +90,19 @@ color:white;
     margin: 0 2.5% 0 0;
     //  background-color:black;
     color:white;
+    background-image: url("../images/nav.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    
+
+    &:last-child{
+      background-image: none;
+    }
 
      a {
       //background-color:black;
       color:white;
+
     }
   }
   } 
@@ -224,6 +233,19 @@ visibility:hidden;
 
 #block-user-online { /* "Who's online" block for a list of the online users */
 }
+
+.block-views {
+  background-color: white;
+   @include box-shadow(black 0px 0px 10px);
+}
+#block-views-featured-resource-block-block{
+  margin-top: 15px;
+}
+
+#boxes-box-top_resources {
+
+}
+
 //#block-views-latest-tweet-block, #block-views-news-block-for-first-page-block, #block-views-96336209a120729401f35b3836b5ef54, #block-views-recently-arrived-block-block{
   //background-color: white;
 //}

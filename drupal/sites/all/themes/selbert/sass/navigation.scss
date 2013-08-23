@@ -60,7 +60,7 @@
   }
   
   #audtopic{/* Span 2 column,  */
-  @include zen-grid-item(2, 6);
+  @include zen-grid-item(2, 1);
   //background-color:gray;
   //margin-top:15px;
 
@@ -159,7 +159,7 @@ li a.active {
       padding: 5px 10px 0 0;
       list-style-type: none;
       list-style-image: none;
-      border-right: 1px solid black
+      //border-right: 1px solid black
     }
   }
 }

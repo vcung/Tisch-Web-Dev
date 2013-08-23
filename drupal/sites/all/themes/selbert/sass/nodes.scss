@@ -61,11 +61,12 @@
   
    ul + h5 {
      //color: green;
-     padding-top: $base-line-height * 5;
+     padding-top: $base-line-height * 3;
    }
  
   //+inline-block-list
    @include column-count(2);
+   
   width: 100%;
   margin-bottom: 0px;
 

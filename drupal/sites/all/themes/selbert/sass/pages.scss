@@ -457,6 +457,11 @@ span.field-label { /* The inline field label used by the Fences module */
 }
 
 #footer {
+
+  .empty{
+    display:none;
+  }
+
    @include adjust-font-size-to (12px);
   line-height: 1.5em;
 
@@ -468,7 +473,7 @@ span.field-label { /* The inline field label used by the Fences module */
       @include adjust-font-size-to (13px);
     color: white;
     text-transform: uppercase;
-    font-weight:normal;
+    //font-weight:normal;
     margin-bottom: 0px;
   }
 
@@ -482,17 +487,29 @@ span.field-label { /* The inline field label used by the Fences module */
     
   }
 
+}
 
-
-  //@media all and (min-width: 480px) and (max-width: 750px) {
-    
+  @media all and (min-width: 480px)  {
+   #footer{ 
    @include zen-clear();
    $zen-column-count: 7;
   $zen-gutter-width: 10px;
   @include zen-grid-container;
   width: 100%;
 
+  div {
+    background-image: url("../images/nav.png");
+    background-repeat: no-repeat;
 
+    background-position: right 0px top 10px;
+    
+   
+    }
+    div:last-child{
+    background-image:none;
+    
+    }
+  
   #footerLogo{/* Span 1 columns, starting in 1st column from left. */
    
   @include zen-grid-item(1, 1);
@@ -533,9 +550,9 @@ span.field-label { /* The inline field label used by the Fences module */
   }
 
 
-//}//end larger media screens
+}//endfooter large screen
 
-}//end footer
+}//end larger screen
   
   
 

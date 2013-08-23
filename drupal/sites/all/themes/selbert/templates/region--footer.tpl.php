@@ -26,7 +26,7 @@
  * @see template_process()
  */
 ?>
-<?php if ($content): ?>
+
   <footer id="footer" class="<?php print $classes; ?>">
     <?php print $content; ?>
     <div id="footerLogo">
@@ -67,4 +67,4 @@
     </div>
     	
   </footer><!-- region__footer -->
-<?php endif; ?>
+
