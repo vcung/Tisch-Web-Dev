@@ -34,6 +34,7 @@
    
 </div>
 <?php else:?>
+
   
   <div class="lci_chat_load" >
   <h2>Chat with a librarian</h2>

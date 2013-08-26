@@ -30,27 +30,27 @@
 .node .content {
   /* Node's content wrapper */
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000329}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000330}}
 .node ul.links {
   /* Node links. See also the ul.links declaration in the pages.css. */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000334}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000335}}
 .node-promoted {
   /* A node that has been promoted to the front page */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000337}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000338}}
 .node-sticky {
   /* A sticky node (displayed before others in a list) */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000341}}
 .node-by-viewer {
   /* A node created by the current user */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000344}}
 .node-teaser {
   /* A node displayed as teaser */
 }
@@ -60,19 +60,20 @@
  * it is. If you create a new content type called "my-custom-type", it will
  * receive a "node-my-custom-type" class.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000352}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000353}}
 .node-page {
   /* Page content node */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000356}}
 .node-article {
   /* Article content node */
 }
 
 /*KB added*/
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000359}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000360}}
 .node-basic-content .field-name-body {
+  background-color: white;
   -webkit-column-count: 2;
   -moz-column-count: 2;
   -ms-column-count: 2;
@@ -81,18 +82,18 @@
   width: 100%;
   margin-bottom: 0px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000362}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000363}}
 .node-basic-content .field-name-body ul + h5 {
   padding-top: 72px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000375}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000376}}
 .node-unpublished {
   /* Unpublished nodes */
   /* background-color: #fff4f4; */
   /* Drupal core uses a #fff4f4 background */
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000378}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000379}}
 .node-unpublished p.unpublished {
   /* The word "Unpublished" displayed underneath the content. */
   height: 0;
@@ -108,20 +109,20 @@
 }
 
 /*KB added this to style the search box on the home page; node 2 in quicktab */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000387}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000388}}
 .homeSearch input#searcharg {
   width: 80%;
   height: 20px;
   margin-top: 20px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000392}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000393}}
 .homeSearch input#submit {
   height: 27px;
   font-weight: bold;
   margin-left: -5px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000399}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\00003100}}
 #searchtypes {
   float: right;
   margin-top: -50px;

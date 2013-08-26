@@ -11,6 +11,8 @@
   //kate added font-size for block text
   font-size:.5em;
   line-height:1em;
+  background-color: white;
+   @include box-shadow(black 0px 0px 10px);
 
   &.first { /* The first block in the region */
   }
@@ -241,7 +243,14 @@ visibility:hidden;
 #block-views-featured-resource-block-block{
   margin-top: 15px;
 }
+#block-views-find-books-in-tisch-block-block{
+  float: right;
+  //margin-top: 0;
+}
 
+#block-panels-mini-call-number-infographic{
+  float: left;
+}
 #boxes-box-top_resources {
 
 }

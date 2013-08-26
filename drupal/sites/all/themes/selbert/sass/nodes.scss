@@ -24,6 +24,7 @@
   }
 
   .content { /* Node's content wrapper */
+  //background-color:white;
   }
 
   ul.links { /* Node links. See also the ul.links declaration in the pages.css. */
@@ -57,7 +58,7 @@
 
 /*KB added*/
 .node-basic-content .field-name-body{
-
+   background-color: white;
   
    ul + h5 {
      //color: green;

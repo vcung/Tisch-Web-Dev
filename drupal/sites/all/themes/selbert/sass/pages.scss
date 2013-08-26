@@ -115,7 +115,15 @@ body {
  */
 
 #content {
-  background-color:white;
+
+  .breadcrumb{
+    background-color:white;
+  }
+  .title {
+    background-color:white;
+  }
+  //background-color: 
+  background-image: url("../images/background.png");
 
 #quicktabs-home_page_search_box {
   border: 1px black solid;
@@ -416,6 +424,14 @@ span.field-label { /* The inline field label used by the Fences module */
 
 .region-sidebar-second {
 
+
+}
+
+.lci_chat_load {
+//hide chat on smaller screens
+  @media all and (max-width:480px){
+      display:none;
+    }
 }
 
 .happening {

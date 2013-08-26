@@ -7,95 +7,99 @@
   /* Block wrapper */
   font-size: .5em;
   line-height: 1em;
+  background-color: white;
+  -webkit-box-shadow: black 0px 0px 10px;
+  -moz-box-shadow: black 0px 0px 10px;
+  box-shadow: black 0px 0px 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000315}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000317}}
 .block.first {
   /* The first block in the region */
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000320}}
 .block.last {
   /* The last block in the region */
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000321}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000323}}
 .block.odd {
   /* Zebra striping for each block in the region */
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000326}}
 .block.even {
   /* Zebra striping for each block in the region */
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000327}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000329}}
 .block h2.block-title {
   /* Block title */
   font-size: .75em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000331}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000333}}
 .block li {
   list-style-type: none;
   padding: 0 1em 0 0;
   margin-left: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000342}}
 #block-aggregator-category-1 {
   /* Block for the latest news items in the first category */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000345}}
 #block-aggregator-feed-1 {
   /* Block for the latest news items in the first feed */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000348}}
 #block-block-1 {
   /* First block created with "Add block" link */
   height: 10%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000352}}
 #block-blog-recent {
   /* "Recent blog posts" block */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000355}}
 #block-book-navigation {
   /* "Book navigation" block for the current book's table of contents */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000356}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000358}}
 #block-comment-recent {
   /* "Recent comments" block */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000359}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000361}}
 #block-forum-active {
   /* "Active forum topics" block */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000362}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000364}}
 #block-forum-new {
   /* "New forum topics" block */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000370}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000372}}
 #block-locale-language {
   /* Language switcher block */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000375}}
 #block-menu-block-1 {
   font-size: 1em;
   background-color: none;
   color: white;
 }
 @media all and (min-width: 700px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000375}}
   #block-menu-block-1 {
     font-size: 1.5em;
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000388}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000390}}
 #block-menu-block-1 ul li {
   margin: 0 2.5% 0 0;
   color: white;
@@ -103,28 +107,28 @@
   background-repeat: no-repeat;
   background-position: right center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\0000398}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003100}}
 #block-menu-block-1 ul li:last-child {
   background-image: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003102}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003104}}
 #block-menu-block-1 ul li a {
   color: white;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003112}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003114}}
 #block-menu-block-3 {
   background-color: #e5e4e2;
   margin-left: 0px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003115}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003117}}
 #block-menu-block-3 ul.menu {
   position: relative;
   float: right;
   z-index: 1;
   margin-top: 10%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003121}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003123}}
 #block-menu-block-3 ul.menu li {
   text-transform: uppercase;
   color: black;
@@ -132,7 +136,7 @@
   float: left;
   width: 80%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003132}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003134}}
 #block-menu-block-3 ul.menu li a {
   padding-left: 5%;
   line-height: 3em;
@@ -142,43 +146,43 @@
   display: inline-block;
   /* IE 6 & 7 Needs Inline Block */
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003140}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003142}}
 #block-menu-block-3 ul.menu li a:hover {
   color: orange;
   background-color: #837e7c;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003148}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003150}}
 #block-menu-menu-NAME {
   /* Custom menu block */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003151}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003153}}
 #block-node-recent {
   /* "Recent content" block */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003154}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003156}}
 #block-node-syndicate {
   /* "Syndicate" block for primary RSS feed; see also page.css's .feed-icon */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003157}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003159}}
 #block-poll-recent {
   /* "Most recent poll" block */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003160}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003162}}
 #block-profile-author-information {
   /* "Author information" block for the profile of the page's author */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003164}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003166}}
 #block-menu-block-2 {
   visibility: hidden;
 }
 @media all and (min-width: 600px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003164}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003166}}
   #block-menu-block-2 {
     visibility: visible;
     float: right;
@@ -186,19 +190,19 @@
   }
 }
 @media all and (min-width: 1000px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003164}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003166}}
   #block-menu-block-2 {
     margin-top: -5%;
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003177}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003179}}
 #block-search-form {
   /* "Search form" block */
   visibility: hidden;
 }
 @media all and (min-width: 600px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003177}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003179}}
   #block-search-form {
     /* Span 2 column, starting in 6th column from left. */
     clear: left;
@@ -217,7 +221,7 @@
   #block-search-form:after {
     clear: both;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003192}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003194}}
   #block-search-form input[type="text"], #block-search-form textarea {
     background-color: #96bee2;
     width: 80%;
@@ -226,67 +230,67 @@
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003201}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003203}}
 #block-shortcut-shortcuts {
   /* "Shortcuts" block */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003204}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003206}}
 #block-statistics-popular {
   /* "Popular content" block */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003207}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003209}}
 #block-system-main-menu {
   /* "Main menu" block */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003210}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003212}}
 #block-system-management {
   /* "Management" block for Drupal management menu */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003213}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003215}}
 #block-system-navigation {
   /* "Navigation" block for Drupal navigation menu */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003216}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003218}}
 #block-system-user-menu {
   /* "User menu" block for Drupal user menu */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003219}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003221}}
 #block-system-help {
   /* "System help" block */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003222}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003224}}
 #block-system-main {
   /* "Main page content" block */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003225}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003227}}
 #block-system-powered-by {
   /* "Powered by Drupal" block */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003228}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003230}}
 #block-user-login {
   /* "User login form" block */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003231}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003233}}
 #block-user-new {
   /* "Who's new" block for a list of the newest users */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003234}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003236}}
 #block-user-online {
   /* "Who's online" block for a list of the online users */
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003237}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003239}}
 .block-views {
   background-color: white;
   -webkit-box-shadow: black 0px 0px 10px;
@@ -294,7 +298,17 @@
   box-shadow: black 0px 0px 10px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003241}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003243}}
 #block-views-featured-resource-block-block {
   margin-top: 15px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003246}}
+#block-views-find-books-in-tisch-block-block {
+  float: right;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003251}}
+#block-panels-mini-call-number-infographic {
+  float: left;
 }
