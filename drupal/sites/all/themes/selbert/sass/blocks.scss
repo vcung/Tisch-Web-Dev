@@ -38,7 +38,10 @@
   
 }
 
-
+.headerSearch{
+  background-color: transparent;
+  @include box-shadow(none);
+}
 #block-aggregator-category-1 { /* Block for the latest news items in the first category */
 }
 
