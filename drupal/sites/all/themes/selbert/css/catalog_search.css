@@ -18,7 +18,7 @@ ul.quicktabs-tabs li {
   min-height: 2.6em;
   padding: 0;
   background: #0b3659;
-  font-size: 2.2em;
+  font-size: 1em;
   margin: 0px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/catalog_search\.scss}line{font-family:\0000326}}
@@ -43,14 +43,6 @@ ul.quicktabs-tabs li.active {
 ul.quicktabs-tabs li.active a {
   color: #fff;
   font-weight: normal;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/catalog_search\.scss}line{font-family:\0000351}}
-ul.quicktabs-tabs .first {
-  box-shadow: -3px -2px 2px 1px #062746 inset;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/catalog_search\.scss}line{font-family:\0000356}}
-ul.quicktabs-tabs .last {
-  box-shadow: 3px -2px 2px 1px #062746 inset;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/catalog_search\.scss}line{font-family:\0000366}}
@@ -85,4 +77,29 @@ ul.quicktabs-tabs .last {
 #searchtypes {
   color: #fff;
   font-size: 1.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/catalog_search\.scss}line{font-family:\0000397}}
+.homeSearch input#searcharg {
+  width: 80%;
+  height: 20px;
+  margin-top: 20px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/catalog_search\.scss}line{font-family:\00003102}}
+.homeSearch input#submit {
+  height: 27px;
+  font-weight: bold;
+  margin-left: -5px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/catalog_search\.scss}line{font-family:\00003109}}
+#searchtypes {
+  float: right;
+  margin-top: -50px;
+  margin-right: 15%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/catalog_search\.scss}line{font-family:\00003115}}
+.sideSearch {
+  background-color: gainsboro;
 }

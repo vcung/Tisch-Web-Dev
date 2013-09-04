@@ -116,21 +116,47 @@ body {
 
 #content {
 
-  .breadcrumb{
+  .titleContainer{
+    margin-top: $vertical-content-amount;
+    border-top: 2px $heading-orange solid;
     background-color:white;
+    padding-left: $padding-amount;
+    @include box-shadow(gray 1px 1px 7px);
+    h1 {
+      @include adjust-font-size-to (40px);
+      color: $heading-orange;
+      font-weight: normal;
+      text-transform: uppercase; 
+    }
+  }
+
+  .breadcrumb{
+    @include adjust-font-size-to (12px);
+    a {color: $active-menu-gray; 
+      text-decoration: none;
+    }
   }
   .title {
+
     background-color:white;
+    margin-bottom: $vertical-content-amount;
+  
+
   }
   //background-color: 
   background-image: url("../images/background.png");
 
+//home page  - search box
 #quicktabs-home_page_search_box {
   border: 1px black solid;
+  box-shadow: none;
 
  }
 }
 
+
+
+//home page -highlight region
 .region-highlighted {
 }
 
@@ -152,7 +178,7 @@ h2.node-title, /* Title of a piece of content when it is given in a list of cont
 h2.block-title, /* Block title */
 h2.title, /* Comment section heading */
 h2.comment-form, /* Comment form heading */
-h3.title { /* Comment title */
+h3.title { /* Cmment title */
   margin: 0;
 }
 
@@ -203,6 +229,16 @@ tr.error { /* High priority messages. See also the .error declaration below. */
 }
 
 .region-content { /* Wrapper for the actual page content */
+
+  .field.field-name-body{
+    margin-bottom: $vertical-content-amount;
+    padding: 2%;
+     //@include box-shadow(gray 1px 1px 7px);
+  }
+
+  .block-panels-mini{
+  padding: $padding-amount;
+}
 }
 
 #mobile-hours {
@@ -423,6 +459,25 @@ span.field-label { /* The inline field label used by the Fences module */
  */
 
 .region-sidebar-second {
+@include adjust-font-size-to (12px);
+
+
+  .block-title{
+ @include background-image(linear-gradient($heading-orange, lighten($heading-orange, 20%)));
+   //@include adjust-font-size-to (20px);
+   //above didn't work, so resorting to:
+   
+   text-transform: uppercase;
+   font-weight:normal;
+    padding-left: 1%;  
+      color: white;
+      @include single-text-shadow;
+    border-bottom: $heading-orange 1px solid;
+    }
+
+.field-content{
+  padding: 2%;
+}
 
 
 }
@@ -431,6 +486,10 @@ span.field-label { /* The inline field label used by the Fences module */
 //hide chat on smaller screens
   @media all and (max-width:480px){
       display:none;
+    }
+
+    @media all and (min-width:481px){
+      margin-top: $vertical-amount;
     }
 }
 
@@ -442,13 +501,13 @@ span.field-label { /* The inline field label used by the Fences module */
 
   background-color:$page-color;
 
-  hr {border-color: $light-gray;
-  border-style: dashed;
-  border-width: 1px 0 0;
-  clear: both;
-  margin: 0 0 20px;
-  height: 0;
-  }
+  //hr {border-color: $light-gray;
+  //border-style: dashed;
+  //border-width: 1px 0 0;
+  //clear: both;
+  //margin: 0 0 20px;
+  //height: 0;
+  //}
 }
 
 #block-views-recently-arrived-block-block, {

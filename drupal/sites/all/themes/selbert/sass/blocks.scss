@@ -9,10 +9,11 @@
 .block { /* Block wrapper */
   //margin-bottom: 1.5em;
   //kate added font-size for block text
-  font-size:.5em;
-  line-height:1em;
+  //font-size:.5em;
+  //line-height:1em;
   background-color: white;
-@include box-shadow(gray 3px 3px 7px);
+  
+//@include box-shadow(gray 3px 3px 7px);
 
   &.first { /* The first block in the region */
   }
@@ -135,8 +136,9 @@ color:white;
       //margin: 5%;
       width:80%;
       a {
+        @include adjust-font-size-to(12px);
         padding-left: 5%;
-        line-height: 3em;
+        line-height: 1.5em;
         margin-bottom: 2.5%;
         color: black;
         width: 100%;
@@ -147,6 +149,7 @@ color:white;
         color: orange;
         background-color: $active-menu-gray;
       }
+      
     }  
 }
 }
@@ -161,31 +164,28 @@ color:white;
 #block-panels-mini-happening-now {
   margin-top: $vertical-amount;
   margin-bottom: $vertical-amount;
-   
-   
- .block-title{
-  
-   @include background-image(linear-gradient($heading-orange, $heading-fade-orange));
-   //@include adjust-font-size-to (20px);
-   //above didn't work, so resorting to:
-   font-size:2.5em;
-   line-height:2em;
-   text-transform: uppercase;
-   font-weight:normal;
-    padding-left: 1%;  
-      color: white;
-      @include single-text-shadow;
-      
+  @include box-shadow(gray 3px 3px 7px);
 
+   
+ .pane-block {
+  margin-right: 2%;
+  border-bottom: gray 1px solid;
+  }
+  & :last-child{
+   border-bottom: none;
   }
 
  & div {
 
-  padding-left: 2%;
+  padding-left: 1%;
   padding-right: 1%;
  }
-  
+} 
+#block-panels-mini-search-box-for-side-pages{
+  margin-bottom: $vertical-content-amount;
+  @include box-shadow(gray 3px 3px 7px);
 }
+
 #block-poll-recent { /* "Most recent poll" block */
 }
 
@@ -273,11 +273,23 @@ visibility:hidden;
 }
 #block-views-featured-resource-block-block{
   margin-top: 15px;
+  margin-bottom: $vertical-amount;
 }
 #block-views-find-books-in-tisch-block-block{
   float: right;
   //margin-top: 0;
 }
+
+#block-views-feed-recently-arrived-block{
+   margin-bottom: $vertical-amount;
+  //see views-styles for control styling
+  //div ~ div {padding: 2%;
+  //}
+ 
+}
+
+
+
 
 #block-panels-mini-call-number-infographic{
   float: left;
@@ -285,6 +297,8 @@ visibility:hidden;
 #boxes-box-top_resources {
 
 }
+
+
 
 //#block-views-latest-tweet-block, #block-views-news-block-for-first-page-block, #block-views-96336209a120729401f35b3836b5ef54, #block-views-recently-arrived-block-block{
   //background-color: white;

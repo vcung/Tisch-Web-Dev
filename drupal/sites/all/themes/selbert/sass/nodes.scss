@@ -57,19 +57,34 @@
 }
 
 /*KB added*/
-.node-basic-content .field-name-body{
-   background-color: white;
+.node-basic-content {
+  h2 {
+    color: darken($tufts-classic, 20%);
+    text-transform: uppercase;
+
+  }
+  //display: inline;
+  background-color: white;
+  margin-bottom: $vertical-content-amount;
+  @include box-shadow(gray 3px 3px 7px);
+.field-name-body{
+   //background-color: white;
+   
+   float: left;
+   //width: 100%;
+}
   
-   ul + h5 {
+
+
+.field-name-field-2nd-column-body{
+  float: right;
+  padding-right: $padding-amount;
+  z-index: -10;
+  ul + h5 {
      //color: green;
      padding-top: $base-line-height * 3;
    }
- 
-  //+inline-block-list
-   @include column-count(2);
-   
-  width: 100%;
-  margin-bottom: 0px;
+}
 
 }
 
@@ -83,22 +98,5 @@
 
 
 
-/*KB added this to style the search box on the home page; node 2 in quicktab */
-.homeSearch {
-  input#searcharg {
-  width: 80%;
-  height:20px;
-  margin-top:20px;
-  }
-  input#submit {
-  height:27px;
-  font-weight:bold;
-  margin-left: -5px;
-  }
-  
-}
-#searchtypes{
-  float:right;
-  margin-top: -50px;
-  margin-right: 15%;
-}
+
+

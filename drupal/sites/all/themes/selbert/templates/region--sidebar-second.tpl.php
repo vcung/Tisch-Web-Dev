@@ -29,10 +29,10 @@
 
   <section class="<?php print $classes; ?>">
   	<?php if ($is_front): ?>
-    <div class="happening">
+   <!-- <div class="happening">
     <h3>Happening Now</h3>
    
-</div>
+</div>-->
 <?php else:?>
 
   
