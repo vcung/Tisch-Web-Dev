@@ -95,7 +95,7 @@
   z-index: -10;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/nodes\.scss}line{font-family:\0000383}}
-.node-basic-content .field-name-field-2nd-column-body ul + h5 {
+.node-basic-content .field-name-field-2nd-column-body h5 {
   padding-top: 72px;
 }
 

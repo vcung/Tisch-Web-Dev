@@ -347,5 +347,7 @@
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/blocks\.scss}line{font-family:\00003294}}
 #block-panels-mini-call-number-infographic {
-  float: left;
+  -webkit-box-shadow: gray 3px 3px 7px;
+  -moz-box-shadow: gray 3px 3px 7px;
+  box-shadow: gray 3px 3px 7px;
 }

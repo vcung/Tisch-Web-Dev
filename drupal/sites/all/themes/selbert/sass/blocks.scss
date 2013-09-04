@@ -292,8 +292,9 @@ visibility:hidden;
 
 
 #block-panels-mini-call-number-infographic{
-  float: left;
+ @include box-shadow(gray 3px 3px 7px);
 }
+
 #boxes-box-top_resources {
 
 }
