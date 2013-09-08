@@ -23,3 +23,19 @@
 /* SMACSS theme rules */
 /* @import "theme-A"; */
 /* @import "theme-B"; */
+
+
+#headerWrap {
+	 @include background-image(linear-gradient(left, $tufts-classic, $tufts-info-blue)); 
+}
+
+#main
+ {
+	//@include background-image(linear-gradient(left, $tufts-classic, $tufts-info-blue));
+}
+
+#content {
+
+}
+
+

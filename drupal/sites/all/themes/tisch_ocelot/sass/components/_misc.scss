@@ -129,17 +129,27 @@
   /* Clear the logo. */
   clear: both;
 }
+#site-slogan { /* The slogan (or tagline) of a website */
+  margin: 3em 0 0 0;
+  font-size: 1em;
+  color: white;
+  font-weight: normal;
+}
 
 /**
  * Navigation bar.
  */
 #navigation {
+
+  margin-top: -20px;
   /* Sometimes you want to prevent overlapping with main div. */
   /* overflow: hidden; */
 
   .block {
     margin-bottom: 0;
   }
+  background-color:black;
+  //@include background-image(linear-gradient(#4d4d4d, black));
 
   .block-menu .block__title,
   .block-menu-block .block__title {
@@ -152,16 +162,83 @@
     margin: 0;
     padding: 0;
     text-align: left; /* LTR */
+    text-transform: uppercase;
+     }
+     //first level
 
-    li {
+      ul { 
+        position:relative;
+        
+       li {
       /* A simple method to get navigation links to appear in one line. */
-      float: left; /* LTR */
-      padding: 0 10px 0 0; /* LTR */
+      //margin-right: 5px;
+      //padding-left:10px; 
+      //padding-right:10px; 
+      list-style-image:none;
       list-style-type: none;
-      list-style-image: none;
-    }
-  }
-}
+      margin-right: 5px;
+      padding-top:10px;
+      //margin-top: 10px;
+      
+     padding-left:10px; 
+     padding-right:10px; 
+     float: left;  
+     text-align:left;
+      //display:block;
+     li:first-of-type{
+      margin-top:15px;
+     }
+     //b
+          a {
+              //display: inline;
+              color: white;
+              text-decoration: none;
+              //float: left;
+              display: block;
+            }
+         } //end first    
+
+       li.hover, li:hover {position: relative; 
+                           }     
+          
+      //second level
+      ul{
+        visibility:hidden;
+        position: absolute; 
+        //margin-top: 20px;
+        width:250px;
+       z-index:9999;
+        
+
+        li {
+            background: #f6f6f6;
+            border-bottom: 1px solid #ccc;
+            float: none; 
+            font-size:0.7em;
+            padding:2%;
+            text-align: left;
+           a {
+               width: 100%;
+               color: black;
+               display: inline-block;  /* IE 6 & 7 Needs Inline Block */
+              }
+            a:hover {
+               color:orange;
+              }
+
+            
+           }//end 2nd li
+
+        }//end 2nd ul
+    }//end 1st ul
+
+ul.menu li:hover > ul       { visibility: visible; }
+}//end nav
+    //ul.menu ul ul           { left: 100%; top: 0; }
+    
+
+   
+
 
 /**
  * Breadcrumb navigation.
@@ -785,6 +862,203 @@ tr.drag-previous {
 tr.selected td {
   background: #ffc;
 }
+/**front page**/
+.lowerMainContent {
+
+@media all and (max-width:480px){
+  display:none
+}
+
+  float: left;
+  margin: 0 0.5% 2% 0;
+  padding: 0;
+  width: 48%;
+  border: $light-gray 1px dashed;
+
+  h4 {
+    margin: 0px 0px 2px 0px;
+    
+  }
+
+  ul {
+    list-style-type:none;
+    margin: 0px 0px 1% 0px;
+    padding:0px;
+  }
+}
+
+/**Chat Box**/
+.lci_chat_load {
+  background: #D6E0E9;
+  border: 2px solid #6B7C83;
+  width: 100%; 
+  //height: 210px;
+}
+
+.lci_chat_load h2{
+  font-size: 1.2em;
+  color: #fff;
+  background: #6B7C83;
+  margin: 0px;
+  padding: 0.3em;
+  line-height: 1em;
+  font-weight:normal;
+  width: 80%;
+}
+
+.login_field {
+  padding:0.5em;
+    input {
+    box-shadow: 0 0.5px 0.5px 0.5px #EBEBEB inset;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.7em;
+    width: 90%;
+  }
+  textarea{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    //margin-bottom: 0.7em;
+    resize:none;
+  }
+}
+.lc_button {
+    background:#85949B;
+  color: #fff;
+    border-radius: 2px;
+  cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    height: 2em;
+    padding: 3px 5px;
+  margin: 0 1em;
+    vertical-align: middle;
+  border:#85949B;
+}
+.send_button {
+  margin:0.5em;
+}
+
+/** Catalog Search**/
+#quicktabs-home_page_search_box {
+  background: $active_bg;
+}
+
+.item-list {
+  //height: 7.6em;  
+  //background: #fff;
+
+}
+  ul.quicktabs-tabs { 
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    li {
+      float: left;
+      font-weight: normal;
+      list-style: none;
+      height: 2.5em;
+      min-height: 2.6em;
+      padding: 0;
+      background: $inactive_bg;
+      font-size: 1em;
+      margin: 0px;
+      a {
+        color: $inactive_font;
+        text-decoration: none;
+        float: left;
+        display: block;
+        height: 2.5em;
+        min-height: 2.6em;
+        line-height: 2.6em;
+        padding: 0 8px;
+        text-decoration: none;
+        position: relative;
+      }
+
+    }
+    li.active {
+
+      background: $active_bg;
+      box-shadow: none;
+
+      a { 
+
+        color: #fff;
+        font-weight: normal;
+      }
+    }
+    .first {
+      //box-shadow: -3px -2px 2px 1px #062746 inset;
+      //float:left;
+
+    }
+    .last{
+      //box-shadow: 3px -2px 2px 1px #062746 inset;
+    //  float:right;
+
+    }
+    .last.active{
+  //    float: left;
+    }
+  }
+
+.quicktabs_main  {
+  clear: both;
+  padding: 20px 5px 0 5px;
+  position: relative;
+  background: $active_bg;
+  fieldset{
+    border: none;
+  }
+  ul {
+    float: right;
+    li {
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.5em;
+      }
+    }
+  }
+  #submit {
+    background: none repeat scroll 0 0 #104C80;
+    border: medium none;
+    color: #fff;
+  }
+}
+
+#searchtypes {
+  color: #fff;
+  font-size: 1.5em;
+}
+.homeSearch {
+  input#searcharg {
+  width: 80%;
+  height:20px;
+  margin-top:20px;
+  }
+  input#submit {
+  height:27px;
+  font-weight:bold;
+  margin-left: -5px;
+  }
+  
+}
+#searchtypes{
+  float:right;
+  margin-top: -50px;
+  margin-right: 15%;
+}
+
+.sideSearch {
+  background-color: $light-gray;
+}
+
 
 /**
  * Progress bar.

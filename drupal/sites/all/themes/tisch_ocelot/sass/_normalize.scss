@@ -126,6 +126,8 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background-image: url("../images/background.png");
+
 }
 
 /**
@@ -135,8 +137,10 @@ body {
  * http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
  */
 a:link {
+  color: $tufts-text-blue;
 }
 a:visited {
+color:$active_bg;
 }
 a:hover,
 a:focus {

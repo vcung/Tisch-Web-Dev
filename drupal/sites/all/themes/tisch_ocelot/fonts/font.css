@@ -1,0 +1,15 @@
+@font-face {
+	font-family: 'circlethings';
+    
+    	src: url('http://fontsforweb.com/public/fonts/696/circlethings.eot');
+	src: local('circlethings'), url('http://fontsforweb.com/public/fonts/696/circlethings.ttf') format('truetype');
+    }
+body.cke_show_borders p {
+	font-family: 'circlethings';
+    font-size: 30px;
+}
+.fontsforweb_fontid_696 {
+	font-family: 'circlethings' !important;
+}
+
+/* Font downloaded from FontsForWeb.com */
