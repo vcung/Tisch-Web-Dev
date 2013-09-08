@@ -152,20 +152,22 @@ $zen-auto-include-item-base: false;
   }
 }
 
-/**
- * Use 5 grid columns for larger screens.
+/** KB changed the default 5 column layout to be 6, to account for 
+ * slightly larger second sidebar.
+ * Use 5 (now 6) grid columns for larger screens.
+  * 
  */
 @media all and (min-width: 960px) {
-
-  $zen-column-count: 5;
+  
+  $zen-column-count: 7;
 
   /**
    * The layout when there is only one sidebar, the left one.
    */
   .sidebar-first {
-    /* Span 4 columns, starting in 2nd column from left. */
+    /* Span 6 columns, starting in 2nd column from left. */
     #content {
-      @include zen-grid-item(4, 2);
+      @include zen-grid-item(6, 2);
     }
 
     /* Span 1 column, starting in 1st column from left. */
@@ -178,14 +180,14 @@ $zen-auto-include-item-base: false;
    * The layout when there is only one sidebar, the right one.
    */
   .sidebar-second {
-    /* Span 4 columns, starting in 1st column from left. */
+    /* Span 5 columns, starting in 1st column from left. */
     #content {
-      @include zen-grid-item(4, 1);
+      @include zen-grid-item(5, 1);
     }
 
-    /* Span 1 column, starting in 5th column from left. */
+    /* Span 2 columns, starting in 5th column from left. */
     .region-sidebar-second {
-      @include zen-grid-item(1, 5);
+      @include zen-grid-item(2, 6);
     }
   }
 
@@ -193,9 +195,9 @@ $zen-auto-include-item-base: false;
    * The layout when there are two sidebars.
    */
   .two-sidebars {
-    /* Span 3 columns, starting in 2nd column from left. */
+    /* Span 4 columns, starting in 2nd column from left. */
     #content {
-      @include zen-grid-item(3, 2);
+      @include zen-grid-item(4, 2);
     }
 
     /* Span 1 column, starting in 1st column from left. */
@@ -203,9 +205,9 @@ $zen-auto-include-item-base: false;
       @include zen-grid-item(1, 1);
     }
 
-    /* Span 1 column, starting in 5th column from left. */
+    /* Span 2 column, starting in 5th column from left. */
     .region-sidebar-second {
-      @include zen-grid-item(1, 5);
+      @include zen-grid-item(2, 6);
     }
   }
 }
