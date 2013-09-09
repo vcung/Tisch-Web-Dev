@@ -77,6 +77,33 @@
  * Branding header.
  */
 
+#header{
+
+  //site search in header
+#block-search-form { /* "Search form" block */
+visibility:hidden;
+@media all and (min-width:600px) {
+  /* Span 2 column, starting in 6th column from left. */
+  @include zen-clear();
+   $zen-column-count: 2;
+  $zen-gutter-width: 5px;
+  @include zen-grid-container;
+  width: 29%;
+  
+  float: right;
+
+  margin-right:-8px;
+ visibility:visible;
+ float:right;
+ input[type="text"], textarea {
+            background-color: $header_bg_blue;
+            width: 80%;
+            height: 2em;
+            color: $header_search_black;
+          }
+   }
+  }
+}
 /* Wrapping link for logo. */
 .header__logo {
   float: left; /* LTR */
@@ -141,7 +168,11 @@
  */
 #navigation {
 
-  margin-top: -20px;
+@media all and (max-width:480px){
+    display: none;
+  }
+
+  margin-top: -24px;
   /* Sometimes you want to prevent overlapping with main div. */
   /* overflow: hidden; */
 
@@ -159,6 +190,8 @@
   /* Main menu and secondary menu links and menu block links. */
   .links,
   .menu {
+
+
     margin: 0;
     padding: 0;
     text-align: left; /* LTR */
@@ -236,6 +269,94 @@ ul.menu li:hover > ul       { visibility: visible; }
 }//end nav
     //ul.menu ul ul           { left: 100%; top: 0; }
     
+@media all and (max-width: 480px) {
+  #askHeader {
+   display:none;
+
+  }
+ }
+ @media all and (min-width: 480px) {
+ #askHeader {/* Span 2 column, starting in 6th column from left. */
+  @include zen-clear();
+   $zen-column-count: 2;
+  $zen-gutter-width: 1px;
+  @include zen-grid-container;
+  width: 28.80%;
+  background-color: $dark-gray;
+   margin-bottom:3px;
+   //margin-left: 4px;
+   margin-right:-7px;
+   margin-top: 5px;
+  float: right;
+  padding: 5px 0px 5px 0px;
+  
+   text-align:center;
+   @include adjust-font-size-to(12px);
+   line-height: 1.2em;
+
+     div {
+      display: inline;
+     }
+ a:link {
+      color: white;
+      text-decoration:none;
+    }
+  a:visited{
+    color:white;
+  }
+  a:hover{
+    color:yellow;
+  }
+  //width: 99.5%;
+  
+  #ask{
+    background-color: $dark-gray;
+   
+    //border: 3px solid black;
+    color: white;
+    hr{
+      border: 0;
+    height: 2px;
+    background: black;
+    margin:0px;
+    padding:0px;
+    }
+   
+  }
+  
+  #audtopic{/* Span 2 column,  */
+  @include zen-grid-item(2, 1);
+  //background-color:gray;
+  //margin-top:15px;
+
+}
+
+  #aud{
+ @include zen-grid-item(1, 1);
+ border: 5px black;
+background-color: $dark-gray;
+ width:50%;
+
+ //margin-right:1px;
+ //border-right:1px black;
+ //margin-right:1px;
+  }
+
+  #topic{
+  @include zen-grid-item(1, 2);  
+   color: white;
+   //margin-left: 0.5px black;
+   background-color: $dark-gray;
+   width: 50%;
+  
+   a:link {
+    color: white;
+    text-decoration:none;
+   }
+  }
+
+}
+}
 
    
 
@@ -267,7 +388,16 @@ ul.menu li:hover > ul       { visibility: visible; }
 .comment__title {      /* Comment title. */
   margin: 0;
 }
-
+/** 
+*  Hours
+**/
+#mobile-hours {
+  background: $light-gray;
+  
+  @media all and (min-width:480px){
+    display: none;
+  }
+}
 /**
  * Messages.
  */
@@ -550,6 +680,85 @@ span.field-label {
   margin-bottom: rhythm(1);
 }
 
+.block-views {
+  background-color: white;
+   @include box-shadow(gray 3px 3px 7px);
+
+   &>div{
+    padding: $padding-amount;
+   }
+
+}
+
+
+#block-views-featured-resource-block-block{
+  margin-top: 15px;
+  margin-bottom: $vertical-amount;
+}
+#block-views-find-books-in-tisch-block-block{
+  float: right;
+  //margin-top: 0;
+}
+
+#block-views-feed-recently-arrived-block{
+   margin-bottom: $vertical-amount;
+  //see views-styles for control styling
+  //div ~ div {padding: 2%;
+  //}
+ 
+}
+
+/*
+*PANELS
+*
+*/
+
+.block-panels-mini{
+  background-color: white;
+  
+  &>div{
+    padding: $padding-amount;
+  }
+    
+  
+  h2{
+    @include adjust-font-size-to(14px);
+    padding: $padding-amount;
+    padding-bottom: 0px;
+  }
+  
+    //padding: $padding-amount;
+  
+}
+
+#block-panels-mini-call-number-infographic{
+ @include box-shadow(gray 3px 3px 7px);
+}
+
+#block-panels-mini-happening-now {
+  margin-top: $vertical-amount;
+  margin-bottom: $vertical-amount;
+  @include box-shadow(gray 3px 3px 7px);
+  background-color: white;
+   
+ .pane-block {
+  margin-right: 2%;
+  border-bottom: gray 1px solid;
+  }
+  & :last-child{
+   border-bottom: none;
+  }
+
+ & div {
+
+  padding-left: 1%;
+  padding-right: 1%;
+ }
+} 
+#block-panels-mini-search-box-for-side-pages{
+  margin-bottom: $vertical-content-amount;
+  @include box-shadow(gray 3px 3px 7px);
+}
 /**
  * Menus.
  */
@@ -945,6 +1154,12 @@ tr.selected td {
 /** Catalog Search**/
 #quicktabs-home_page_search_box {
   background: $active_bg;
+
+}
+//override for node on front page.
+.node-3  {
+  background-image: url("../images/background.png");
+  box-shadow: none !important;
 }
 
 .item-list {
@@ -1035,11 +1250,13 @@ tr.selected td {
 #searchtypes {
   color: #fff;
   font-size: 1.5em;
+  background-color:$active_bg;
 }
 .homeSearch {
+
   input#searcharg {
   width: 80%;
-  height:20px;
+  height:30px;
   margin-top:20px;
   }
   input#submit {
@@ -1078,4 +1295,46 @@ tr.selected td {
     background-color: #0072b9;
     background-image: image-url("progress.gif");
   }
+}
+
+/***
+*   SPECIFIC NODES & CONTENT TYPES
+***/
+
+/*KB added*/
+.node-basic-content {
+
+  h2 {
+    color: darken($tufts-classic, 20%);
+    text-transform: uppercase;
+    padding-left: $padding-amount;
+    padding-right: 0;
+
+  }
+  //display: inline;
+  background-color: white;
+  margin-bottom: $vertical-content-amount;
+  @include box-shadow(gray 3px 3px 7px);
+.field-name-body{
+   //background-color: white;
+   padding-left: $padding-amount;
+   float: left;
+   //width: 100%;
+}
+  
+
+ 
+.field-name-field-2nd-column-body{
+  @media all and (min-width: 480px) {
+
+  float: right;
+  padding-right: $padding-amount;
+  z-index: -10;
+  h5 {
+     //color: green;
+     padding-top: $base-line-height * 3;
+   }
+ }
+}
+
 }

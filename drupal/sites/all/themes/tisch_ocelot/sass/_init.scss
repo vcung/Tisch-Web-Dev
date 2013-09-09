@@ -94,13 +94,15 @@ $font-monospace:   $courier;
 // Colors, etc.
 //
 //colors
-$light-gray: #DCDCDC;
+$light-gray: #8c959a;
+$dark-gray: #434343;
 $page-color: #E5E4E2;
 $tufts-classic: #6699CC;
 $tufts-info-blue: #3172AE;
 $active-menu-gray: #837E7C;
-$heading-orange: #cf5300;
+$heading-orange: #db6b0f;
 $heading-fade-orange: #ffa500;
+$heading-orange-border: darken($heading-orange, 10%);
 //colors for views pages & blocks 
 $pager_item_grey: #837E7C;
 $pager_item_active: yellow;
@@ -112,9 +114,10 @@ $inactive_font: #C5CCD2;
 $header_bg_blue: lighten($tufts-info-blue, 30%);
 $header_search_black: lighten(black, 20%); //#C6E2FF;
 //colors for footer
-$footer-gray: #363D4a;
+$footer-gray: #343434;
 //colors for text
 $tufts-text-blue: #3e7bb3;
+$footer-text-gray: #b2b2b2;
 
 
 

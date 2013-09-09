@@ -53,6 +53,8 @@
   <div id="main">
 
     <div id="content" class="column" role="main">
+      <!--KB added titleContainer div for block shadow-->
+      <div class="titleContainer">
       <?php print render($page['highlighted']); ?>
       <?php print $breadcrumb; ?>
       <a id="main-content"></a>
@@ -67,6 +69,7 @@
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
+      </div> <!--end titleContainer-->
       <?php print render($page['content']); ?>
       <?php print $feed_icons; ?>
     </div>
