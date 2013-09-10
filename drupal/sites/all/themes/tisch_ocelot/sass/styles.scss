@@ -23,6 +23,7 @@
 /* SMACSS theme rules */
 /* @import "theme-A"; */
 /* @import "theme-B"; */
+@include font-face("SocialicoRegular", font-files("socialico/socialico-webfont.woff", "socialico/socialico-webfont.ttf"), "socialico/socialico-webfont.eot");
 
 
 #headerWrap {
@@ -151,8 +152,8 @@
   .empty{
     display:none;
   }
-
-   @include adjust-font-size-to (12px);
+ 
+  @include adjust-font-size-to (12px);
   line-height: 1.5em;
 
   background-color: $footer-gray;
@@ -176,6 +177,14 @@
     text-decoration: none;
     
   }
+
+  .socialIcons{
+
+      @extend .backgroundFontIcon;
+      p{
+      color: white;
+      background-color: $dark-gray;}
+    }
 
 }
 
@@ -237,10 +246,9 @@
   #footerSocial {/* Span 2 columns, starting in 6th column from left. */
   //width: 25%;
   @include zen-grid-item(2, 6);
-
-    p{font-family: $social;}
+  
   }
-
+  
 
 }//endfooter large screen
 

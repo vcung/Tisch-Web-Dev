@@ -41,9 +41,10 @@
         <p>Copyright &copy; 2013</p>
      </div>
      <div id="footerSocial">
+      <span class="socialIcons">
       <h3>Follow Us</h3>
-     <p>L</p><p> F</p>
-     
+     <p>L</p><p>F</p>
+     </span>
     </div>
     	
   </footer><!-- region__footer -->
