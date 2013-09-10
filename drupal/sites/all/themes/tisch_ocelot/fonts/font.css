@@ -13,3 +13,16 @@ body.cke_show_borders p {
 }
 
 /* Font downloaded from FontsForWeb.com */
+
+/*SOCIOLICO font*/
+@font-face {
+    font-family: 'socialicoregular' !important;
+    src: url('socialico-webfont.eot');
+    src: url('socialico-webfont.eot?#iefix') format('embedded-opentype'),
+         url('socialico-webfont.woff') format('woff'),
+         url('socialico-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+
+}

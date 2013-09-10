@@ -237,6 +237,8 @@
   #footerSocial {/* Span 2 columns, starting in 6th column from left. */
   //width: 25%;
   @include zen-grid-item(2, 6);
+
+    p{font-family: $social;}
   }
 
 

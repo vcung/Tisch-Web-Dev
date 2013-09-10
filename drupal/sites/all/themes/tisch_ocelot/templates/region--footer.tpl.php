@@ -42,8 +42,8 @@
      </div>
      <div id="footerSocial">
       <h3>Follow Us</h3>
-      <img src="" alt="twitter icon"/>
-      <img src="" alt="facebook icon"/>
+     <p>L</p><p> F</p>
+     
     </div>
     	
   </footer><!-- region__footer -->
