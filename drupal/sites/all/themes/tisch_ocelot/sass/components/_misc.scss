@@ -7,7 +7,10 @@
  * Additional useful selectors can be found in Zen's online documentation.
  * https://drupal.org/node/1707736
  */
-
+ .white {
+  color: white;
+  @include single-text-shadow;
+ }
 /**
  * Wireframes.
  */
@@ -1107,15 +1110,27 @@ tr.selected td {
 }
 
 .backgroundFontIcon {
+  [data-icon]:before {
+  font-family: 'icomoon';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
     p{  
       width: 10%;
       text-align: center;
       display: inline-block;
       font-size: 200%;
-      font-family: $social;
+      //font-family: $icon;
       padding: 5px;
       margin: 2px;
     }
+
   }
 /**Chat Box**/
 .lci_chat_load {

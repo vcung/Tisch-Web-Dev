@@ -21,10 +21,10 @@
       <div class="frontSideBlock sideAsk">
         <h3>Ask a Librarian</h3>
       <ul>
-    <li>Chat ></li>
-    <li>Email > </li>
-    <li>In person > </li>
-    <li>Phone > </li>
+    <li><span class="white" data-icon="&#xe00b;" aria-hidden="true"></span> Chat  >></li>
+    <li><span class="white" data-icon="" aria-hidden="true">@</span> Email >> </li>
+    <li><span class="white" data-icon="&#xe00a;" aria-hidden="true"></span> In person >> </li>
+    <li><span class="white" data-icon="&#xe000;" aria-hidden="true"></span> Phone >> </li>
     </ul>
      </div>
         <div class="frontSideBlock techAvail">
