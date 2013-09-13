@@ -23,8 +23,8 @@
 /* SMACSS theme rules */
 /* @import "theme-A"; */
 /* @import "theme-B"; */
-
-
+@include font-face("SocialicoRegular", font-files("socialico/socialico-webfont.woff", "socialico/socialico-webfont.ttf"), "socialico/socialico-webfont.eot");
+@include font-face("icomoon", font-files("icomoon/fonts/icomoon.woff", "icomoon/fonts/icomoon.ttf"), "icomoon/fonts/icomoon.eot");
 #headerWrap {
 	 @include background-image(linear-gradient(left, $tufts-classic, $tufts-info-blue)); 
 }
@@ -74,7 +74,27 @@
  * SIDEBARS
  ***/
 
+ .sideAsk{
+  @extend .backgroundFontIcon;
+  background-color: $light-gray;
+  color: black;
+  padding: 0 5% 10% 5%;
+  
+ 
+  ul {
+    margin-left: 0;
+    padding-left:0;
+
+  li {
+    list-style-type: none;
+    //margin-left: 2%;
+    //padding-left:2%;
+  }
+ }
+}
  .region-sidebar-first {
+
+
 
  	.block-menu-block {
 
@@ -151,8 +171,8 @@
   .empty{
     display:none;
   }
-
-   @include adjust-font-size-to (12px);
+ 
+  @include adjust-font-size-to (12px);
   line-height: 1.5em;
 
   background-color: $footer-gray;
@@ -176,6 +196,22 @@
     text-decoration: none;
     
   }
+
+  .socialIcons{
+
+      @extend .backgroundFontIcon;
+      p{
+      color: white;
+      background-color: $dark-gray;}
+      a:link{
+        color:white;
+        text-decoration: none;
+      }
+      a:visited{
+        color:white;
+        text-decoration: none;
+      }
+    }
 
 }
 
@@ -237,10 +273,9 @@
   #footerSocial {/* Span 2 columns, starting in 6th column from left. */
   //width: 25%;
   @include zen-grid-item(2, 6);
-
-    p{font-family: $social;}
+  
   }
-
+  
 
 }//endfooter large screen
 

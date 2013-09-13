@@ -41,9 +41,11 @@
         <p>Copyright &copy; 2013</p>
      </div>
      <div id="footerSocial">
+      <span class="socialIcons">
       <h3>Follow Us</h3>
-     <p>L</p><p> F</p>
-     
+      <p><a href="https://www.facebook.com/tischlibrary"><span data-icon="&#xe006;" aria-hidden="true"></span><span class="element-invisible">Facebook</span></a></p>
+      <p><a href="https://twitter.com/TischLibrary"><span data-icon="&#xe005;" aria-hidden="true"></span><span class="element-invisible">Twitter</span></a></p>
+     </span>
     </div>
     	
   </footer><!-- region__footer -->
