@@ -87,7 +87,9 @@ function screen_scrape_cron_queue_info() {
  */
 function screen_scrape_cron() {
   $feeds = _screen_scrape_list();
-  $queue = DrupalQueue::get('screen_scrape_feed'); 
+  $queue = DrupalQueue::get('screen_scrape_feed');
+
+  // This needs to be modified to pass the feed key in somewhow
   foreach($feeds as $feed) { 
     $queue->createItem($feed); 
   }
@@ -98,6 +100,8 @@ function screen_scrape_cron() {
  *
  * @param $feed
  *   An array describing the data URL
+ *
+ * @todo: get the feed key somehow
  */
  function screen_scrape_refresh($feed) {
   
@@ -106,9 +110,10 @@ function screen_scrape_cron() {
   
   // Now we actually get the remote data and process it
   $value = _screen_scrape_get_num_available($url, $offset, $count);
-  
+ 
+
   // Store the value in the variable table
-  variable_set('screen_scrape_' . $feed, $value);
+  variable_set('screen_scrape_' . $feed_key, $value); // This is where the feed key will go
 }
 
 /**
