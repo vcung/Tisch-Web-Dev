@@ -137,7 +137,7 @@ function screen_scrape_block_view($delta = '') {
 }
 
 /**
- * Generate Available Technology HTML from cached info
+ * Generate Available Technology HTML from stored variables
  */ 
 function _screen_scrape_block_html() {
   $feeds = _screen_scrape_list();
