@@ -161,7 +161,7 @@ function _screen_scrape_block_html() {
 /**
  * Implements hook_theme()
  */ 
-function screen_scrape_ui_theme($existing, $type, $theme, $path) {
+function screen_scrape_theme($existing, $type, $theme, $path) {
   return array(
     'screen_scrape_item' => array(
       'variables' => array('count' => 0, 'label' => null),
