@@ -78,6 +78,8 @@ $font-body:        $verdana;
 $font-monospace:   $courier;
 
 
+
+
 //
 // Colors, etc.
 //
@@ -85,6 +87,13 @@ $font-monospace:   $courier;
 // The amount lists, blockquotes and comments are indented.
 $indent-amount: 30px;
 
+//vertical space between sections
+$vertical-amount: 5%;
+//space between sections in content column
+$vertical-content-amount:2%;
+
+//padding
+$padding-amount: 2%;
 
 //colors
 $light-gray: #DCDCDC;
@@ -92,7 +101,8 @@ $page-color: #E5E4E2;
 $tufts-classic: #6699CC;
 $tufts-info-blue: #3172AE;
 $active-menu-gray: #837E7C;
-$heading-orange: orange;
+$heading-orange: #cf5300;
+$heading-fade-orange: #ffa500;
 //colors for views pages & blocks 
 $pager_item_grey: #837E7C;
 $pager_item_active: yellow;
@@ -106,6 +116,9 @@ $header_search_black: lighten(black, 20%); //#C6E2FF;
 //colors for footer
 $footer-gray: #363D4a;
 
+$default-text-shadow-color: black;
+$default-text-shadow-blur: 2px;
+$default-text-shadow-v-offset: 1px;
 //
 // Partials to be shared with all .scss files.
 //

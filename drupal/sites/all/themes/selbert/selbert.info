@@ -59,6 +59,7 @@ stylesheets[all][] = css/navigation.css
 stylesheets[all][] = css/views-styles.css
 stylesheets[all][] = css/nodes.css
 stylesheets[all][] = css/comments.css
+stylesheets[all][] = css/chat.css
 stylesheets[all][] = css/forms.css
 stylesheets[all][] = css/fields.css
 stylesheets[all][] = css/print.css

@@ -24,6 +24,7 @@
   }
 
   .content { /* Node's content wrapper */
+  //background-color:white;
   }
 
   ul.links { /* Node links. See also the ul.links declaration in the pages.css. */
@@ -55,6 +56,38 @@
 .node-article { /* Article content node */
 }
 
+/*KB added*/
+.node-basic-content {
+  h2 {
+    color: darken($tufts-classic, 20%);
+    text-transform: uppercase;
+
+  }
+  //display: inline;
+  background-color: white;
+  margin-bottom: $vertical-content-amount;
+  @include box-shadow(gray 3px 3px 7px);
+.field-name-body{
+   //background-color: white;
+   
+   float: left;
+   //width: 100%;
+}
+  
+
+
+.field-name-field-2nd-column-body{
+  float: right;
+  padding-right: $padding-amount;
+  z-index: -10;
+  h5 {
+     //color: green;
+     padding-top: $base-line-height * 3;
+   }
+}
+
+}
+
 .node-unpublished { /* Unpublished nodes */
   /* background-color: #fff4f4; */ /* Drupal core uses a #fff4f4 background */
 
@@ -63,22 +96,7 @@
   }
 }
 
-/*KB added this to style the search box on the home page; node 2 in quicktab */
-.homeSearch {
-  input#searcharg {
-  width: 80%;
-  height:20px;
-  margin-top:20px;
-  }
-  input#submit {
-  height:27px;
-  font-weight:bold;
-  margin-left: -5px;
-  }
-  
-}
-#searchtypes{
-  float:right;
-  margin-top: -50px;
-  margin-right: 15%;
-}
+
+
+
+
