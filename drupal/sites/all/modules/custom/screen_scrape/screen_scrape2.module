@@ -1,0 +1,302 @@
+<?php
+
+/**
+ * @file
+ * Display availabile technologies in a block
+ */
+
+
+//returns information on location, call number, and status of the items from the source
+function get_availability($url, $section, $to_split, $offset, $count, $status) {
+  
+  $html = drupal_http_request($url)->data; 
+  //Get only the section of the page that you want
+  preg_match($section, $html, $matches);
+
+  //Separate the page via the explode function into an array
+  $items_array = explode($to_split, $matches[1]);
+
+  if (empty($count)) {
+    $items_count = count($items_array);
+  } 
+  else {
+    $items_count = $count;
+  }
+  
+  $available = 0;
+  
+  for ($i=$offset; $i< $items_count; $i++) {
+    preg_match($status, $items_array[$i], $stat);
+    
+    if (trim($stat[1]) == 'AVAILABLE') {
+      $available+=1;
+    }
+  }
+  
+  return sprintf("%02s", $available);
+}
+
+
+function get_num_available($html, $offset, $count) {
+  $available=0;
+  
+  // loads the page
+  phpQuery::newDocumentFileHTML($html);
+
+  // Once the page is loaded, you can then make queries on whatever DOM is loaded.  
+  // This example grabs the title of the currently loaded page.
+
+  $technology = pq('.bibItemsEntry td'); //requires including phpQuery-onefile.php
+
+  if (empty($count)) {
+    $technology_count = count($technology);
+  } 
+  else {
+    $technology_count = $count;
+  }
+
+  if ($technology_count == 0) {
+  }
+  else {
+    for ($i=$offset; $i<=$technology_count - 1; $i++) {
+      $url = pq('.bibItemsEntry td:eq(' . $i . ') a')->attr('href');
+      $items_loc = pq('.bibItemsEntry td:eq(' . $i . ')')->text();
+      $items_no = pq('.bibItemsEntry td:eq(' . ($i+=1) . ')')->text();
+      $items_stat = pq('.bibItemsEntry td:eq(' . ($i+=1) . ')')->text();
+
+      //to remove prefixing "nbsp;" 
+      preg_match("/nbsp\;(.*) /s", htmlspecialchars(htmlentities($items_stat)), $status);
+
+      if (trim($items_stat) == 'AVAILABLE' || trim($status[1]) == 'AVAILABLE') {
+        $available += 1;
+      }
+    }
+  }
+  return sprintf("%02s", $available);
+}
+
+
+
+function screen_scrape_block_view_alter(&$data, $block) {
+  
+  switch ($block->title) { //or use delta
+    case ('Available Technology'): 
+
+   /* include_once('phpQuery-onefile.php');
+
+    $ipad = get_num_available('http://library.tufts.edu/record=b2307230~S2', 0, "");
+    $harddrive = get_num_available('http://library.tufts.edu/record=b2321148~S1', 0, "");
+    $laptop = get_num_available('http://library.tufts.edu/record=b1684189~S1', 15, ""); //first 5 is not from tisch
+    $bike = get_num_available('http://library.tufts.edu/search~S1?/.b2133185/.b2133185/1,1,1,B/holdings~2133185&FF=&1,0,', 0, 90);
+    $camcorder = get_num_available('http://library.tufts.edu/record=b2032147~S1', 0, "");
+ */     
+  $section = '/<tr  class=\"bibItemsEntry\">(.*)<\/tr>/s';  
+  $status = '/<!-- field % -->&nbsp\;(.*?)<\/td>/s';  
+  $to_split = '<tr  class="bibItemsEntry">';  
+  
+  $bike_url = 'http://library.tufts.edu/search~S1?/.b2133185/.b2133185/1,1,1,B/holdings~2133185&FF=&1,0,';
+    $laptop_url = 'http://library.tufts.edu/record=b1684189~S1';
+    $ipad_url = 'http://library.tufts.edu/record=b2307230~S2';
+    $camcorder_url = 'http://library.tufts.edu/record=b2032147~S1';
+    $harddrive_url = 'http://library.tufts.edu/record=b2321148~S1'; 
+  
+    $bike = get_availability($bike_url, $section, $to_split, 0, 30, $status);
+    $laptop= get_availability($laptop_url, $section, $to_split, 5, '', $status);
+    $ipad= get_availability($ipad_url, $section, $to_split, 0, '', $status);
+    $camcorder= get_availability($camcorder_url, $section, $to_split, 0, '', $status);
+    $harddrive= get_availability($harddrive_url, $section, $to_split, 0, '', $status);
+  
+ 
+/*  $bike = screen_scrape_get_avail_bike(FALSE);
+    $laptop= screen_scrape_get_avail_laptop(FALSE);
+    $ipad= screen_scrape_get_avail_ipad(FALSE);
+    $camcorder= screen_scrape_get_avail_camcorder(FALSE);
+    $harddrive= screen_scrape_get_avail_harddrive(FALSE);
+  */
+  $data['content']=array(
+    '#markup' => '<p>' . $bike . ' Bikes</p>
+          <p>' . $camcorder . ' Video Cameras</p>
+          <p>' . $harddrive . ' External Hard Drive</p>
+          <p>' . $ipad . ' Ipads</p>
+          <p>' . $laptop . ' Laptops</p>  
+            '
+    );
+  
+  /*drupal_add_js('sites/all/modules/custom/screen_scrape/screen_scrape.js');    
+   $block->content['js'] = drupal_get_path('module', 'screen_scrape') . '/screen_scrape.js';
+    break;
+  */
+
+  default:
+  }
+
+
+}
+//http://www.lullabot.com/blog/article/beginners-guide-caching-data
+//should each tech be separately retrieved, or within same function...
+//CHECK UP ON CACHEING/CRON ->http://blog.merge.nl/20120118/how-does-caching-work-drupal, HOW TO EXCLUDE CACHING OF A BLOCK
+//MAYBE USING ELYSIA CRON https://drupal.org/project/elysia_cron OR ANOTHER MODULE?
+function screen_scrape_get_avail_tech($reset = FALSE) {
+  static $bike; //create separate fun for each tech? 
+  if (!isset($bike) || $reset) {
+    if (!$reset && ($cache = cache_get('screen_scrape_bike')) && !empty($cache->data)) {
+    $bike = $cache->data;
+    }
+    else {
+      // Do your expensive calculations here, and populate $my_data
+    
+  $section = '/<tr  class=\"bibItemsEntry\">(.*)<\/tr>/s';  
+  $status = '/<!-- field % -->&nbsp\;(.*?)<\/td>/s';  
+  $to_split = '<tr  class="bibItemsEntry">';  
+  
+  $bike_url = 'http://library.tufts.edu/search~S1?/.b2133185/.b2133185/1,1,1,B/holdings~2133185&FF=&1,0,';
+    $laptop_url = 'http://library.tufts.edu/record=b1684189~S1';
+    $ipad_url = 'http://library.tufts.edu/record=b2307230~S2';
+    $camcorder_url = 'http://library.tufts.edu/record=b2032147~S1';
+    $harddrive_url = 'http://library.tufts.edu/record=b2321148~S1'; 
+  
+  $bike = get_availability($bike_url, $section, $to_split, 0, 30, $status);
+    $laptop= get_availability($laptop_url, $section, $to_split, 5, '', $status);
+    $ipad= get_availability($ipad_url, $section, $to_split, 0, '', $status);
+    $camcorder= get_availability($camcorder_url, $section, $to_split, 0, '', $status);
+    $harddrive= get_availability($harddrive_url, $section, $to_split, 0, '', $status);
+  
+    cache_set('screen_scrape_bike', $bike, 'cache', time()+900);
+  cache_set('screen_scrape_ipad', $ipad, 'cache', time()+900);
+  cache_set('screen_scrape_harddrive', $harddrive, 'cache', time()+900);
+  cache_set('screen_scrape_camcorder', $camcorder, 'cache', time()+900);
+  cache_set('screen_scrape_laptop', $laptop, 'cache', time()+900);
+    }
+  }
+  return $bike;
+}
+function screen_scrape_get_avail_bike($reset = FALSE) {
+  static $num_bike; //create separate fun for each tech? 
+  if (!isset($num_bike) || $reset) {
+    if (!$reset && ($cache = cache_get('screen_scrape_bike')) && !empty($cache->data)) {
+    $num_bike = $cache->data;
+    }
+    else {
+      // Do your expensive calculations here, and populate $my_data
+    
+  $section = '/<tr  class=\"bibItemsEntry\">(.*)<\/tr>/s';  
+  $status = '/<!-- field % -->&nbsp\;(.*?)<\/td>/s';  
+  $to_split = '<tr  class="bibItemsEntry">';  
+  $bike_url = 'http://library.tufts.edu/search~S1?/.b2133185/.b2133185/1,1,1,B/holdings~2133185&FF=&1,0,';
+  
+  $num_bike = get_availability($bike_url, $section, $to_split, 0, 30, $status);
+    cache_set('screen_scrape_bike', $num_bike, 'cache', time()+900);
+  
+    }
+  }
+  return $num_bike;
+}
+
+function screen_scrape_get_avail_ipad($reset = FALSE) {
+
+  static $num_ipad;
+  if (!isset($num_ipad) || $reset) {
+    if (!$reset && ($cache = cache_get('screen_scrape_ipad')) && !empty($cache->data)) {
+     $num_ipad = $cache->data;
+    }
+    else {
+    $section = '/<tr  class=\"bibItemsEntry\">(.*)<\/tr>/s';  
+    $status = '/<!-- field % -->&nbsp\;(.*?)<\/td>/s';  
+    $to_split = '<tr  class="bibItemsEntry">';  
+    $ipad_url = 'http://library.tufts.edu/record=b2307230~S2';
+    
+    $num_ipad = get_availability($ipad_url, $section, $to_split, 0, '', $status);
+    cache_set('screen_scrape_ipad', $num_ipad, 'cache', time()+900);
+    }
+  }
+  return $num_ipad;
+}
+
+function screen_scrape_get_avail_laptop($reset = FALSE) {
+
+  static $num_laptop;
+  if (!isset($num_laptop) || $reset) {
+    if (!$reset && ($cache = cache_get('screen_scrape_laptop')) && !empty($cache->data)) {
+     $num_laptop = $cache->data;
+    }
+    else {
+    $section = '/<tr  class=\"bibItemsEntry\">(.*)<\/tr>/s';  
+    $status = '/<!-- field % -->&nbsp\;(.*?)<\/td>/s';  
+    $to_split = '<tr  class="bibItemsEntry">';  
+    $laptop_url = 'http://library.tufts.edu/record=b1684189~S1';
+    
+    $num_laptop= get_availability($laptop_url, $section, $to_split, 5, '', $status);
+    cache_set('screen_scrape_laptop', $num_laptop, 'cache', time()+900);
+    }
+  }
+  return $num_laptop;
+}
+
+function screen_scrape_get_avail_camcorder($reset = FALSE) {
+
+  static $num_camcorder;
+  if (!isset($num_camcorder) || $reset) {
+    if (!$reset && ($cache = cache_get('screen_scrape_camcorder')) && !empty($cache->data)) {
+     $num_camcorder = $cache->data;
+    }
+    else {
+    $section = '/<tr  class=\"bibItemsEntry\">(.*)<\/tr>/s';  
+    $status = '/<!-- field % -->&nbsp\;(.*?)<\/td>/s';  
+    $to_split = '<tr  class="bibItemsEntry">';  
+    $camcorder_url = 'http://library.tufts.edu/record=b2032147~S1';
+    
+    $num_camcorder= get_availability($camcorder_url, $section, $to_split, 0, '', $status);
+    cache_set('screen_scrape_camcorder', $num_camcorder, 'cache', time()+900);
+    }
+  }
+  return $num_camcorder;
+}
+
+function screen_scrape_get_avail_harddrive($reset = FALSE) {
+
+  static $num_harddrive;
+  if (!isset($num_harddrive) || $reset) {
+    if (!$reset && ($cache = cache_get('screen_scrape_harddrive')) && !empty($cache->data)) {
+     $num_harddrive = $cache->data;
+    }
+    else {
+    $section = '/<tr  class=\"bibItemsEntry\">(.*)<\/tr>/s';  
+    $status = '/<!-- field % -->&nbsp\;(.*?)<\/td>/s';  
+    $to_split = '<tr  class="bibItemsEntry">';  
+    $harddrive_url = 'http://library.tufts.edu/record=b2321148~S1'; 
+    
+    $num_harddrive= get_availability($harddrive_url, $section, $to_split, 0, '', $status);
+    cache_set('screen_scrape_harddrive', $num_harddrive, 'cache', time()+900);
+    }
+  }
+  return $num_harddrive;
+}
+
+function screen_scrape_cron() {
+  // Short-running operation example, not using a queue:
+  // Delete all expired records since the last cron run.
+  $expires = variable_get('mymodule_cron_last_run', REQUEST_TIME);
+  db_delete('mymodule_table')->condition('expires', $expires, '>=')->execute();
+  variable_set('mymodule_cron_last_run', REQUEST_TIME);
+
+  // Long-running operation example, leveraging a queue:
+  // Fetch feeds from other sites.
+  $result = db_query('SELECT * FROM {aggregator_feed} WHERE checked + refresh < :time AND refresh <> :never', array(
+    ':time' => REQUEST_TIME,
+    ':never' => AGGREGATOR_CLEAR_NEVER,
+  ));
+  $queue = DrupalQueue::get('aggregator_feeds');
+  foreach ($result as $feed) {
+    $queue->createItem($feed);
+  }
+}
+
+
+
+
+
+
+
+
+
+
