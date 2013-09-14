@@ -169,7 +169,7 @@
 	#footer {
 
   .empty{
-    display:none;
+    @extend .element-invisible;
   }
  
   @include adjust-font-size-to (12px);
@@ -188,7 +188,7 @@
   }
 
   ul {
-    margin:0 0 0 3%;
+    margin:0 0 0 5%;
     padding:0 0 0 2%;
   }
   li a {
@@ -198,7 +198,8 @@
   }
 
   .socialIcons{
-
+      margin-left: 0px;
+      padding-left: 0px;
       @extend .backgroundFontIcon;
       p{
       color: white;
@@ -212,14 +213,27 @@
         text-decoration: none;
       }
     }
+   #footerLogo{
+    @include leader(1);
+   background-image: url("../images/TuftsLogo.jpg");
+  
 
+   
+   //position: absolute;
+   height: 150px;
+   //background-position: top left;
+   background-repeat: no-repeat; }
+
+   padding-bottom: 2%;
 }
 
 @media all and (min-width: 480px)  {
-   #footer{ 
+   #footerContent{ 
+    margin-left:auto;
+    margin-right:auto;
    @include zen-clear();
    $zen-column-count: 7;
-  $zen-gutter-width: 10px;
+  //$zen-gutter-width: 10px;
   @include zen-grid-container;
   width: 100%;
 
@@ -227,7 +241,7 @@
     background-image: url("../images/nav.png");
     background-repeat: no-repeat;
 
-    background-position: right 0px top 10px;
+    //background-position: right 0px top 10px;
     
    
     }
@@ -239,17 +253,17 @@
   #footerLogo{/* Span 1 columns, starting in 1st column from left. */
    
   @include zen-grid-item(1, 1);
-  //width: 15%
-
+  height: 200px;
+  //width: 15%;
+   //margin-right: 30px;
+   
+   //background-size: 80%;
   }
   
   #otherFooterLibs {/* Span 1 columns, starting in 2nd column from left. */
   
   @include zen-grid-item(2, 2);
-  ul {
-    
-  
-  }
+ 
 
   //width: 25%;
   }
@@ -267,12 +281,14 @@
   p {
     margin:0.5em 0 0.5em 0;
   }
+
   //width: 25%;
   }
 
   #footerSocial {/* Span 2 columns, starting in 6th column from left. */
   //width: 25%;
   @include zen-grid-item(2, 6);
+
   
   }
   

@@ -9,8 +9,11 @@
 ?>
  <footer id="footer" class="<?php print $classes; ?>">
     <?php print $content; ?>
+    <div id="footerContent">
     <div id="footerLogo">
-    <img src="tuftslogos.png" alt="Tufts University, Arts & Sciences and Engineering logos"/>
+    <div class="element-invisible">
+      Tufts University Logo, Tufts School of Arts & Sciences, Tufts School of Engineering
+    </div>
     </div>
     <div id="otherFooterLibs">
     <h3>Other Tufts Libraries</h3>
@@ -47,6 +50,6 @@
       <p><a href="https://twitter.com/TischLibrary"><span data-icon="&#xe005;" aria-hidden="true"></span><span class="element-invisible">Twitter</span></a></p>
      </span>
     </div>
-    	
+   </div> 	
   </footer><!-- region__footer -->
 

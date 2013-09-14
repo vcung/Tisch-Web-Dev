@@ -603,17 +603,18 @@ table {
  * For screen sizes larger than 1200px, prevent excessively long lines of text
  * by setting a max-width.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\0000336}}
 #main,
 #header,
-.region-bottom {
+.region-bottom,
+#footerContent {
   margin-left: auto;
   margin-right: auto;
   max-width: 1200px;
 }
 
 /* Apply the shared properties of grid items in a single, efficient ruleset. */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\0000347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\0000348}}
 #header,
 #content,
 #navigation,
@@ -648,14 +649,14 @@ table {
 
 /* Navigation bar */
 @media all and (min-width: 480px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\0000361}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\0000362}}
   #main {
     /* Move all the children of #main down to make room. */
     padding-top: 3em;
     position: relative;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\0000366}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\0000367}}
   #navigation {
     /* Move the navbar up inside #main's padding. */
     position: absolute;
@@ -671,19 +672,19 @@ table {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\0000387}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\0000388}}
   .sidebar-first {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\0000389}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\0000390}}
   .sidebar-first #content {
     float: left;
     width: 66.66667%;
     margin-left: 33.33333%;
     margin-right: -100%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\0000394}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\0000395}}
   .sidebar-first .region-sidebar-first {
     float: left;
     width: 33.33333%;
@@ -694,19 +695,19 @@ table {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003102}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003103}}
   .sidebar-second {
     /* Span 2 columns, starting in 1st column from left. */
     /* Span 1 column, starting in 3rd column from left. */
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003104}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003105}}
   .sidebar-second #content {
     float: left;
     width: 66.66667%;
     margin-left: 0%;
     margin-right: -66.66667%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003109}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003110}}
   .sidebar-second .region-sidebar-second {
     float: left;
     width: 33.33333%;
@@ -717,27 +718,27 @@ table {
   /**
    * The layout when there are two sidebars.
    */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003117}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003118}}
   .two-sidebars {
     /* Span 2 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Start a new row and span all 3 columns. */
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003119}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003120}}
   .two-sidebars #content {
     float: left;
-    width: 66.66667%;
+    width: 100%;
     margin-left: 33.33333%;
-    margin-right: -100%;
+    margin-right: -133.33333%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003124}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003125}}
   .two-sidebars .region-sidebar-first {
     float: left;
     width: 33.33333%;
     margin-left: 0%;
     margin-right: -33.33333%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003129}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003130}}
   .two-sidebars .region-sidebar-second {
     float: left;
     width: 100%;
@@ -751,7 +752,7 @@ table {
     /* Span 1 column, starting in the 2nd column from left. */
     /* Span 1 column, starting in the 3rd column from left. */
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003135}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003136}}
   .two-sidebars .region-sidebar-second .block {
     padding-left: 10px;
     padding-right: 10px;
@@ -761,7 +762,7 @@ table {
     box-sizing: border-box;
     word-wrap: break-word;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003139}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003140}}
   .two-sidebars .region-sidebar-second .block:nth-child(3n+1) {
     float: left;
     width: 33.33333%;
@@ -769,14 +770,14 @@ table {
     margin-right: -33.33333%;
     clear: left;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003144}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003145}}
   .two-sidebars .region-sidebar-second .block:nth-child(3n+2) {
     float: left;
     width: 33.33333%;
     margin-left: 33.33333%;
     margin-right: -66.66667%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003148}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003149}}
   .two-sidebars .region-sidebar-second .block:nth-child(3n) {
     float: left;
     width: 33.33333%;
@@ -784,7 +785,7 @@ table {
     margin-right: -100%;
   }
 }
-/** KB changed the default 5 column layout to be 6, to account for 
+/** KB changed the default 5 column layout to be 7, to account for 
  * slightly larger second sidebar.
  * Use 5 (now 6) grid columns for larger screens.
   * 
@@ -793,19 +794,19 @@ table {
   /**
    * The layout when there is only one sidebar, the left one.
    */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003167}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003168}}
   .sidebar-first {
     /* Span 6 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003169}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003170}}
   .sidebar-first #content {
     float: left;
     width: 85.71429%;
     margin-left: 14.28571%;
     margin-right: -100%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003174}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003175}}
   .sidebar-first .region-sidebar-first {
     float: left;
     width: 14.28571%;
@@ -816,19 +817,19 @@ table {
   /**
    * The layout when there is only one sidebar, the right one.
    */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003182}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003183}}
   .sidebar-second {
     /* Span 5 columns, starting in 1st column from left. */
     /* Span 2 columns, starting in 5th column from left. */
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003184}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003185}}
   .sidebar-second #content {
     float: left;
     width: 71.42857%;
     margin-left: 0%;
     margin-right: -71.42857%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003189}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003190}}
   .sidebar-second .region-sidebar-second {
     float: left;
     width: 28.57143%;
@@ -839,27 +840,27 @@ table {
   /**
    * The layout when there are two sidebars.
    */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003197}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003198}}
   .two-sidebars {
     /* Span 4 columns, starting in 2nd column from left. */
     /* Span 1 column, starting in 1st column from left. */
     /* Span 2 column, starting in 5th column from left. */
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003199}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003200}}
   .two-sidebars #content {
     float: left;
     width: 57.14286%;
     margin-left: 14.28571%;
     margin-right: -71.42857%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003204}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003205}}
   .two-sidebars .region-sidebar-first {
     float: left;
     width: 14.28571%;
     margin-left: 0%;
     margin-right: -14.28571%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003209}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/layouts\/_responsive\.scss}line{font-family:\00003210}}
   .two-sidebars .region-sidebar-second {
     float: left;
     width: 28.57143%;
@@ -903,7 +904,7 @@ table {
  */
 /* element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/components\/_misc\.scss}line{font-family:\0000343}}
-.element-invisible,
+.element-invisible, #footer .empty,
 .element-focusable,
 #navigation .block-menu .block__title,
 #navigation .block-menu-block .block__title {
@@ -2527,10 +2528,7 @@ ul.quicktabs-tabs li.active a {
   line-height: 1.5em;
   background-color: #343434;
   color: #b2b2b2;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003171}}
-#footer .empty {
-  display: none;
+  padding-bottom: 2%;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003182}}
 #footer h3 {
@@ -2542,7 +2540,7 @@ ul.quicktabs-tabs li.active a {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003190}}
 #footer ul {
-  margin: 0 0 0 3%;
+  margin: 0 0 0 5%;
   padding: 0 0 0 2%;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003194}}
@@ -2550,89 +2548,103 @@ ul.quicktabs-tabs li.active a {
   color: #b2b2b2;
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003203}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003200}}
+#footer .socialIcons {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003204}}
 #footer .socialIcons p {
   color: white;
   background-color: #434343;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003206}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003207}}
 #footer .socialIcons a:link {
   color: white;
   text-decoration: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003210}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003211}}
 #footer .socialIcons a:visited {
   color: white;
   text-decoration: none;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003216}}
+#footer #footerLogo {
+  margin-top: 1.5em;
+  background-image: url("../images/TuftsLogo.jpg");
+  height: 150px;
+  background-repeat: no-repeat;
+}
 
 @media all and (min-width: 480px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003219}}
-  #footer {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003231}}
+  #footerContent {
+    margin-left: auto;
+    margin-right: auto;
     clear: left;
     width: 100%;
   }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass-extensions\/zen-grids\/stylesheets\/zen\/_grids\.scss}line{font-family:\0000346}}
-  #footer:before, #footer:after {
+  #footerContent:before, #footerContent:after {
     content: "";
     display: table;
   }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass-extensions\/zen-grids\/stylesheets\/zen\/_grids\.scss}line{font-family:\0000350}}
-  #footer:after {
+  #footerContent:after {
     clear: both;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003226}}
-  #footer div {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003240}}
+  #footerContent div {
     background-image: url("../images/nav.png");
     background-repeat: no-repeat;
-    background-position: right 0px top 10px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003234}}
-  #footer div:last-child {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003248}}
+  #footerContent div:last-child {
     background-image: none;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003239}}
-  #footer #footerLogo {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003253}}
+  #footerContent #footerLogo {
     /* Span 1 columns, starting in 1st column from left. */
     float: left;
     width: 14.28571%;
     margin-left: 0%;
     margin-right: -14.28571%;
+    height: 200px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003246}}
-  #footer #otherFooterLibs {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003263}}
+  #footerContent #otherFooterLibs {
     /* Span 1 columns, starting in 2nd column from left. */
     float: left;
     width: 28.57143%;
     margin-left: 14.28571%;
     margin-right: -42.85714%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003257}}
-  #footer #otherFooterTufts {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003271}}
+  #footerContent #otherFooterTufts {
     /* Span 1 column, starting in 4th column from left. */
     float: left;
     width: 14.28571%;
     margin-left: 42.85714%;
     margin-right: -57.14286%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003262}}
-  #footer #footerContact {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003276}}
+  #footerContent #footerContact {
     /* Span 1 columns, starting in 2nd column from left. */
     float: left;
     width: 14.28571%;
     margin-left: 57.14286%;
     margin-right: -71.42857%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003264}}
-  #footer #footerContact p.address {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003278}}
+  #footerContent #footerContact p.address {
     margin: 0px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003267}}
-  #footer #footerContact p {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003281}}
+  #footerContent #footerContact p {
     margin: 0.5em 0 0.5em 0;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003273}}
-  #footer #footerSocial {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003288}}
+  #footerContent #footerSocial {
     /* Span 2 columns, starting in 6th column from left. */
     float: left;
     width: 28.57143%;
