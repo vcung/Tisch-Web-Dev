@@ -29,7 +29,7 @@
         <?php endif; ?>
       </div>
     <?php endif; ?>
-
+     <div id="myAccount"><a href="https://library.tufts.edu/patroninfo~S1">My Account</a></div>
     <?php if ($secondary_menu): ?>
       <nav class="header__secondary-menu" id="secondary-menu" role="navigation">
         <?php print theme('links__system_secondary_menu', array(

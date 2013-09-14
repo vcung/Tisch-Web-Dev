@@ -185,31 +185,43 @@
     text-transform: uppercase;
     //font-weight:normal;
     margin-bottom: 0px;
+    margin-top: 0px;
+      margin-left: 5%;
+      padding-top: 0px;
+     }
+  
+    ul {
+      
+      margin-top:0;
+    li a {
+      color: $footer-text-gray;
+        text-decoration: none;
+        margin-left: 0;
+        padding-left: 0;
+    //margin: 0;
+    //padding: 0;
+    }
   }
-
-  ul {
-    margin:0 0 0 5%;
-    padding:0 0 0 2%;
-  }
-  li a {
-    color: $footer-text-gray;
-    text-decoration: none;
-    
-  }
-
   .socialIcons{
       margin-left: 0px;
       padding-left: 0px;
       @extend .backgroundFontIcon;
       p{
       color: white;
-      background-color: $dark-gray;}
+      background-color: $dark-gray;
+      }
+      p:first-of-type{
+        margin-left: 5%;
+      }
       a:link{
-        color:white;
+        color: white;
         text-decoration: none;
       }
+      a:hover {
+        color: $heading-orange;
+      }
       a:visited{
-        color:white;
+        color: white;
         text-decoration: none;
       }
     }
@@ -238,22 +250,27 @@
   width: 100%;
 
   div {
-    background-image: url("../images/nav.png");
-    background-repeat: no-repeat;
-
-    //background-position: right 0px top 10px;
-    
-   
+    @include leader(1);
+    p {
+      padding-left: 5%;
+      }
+    height: 150px;
+    //padding-left: 10px;
+    border-right: 1px solid $dark-gray;
     }
+    
     div:last-child{
-    background-image:none;
+    border-right:none;
+
+
+    //margin-right: 20px;
     
     }
   
   #footerLogo{/* Span 1 columns, starting in 1st column from left. */
    
   @include zen-grid-item(1, 1);
-  height: 200px;
+  //height: 150px;
   //width: 15%;
    //margin-right: 30px;
    
