@@ -93,7 +93,7 @@
 #header{
 
 #myAccount{
-  margin-top: 5%;
+  margin-top: 1.5em;
   float:right;
   color: white;
 
@@ -148,13 +148,14 @@ visibility:hidden;
   float: left; /* LTR */
   margin: 0;
   padding: 0;
-  margin-top: 5%;
+  margin-top: 0;
 }
 
 /* Logo image. */
 .header__logo-image {
+  margin-top: 1em;
   vertical-align: bottom;
-  //margin-bottom: -2em;
+  margin-bottom: -2em;
 }
 
 /* Wrapper for website name and slogan. */
@@ -198,7 +199,8 @@ visibility:hidden;
   clear: both;
 }
 #site-slogan { /* The slogan (or tagline) of a website */
-  margin: 3em 0 0 0;
+  margin: 0 0 -3em 0;
+  padding-top: 3em;
   font-size: 1em;
   color: white;
   font-weight: normal;
