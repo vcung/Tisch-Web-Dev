@@ -35,3 +35,10 @@
     @include element-invisible-off;
   }
 }
+
+//no bullets
+@mixin no-bullets{
+  list-style-image: none;
+list-style-type: none;
+margin-left: 0px;
+}

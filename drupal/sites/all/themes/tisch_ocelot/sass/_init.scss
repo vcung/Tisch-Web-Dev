@@ -152,6 +152,8 @@ $tabs-border: #bbb;
 // See http://compass-style.org/help/tutorials/spriting/
 @import "compass/utilities/sprites";
 // Use one CSS3 mixin instead of multiple vendor prefixes.
+@import "compass/utilities/lists";
+//KB added this to work with lists.
 @import "compass/css3";
 // Helps set up a vertical rhythm.
 @import "compass/typography/vertical_rhythm";

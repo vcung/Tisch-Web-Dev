@@ -21,6 +21,8 @@
     color:white;
   }
  }
+
+
 /**
  * Wireframes.
  */
@@ -1230,7 +1232,11 @@ tr.selected td {
 /** Catalog Search**/
 #quicktabs-home_page_search_box {
   background: $active_bg;
-
+  border: 3px solid $inactive-bg;
+  background-image:url("../images/blueCorner.png");
+  background-image-color: $inactive-bg;
+  background-repeat:no-repeat;
+  background-position: right bottom;
 }
 //override for node on front page.
 .node-3  {
@@ -1257,7 +1263,9 @@ tr.selected td {
       background: $inactive_bg;
       font-size: 1em;
       margin: 0px;
+
       a {
+
         color: $inactive_font;
         text-decoration: none;
         float: left;
@@ -1298,6 +1306,8 @@ tr.selected td {
   }
 
 .quicktabs_main  {
+  @extend .white;
+  @extend .whiteLink;
   clear: both;
   padding: 20px 5px 0 5px;
   position: relative;
@@ -1305,6 +1315,7 @@ tr.selected td {
   fieldset{
     border: none;
   }
+
   //ul {
     //float: right;
     //li {
@@ -1316,14 +1327,33 @@ tr.selected td {
       //}
     //}
   //}
+#otherCatalogs{
+  float: right;
+  margin: 1% 0 3% 0;
+}
 #submit {
-   background: none repeat scroll 0 0 #104C80;
+    background-image:url("../images/searchButton.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 40px;
+    margin-top: -40px;
+    float: right;
+    background-color: $inactive-bg;
+    border: none;
+    position: relative;
+    z-index: 15;
+   //background: none repeat scroll 0 0 #104C80;
    // border: medium none;
-    color: #fff;
+    //color: #fff;
   }
   input#searcharg {
-  width: 80%;
-  height:30px;
+  width: 100%;
+  height:40px;
+  margin: 0;
+  border: 1px solid $inactive-bg;
+  position: relative;
+  z-index: 5;
   //margin-top:100px;
   //float: left;
   }
@@ -1334,12 +1364,25 @@ tr.selected td {
     display: inline-block;
   }
   input#searchscope{
-    margin-left: 200px;
     position: relative;
     //margin-bottom: 5px;
   }
   #otherCatalogs{
-    margin-left:200px;
+    //margin-left:200px;
+
+  }
+  .help{
+    float: right;
+    margin-top: 1em;
+
+    ul {
+      @include horizontal-list;
+      @include no-bullets;
+      li {
+        margin-left: 1em;
+      }  
+    }
+
   }
 }
 
