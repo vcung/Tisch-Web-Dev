@@ -12,7 +12,7 @@
   <div class="<?php print $classes; ?>">
   	<div id="askHeader">
     	<div id="ask">
-    	<a href="">Ask a Librarian</a>
+    	<a href=""><span  data-icon="&#xe00b;" aria-hidden="true"></span>  Ask a Librarian</a>
     	<hr>
     </div>
        <div id="audtopic">

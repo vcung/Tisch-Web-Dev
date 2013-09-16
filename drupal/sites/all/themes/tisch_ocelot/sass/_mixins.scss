@@ -42,3 +42,32 @@
 list-style-type: none;
 margin-left: 0px;
 }
+
+@mixin no-decoration{
+  a:link{
+    text-decoration: none;
+  }
+  a:visited{
+    text-decoration: none;
+  }
+}
+
+@mixin orange_corner{
+  background-image:url("../images/orangeCorner.png");
+  background-position: 0 3em;
+  background-repeat: no-repeat;
+
+  h2.block__title{
+    @include adjust-font-size-to(24px);
+   @include text-shadow(rgba(black, 0.2) 1px 1px 0, rgba(black, 0.2) 2px 2px 0, rgba(black, 0.2) 3px 3px 0);
+    margin: 0;
+    padding: 0 .75em;  
+
+  }
+}
+
+@mixin gray_corner{
+  background-image:url("../images/grayCorner.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
