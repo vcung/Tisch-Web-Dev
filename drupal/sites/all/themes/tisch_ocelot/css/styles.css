@@ -2817,7 +2817,7 @@ ul.quicktabs-tabs li.active a {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles\.scss}line{font-family:\00003140}}
 #footer #footerLogo {
   margin-top: 1.5em;
-  background-image: url("../images/TuftsLogo.jpg");
+  background-image: url("../images/tuftsLogo.jpg");
   height: 150px;
   background-repeat: no-repeat;
 }
