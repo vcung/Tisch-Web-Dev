@@ -42,6 +42,8 @@
     border-top: 2px $heading-orange solid;
     background-color:white;
     padding-left: $padding-amount;
+    padding-bottom: $padding-amount/2;
+    margin-bottom: $vertical-content-amount;
     @include box-shadow(gray 1px 1px 7px);
     h1 {
       @include adjust-font-size-to (40px);
@@ -62,6 +64,12 @@
     background-color:white;
     margin-bottom: $vertical-content-amount;
 
+  }
+
+  .tabs-primary{
+    
+     margin-bottom:0;
+    
   }
 
 
