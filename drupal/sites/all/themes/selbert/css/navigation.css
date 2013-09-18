@@ -60,7 +60,7 @@
   }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/selbert\/sass\/navigation\.scss}line{font-family:\0000362}}
   #askHeader #audtopic {
-    /* Span 2 column, starting in 6th column from left. */
+    /* Span 2 column,  */
     float: left;
     width: 100%;
     margin-left: 0%;
@@ -182,7 +182,6 @@ li a.active {
   padding: 5px 10px 0 0;
   list-style-type: none;
   list-style-image: none;
-  border-right: 1px solid black;
 }
 
 /*

@@ -9,8 +9,11 @@
 .block { /* Block wrapper */
   //margin-bottom: 1.5em;
   //kate added font-size for block text
-  font-size:.5em;
-  line-height:1em;
+  //font-size:.5em;
+  //line-height:1em;
+  background-color: white;
+  
+//@include box-shadow(gray 3px 3px 7px);
 
   &.first { /* The first block in the region */
   }
@@ -24,9 +27,9 @@
   &.even { /* Zebra striping for each block in the region */
   }
 //font-size changed by kate
-  h2.block-title { /* Block title */
-  font-size:.75em;
-  }
+  //h2.block-title { /* Block title */
+  //font-size:.75em;
+  //}
   
   li {
     list-style-type: none;
@@ -36,7 +39,10 @@
   
 }
 
-
+.headerSearch{
+  background-color: transparent;
+  @include box-shadow(none);
+}
 #block-aggregator-category-1 { /* Block for the latest news items in the first category */
 }
 
@@ -90,10 +96,19 @@ color:white;
     margin: 0 2.5% 0 0;
     //  background-color:black;
     color:white;
+    background-image: url("../images/nav.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    
+
+    &:last-child{
+      background-image: none;
+    }
 
      a {
       //background-color:black;
       color:white;
+
     }
   }
   } 
@@ -111,7 +126,8 @@ color:white;
     
     li {
       text-transform:uppercase;
-      background-color: $page-color;
+      //background-image: url("../images/background.png");
+      //background-color: $page-color;
       color: black;
       border-bottom: 1px solid #ccc;
       float: left; 
@@ -120,8 +136,9 @@ color:white;
       //margin: 5%;
       width:80%;
       a {
+        @include adjust-font-size-to(12px);
         padding-left: 5%;
-        line-height: 3em;
+        line-height: 1.5em;
         margin-bottom: 2.5%;
         color: black;
         width: 100%;
@@ -132,6 +149,7 @@ color:white;
         color: orange;
         background-color: $active-menu-gray;
       }
+      
     }  
 }
 }
@@ -142,6 +160,30 @@ color:white;
 }
 
 #block-node-syndicate { /* "Syndicate" block for primary RSS feed; see also page.css's .feed-icon */
+}
+#block-panels-mini-happening-now {
+  margin-top: $vertical-amount;
+  margin-bottom: $vertical-amount;
+  @include box-shadow(gray 3px 3px 7px);
+
+   
+ .pane-block {
+  margin-right: 2%;
+  border-bottom: gray 1px solid;
+  }
+  & :last-child{
+   border-bottom: none;
+  }
+
+ & div {
+
+  padding-left: 1%;
+  padding-right: 1%;
+ }
+} 
+#block-panels-mini-search-box-for-side-pages{
+  margin-bottom: $vertical-content-amount;
+  @include box-shadow(gray 3px 3px 7px);
 }
 
 #block-poll-recent { /* "Most recent poll" block */
@@ -223,6 +265,42 @@ visibility:hidden;
 
 #block-user-online { /* "Who's online" block for a list of the online users */
 }
+
+.block-views {
+  background-color: white;
+   @include box-shadow(gray 3px 3px 7px);
+
+}
+#block-views-featured-resource-block-block{
+  margin-top: 15px;
+  margin-bottom: $vertical-amount;
+}
+#block-views-find-books-in-tisch-block-block{
+  float: right;
+  //margin-top: 0;
+}
+
+#block-views-feed-recently-arrived-block{
+   margin-bottom: $vertical-amount;
+  //see views-styles for control styling
+  //div ~ div {padding: 2%;
+  //}
+ 
+}
+
+
+
+
+#block-panels-mini-call-number-infographic{
+ @include box-shadow(gray 3px 3px 7px);
+}
+
+#boxes-box-top_resources {
+
+}
+
+
+
 //#block-views-latest-tweet-block, #block-views-news-block-for-first-page-block, #block-views-96336209a120729401f35b3836b5ef54, #block-views-recently-arrived-block-block{
   //background-color: white;
 //}

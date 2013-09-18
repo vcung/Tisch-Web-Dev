@@ -1,6 +1,26 @@
 <?php	
+<<<<<<< HEAD
 function get_num_available($html, $offset, $count){
  
+=======
+include_once('phpQuery-onefile.php');
+
+	$html = ('http://library.tufts.edu/record=b2307230~S2 #bibItems'); // see below for source
+	$count = "";
+	$offset = 0;
+
+	$ipad = get_num_available($html, $offset, $count);
+	$harddrive = get_num_available('http://library.tufts.edu/record=b2321148~S1', $offset, $count);
+	$laptop = get_num_available('http://library.tufts.edu/record=b1684189~S1', 15, $count); //first 5 is not from tisch
+	$bike = get_num_available('http://library.tufts.edu/search~S1?/.b2133185/.b2133185/1,1,1,B/holdings~2133185&FF=&1,0,', $offset, 90);
+	$camcorder = get_num_available('http://library.tufts.edu/record=b2032147~S1', $offset, $count);
+
+echo $ipad . $harddrive . $laptop . $bike . $camcorder;
+
+
+function get_num_available($html, $offset, $count){
+
+>>>>>>> 444740077eb6a07cd49a4296d1b3d5aebb65b9a5
 // loads the page above
 phpQuery::newDocumentFileHTML($html);
 
@@ -35,6 +55,7 @@ phpQuery::newDocumentFileHTML($html);
 	}
 	return $available;
 }
+<<<<<<< HEAD
 include_once('phpQuery-onefile.php');
 
 	$html = ('http://library.tufts.edu/record=b2307230~S2 #bibItems'); // see below for source
@@ -48,6 +69,8 @@ include_once('phpQuery-onefile.php');
 	$camcorder = get_num_available('http://library.tufts.edu/record=b2032147~S1', $offset, $count);
 
 echo $ipad . $harddrive . $laptop . $bike . $camcorder;
+=======
+>>>>>>> 444740077eb6a07cd49a4296d1b3d5aebb65b9a5
 
 
 

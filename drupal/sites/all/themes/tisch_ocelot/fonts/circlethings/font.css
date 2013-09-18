@@ -1,0 +1,28 @@
+@font-face {
+	font-family: 'circlethings';
+    
+    	src: url('http://fontsforweb.com/public/fonts/696/circlethings.eot');
+	src: local('circlethings'), url('http://fontsforweb.com/public/fonts/696/circlethings.ttf') format('truetype');
+    }
+body.cke_show_borders p {
+	font-family: 'circlethings';
+    font-size: 30px;
+}
+.fontsforweb_fontid_696 {
+	font-family: 'circlethings' !important;
+}
+
+/* Font downloaded from FontsForWeb.com */
+
+/*SOCIOLICO font*/
+@font-face {
+    font-family: 'socialicoregular' !important;
+    src: url('socialico-webfont.eot');
+    src: url('socialico-webfont.eot?#iefix') format('embedded-opentype'),
+         url('socialico-webfont.woff') format('woff'),
+         url('socialico-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+
+}

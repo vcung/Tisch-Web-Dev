@@ -17,11 +17,14 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: $page-color;
+  //background-color: $page-color;
+  background-image: url("../images/background.png");
+  //background-position: 25% 75%;
 }
 
 #page {
-  background-color: $page-color;
+//background-color: $page-color;
+ background-image: url("../images/background.png");
 }
 
 /*
@@ -84,12 +87,16 @@ body {
 }
 
 #site-slogan { /* The slogan (or tagline) of a website */
-  margin: 0;
+  margin: 3em 0 0 0;
   font-size: 1em;
+  color: white;
+  font-weight: normal;
 }
 
 .region-header { /* Wrapper for any blocks placed in the header region */
   clear: both; /* Clear the logo */
+  //display: inline;
+  
 }
 
 #askHeader {
@@ -108,14 +115,48 @@ body {
  */
 
 #content {
-  background-color:white;
 
+  .titleContainer{
+    margin-top: $vertical-content-amount;
+    border-top: 2px $heading-orange solid;
+    background-color:white;
+    padding-left: $padding-amount;
+    @include box-shadow(gray 1px 1px 7px);
+    h1 {
+      @include adjust-font-size-to (40px);
+      color: $heading-orange;
+      font-weight: normal;
+      text-transform: uppercase; 
+    }
+  }
+
+  .breadcrumb{
+    @include adjust-font-size-to (12px);
+    a {color: $active-menu-gray; 
+      text-decoration: none;
+    }
+  }
+  .title {
+
+    background-color:white;
+    margin-bottom: $vertical-content-amount;
+  
+
+  }
+  //background-color: 
+  background-image: url("../images/background.png");
+
+//home page  - search box
 #quicktabs-home_page_search_box {
   border: 1px black solid;
+  box-shadow: none;
 
  }
 }
 
+
+
+//home page -highlight region
 .region-highlighted {
 }
 
@@ -137,7 +178,7 @@ h2.node-title, /* Title of a piece of content when it is given in a list of cont
 h2.block-title, /* Block title */
 h2.title, /* Comment section heading */
 h2.comment-form, /* Comment form heading */
-h3.title { /* Comment title */
+h3.title { /* Cmment title */
   margin: 0;
 }
 
@@ -188,6 +229,16 @@ tr.error { /* High priority messages. See also the .error declaration below. */
 }
 
 .region-content { /* Wrapper for the actual page content */
+
+  .field.field-name-body{
+    margin-bottom: $vertical-content-amount;
+    padding: 2%;
+     //@include box-shadow(gray 1px 1px 7px);
+  }
+
+  .block-panels-mini{
+  padding: $padding-amount;
+}
 }
 
 #mobile-hours {
@@ -408,7 +459,38 @@ span.field-label { /* The inline field label used by the Fences module */
  */
 
 .region-sidebar-second {
+@include adjust-font-size-to (12px);
 
+
+  .block-title{
+ @include background-image(linear-gradient($heading-orange, lighten($heading-orange, 20%)));
+   //@include adjust-font-size-to (20px);
+   //above didn't work, so resorting to:
+   
+   text-transform: uppercase;
+   font-weight:normal;
+    padding-left: 1%;  
+      color: white;
+      @include single-text-shadow;
+    border-bottom: $heading-orange 1px solid;
+    }
+
+.field-content{
+  padding: 2%;
+}
+
+
+}
+
+.lci_chat_load {
+//hide chat on smaller screens
+  @media all and (max-width:480px){
+      display:none;
+    }
+
+    @media all and (min-width:481px){
+      margin-top: $vertical-amount;
+    }
 }
 
 .happening {
@@ -419,13 +501,13 @@ span.field-label { /* The inline field label used by the Fences module */
 
   background-color:$page-color;
 
-  hr {border-color: $light-gray;
-  border-style: dashed;
-  border-width: 1px 0 0;
-  clear: both;
-  margin: 0 0 20px;
-  height: 0;
-  }
+  //hr {border-color: $light-gray;
+  //border-style: dashed;
+  //border-width: 1px 0 0;
+  //clear: both;
+  //margin: 0 0 20px;
+  //height: 0;
+  //}
 }
 
 #block-views-recently-arrived-block-block, {
@@ -450,9 +532,104 @@ span.field-label { /* The inline field label used by the Fences module */
 }
 
 #footer {
+
+  .empty{
+    display:none;
+  }
+
+   @include adjust-font-size-to (12px);
+  line-height: 1.5em;
+
   background-color: $footer-gray;
-  color: white;
+  color: $light-gray;
+  
+
+    h3 {
+      @include adjust-font-size-to (13px);
+    color: white;
+    text-transform: uppercase;
+    //font-weight:normal;
+    margin-bottom: 0px;
+  }
+
+  ul {
+    margin:0 0 0 3%;
+    padding:0 0 0 2%;
+  }
+  li a {
+    color: $light-gray;
+    text-decoration: none;
+    
+  }
+
 }
+
+  @media all and (min-width: 480px)  {
+   #footer{ 
+   @include zen-clear();
+   $zen-column-count: 7;
+  $zen-gutter-width: 10px;
+  @include zen-grid-container;
+  width: 100%;
+
+  div {
+    background-image: url("../images/nav.png");
+    background-repeat: no-repeat;
+
+    background-position: right 0px top 10px;
+    
+   
+    }
+    div:last-child{
+    background-image:none;
+    
+    }
+  
+  #footerLogo{/* Span 1 columns, starting in 1st column from left. */
+   
+  @include zen-grid-item(1, 1);
+  //width: 15%
+
+  }
+  
+  #otherFooterLibs {/* Span 1 columns, starting in 2nd column from left. */
+  
+  @include zen-grid-item(2, 2);
+  ul {
+    
+  
+  }
+
+  //width: 25%;
+  }
+
+  #otherFooterTufts {/* Span 1 column, starting in 4th column from left. */
+  @include zen-grid-item(1, 4);
+  //width: 25%
+  }
+  
+  #footerContact {/* Span 1 columns, starting in 5th column from left. */
+  @include zen-grid-item(1, 5);
+  p.address{
+    margin:0px;
+  }
+  p {
+    margin:0.5em 0 0.5em 0;
+  }
+  //width: 25%;
+  }
+
+  #footerSocial {/* Span 2 columns, starting in 6th column from left. */
+  //width: 25%;
+  @include zen-grid-item(2, 6);
+  }
+
+
+}//endfooter large screen
+
+}//end larger screen
+  
+  
 
 /*
  * Page bottom

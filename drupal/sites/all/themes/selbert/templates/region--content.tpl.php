@@ -32,9 +32,22 @@
     <?php if ($is_front): ?>
     <div class="lowerMainContent">
     <div id="frontChat">
+	
+	<div class="lci_chat_load" >
+	<h2>Chat with a librarian</h2>
+	<div class="login_field" >
+		<input placeholder="Name"/>
+	</div>
+	<div class="login_field" >
+		<textarea placeholder="question here"></textarea>	
+	</div>
+	<div class="send_button" >
+	<input class="lc_button" type="button" value="SEND">
+	</div>
+	</div>
     <!-- Springshare Chat code //-->
 <!-- Springshare Chat code //-->
-
+<!--
 <div id="libchat_inline_widget"></div>
 <script type="text/javascript">
  var libchat_inline = {
@@ -50,7 +63,7 @@
  };
 </script>
 <script type="text/javascript" src="//libanswers.com/js/chat_load_client_in.js"></script>
-<!-- End Springshare Chat code //-->
+--><!-- End Springshare Chat code //-->
     </div><!--end front chat-->
     </div><!--end lowerMainContent-->
      <!--note from kate: took out variable for now-->

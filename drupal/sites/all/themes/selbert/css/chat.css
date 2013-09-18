@@ -1,12 +1,22 @@
+<<<<<<< HEAD
 /* line 2, ../sass/chat.scss */
+=======
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/stuweb01\/Sites\/Tisch-Web-Dev-proto\/drupal\/sites\/all\/themes\/selbert\/sass\/chat\.scss}line{font-family:\000032}}
+>>>>>>> 444740077eb6a07cd49a4296d1b3d5aebb65b9a5
 .lci_chat_load {
   background: #D6E0E9;
   border: 2px solid #6B7C83;
   width: 100%;
+<<<<<<< HEAD
   height: 210px;
 }
 
 /* line 9, ../sass/chat.scss */
+=======
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/stuweb01\/Sites\/Tisch-Web-Dev-proto\/drupal\/sites\/all\/themes\/selbert\/sass\/chat\.scss}line{font-family:\000039}}
+>>>>>>> 444740077eb6a07cd49a4296d1b3d5aebb65b9a5
 .lci_chat_load h2 {
   font-size: 1.2em;
   color: #fff;
@@ -18,11 +28,19 @@
   width: 80%;
 }
 
+<<<<<<< HEAD
 /* line 20, ../sass/chat.scss */
 .login_field {
   padding: 0.4em;
 }
 /* line 22, ../sass/chat.scss */
+=======
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/stuweb01\/Sites\/Tisch-Web-Dev-proto\/drupal\/sites\/all\/themes\/selbert\/sass\/chat\.scss}line{font-family:\0000320}}
+.login_field {
+  padding: 0.5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/stuweb01\/Sites\/Tisch-Web-Dev-proto\/drupal\/sites\/all\/themes\/selbert\/sass\/chat\.scss}line{font-family:\0000322}}
+>>>>>>> 444740077eb6a07cd49a4296d1b3d5aebb65b9a5
 .login_field input {
   box-shadow: 0 0.5px 0.5px 0.5px #EBEBEB inset;
   display: block;
@@ -31,17 +49,28 @@
   margin-top: 0.7em;
   width: 90%;
 }
+<<<<<<< HEAD
 /* line 30, ../sass/chat.scss */
+=======
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/stuweb01\/Sites\/Tisch-Web-Dev-proto\/drupal\/sites\/all\/themes\/selbert\/sass\/chat\.scss}line{font-family:\0000330}}
+>>>>>>> 444740077eb6a07cd49a4296d1b3d5aebb65b9a5
 .login_field textarea {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 90%;
+<<<<<<< HEAD
   margin-bottom: 0.7em;
   resize: none;
 }
 
 /* line 39, ../sass/chat.scss */
+=======
+  resize: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/stuweb01\/Sites\/Tisch-Web-Dev-proto\/drupal\/sites\/all\/themes\/selbert\/sass\/chat\.scss}line{font-family:\0000339}}
+>>>>>>> 444740077eb6a07cd49a4296d1b3d5aebb65b9a5
 .lc_button {
   background: #85949B;
   color: #fff;
@@ -53,6 +82,16 @@
   padding: 3px 5px;
   margin: 0 1em;
   vertical-align: middle;
+<<<<<<< HEAD
   float: right;
   border: #85949B;
 }
+=======
+  border: #85949B;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/stuweb01\/Sites\/Tisch-Web-Dev-proto\/drupal\/sites\/all\/themes\/selbert\/sass\/chat\.scss}line{font-family:\0000352}}
+.send_button {
+  margin: 0.5em;
+}
+>>>>>>> 444740077eb6a07cd49a4296d1b3d5aebb65b9a5

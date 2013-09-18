@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿/*
 Copyright (c) 2003-2013, CKSource - Frederico Knabben. All rights reserved.
 For licensing, see LICENSE.html or http://ckeditor.com/license
@@ -41,3 +42,25 @@ CKEDITOR.dom =
 
 // PACKAGER_RENAME( CKEDITOR.dom )
 >>>>>>> 3c233a519e8546032631f6d31915c0a728a8cd53
+=======
+﻿/*
+Copyright (c) 2003-2013, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.html or http://ckeditor.com/license
+*/
+
+/**
+ * @fileOverview Defines the {@link CKEDITOR.dom} object, which contains DOM
+ *		manipulation objects and function.
+ */
+
+/**
+ * @namespace DOM manipulation objects, classes and functions.
+ * @see CKEDITOR.dom.element
+ * @see CKEDITOR.dom.node
+ * @example
+ */
+CKEDITOR.dom =
+{};
+
+// PACKAGER_RENAME( CKEDITOR.dom )
+>>>>>>> 444740077eb6a07cd49a4296d1b3d5aebb65b9a5
