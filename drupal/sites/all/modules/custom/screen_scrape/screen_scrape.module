@@ -1,340 +1,252 @@
 <?php
-/*
-*Implements Hook_feeds_parser_sources_alter()
-*Use this hook to add additional mapping sources for any parser. 
-*Allows for registering a callback to be invoked at mapping time.
-*/
-function screen_scrape_feeds_parser_sources_alter(&$sources, $content_type) {
-  $sources['Author'] = array(
-    'name' => t('Author'), 
-    'description' => t('author of feed item'), 
-    'callback' => 'screen_scrape_get_author',
+
+/**
+ * @file
+ * Screen Scrape custom module
+ *
+ * @todo Apply Drupal commenting standards
+ *   see https://drupal.org/coding-standards/docs
+ * @todo Replace tabbed indentation with two spaces
+ *   see https://drupal.org/coding-standards#indenting
+ */
+
+ 
+/**
+ * Tisch Library data source URLs
+ */
+define('TISCH_NEW_ACQUISITIONS_URL', 'http://www.library.tufts.edu/SearchResults.asp?library=Tisch+Library&OrderBy=item.author&Search=Search');
+define('TISCH_BIKES_URL', 'http://library.tufts.edu/search~S1?/.b2133185/.b2133185/1,1,1,B/holdings~2133185&FF=&1,0,');
+define('TISCH_IPAD_URL', 'http://library.tufts.edu/record=b2307230~S2');
+define('TISCH_HARDDRIVES_URL', 'http://library.tufts.edu/record=b2321148~S1');
+define('TISCH_LAPTOPS_URL', 'http://library.tufts.edu/record=b1684189~S1');
+define('TISCH_CAMCORDERS_URL', 'http://library.tufts.edu/record=b2032147~S1');
+
+// etc.
+// Use consolidated list of constants at top of page for maintenance,
+// or possibly expose in admin form
+
+/**
+ * Data source URL list
+ *
+ * @return
+ *   An array keyed by the data source name
+ */
+function _screen_scrape_list() {
+  $feeds = array(
+    'ipads' => array(
+      'label' => t('iPads'),
+      'url' => TISCH_IPAD_URL,
+      'offset' => 0,
+      'count' => '',
+      ),
+    'harddrives' => array(
+      'label' => t('External Hard Drives'),
+      'url' => TISCH_HARDDRIVES_URL,
+      'offset' => 0,
+      'count' => '',
+      ),
+    'laptops' => array(
+      'label' => t('Laptops'),
+      'url' => TISCH_LAPTOPS_URL,
+      'offset' => 5,
+      'count' => '',
+      ),
+    'bikes' => array(
+      'label' => t('Bikes'),
+      'url' => TISCH_BIKES_URL,
+      'offset' => 0,
+      'count' => 30,
+      ),
+    'camcorders' => array(
+      'label' => t('Video Cameras'),
+      'url' => TISCH_CAMCORDERS_URL,
+      'offset' => 0,
+      'count' => '',
+      ),
+    );
+  return $feeds;
+}
+
+/**
+ * Implements hook_cron_queue_info().
+ *
+ * Creates the screen-scrape cron queue
+ * See http://getlevelten.com/blog/randall-knutson/cron-queues-processing-large-amounts-data-cron
+ */
+function screen_scrape_cron_queue_info() {
+  $queues['screen_scrape_feed'] = array(
+    'worker callback' => 'screen_scrape_refresh', // Callback function
+    'time' => 60, // Max run time per cron run in seconds.
   );
-    $sources['Location'] = array(
-    'name' => t('Location'), 
-    'description' => t('location of feed item'), 
-    'callback' => 'screen_scrape_get_location',
-  );
-    $sources['Call_Number'] = array(
-    'name' => t('Call Number'), 
-    'description' => t('Call number of feed item.'), 
-    'callback' => 'screen_scrape_get_call_number',
-  );
+  return $queues;
+}
+
+/**
+ * Implements hook_cron()
+ */
+function screen_scrape_cron() {
+  $feeds = _screen_scrape_list();
+  $queue = DrupalQueue::get('screen_scrape_feed');
+  // This needs to be modified to pass the feed key in somehow
+  foreach($feeds as $feed) { 
+    $queue->createItem($feed);
+    
+  }
+}
+
+/**
+ * Checks a feed for updates.
+ *
+ * @param $feed
+ *   An array describing the data URL
+ *
+ * @todo: get the feed key somehow
+ */
+ function screen_scrape_refresh($feed) {
   
-    $sources['link'] = array(
-    'name' => t('Link'), 
-    'description' => t('Link'), 
-    'callback' => 'screen_scrape_get_link',
-  );
+  // Convert $feed array to $url, $offset and $count variables
+  extract($feed);
   
-  $sources['Time_Created'] = array(
-    'name' => t('Time Created'), 
-    'description' => t('Time the node is created from feed item.'), 
-    'callback' => 'screen_scrape_get_creationTime',
+  $feed_key = key($feed);
+  // Now we actually get the remote data and process it
+  $value = _screen_scrape_get_num_available($url, $offset, $count);
+  // Store the value in the variable table
+  variable_set('screen_scrape_' . $feed_key, $value); // This is where the feed key will go
+}
+
+/**
+ * Implements hook_block_info()
+ */ 
+function screen_scrape_block_info() {
+   $blocks['available_technology'] = array(
+    'info' => t('Available Technology'),
+    'cache' => DRUPAL_NO_CACHE,
   );
+  return $blocks;
+}
+
+/**
+ * Implements hook_view()
+ */ 
+function screen_scrape_block_view($delta = '') {
+  $block = array();
+  switch ($delta) {
+    case 'available_technology':
+      $block['subject'] = t('Available Technology');
+      $block['content'] = _screen_scrape_block_html();
+    break;
+  }
+  return $block;
+}
+
+/**
+ * Generate Available Technology HTML from stored variables
+ */ 
+function _screen_scrape_block_html() {
+  $feeds = _screen_scrape_list();
+  $variables = array();
+  $output = '';
+  foreach($feeds as $key => $feed) {
+   $variables['items'][] = array(
+      'data' => theme('screen_scrape_item', array('count'=>variable_get('screen_scrape_' . $feed['label']), 'label'=>$feed['label'])),
+    );   
+  }
+  $output = theme('item_list', $variables); 
   
- /*     $sources['isbn'] = array(
-    'name' => t('ISBN'), 
-    'description' => t('Images occuring in the description element of a feed item.'), 
-    'callback' => 'screen_scrape_get_isbn',
-  );*/
+  return $output;
 }
 
 
 /**
-*Callback functions for custom mapping sources, customized to work with the format of new acquisitions feed
-*$source: The FeedsSource object being imported.
-*$result: The FeedsParserResult object being mapped from.
-*$key: The key specified in the $sources array in hook_feeds_parser_sources_alter().
-**/
-function screen_scrape_get_link(FeedsSource $source, FeedsParserResult $result, $key) {
-  $item = $result->currentItem();
-  $description = $item['description'];
-  preg_match('/href=\"(.*)\"/', $description, $matches);
-  return $matches[1];
+ * Implements hook_theme()
+ */ 
+function screen_scrape_theme($existing, $type, $theme, $path) {
+  return array(
+    'screen_scrape_item' => array(
+      'variables' => array('count' => 0, 'label' => null),
+    ),
+  );
 }
 
-function screen_scrape_get_author(FeedsSource $source, FeedsParserResult $result, $key) {
-  $item = $result->currentItem();
-  $description = $item['description'];
-  preg_match('/Author\s\:\s<\/span>(.*)\./', $description, $matches);
-  return $matches[1];
+/**
+ * Returns HTML for a screen-scrape list item
+ * 
+ * @param $variables
+ *   An associative array containing:
+ *   - count: The number of items available
+ *   - label: The label for the item
+ */
+function theme_screen_scrape_item($variables) {
+  extract($variables);
+  $output = "<span class='screen-scrape__item-count'>$count</span> <span class='screen-scrape__item-label'>$label</span>";
+  return $output;
 }
 
-function screen_scrape_get_location(FeedsSource $source, FeedsParserResult $result, $key) {
-  $item = $result->currentItem();
-  $description = $item['description'];
+
+function _screen_scrape_get_num_available($url, $offset, $count){
   
-  preg_match('/Location\s\:\s<\/span>(.*?)</', $description, $matches);
-  return $matches[1];
-}
+  $section = '/<tr  class=\"bibItemsEntry\">(.*)<\/tr>/s';  
+  $status = '/<!-- field % -->&nbsp\;(.*?)<\/td>/s';  
+  $to_split = '<tr  class="bibItemsEntry">';  
+  $available = 0;
+  $html = drupal_http_request($url)->data; 
+  
+  //Get only the section of the page that you want
+  preg_match($section, $html, $matches);
+  //Separate the page via the explode function into an array
+  $items_array = explode($to_split, $matches[1]);
 
-function screen_scrape_get_call_number(FeedsSource $source, FeedsParserResult $result, $key) {
-  $item = $result->currentItem();
-  $description = $item['description'];
-  preg_match('/Call\sNumber\s\:\s<\/span>(.*)<\/td>/', $description, $matches);
-  return $matches[1];
-}
+  if (empty($count)) {
+    $items_count = count($items_array);
+  } 
+  else {
+    $items_count = $count;
+  }
+  
+  for ($i=$offset; $i< $items_count; $i++) {
+    preg_match($status, $items_array[$i], $stat);
+    if (trim($stat[1]) == 'AVAILABLE') {
+      $available+=1;
+    }
+  }
+  
+  return sprintf("%02s", $available);
+  
+  //below code works locally bu not on dev site - cUrl problem
+   /* $available=0;
+  // loads the page
+  phpQuery::newDocumentFileHTML($url);
 
-function screen_scrape_get_creationTime(FeedsSource $source, FeedsParserResult $result, $key) {
-  $date= date("U");
-  return $date;
-}
+  // Once the page is loaded, you can then make queries on whatever DOM is loaded.  
+  // This example grabs the title of the currently loaded page.
 
+  $technology = pq('.bibItemsEntry td');
 
-/************************************************/
+  if (empty($count)) {
+    $technologyCount = count($technology);
+  } else {
+    $technologyCount = $count;
+  }
 
-//returns the matches to $entryMatch from the web page
-function return_html_content(&$node, $url, $section, $toSplit, $count, $entryMatch, $name) {
-	$html = drupal_http_request($url)->data;
+  if ($technologyCount == 0) {}
+  else {
+    for ($i=$offset; $i<=$technologyCount - 1; $i++) {
+    //  $url = pq('.bibItemsEntry td:eq(' . $i . ') a')->attr('href');
+     // $itemsLoc = pq('.bibItemsEntry td:eq(' . $i . ')')->text();
+     // $itemsNo = pq('.bibItemsEntry td:eq(' . ($i+=1) . ')')->text();
+      $itemsStat = pq('.bibItemsEntry td:eq(' . ($i+=1) . ')')->text();
 
-	//Get only the section of the page that you want
-	preg_match($section, $html, $matches);
+      //to remove prefixing "nbsp;" 
+      preg_match("/nbsp\;(.*) /s",htmlspecialchars(htmlentities($itemsStat)), $status);
 
-	//Separate the page via the explode function into an array
-	$itemsArray = explode($toSplit, $matches[1]);
-	$itemsCount = count($itemsArray);			
-	
-	$node->content[$name] = array();
-	
-	for ($i=0; $i< $count; $i++) {
-		preg_match($entryMatch, $itemsArray[$i], $entry);
-		$node->content[$name][$i]= array (
-			'#type' => 'markup',
-			'#prefix' => '<p>'.$entry[1],
-			'#suffix' => '</p>'
-		);
-	}
-}
-
-//returns information on location, call number, and status of the items from the source
-function get_availability($url, $section, $toSplit, $offset, $count, $location, $callNo, $status, $name) {
-	$html = drupal_http_request($url)->data;
-	//Get only the section of the page that you want
-	preg_match($section, $html, $matches);
-
-	//Separate the page via the explode function into an array
-	$itemsArray = explode($toSplit, $matches[1]);
-
-	if (empty($count)) {
-		$itemsCount = count($itemsArray);
-	} else {
-		$itemsCount = $count;
-	}
-	
-	$available = 0;
-	
-	for ($i=$offset; $i< $itemsCount; $i++) {
-		preg_match($location, $itemsArray[$i], $loc);
-		preg_match($callNo, $itemsArray[$i], $no);
-		preg_match($status, $itemsArray[$i], $stat);
-		
-		if (trim($stat[1]) == 'AVAILABLE') {
-			$available+=1;
-		}
-	}
-	
-	return $available;
-}
-
-
-function get_num_available($html, $offset, $count){
-	$available=0;
-	
-	// loads the page
-	phpQuery::newDocumentFileHTML($html);
-
-	// Once the page is loaded, you can then make queries on whatever DOM is loaded.  
-	// This example grabs the title of the currently loaded page.
-
-	$technology = pq('.bibItemsEntry td');
-
-	if (empty($count)) {
-		$technologyCount = count($technology);
-	} else {
-		$technologyCount = $count;
-	}
-
-	if ($technologyCount == 0) {}
-	else {
-		for ($i=$offset; $i<=$technologyCount - 1; $i++) {
-			$url = pq('.bibItemsEntry td:eq(' . $i . ') a')->attr('href');
-			$itemsLoc = pq('.bibItemsEntry td:eq(' . $i . ')')->text();
-			$itemsNo = pq('.bibItemsEntry td:eq(' . ($i+=1) . ')')->text();
-			$itemsStat = pq('.bibItemsEntry td:eq(' . ($i+=1) . ')')->text();
-
-			//to remove prefixing "nbsp;" 
-			preg_match("/nbsp\;(.*) /s",htmlspecialchars(htmlentities($itemsStat)), $status);
-
-			if (trim($itemsStat) == 'AVAILABLE' || trim($status[1]) == 'AVAILABLE') {
-				$available += 1;
-			}
-		}
-	}
-	return $available;
-}
-
-function screen_scrape_node_view($node, $view_mode, $langcode) {
-
-	//switch ($node->nid) {
-	switch ($node->title) {
-	
-	  case 'New Acquisitions' : //Node for New Acquisition
-		$url = 'http://www.library.tufts.edu/SearchResults.asp?library=Tisch+Library&OrderBy=item.author&Search=Search';
-		$section = '/<div id=\"results\">(.*?)<div id=\"resultsBottom\">/s';
-		$toSplit = "</div>";
-		$count = 10;
-		$entryMatch='/<p>(.*?)<\/p>/s';
-		$name='newAcqu';
-		return_html_content($node, $url, $section, $toSplit, $count, $entryMatch, $name);
-		
-		break;
-	  
-	  case 'Bikes':
-		$url = 'http://library.tufts.edu/search~S1?/.b2133185/.b2133185/1,1,1,B/holdings~2133185&FF=&1,0,';
-		$section = '/<tr  class=\"bibItemsEntry\">(.*)<\/tr>/s';
-		$toSplit = '<tr  class="bibItemsEntry">';
-		$count = 30;
-		//$entryMatch = '/<!-- field % -->&nbsp\;(.*)<\/td>/s'; //only needed if using return_html_content()
-		$name='bike';
-
-		$location = '/<!-- field 1 -->&nbsp\;(.*?)<\/td>/s';
-		$callNo = '/<!-- field C -->&nbsp\;(.*?)<!-- field # -->&nbsp\;<\/td>/s';
-		$status = '/<!-- field % -->&nbsp\;(.*?)<\/td>/s';
-		
-		//return_html_content($node, $url, $section, $toSplit, $count, $entryMatch, $name);
-		$bike=get_availability($url, $section, $toSplit, 0, $count, $location, $callNo, $status, $name);
-		$node->content['tech']=array(
-			'#prefix' => '<p>'.$bike.' Bikes</p>'
-			);
-		break;
-	  
-	  case 'Laptops':
-		$url = 'http://library.tufts.edu/record=b1684189~S1';
-		$section = '/<tr  class=\"bibItemsEntry\">(.*)<\/tr>/s';
-		$toSplit = '<tr  class="bibItemsEntry">';
-	
-		$location = '/<!-- field 1 -->&nbsp\;(.*?)<\/td>/s';
-		$callNo = '/<!-- field v -->&nbsp\;(.*?)<!-- field # -->&nbsp\;<\/td>/s';
-		$status = '/<!-- field % -->&nbsp\;(.*?)<\/td>/s';
-		
-		$name='laptop';
-		$count = ''; 
-	
-		$laptop=get_availability( $url, $section, $toSplit, 5, $count, $location, $callNo, $status, $name);
-		$node->content['tech']=array(
-			'#prefix' => '<p>'.$laptop.' Laptops</p>'
-			);
-		break;
-	  
-	  case 'Available Technology':
-	  
-		  include_once('phpQuery-onefile.php');
-		  
-		  $html = ('http://library.tufts.edu/record=b2307230~S2 #bibItems'); // see below for source
-		  $count = "";
-		  $offset = 0;
-		  
-		  $ipad = get_num_available($html, $offset, $count);
-		  $harddrive = get_num_available('http://library.tufts.edu/record=b2321148~S1', $offset, $count);
-		  $laptop = get_num_available('http://library.tufts.edu/record=b1684189~S1', 15, $count); //first 5 is not from tisch
-		  $bike = get_num_available('http://library.tufts.edu/search~S1?/.b2133185/.b2133185/1,1,1,B/holdings~2133185&FF=&1,0,', $offset, 90);
-		  $camcorder = get_num_available('http://library.tufts.edu/record=b2032147~S1', $offset, $count);
-			
-			$node->content['tech']=array(
-				'#markup' => '<p>'.$bike.' Bikes</p>
-							<p>'.$camcorder.' Video Cameras</p>
-							<p>'.$harddrive.' External Hard Drive</p>
-							<p>'.$ipad.' Ipads</p>
-							<p>'.$laptop.' Laptops</p>	
-								'
-				);
-	  
-	/***	//Bike
-		$bike_url = 'http://library.tufts.edu/search~S1?/.b2133185/.b2133185/1,1,1,B/holdings~2133185&FF=&1,0,';
-		$section = '/<tr  class=\"bibItemsEntry\">(.*)<\/tr>/s';
-		$toSplit = '<tr  class="bibItemsEntry">';
-		$bike_count = 30;
-		$bike_name='bike';
-		$location = '/<!-- field 1 -->&nbsp\;(.*?)<\/td>/s';
-		$bike_callNo = '/<!-- field C -->&nbsp\;(.*?)<!-- field # -->&nbsp\;<\/td>/s';
-		$status = '/<!-- field % -->&nbsp\;(.*?)<\/td>/s';
-		$bike = get_availability($bike_url, $section, $toSplit, 0, $bike_count, $location, $bike_callNo, $status, $name);
-		
-		//Laptop
-		$laptop_url = 'http://library.tufts.edu/record=b1684189~S1';
-		$laptop_callNo = '/<!-- field v -->&nbsp\;(.*?)<!-- field # -->&nbsp\;<\/td>/s';
-		$laptop_name='laptop';
-		$laptop= get_availability($laptop_url, $section, $toSplit, 5, '', $location, $laptop_callNo, $status, $laptop_name);
-		
-		//Ipad
-		$ipad_url = 'http://library.tufts.edu/record=b2307230~S2';
-		$ipad_callNo = '/<!-- field C -->&nbsp\;(.*?)<!-- field # -->&nbsp\;<\/td>/s';
-		$ipad_name='laptop';
-		$ipad= get_availability($ipad_url, $section, $toSplit, 0, '', $location, $ipad_callNo, $status, $ipad_name);
-		
-		//Video Camera (Camcorder)
-		$camcorder_url = 'http://library.tufts.edu/record=b2032147~S1';
-		$camcorder_callNo = '/<!-- field v -->&nbsp\;(.*?)<!-- field # -->&nbsp\;<\/td>/s';
-		$camcorder_name='laptop';
-		$camcorder= get_availability($camcorder_url, $section, $toSplit, 0, '', $location, $camcorder_callNo, $status, $camcorder_name);
-		
-		//External Hard Drive
-		$harddrive_url = 'http://library.tufts.edu/record=b2321148~S1';
-		$harddrive_callNo = '/<!-- field v -->&nbsp\;(.*?)<!-- field # -->&nbsp\;<\/td>/s';
-		$harddrive_name='harddrive';
-		$harddrive= get_availability($harddrive_url, $section, $toSplit, 0, '', $location, $harddrive_callNo, $status, $harddrive_name);
-		
-		$node->content['tech']=array(
-			'#markup' => '<p>'.$bike.' Bikes</p>
-						<p>'.$camcorder.' Video Cameras</p>
-						<p>'.$harddrive.' External Hard Drive</p>
-						<p>'.$ipad.' Ipads</p>
-						<p>'.$laptop.' Laptops</p>	
-							'
-			);
-			**/
-	  break;
-	  default:
-	}
-	
-}
-
-function screen_scrape_block_view_alter(&$data, $block) {
-	
-	switch ($block->title) { //or use delta
-		case ('Available Technology'): 
-		
-	include_once('phpQuery-onefile.php');
-
-	$html = ('http://library.tufts.edu/record=b2307230~S2 #bibItems'); // see below for source
-	$count = "";
-	$offset = 0;
-
-	$ipad = get_num_available($html, $offset, $count);
-	$harddrive = get_num_available('http://library.tufts.edu/record=b2321148~S1', $offset, $count);
-	$laptop = get_num_available('http://library.tufts.edu/record=b1684189~S1', 15, $count); //first 5 is not from tisch
-	$bike = get_num_available('http://library.tufts.edu/search~S1?/.b2133185/.b2133185/1,1,1,B/holdings~2133185&FF=&1,0,', $offset, 90);
-	$camcorder = get_num_available('http://library.tufts.edu/record=b2032147~S1', $offset, $count);
-
-	$data['content']=array(
-		'#markup' => '<p>'.$bike.' Bikes</p>
-					<p>'.$camcorder.' Video Cameras</p>
-					<p>'.$harddrive.' External Hard Drive</p>
-					<p>'.$ipad.' Ipads</p>
-					<p>'.$laptop.' Laptops</p>	
-						'
-		);
-	
-	/*drupal_add_js('sites/all/modules/custom/screen_scrape/screen_scrape.js');		
-	 $block->content['js'] = drupal_get_path('module', 'screen_scrape') . '/screen_scrape.js';
-		break;
-	*/
-	
-	default:
-	}
-
-
+      if (trim($itemsStat) == 'AVAILABLE' || trim($status[1]) == 'AVAILABLE') {
+        $available += 1;
+      }
+    }
+  }
+  return sprintf("%02s", $available);
+  */
+  
 }
 
 
