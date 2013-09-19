@@ -118,7 +118,7 @@ $zen-auto-include-item-base: false;
   .two-sidebars {
     /* Span 2 columns, starting in 2nd column from left. */
     #content {
-      @include zen-grid-item(3, 2);
+      @include zen-grid-item(2, 2);
     }
 
     /* Span 1 column, starting in 1st column from left. */

@@ -1557,11 +1557,36 @@ tr.selected td {
 
    #frontLeftSide {
 
+   @media all and (min-width: 1200px) { 
+    margin-left:-10px;}
+
+
+
    div {
-       h3{
+       h2{
+        @include adjust-font-size-to(18px);
+        text-transform:uppercase;
+        line-height:1em;
         margin-top:0;
         padding-top:0;
+        word-break: keep-all;
+        
        }
+       ul{
+        @include no-bullets
+       }
+    .item-list{
+
+      @extend no-decoration;
+      a:link{
+        color:black;
+      }
+      background-image:none;
+      ul{
+        margin:0;
+        padding:0;
+      }
+    }
 
     background-color: $light-gray;
     @include gray_corner;
@@ -1569,6 +1594,8 @@ tr.selected td {
     margin-bottom: $vertical-amount;
     margin-left:0px;
   }
+
+
 }
 }
 
