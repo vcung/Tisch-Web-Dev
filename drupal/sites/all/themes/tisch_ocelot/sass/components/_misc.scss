@@ -139,7 +139,14 @@
 
 #header{
 
+@media all and (max-width:600px) {
+  #myAccount{
+    @include element-invisible;
+  }
+ }
+  
 #myAccount{
+
   margin-top: 1.5em;
   float:right;
   color: white;
@@ -245,14 +252,20 @@ visibility:hidden;
   /* Clear the logo. */
   clear: both;
 }
-#site-slogan { /* The slogan (or tagline) of a website */
+#site-slogan {
+@media all and (max-width:775px) {
+  
+    @include element-invisible;
+  }
+ @media all and (min-width:601px) {
+ /* The slogan (or tagline) of a website */
   margin: 0 0 -3em 0;
   padding-top: 3em;
   font-size: 1em;
   color: white;
   font-weight: normal;
 }
-
+}
 /**
  * Navigation bar.
  */
@@ -270,6 +283,7 @@ visibility:hidden;
     margin-bottom: 0;
   }
   background-color:black;
+
   //@include background-image(linear-gradient(#4d4d4d, black));
 
   .block-menu .block__title,
@@ -291,8 +305,15 @@ visibility:hidden;
 
       ul { 
         position:relative;
-        
+      
        li {
+       
+       @media all and (min-width:500) and (max-width:700){
+        float: right;
+       }
+       @media all and (min-width: 960px) {
+      float:left;
+      }
       /* A simple method to get navigation links to appear in one line. */
       //margin-right: 5px;
       //padding-left:10px; 
@@ -304,8 +325,8 @@ visibility:hidden;
       padding-top:10px;
       //margin-top: 10px;
       
-     padding-left:10px; 
-     padding-right:10px; 
+     padding-left:1%; 
+     padding-right:1%; 
      float: left;  
      text-align:left;
       //display:block;
@@ -371,14 +392,51 @@ ul.menu li:hover > ul       { visibility: visible; }
     
 #askHeader{
   @extend .backgroundFontIcon;
-
+ 
   @media all and (max-width: 480px) {
-  
+   
    display:none;
 
   }
- 
- @media all and (min-width: 480px) {
+  //styling for as long as the ask menu is showing
+  @media all and (min-width:500px){
+    float:right;
+  div {
+          display: inline;
+        } 
+
+  a:link {
+      color: white;
+      text-decoration:none;
+    }
+  a:visited{
+    color:white;
+  }
+  a:hover{
+    color: orange;
+  }
+
+  background-color: $dark-gray;
+  }
+  //styling for smaller screens, where the ask menu
+  //drops down below the main menu
+  @media all and (min-width:500px) and (max-width:800px){
+        //float: left;
+        //margin-top: 3em;
+        width: 100%;
+        margin: 2% 0 4% 0;
+        padding: 1% 5% 1% 4%;
+
+      div {
+        margin: 2% 0 4% 0;
+        padding: 1% 4% 1% 5%;
+      }
+      hr {
+        display: none;
+      }
+        
+       }
+ @media all and (min-width:800px) {
  //* Span 2 column, starting in 6th column from left. */
   @include zen-clear();
    $zen-column-count: 2;
@@ -390,7 +448,7 @@ ul.menu li:hover > ul       { visibility: visible; }
    margin-bottom:3px;
    //margin-left: 4px;
    margin-right:-7px;
-   margin-top: 2px;
+   margin-top: -2.6em;
    margin-bottom: 2px;
   float: right;
   padding: 5px 0px 5px 0px;
@@ -402,16 +460,7 @@ ul.menu li:hover > ul       { visibility: visible; }
      div {
       display: inline;
      }
- a:link {
-      color: white;
-      text-decoration:none;
-    }
-  a:visited{
-    color:white;
-  }
-  a:hover{
-    color:yellow;
-  }
+ 
   //width: 99.5%;
   
   #ask{
@@ -428,8 +477,12 @@ ul.menu li:hover > ul       { visibility: visible; }
     }
    
   }
-  
+
+
+
+ 
   #audtopic{/* Span 2 column,  */
+
   @include zen-grid-item(2, 1);
   //background-color:gray;
   //margin-top:15px;
@@ -462,6 +515,7 @@ background-color: $dark-gray;
 
 }
 }
+
 
    
 
@@ -797,7 +851,9 @@ span.field-label {
 
 #block-views-recently-arrived-block-block {
   
-    visibility: hidden;
+  @media all and (max-width: 480px){
+    @include element-invisible;
+  }
   
   @media all and (min-width: 960px) {
     visibility: visible;
@@ -1607,7 +1663,7 @@ tr.selected td {
        }
     .item-list{
 
-      @extend no-decoration;
+      //@extend no-decoration;
       a:link{
         color:black;
       }
