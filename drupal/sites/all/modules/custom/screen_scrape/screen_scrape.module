@@ -6,8 +6,6 @@
  *
  * @todo Apply Drupal commenting standards
  *   see https://drupal.org/coding-standards/docs
- * @todo Replace tabbed indentation with two spaces
- *   see https://drupal.org/coding-standards#indenting
  */
 
  
@@ -100,14 +98,13 @@ function screen_scrape_cron() {
  * @param $feed
  *   An array describing the data URL
  *
- * @todo: get the feed key somehow
  */
  function screen_scrape_refresh($feed) {
   
   // Convert $feed array to $url, $offset and $count variables
   extract($feed);
   
-  $feed_key = key($feed);
+  $feed_key = $feed['label'];
   // Now we actually get the remote data and process it
   $value = _screen_scrape_get_num_available($url, $offset, $count);
   // Store the value in the variable table
@@ -182,7 +179,12 @@ function theme_screen_scrape_item($variables) {
   return $output;
 }
 
-
+/**
+ * Count number of technology available
+ *
+ * @return
+ *   A number with leading zero
+ */
 function _screen_scrape_get_num_available($url, $offset, $count){
   
   $section = '/<tr  class=\"bibItemsEntry\">(.*)<\/tr>/s';  
