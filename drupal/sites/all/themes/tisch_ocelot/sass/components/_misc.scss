@@ -138,6 +138,10 @@
  */
 
 #header{
+//push down to fit "Ask a Librarian"
+@media all and (max-width: 490px) {
+  margin-top: 1em;
+}
 
 @media all and (max-width:600px) {
   #myAccount{
@@ -266,15 +270,22 @@ visibility:hidden;
   font-weight: normal;
 }
 }
+@media all and (min-width: 480px) and (max-width:800px){
+#navigation {
+  padding-right: 0px;
+}
+}
 /**
  * Navigation bar.
  */
 #navigation {
 
-@media all and (max-width:480px){
-    display: none;
-  }
 
+@media all and (min-width: 480) and (max-width:800px){
+    padding-left: 0px;
+    margin-right: 0;
+    margin-bottom: 3em;
+  }
   margin-top: -24px;
   /* Sometimes you want to prevent overlapping with main div. */
   /* overflow: hidden; */
@@ -307,9 +318,12 @@ visibility:hidden;
         position:relative;
       
        li {
+       @media all and (max-width:480px){
+       display: none;
+        }
+       @media all and (min-width:480px) and (max-width:700px){
+       @include adjust-font-size-to(14px)
        
-       @media all and (min-width:500) and (max-width:700){
-        float: right;
        }
        @media all and (min-width: 960px) {
       float:left;
@@ -392,11 +406,24 @@ ul.menu li:hover > ul       { visibility: visible; }
     
 #askHeader{
   @extend .backgroundFontIcon;
- 
-  @media all and (max-width: 480px) {
-   
+  @extend .whiteLink;
+  @media all and (max-width: 500px) {
+  position: fixed;
+  top: 0;
+  background-color: black;
+  width: 100%;
+  margin-left:-10px;
+  padding-left: 2em;
+  max-height:40px;
+  
+   //display:none;
+   hr{
    display:none;
-
+ }
+ #audtopic{
+  @include element-invisible;
+ }
+  
   }
   //styling for as long as the ask menu is showing
   @media all and (min-width:500px){
@@ -405,16 +432,7 @@ ul.menu li:hover > ul       { visibility: visible; }
           display: inline;
         } 
 
-  a:link {
-      color: white;
-      text-decoration:none;
-    }
-  a:visited{
-    color:white;
-  }
-  a:hover{
-    color: orange;
-  }
+  
 
   background-color: $dark-gray;
   }
@@ -423,13 +441,14 @@ ul.menu li:hover > ul       { visibility: visible; }
   @media all and (min-width:500px) and (max-width:800px){
         //float: left;
         //margin-top: 3em;
+        @include adjust-font-size-to(14px);
         width: 100%;
-        margin: 2% 0 4% 0;
-        padding: 1% 5% 1% 4%;
+        margin: 1.5% 0 4% 0;
+        padding: 0 1%;
 
       div {
         margin: 2% 0 4% 0;
-        padding: 1% 4% 1% 5%;
+        padding: 1%;
       }
       hr {
         display: none;
