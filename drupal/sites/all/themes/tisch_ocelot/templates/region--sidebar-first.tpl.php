@@ -13,13 +13,13 @@
     
     <div id = "frontLeftSide">
       <div class="frontSideBlock frontHours">
-      <h3>Today's Hours</h3>
+      <h2>Today's Hours</h2>
       <p>8:30am - 10:00pm</p>
     <p>
     <a href="http://www.library.tufts.edu/tisch/hours.htm">More Hours</a></p>
        </div>
       <div class="frontSideBlock sideAsk">
-        <h3>Ask a Librarian</h3>
+        <h2>Ask a Librarian</h2>
       <ul>
     <li><span class="white" data-icon="&#xe00b;" aria-hidden="true"></span> Chat  >></li>
     <li><span class="white" data-icon="" aria-hidden="true">@</span> Email >> </li>
@@ -27,7 +27,7 @@
     <li><span class="white" data-icon="&#xe000;" aria-hidden="true"></span> Phone >> </li>
     </ul>
      </div>
-        <div class="frontSideBlock techAvail">
+       <!-- <div class="frontSideBlock techAvail">
       <h3>Available Technology</h3>
         <ul>
     <li>xx Bikes</li>
@@ -37,14 +37,15 @@
     <li>xx Video Cameras</li>
     <li>xx Workstations</li>
     </ul>
-        </div>
-         <div class="frontSideBlock roomAvail">
+        </div>-->
+        <!-- <div class="frontSideBlock roomAvail">
       <h3>Available Study Rooms</h3>
       <p>xx Group Study Rooms</p>
-        </div>    
-    </div>  
+        </div> -->   
+    
     
     <?php print $content; ?>
+  </div>  <!--end frontLeftSide-->
   </section><!-- region__sidebar -->
 
 

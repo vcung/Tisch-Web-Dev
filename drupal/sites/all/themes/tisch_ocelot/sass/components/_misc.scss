@@ -138,8 +138,19 @@
  */
 
 #header{
+//push down to fit "Ask a Librarian"
+@media all and (max-width: 490px) {
+  margin-top: 1em;
+}
 
+@media all and (max-width:600px) {
+  #myAccount{
+    @include element-invisible;
+  }
+ }
+  
 #myAccount{
+
   margin-top: 1.5em;
   float:right;
   color: white;
@@ -245,23 +256,36 @@ visibility:hidden;
   /* Clear the logo. */
   clear: both;
 }
-#site-slogan { /* The slogan (or tagline) of a website */
+#site-slogan {
+@media all and (max-width:775px) {
+  
+    @include element-invisible;
+  }
+ @media all and (min-width:601px) {
+ /* The slogan (or tagline) of a website */
   margin: 0 0 -3em 0;
   padding-top: 3em;
   font-size: 1em;
   color: white;
   font-weight: normal;
 }
-
+}
+@media all and (min-width: 480px) and (max-width:800px){
+#navigation {
+  padding-right: 0px;
+}
+}
 /**
  * Navigation bar.
  */
 #navigation {
 
-@media all and (max-width:480px){
-    display: none;
-  }
 
+@media all and (min-width: 480) and (max-width:800px){
+    padding-left: 0px;
+    margin-right: 0;
+    margin-bottom: 3em;
+  }
   margin-top: -24px;
   /* Sometimes you want to prevent overlapping with main div. */
   /* overflow: hidden; */
@@ -270,6 +294,7 @@ visibility:hidden;
     margin-bottom: 0;
   }
   background-color:black;
+
   //@include background-image(linear-gradient(#4d4d4d, black));
 
   .block-menu .block__title,
@@ -291,8 +316,18 @@ visibility:hidden;
 
       ul { 
         position:relative;
-        
+      
        li {
+       @media all and (max-width:480px){
+       display: none;
+        }
+       @media all and (min-width:480px) and (max-width:700px){
+       @include adjust-font-size-to(14px)
+       
+       }
+       @media all and (min-width: 960px) {
+      float:left;
+      }
       /* A simple method to get navigation links to appear in one line. */
       //margin-right: 5px;
       //padding-left:10px; 
@@ -304,8 +339,8 @@ visibility:hidden;
       padding-top:10px;
       //margin-top: 10px;
       
-     padding-left:10px; 
-     padding-right:10px; 
+     padding-left:1%; 
+     padding-right:1%; 
      float: left;  
      text-align:left;
       //display:block;
@@ -371,14 +406,56 @@ ul.menu li:hover > ul       { visibility: visible; }
     
 #askHeader{
   @extend .backgroundFontIcon;
-
-  @media all and (max-width: 480px) {
+  @extend .whiteLink;
+  @media all and (max-width: 500px) {
+  position: fixed;
+  top: 0;
+  background-color: black;
+  width: 100%;
+  margin-left:-10px;
+  padding-left: 2em;
+  max-height:40px;
   
+   //display:none;
+   hr{
    display:none;
-
+ }
+ #audtopic{
+  @include element-invisible;
+ }
+  
   }
- 
- @media all and (min-width: 480px) {
+  //styling for as long as the ask menu is showing
+  @media all and (min-width:500px){
+    float:right;
+  div {
+          display: inline;
+        } 
+
+  
+
+  background-color: $dark-gray;
+  }
+  //styling for smaller screens, where the ask menu
+  //drops down below the main menu
+  @media all and (min-width:500px) and (max-width:800px){
+        //float: left;
+        //margin-top: 3em;
+        @include adjust-font-size-to(14px);
+        width: 100%;
+        margin: 1.5% 0 4% 0;
+        padding: 0 1%;
+
+      div {
+        margin: 2% 0 4% 0;
+        padding: 1%;
+      }
+      hr {
+        display: none;
+      }
+        
+       }
+ @media all and (min-width:800px) {
  //* Span 2 column, starting in 6th column from left. */
   @include zen-clear();
    $zen-column-count: 2;
@@ -390,7 +467,7 @@ ul.menu li:hover > ul       { visibility: visible; }
    margin-bottom:3px;
    //margin-left: 4px;
    margin-right:-7px;
-   margin-top: 2px;
+   margin-top: -2.6em;
    margin-bottom: 2px;
   float: right;
   padding: 5px 0px 5px 0px;
@@ -402,16 +479,7 @@ ul.menu li:hover > ul       { visibility: visible; }
      div {
       display: inline;
      }
- a:link {
-      color: white;
-      text-decoration:none;
-    }
-  a:visited{
-    color:white;
-  }
-  a:hover{
-    color:yellow;
-  }
+ 
   //width: 99.5%;
   
   #ask{
@@ -428,8 +496,12 @@ ul.menu li:hover > ul       { visibility: visible; }
     }
    
   }
-  
+
+
+
+ 
   #audtopic{/* Span 2 column,  */
+
   @include zen-grid-item(2, 1);
   //background-color:gray;
   //margin-top:15px;
@@ -462,6 +534,7 @@ background-color: $dark-gray;
 
 }
 }
+
 
    
 
@@ -796,13 +869,30 @@ span.field-label {
 }
 
 #block-views-recently-arrived-block-block {
+  
+  @media all and (max-width: 480px){
+    @include element-invisible;
+  }
+  
+  @media all and (min-width: 960px) {
+    visibility: visible;
   @include orange_corner;
+  }
 }
+
 #block-views-featured-resource-block-block{
   @include orange_corner;
   margin-top: 15px;
-  margin-bottom: $vertical-amount;
+   margin-bottom: $vertical-amount;
+  
+  @media all and (min-width: 480px) and (max-width: 959px) {
+  h2{
+    width: 100%;
+  }
+  }
+
 }
+
 #block-views-find-books-in-tisch-block-block{
   float: right;
   //margin-top: 0;
@@ -846,6 +936,7 @@ span.field-label {
 }
 
 #block-panels-mini-happening-now {
+
   @include orange_corner;
   //margin-top: $vertical-amount;
   margin-bottom: $vertical-amount;
@@ -864,6 +955,10 @@ span.field-label {
 
   padding-left: 1%;
   padding-right: 1%;
+ 
+ //@media all and (min-width: 480px) and (max-width: 959px) {
+  //padding: 0;
+  //}
  }
 } 
 #block-panels-mini-search-box-for-side-pages{
@@ -1209,14 +1304,20 @@ tr.selected td {
 
 
 /**Chat Box**/
-.lci_chat_load {
+
+.lci_chat_load{
+  @media all and (max-width: 959px){
+  display:none;
+  }
+
+@media all and (min-width: 960px) {
   background: #D6E0E9;
   border: 2px solid #6B7C83;
   width: 100%; 
   //height: 210px;
-}
 
-.lci_chat_load h2{
+
+ h2{
   font-size: 1.2em;
   color: #fff;
   background: #6B7C83;
@@ -1225,43 +1326,47 @@ tr.selected td {
   line-height: 1em;
   font-weight:normal;
   width: 80%;
-}
+  }
 
-.login_field {
-  padding:0.5em;
+  .login_field {
+    padding:0.5em;
     input {
-    box-shadow: 0 0.5px 0.5px 0.5px #EBEBEB inset;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0.7em;
-    width: 90%;
+      box-shadow: 0 0.5px 0.5px 0.5px #EBEBEB inset;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0.7em;
+      width: 90%;
+    }
+    textarea{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+      //margin-bottom: 0.7em;
+      resize:none;
+    }
+    }//end login field
+  .lc_button {
+   background:#85949B;
+   color: #fff;
+   border-radius: 2px;
+   cursor: pointer;
+   font-size: 15px;
+   font-weight: bold;
+   height: 2em;
+   padding: 3px 5px;
+   margin: 0 1em;
+   vertical-align: middle;
+   border:#85949B;
   }
-  textarea{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    //margin-bottom: 0.7em;
-    resize:none;
+  .send_button {
+   margin:0.5em;
   }
-}
-.lc_button {
-    background:#85949B;
-  color: #fff;
-    border-radius: 2px;
-  cursor: pointer;
-    font-size: 15px;
-    font-weight: bold;
-    height: 2em;
-    padding: 3px 5px;
-  margin: 0 1em;
-    vertical-align: middle;
-  border:#85949B;
-}
-.send_button {
-  margin:0.5em;
-}
+
+
+}//end media query
+}//end lci
 
 /** Catalog Search**/
 #quicktabs-home_page_search_box {
@@ -1557,11 +1662,36 @@ tr.selected td {
 
    #frontLeftSide {
 
+   @media all and (min-width: 1200px) { 
+    margin-left:-10px;}
+
+
+
    div {
-       h3{
+       h2{
+        @include adjust-font-size-to(18px);
+        text-transform:uppercase;
+        line-height:1em;
         margin-top:0;
         padding-top:0;
+        word-break: keep-all;
+        
        }
+       ul{
+        @include no-bullets
+       }
+    .item-list{
+
+      //@extend no-decoration;
+      a:link{
+        color:black;
+      }
+      background-image:none;
+      ul{
+        margin:0;
+        padding:0;
+      }
+    }
 
     background-color: $light-gray;
     @include gray_corner;
@@ -1569,6 +1699,8 @@ tr.selected td {
     margin-bottom: $vertical-amount;
     margin-left:0px;
   }
+
+
 }
 }
 
@@ -1593,7 +1725,16 @@ tr.selected td {
   }
  }
 }
-
+//end 1st sidebar
+//2nd sidebar:
+@media all and (min-width: 480px) and (max-width: 959px) {
+  .two-sidebars .region-sidebar-second .block
+  {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    }
+  }
  .region-sidebar-second {
 @include adjust-font-size-to (12px);
 

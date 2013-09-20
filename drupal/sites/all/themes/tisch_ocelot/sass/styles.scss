@@ -27,6 +27,7 @@
 @include font-face("icomoon", font-files("icomoon/fonts/icomoon.woff", "icomoon/fonts/icomoon.ttf"), "icomoon/fonts/icomoon.eot");
 #headerWrap {
 	 @include background-image(linear-gradient(left, $tufts-classic, $tufts-info-blue)); 
+
 }
 
 #main
@@ -88,6 +89,12 @@
 
 	#footer {
 
+    width:100%;
+    margin-right:0;
+  
+  //when footer drops to vertical list, give bottom border
+
+
   .empty{
     @extend .element-invisible;
   }
@@ -122,6 +129,30 @@
     //padding: 0;
     }
   }
+  //style for when the footer is vertical
+  @media all and (max-width:600px){
+    div {
+      border-bottom: 2px solid $dark-gray;
+      margin-left:0;
+      padding-left:0;
+      
+    }  
+     div:last-child{
+    border-bottom:none;
+    }
+    h3{
+      margin-left:0;
+      padding-left:0;
+    }
+    .socialIcons p {
+      margin-bottom: 2em;
+      
+    }
+    
+  }
+    div{
+      @include leader();
+    }
   .socialIcons{
       margin-left: 0px;
       padding-left: 0px;
@@ -130,9 +161,7 @@
       color: white;
       background-color: $dark-gray;
       }
-      p:first-of-type{
-        margin-left: 5%;
-      }
+      
       a:link{
         color: white;
         text-decoration: none;
@@ -145,8 +174,9 @@
         text-decoration: none;
       }
     }
+
+       
    #footerLogo{
-    @include leader(1);
    background-image: url("../images/tuftsLogo.jpg");
   
 
@@ -157,9 +187,15 @@
    background-repeat: no-repeat; }
 
    padding-bottom: 2%;
-}
+  }
 
-@media all and (min-width: 480px)  {
+  //fix width for logo area to not overlap the background image
+@media all and (min-width:600px) and (max-width:710px){
+  #footerLogo{
+    min-width: 20%;
+  }
+}
+@media all and (min-width: 600px)  {
    #footerContent{ 
     margin-left:auto;
     margin-right:auto;
@@ -170,9 +206,11 @@
   width: 100%;
 
   div {
-    @include leader(1);
+    
+    margin-bottom: 5%;
     p {
       padding-left: 5%;
+
       }
     height: 150px;
     //padding-left: 10px;
@@ -190,6 +228,7 @@
   #footerLogo{/* Span 1 columns, starting in 1st column from left. */
    
   @include zen-grid-item(1, 1);
+
   //height: 150px;
   //width: 15%;
    //margin-right: 30px;
@@ -225,12 +264,14 @@
   #footerSocial {/* Span 2 columns, starting in 6th column from left. */
   //width: 25%;
   @include zen-grid-item(2, 6);
-
+  //give 1st icon a bigger margin once footer is horizontal
+  .socialIcons p:first-of-type{
+        margin-left: 5%;
+      }
   
   }
   
 
 }//endfooter large screen
 
-}//end larger screen
-
+}//end footer
