@@ -21,7 +21,37 @@
     color:white;
   }
  }
+.smallerBlueHeading{
+  @include adjust-font-size-to (14px);
+  color: $inactive-bg;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  //font-weight: normal;
+  padding-left: $padding-amount;
+}
+.blueBlockHeading{
 
+  
+  h2{
+    @include adjust-font-size-to(20px);
+    font-weight: normal;
+    text-transform: uppercase;
+    padding-top:0;
+    padding-bottom:0;
+    line-height:1.4em;
+    padding-left: 3px;
+    background-color: $active_bg;
+    color: white;
+    overflow:hidden;
+    white-space: nowrap;
+    @media all and (max-width:900px){
+      width: 160px;
+      @include adjust-font-size-to(16px);
+    }
+  
+  }
+}
 .backgroundFontIcon {
   [data-icon]:before {
   font-family: 'icomoon';
@@ -270,18 +300,17 @@ visibility:hidden;
   font-weight: normal;
 }
 }
-@media all and (min-width: 480px) and (max-width:800px){
-#navigation {
-  padding-right: 0px;
-}
-}
+
+
 /**
  * Navigation bar.
  */
 #navigation {
+ @media all and (min-width: 480px) and (max-width:800px){
+ padding-right: 0px;
+}
 
-
-@media all and (min-width: 480) and (max-width:800px){
+@media all and (min-width: 480px) and (max-width:800px){
     padding-left: 0px;
     margin-right: 0;
     margin-bottom: 3em;
@@ -321,8 +350,13 @@ visibility:hidden;
        @media all and (max-width:480px){
        display: none;
         }
-       @media all and (min-width:480px) and (max-width:700px){
-       @include adjust-font-size-to(14px)
+         @media all and (min-width:400px) and (max-width:490px){
+       @include adjust-font-size-to(13px);
+       //color:blue;
+       
+       }
+       @media all and (min-width:490px) and (max-width:700px){
+       @include adjust-font-size-to(14px);
        
        }
        @media all and (min-width: 960px) {
@@ -407,7 +441,7 @@ ul.menu li:hover > ul       { visibility: visible; }
 #askHeader{
   @extend .backgroundFontIcon;
   @extend .whiteLink;
-  @media all and (max-width: 500px) {
+  @media all and (max-width: 480px) {
   position: fixed;
   top: 0;
   background-color: black;
@@ -426,7 +460,7 @@ ul.menu li:hover > ul       { visibility: visible; }
   
   }
   //styling for as long as the ask menu is showing
-  @media all and (min-width:500px){
+  @media all and (min-width:480px){
     float:right;
   div {
           display: inline;
@@ -438,7 +472,7 @@ ul.menu li:hover > ul       { visibility: visible; }
   }
   //styling for smaller screens, where the ask menu
   //drops down below the main menu
-  @media all and (min-width:500px) and (max-width:800px){
+  @media all and (min-width:480px) and (max-width:800px){
         //float: left;
         //margin-top: 3em;
         @include adjust-font-size-to(14px);
@@ -448,7 +482,7 @@ ul.menu li:hover > ul       { visibility: visible; }
 
       div {
         margin: 2% 0 4% 0;
-        padding: 1%;
+        padding-left: 4%;
       }
       hr {
         display: none;
@@ -570,8 +604,12 @@ background-color: $dark-gray;
 *  Hours
 **/
 #mobile-hours {
-  background: $light-gray;
-  
+  //background: $light-gray;
+  margin: 2%;
+  padding: 2%;
+  background-color: $green_bg;
+  @include background-image(linear-gradient($green_bg, $lighter_green_bg)); 
+  @include green_corner_bg;
   @media all and (min-width:480px){
     display: none;
   }
@@ -869,14 +907,14 @@ span.field-label {
 }
 
 #block-views-recently-arrived-block-block {
-  
+  @include orange_corner;
   @media all and (max-width: 480px){
     @include element-invisible;
   }
   
   @media all and (min-width: 960px) {
     visibility: visible;
-  @include orange_corner;
+  
   }
 }
 
@@ -1278,18 +1316,33 @@ tr.selected td {
   background: #ffc;
 }
 /**front page**/
+
 .lowerMainContent {
+//margin: 0 0.5% 2% 0;
+@media all and (max-width:800px){
+  width: 100%;
+  margin-bottom: $vertical-amount;
+}
+@media all and (min-width:800px){
+  width: 48%;
+  float: left;
+
+
+}
+  //width: 48%;
+  //max-height: 190px;
+@extend .blueBlockHeading;
+  background-color: white;
+
+
+  
 
 @media all and (max-width:480px){
-  display:none
+ 
 }
+ 
 
-  float: left;
-  margin: 0 0.5% 2% 0;
-  padding: 0;
-  width: 48%;
-  border: $light-gray 1px dashed;
-
+ 
   h4 {
     margin: 0px 0px 2px 0px;
     
@@ -1302,30 +1355,57 @@ tr.selected td {
   }
 }
 
+/**Top Resources Box**/
+#block-boxes-top-resources{
+  //give corner image
+  background-image:url("../images/blueCorner.png");
+  background-repeat: no-repeat;
+  background-position: 202.5px -2px;
+  border-top: 2px solid $active_bg;
 
+  //adjust background image for smaller screens
+  @media all and (max-width: 790px){
+    background-position: 162.5px -7px;
+  }
+  h2{
+    max-width: 200px;
+  }
+  h3{
+    @extend .smallerBlueHeading;
+    margin-top: 0.5em;
+    
+  }
+  @include no-decoration;
+  ul li a {
+    line-height: 1em;
+    padding: $padding-amount;
+    margin-bottom:0;
+  }
+  @media all and (min-width:550px){
+    margin-left: 0;
+    margin-right:1%;
+  }
+  
+ }
 /**Chat Box**/
 
 .lci_chat_load{
-  @media all and (max-width: 959px){
+border-top: 2px solid $active_bg;
+  @media all and (max-width: 800px){
   display:none;
   }
 
-@media all and (min-width: 960px) {
-  background: #D6E0E9;
-  border: 2px solid #6B7C83;
-  width: 100%; 
+@media all and (min-width: 550px) {
+  background-image:url("../images/blueCorner.png");
+  background-repeat: no-repeat;
+  
+ background-position: 262px -2px;
   //height: 210px;
 
-
  h2{
-  font-size: 1.2em;
-  color: #fff;
-  background: #6B7C83;
-  margin: 0px;
-  padding: 0.3em;
-  line-height: 1em;
-  font-weight:normal;
-  width: 80%;
+    margin-top:0px;
+    max-width: 260px;
+
   }
 
   .login_field {
@@ -1704,7 +1784,11 @@ tr.selected td {
 }
 }
 
-
+.frontHours {
+  @media all and (max-width: 480px){
+    display: none;
+  }
+}
 .sideAsk{
   @extend .backgroundFontIcon;
   background-color: $light-gray;
@@ -1732,15 +1816,19 @@ tr.selected td {
   {
     padding-left: 0;
     padding-right: 0;
-    width: 100%;
+    margin-left: 1em; //need to change to be flush with first sidebar
+    //width: 33%;
+    h2.block__title.block-title {
+      background-color:blue;
+    }
     }
   }
  .region-sidebar-second {
-@include adjust-font-size-to (12px);
+//@include adjust-font-size-to (12px);
 
 
   .block-title{
-    background-color:$heading-orange;
+    //
  //@include background-image(linear-gradient($heading-orange, lighten($heading-orange, 20%)));
    //@include adjust-font-size-to (20px);
    //above didn't work, so resorting to:
@@ -1755,6 +1843,7 @@ tr.selected td {
 
 .field-content{
   padding: 2%;
+  margin: 2%;
 }
 
 

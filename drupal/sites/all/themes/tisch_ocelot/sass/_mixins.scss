@@ -51,23 +51,69 @@ margin-left: 0px;
     text-decoration: none;
   }
 }
-
-@mixin orange_corner{
-  background-image:url("../images/orangeCorner.png");
-  background-position: 0 3em;
+@mixin blue_corner{
+  //give corner image
+  background-image:url("../images/blueCorner.png");
   background-repeat: no-repeat;
+  border-top: 2px solid $active_bg;
+  //but define background position in actual div...
+  
+  h2{
+    @include adjust-font-size-to(20px);
+    font-weight: normal;
+    text-transform: uppercase;
+    padding-top:0;
+    padding-bottom:0;
+    line-height:1.4em;
+    padding-left: 3px;
+    background-color: $active_bg;
+    color: white;
+    overflow:hidden;
+    white-space: nowrap;
+    @media all and (max-width:790px){
+      width: 160px;
+      @include adjust-font-size-to(18px);
+    }
+  
+  }
+}
+@mixin orange_corner{
 
+  background-image:url("../images/orangeCorner.png");
+  background-position: 0 2em;
+  background-repeat: no-repeat;
+   @media all and (min-width:550px) and (max-width:690px){
+    background-position: 0 1em;
+
+  }
+     
   h2.block__title{
-    @include adjust-font-size-to(24px);
+    background-color:$heading-orange;
+    @include adjust-font-size-to(16px);
+    line-height: 2em;
+    max-height: 35px;
+    
    @include text-shadow(rgba(black, 0.2) 1px 1px 0, rgba(black, 0.2) 2px 2px 0, rgba(black, 0.2) 3px 3px 0);
     margin: 0;
     padding: 0 .75em;  
+    @media all and (min-width:550px) and (max-width:690px){
+      @include adjust-font-size-to(16px);
+      
 
+    }
   }
 }
 
+
+
 @mixin gray_corner{
   background-image:url("../images/grayCorner.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+@mixin green_corner_bg{
+  background-image: url("../images/greenCornerBG.png");
   background-repeat: no-repeat;
   background-position: bottom right;
 }

@@ -78,7 +78,7 @@ $zen-auto-include-item-base: false;
 /**
  * Use 3 grid columns for smaller screens.
  */
-@media all and (min-width: 480px) and (max-width: 959px) {
+@media all and (min-width: 550px) and (max-width: 959px) {
 
   $zen-column-count: 3;
 
@@ -132,14 +132,25 @@ $zen-auto-include-item-base: false;
       @include zen-nested-container(); // Since we're making every block in this region be a grid item.
       @include zen-clear();
 
+
+      //$zen-auto-include-item-base: true;
+      
+
       /* Apply the shared properties of grid items in a single, efficient ruleset. */
       .block {
         @include zen-grid-item-base();
+        //KB applied max width to enforce
+        max-width: 32%;
+        //KB added to reinforce for Firefox:
+        float: left;
+        
       }
       /* Span 1 column, starting in the 1st column from left. */
       .block:nth-child(3n+1) {
-        @include zen-grid-item(1, 1);
+        //@include zen-grid-item(1, 1);
         @include zen-clear();
+
+
       }
       /* Span 1 column, starting in the 2nd column from left. */
       .block:nth-child(3n+2) {
@@ -204,6 +215,7 @@ $zen-auto-include-item-base: false;
     /* Span 1 column, starting in 1st column from left. */
     .region-sidebar-first {
       @include zen-grid-item(1, 1);
+
     }
 
     /* Span 2 column, starting in 5th column from left. */
