@@ -9,6 +9,9 @@
  */
  .white {
   color: white;
+  
+ }
+ .shadow{
   @include single-text-shadow;
  }
 
@@ -21,33 +24,56 @@
     color:white;
   }
  }
-.smallerBlueHeading{
+
+ .blackLink{
+  a:link{
+    color: black;
+    text-decoration:none;
+  }
+  a:visited{
+    color:black;
+  }
+ }
+ 
+ .smallerHeading{
   @include adjust-font-size-to (14px);
-  color: $inactive-bg;
   text-transform: uppercase;
   margin-bottom: 0;
   padding-bottom: 0;
-  //font-weight: normal;
   padding-left: $padding-amount;
+  word-break: keep-all;
+ }
+.smallerBlueHeading{
+  @extend .smallerHeading;
+  color: $inactive-bg;
+  //font-weight: normal;
+  
 }
+
+.smallerBlackHeading{
+ @extend .smallerHeading;
+  color: black;
+}
+
 .blueBlockHeading{
 
   
   h2{
-    @include adjust-font-size-to(20px);
+    @include adjust-font-size-to(18px);
     font-weight: normal;
     text-transform: uppercase;
     padding-top:0;
     padding-bottom:0;
-    line-height:1.4em;
+    line-height:1.6em;
     padding-left: 3px;
     background-color: $active_bg;
     color: white;
     overflow:hidden;
     white-space: nowrap;
-    @media all and (max-width:900px){
-      width: 160px;
+    @media all and (max-width:995px){
+     
       @include adjust-font-size-to(16px);
+      line-height:1.8em;
     }
   
   }
@@ -63,7 +89,10 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  }
 }
+.socialMediaBoxes{
     p{  
       width: 10%;
       text-align: center;
@@ -72,9 +101,19 @@
       //font-family: $icon;
       padding: 5px;
       margin: 2px;
-    }
 
-  }
+    }
+}
+
+.thickChevron{
+  @extend .backgroundFontIcon;
+  position: relative;
+  bottom: -5px;
+  //top: -3em;
+  //letter-spacing: 1px;
+  @include adjust-font-size-to(25px);
+  
+}  
 
  .searchBox{
  width: 100%;
@@ -605,15 +644,20 @@ background-color: $dark-gray;
 **/
 #mobile-hours {
   //background: $light-gray;
+  text-transform: uppercase;
   margin: 2%;
   padding: 2%;
   background-color: $green_bg;
   @include background-image(linear-gradient($green_bg, $lighter_green_bg)); 
   @include green_corner_bg;
+  p {
+    color: white;
+  }
   @media all and (min-width:480px){
     display: none;
   }
 }
+
 /**
  * Messages.
  */
@@ -1334,15 +1378,6 @@ tr.selected td {
 @extend .blueBlockHeading;
   background-color: white;
 
-
-  
-
-@media all and (max-width:480px){
- 
-}
- 
-
- 
   h4 {
     margin: 0px 0px 2px 0px;
     
@@ -1360,15 +1395,24 @@ tr.selected td {
   //give corner image
   background-image:url("../images/blueCorner.png");
   background-repeat: no-repeat;
-  background-position: 202.5px -2px;
-  border-top: 2px solid $active_bg;
+    border-top: 2px solid $active_bg;
 
+
+  
   //adjust background image for smaller screens
-  @media all and (max-width: 790px){
-    background-position: 162.5px -7px;
+  @media all and (min-width:995px){
+    background-position: 158.5px -1px;
   }
   h2{
-    max-width: 200px;
+    max-width: 157px;
+  }
+  //adjust background and font for larger screens
+  @media all and (max-width: 995px) {
+    background-position: 146.5px -1px;
+
+  h2{
+    max-width: 145px;
+  }
   }
   h3{
     @extend .smallerBlueHeading;
@@ -1399,14 +1443,27 @@ border-top: 2px solid $active_bg;
   background-image:url("../images/blueCorner.png");
   background-repeat: no-repeat;
   
- background-position: 262px -2px;
-  //height: 210px;
-
- h2{
+  h2{
     margin-top:0px;
-    max-width: 260px;
-
   }
+  //height: 210px;
+//adjust positioning of background image for bigger screens
+@media all and (min-width:710px) and (max-width:995px){
+  h2{ max-width:210px;
+  }
+  background-position: 211.5px -1px;
+}
+
+@media all and (min-width:995px){
+ h2{
+
+    
+    max-width: 232px;
+  }
+  background-position: 233.5px -1px;
+}
+
+  
 
   .login_field {
     padding:0.5em;
@@ -1451,6 +1508,7 @@ border-top: 2px solid $active_bg;
 /** Catalog Search**/
 #quicktabs-home_page_search_box {
   @extend .backgroundFontIcon;
+
   background: $active_bg;
   border: 3px solid $inactive-bg;
   background-image:url("../images/darkBlueCorner.png");
@@ -1528,6 +1586,7 @@ border-top: 2px solid $active_bg;
 .quicktabs_main  {
   @extend .white;
   @extend .whiteLink;
+
   clear: both;
   padding: 20px 5px 0 5px;
   position: relative;
@@ -1552,7 +1611,7 @@ border-top: 2px solid $active_bg;
   margin: 1% 0 3% 0;
   [data-icon]:before{
   
-  color: $inactive-bg;
+  color: white;
   @include single-text-shadow;
    @include opacity(.5);
 
@@ -1741,41 +1800,47 @@ border-top: 2px solid $active_bg;
   }
 
    #frontLeftSide {
+   padding-top: $padding-amount;
 
    @media all and (min-width: 1200px) { 
     margin-left:-10px;}
-
-
+   
+   //padding: 0;
+    
+  
 
    div {
+    padding-top: $vertical-content-amount;
+    padding-left: $padding-amount;
        h2{
-        @include adjust-font-size-to(18px);
-        text-transform:uppercase;
-        line-height:1em;
-        margin-top:0;
-        padding-top:0;
-        word-break: keep-all;
+        @extend .smallerBlackHeading;
+        margin-top: -2px;
         
        }
+       background-color: $light-gray;
+       color:black;
+
        ul{
         @include no-bullets
        }
+      
     .item-list{
 
       //@extend no-decoration;
-      a:link{
-        color:black;
-      }
+      @extend .blackLink;
       background-image:none;
       ul{
         margin:0;
+        padding: 0;
+      }
+      li{
         padding:0;
       }
     }
 
     background-color: $light-gray;
     @include gray_corner;
-    padding: 1em .5em 1em 1em;
+    
     margin-bottom: $vertical-amount;
     margin-left:0px;
   }
@@ -1785,30 +1850,40 @@ border-top: 2px solid $active_bg;
 }
 
 .frontHours {
+  @extend .backgroundFontIcon;
   @media all and (max-width: 480px){
     display: none;
   }
+  p{
+  color: white;
+  margin:0;
+  padding:0;
+  }
+  @extend .blackLink;
+  padding-bottom: 15%;
 }
 .sideAsk{
   @extend .backgroundFontIcon;
-  background-color: $light-gray;
-  color: black;
-  padding: 0 5% 10% 5%;
+  padding-bottom: 2%;
   @include gray_corner;
-  
-  
- 
-  ul {
-    margin-left: 0;
-    padding-left:0;
-
-  li {
-    list-style-type: none;
-    //margin-left: 2%;
-    //padding-left:2%;
+  ul{
+    padding-left:$padding-amount;
+    li{
+      //added to deal with spacing for thick chevron webfont icons
+      margin-top:-20px;
+    }
   }
- }
 }
+
+#block-screen-scrape-available-technology{
+  padding-bottom: 7%;
+}
+.screen-scrape__item-count {
+    @extend .white;
+    @extend .shadow;
+  }
+
+
 //end 1st sidebar
 //2nd sidebar:
 @media all and (min-width: 480px) and (max-width: 959px) {

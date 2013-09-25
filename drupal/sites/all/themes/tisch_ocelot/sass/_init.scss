@@ -123,7 +123,9 @@ $tufts-text-blue: #3e7bb3;
 $footer-text-gray: #b2b2b2;
 
 
-
+$default-text-shadow-color: black;
+$default-text-shadow-blur: 0.5px;
+$default-text-shadow-v-offset: 1px;
 // The amount lists, blockquotes and comments are indented.
 $indent-amount: 30px;
 

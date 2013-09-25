@@ -20,7 +20,9 @@ window.onload = function() {
 			'icon-arrow-down' : '&#xe00f;',
 			'icon-untitled' : '&#xe01b;',
 			'icon-help' : '&#xe01c;',
-			'icon-bubbles-2' : '&#xe004;'
+			'icon-bubbles-2' : '&#xe004;',
+			'icon-chevron-right' : '&#xf054;',
+			'icon-double-angle-right' : '&#xf101;'
 		},
 		els = document.getElementsByTagName('*'),
 		i, attr, c, el;

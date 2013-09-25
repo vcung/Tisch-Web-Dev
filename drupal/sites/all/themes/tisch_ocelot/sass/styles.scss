@@ -157,6 +157,7 @@
       margin-left: 0px;
       padding-left: 0px;
       @extend .backgroundFontIcon;
+      @extend .socialMediaBoxes;
       p{
       color: white;
       background-color: $dark-gray;

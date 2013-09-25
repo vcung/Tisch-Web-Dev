@@ -28,7 +28,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"] {
 */
-.icon-phone, .icon-clock, .icon-keyboard, .icon-search, .icon-twitter, .icon-facebook, .icon-users, .icon-bubbles, .icon-arrow-left, .icon-arrow-right, .icon-arrow-up, .icon-arrow-down, .icon-untitled, .icon-help, .icon-bubbles-2 {
+.icon-phone, .icon-clock, .icon-keyboard, .icon-search, .icon-twitter, .icon-facebook, .icon-users, .icon-bubbles, .icon-arrow-left, .icon-arrow-right, .icon-arrow-up, .icon-arrow-down, .icon-untitled, .icon-help, .icon-bubbles-2, .icon-chevron-right, .icon-double-angle-right {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -82,4 +82,10 @@ you can use the generic selector below, but it's slower:
 }
 .icon-bubbles-2:before {
 	content: "\e004";
+}
+.icon-chevron-right:before {
+	content: "\f054";
+}
+.icon-double-angle-right:before {
+	content: "\f101";
 }
