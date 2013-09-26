@@ -54,11 +54,8 @@
  @extend .smallerHeading;
   color: black;
 }
-
-.blueBlockHeading{
-
-  
-  h2{
+.mainHeading{
+   h2{
     @include adjust-font-size-to(18px);
     font-weight: normal;
     text-transform: uppercase;
@@ -66,10 +63,20 @@
     padding-bottom:0;
     line-height:1.6em;
     padding-left: 3px;
-    background-color: $active_bg;
     color: white;
+   }
+}
+.blueBlockHeading{
+  
+  @extend .mainHeading;
+
+  h2{
+    
+    background-color: $active_bg;
+    
     overflow:hidden;
     white-space: nowrap;
+
     @media all and (max-width:995px){
      
       @include adjust-font-size-to(16px);
@@ -107,11 +114,7 @@
 
 .thickChevron{
   @extend .backgroundFontIcon;
-  position: relative;
-  bottom: -5px;
-  //top: -3em;
-  //letter-spacing: 1px;
-  @include adjust-font-size-to(25px);
+  @include adjust-font-size-to(15px);
   
 }  
 
@@ -950,6 +953,47 @@ span.field-label {
 
 }
 
+#block-views-highlights-for-front-block {
+  clear: left;
+  background-image:url("../images/largeGreenCorner.png");
+  background-repeat: no-repeat;
+  height: 200px;
+
+  @extend .mainHeading;
+  h2{
+    background-color: $green_bg;
+    max-width: 200px;
+    
+  }
+  border-top: 6px solid $green_bg;
+
+  .views-row{
+    float: left;
+    width: 33%;
+    padding: 0 0.15% 0 0.15%;
+  }
+  .whiteCaptions{
+     color: white;
+     @include adjust-font-size-to(14px);
+     padding-left: 2%;
+     font-weight: 550;
+     line-height: 1em;
+
+  }
+  .highlight_headline{
+    @extend .whiteCaptions;
+    margin-top: 5px;
+    margin-bottom: -25px;  
+    position: relative;
+    
+  }
+  .highlight_tagline{
+    @extend .whiteCaptions;
+    position: relative;
+    margin-top: -40px;
+  }
+}
+
 #block-views-recently-arrived-block-block {
   @include orange_corner;
   @media all and (max-width: 480px){
@@ -1392,11 +1436,12 @@ tr.selected td {
 
 /**Top Resources Box**/
 #block-boxes-top-resources{
+  @extend .lowerMainContent;
   //give corner image
   background-image:url("../images/blueCorner.png");
   background-repeat: no-repeat;
     border-top: 2px solid $active_bg;
-
+  margin-bottom: $vertical-amount;
 
   
   //adjust background image for smaller screens
@@ -1432,6 +1477,11 @@ tr.selected td {
   
  }
 /**Chat Box**/
+
+#block-boxes-chat-front{
+  @extend .lowerMainContent;
+  //clear: right;
+}
 
 .lci_chat_load{
 border-top: 2px solid $active_bg;
@@ -1868,10 +1918,7 @@ border-top: 2px solid $active_bg;
   @include gray_corner;
   ul{
     padding-left:$padding-amount;
-    li{
-      //added to deal with spacing for thick chevron webfont icons
-      margin-top:-20px;
-    }
+    
   }
 }
 
