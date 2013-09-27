@@ -86,7 +86,7 @@ function screen_scrape_cron() {
   $feeds = _screen_scrape_list();
   $queue = DrupalQueue::get('screen_scrape_feed');
   // This needs to be modified to pass the feed key in somehow
-  foreach($feeds as $feed) { 
+  foreach ($feeds as $feed) { 
     $queue->createItem($feed);
     
   }
@@ -143,9 +143,9 @@ function _screen_scrape_block_html() {
   $feeds = _screen_scrape_list();
   $variables = array();
   $output = '';
-  foreach($feeds as $key => $feed) {
+  foreach ($feeds as $key => $feed) {
    $variables['items'][] = array(
-      'data' => theme('screen_scrape_item', array('count'=>variable_get('screen_scrape_' . $feed['label']), 'label'=>$feed['label'])),
+      'data' => theme('screen_scrape_item', array('count' => variable_get('screen_scrape_' . $feed['label']), 'label' => $feed['label'])),
     );   
   }
   $output = theme('item_list', $variables); 
@@ -160,7 +160,7 @@ function _screen_scrape_block_html() {
 function screen_scrape_theme($existing, $type, $theme, $path) {
   return array(
     'screen_scrape_item' => array(
-      'variables' => array('count' => 0, 'label' => null),
+      'variables' => array('count' => 0, 'label' => NULL),
     ),
   );
 }
@@ -185,7 +185,7 @@ function theme_screen_scrape_item($variables) {
  * @return
  *   A number with leading zero
  */
-function _screen_scrape_get_num_available($url, $offset, $count){
+function _screen_scrape_get_num_available($url, $offset, $count) {
   
   $section = '/<tr  class=\"bibItemsEntry\">(.*)<\/tr>/s';  
   $status = '/<!-- field % -->&nbsp\;(.*?)<\/td>/s';  
