@@ -17,15 +17,15 @@
       <p class="white"><span class="shadow">8:30</span>am - <span class="shadow">10:00</span>pm</p>
     <p>
     <a href="http://www.library.tufts.edu/tisch/hours.htm">More
-      <span class="thickChevron" data-icon="&#xf101;" aria-hidden="true"></span></a></p>
+      <span class="thickChevron" aria-hidden="true">&raquo;</span></a></p>
        </div>
       <div class="frontSideBlock sideAsk">
         <h2>Ask a Librarian</h2>
       <ul>
-    <li><span class="white shadow" data-icon="&#xe00b;" aria-hidden="true"></span> Chat  <span class="thickChevron" data-icon="&#xf101;" aria-hidden="true"></span></a></li>
-    <li><span class="white shadow" data-icon="" aria-hidden="true">@</span> Email <span class="thickChevron" data-icon="&#xf101;" aria-hidden="true"></span></a> </li>
-    <li><span class="white shadow" data-icon="&#xe00a;" aria-hidden="true"></span> In person <span class="thickChevron" data-icon="&#xf101;" aria-hidden="true"></span></a> </li>
-    <li><span class="white shadow" data-icon="&#xe000;" aria-hidden="true"></span> Phone <span class="thickChevron" data-icon="&#xf101;" aria-hidden="true"></span></a> </li>
+    <li><span class="white shadow" data-icon="&#xe00b;" aria-hidden="true"></span> Chat  <span class="thickChevron"  aria-hidden="true">&raquo;</span></a></li>
+    <li><span class="white shadow" data-icon="" aria-hidden="true">@</span> Email <span class="thickChevron" aria-hidden="true">&raquo;</span></a> </li>
+    <li><span class="white shadow" data-icon="&#xe00a;" aria-hidden="true"></span> In person <span class="thickChevron" aria-hidden="true">&raquo;</span></a> </li>
+    <li><span class="white shadow" data-icon="&#xe000;" aria-hidden="true"></span> Phone <span class="thickChevron" aria-hidden="true">&raquo;</span></a> </li>
     </ul>
      </div>
        <!-- <div class="frontSideBlock techAvail">

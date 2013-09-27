@@ -113,10 +113,14 @@
 }
 
 .thickChevron{
-  @extend .backgroundFontIcon;
-  @include adjust-font-size-to(15px);
+   //[data-icon]:before {
+  font-family: '$base_font';
+  content: attr(data-icon);
+  font-size: $chevron-font-size;
+}
   
-}  
+  
+
 
  .searchBox{
  width: 100%;
@@ -128,8 +132,9 @@
 
  }
  
+ //used for search forms of external services - like catalog
  .submitButton {
- background-image:url("../images/searchButton.jpg");
+ //background-image:url("../images/searchButton.jpg");
     background-repeat: no-repeat;
     background-position: center;
     width: 50px;
@@ -959,6 +964,8 @@ span.field-label {
   background-repeat: no-repeat;
   height: 200px;
 
+
+
   @extend .mainHeading;
   h2{
     background-color: $green_bg;
@@ -971,6 +978,7 @@ span.field-label {
     float: left;
     width: 33%;
     padding: 0 0.15% 0 0.15%;
+
   }
   .whiteCaptions{
      color: white;
@@ -987,10 +995,23 @@ span.field-label {
     position: relative;
     
   }
+  .views-field-field-highlight-image:after{
+      @extend .thickChevron;
+      content:'\00BB';
+      color: white;
+      float: right;
+      margin-top: -35px;
+      margin-right: 5%;
+      z-index: 99;
+      position: relative;
+
+    }
   .highlight_tagline{
+
     @extend .whiteCaptions;
     position: relative;
     margin-top: -40px;
+
   }
 }
 
@@ -1669,8 +1690,14 @@ border-top: 2px solid $active_bg;
 }
 
 #submit {
-    @extend .submitButton;
-    margin-top: -40px;
+    //@extend .submitButton;
+background-image:none;
+background-color: $inactive-bg;
+    margin-top: -56px;
+
+    #searchIcon{
+      float:right;
+    }
     
    //background: none repeat scroll 0 0 #104C80;
    // border: medium none;
@@ -1721,8 +1748,8 @@ border-top: 2px solid $active_bg;
 
   }
 
-  #submit{
-    @extend .submitButton;
+  &#submit{
+    //@extend .submitButton;
     margin-top: -40px;
   }
   #parameter {
