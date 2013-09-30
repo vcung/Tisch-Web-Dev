@@ -8,7 +8,6 @@
  *   see https://drupal.org/coding-standards/docs
  */
 
- 
 /**
  * Tisch Library data source URLs
  */
@@ -36,30 +35,35 @@ function _screen_scrape_list() {
       'url' => TISCH_IPAD_URL,
       'offset' => 0,
       'count' => '',
+	  'link' => '/',
       ),
     'harddrives' => array(
       'label' => t('External Hard Drives'),
       'url' => TISCH_HARDDRIVES_URL,
       'offset' => 0,
       'count' => '',
+	  'link' => '/',
       ),
     'laptops' => array(
       'label' => t('Laptops'),
       'url' => TISCH_LAPTOPS_URL,
       'offset' => 5,
       'count' => '',
+	  'link' => '/',
       ),
     'bikes' => array(
       'label' => t('Bikes'),
       'url' => TISCH_BIKES_URL,
       'offset' => 0,
       'count' => 30,
+	  'link' => '/node/3014',
       ),
     'camcorders' => array(
       'label' => t('Video Cameras'),
       'url' => TISCH_CAMCORDERS_URL,
       'offset' => 0,
       'count' => '',
+	  'link' => '/',
       ),
     );
   return $feeds;
@@ -145,14 +149,13 @@ function _screen_scrape_block_html() {
   $output = '';
   foreach ($feeds as $key => $feed) {
    $variables['items'][] = array(
-      'data' => theme('screen_scrape_item', array('count' => variable_get('screen_scrape_' . $feed['label']), 'label' => $feed['label'])),
+      'data' => theme('screen_scrape_item', array('count' => variable_get('screen_scrape_' . $feed['label']), 'label' => $feed['label'], 'link' => $feed['link'])),
     );   
   }
   $output = theme('item_list', $variables); 
   
   return $output;
 }
-
 
 /**
  * Implements hook_theme()
@@ -175,7 +178,7 @@ function screen_scrape_theme($existing, $type, $theme, $path) {
  */
 function theme_screen_scrape_item($variables) {
   extract($variables);
-  $output = "<span class='screen-scrape__item-count'>$count</span> <span class='screen-scrape__item-label'>$label</span>";
+  $output = "<span class='screen-scrape__item-count'><a href='$link'>$count</a></span> <span class='screen-scrape__item-label'>$label</span>";
   return $output;
 }
 
