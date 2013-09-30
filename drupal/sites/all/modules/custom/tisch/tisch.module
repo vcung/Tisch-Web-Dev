@@ -14,3 +14,61 @@ function tisch_preprocess_page(&$variables){
   $variables['mobile_hours'] = "<h3>Today's Hours</h3><p>8:30am - 10:00pm</p>";
 }
 
+
+/**
+ * Implements hook_block_view_MODULE_DELTA_alter().
+ *
+ * Adds chevrons to specific blocks
+ */
+/*function tisch_block_view_alter(&$data, $block) {
+  *dpm($block);
+*}
+*/
+
+function tisch_block_view_alter(&$data, $block) {
+	$chevHTML = '<span class="thickChevron rightChevron">  &raquo;</span>';
+
+//Find the mini panels...
+	if($block->module == 'panels_mini')  {
+      switch($block->delta) {
+   
+   //Mini happening now
+   case 'happening_now':
+    {
+      $data['subject'] = t('Happening Now'.$chevHTML,array('html' => TRUE));
+     break;
+    }
+  }  
+}
+
+//Find the view blocks...
+  if($block->module == 'views') {
+    	switch($block->delta){
+    
+    //New at Tisch block
+    case 'feed_recently_arrived_block':	
+	{
+      $data['subject'] = t('New at Tisch'.$chevHTML,array('html' => TRUE));
+     break;
+    }
+
+    }
+}
+ 
+}  
+
+
+/**
+ * Implements hook_block_view_alter().
+ *
+ * Adds chevrons to specific blocks
+*
+*function ps_nav_block_view_alter(&$data, $block) {
+ * if($block->module == 'menu_block') {
+ *   switch($block->delta) {
+*
+ *     // Footer
+  *    case 'ps-footer-1':
+   *     $data['subject'] = l('Power of<br />Blah', 'power-blah', array('html' => TRUE));
+    *    break;
+        */
