@@ -4,8 +4,6 @@
  * @file
  * Screen Scrape custom module
  *
- * @todo Apply Drupal commenting standards
- *   see https://drupal.org/coding-standards/docs
  */
 
 /**
@@ -56,7 +54,7 @@ function _screen_scrape_list() {
       'url' => TISCH_BIKES_URL,
       'offset' => 0,
       'count' => 30,
-	  'link' => '/node/3014',
+	  'link' => '/',
       ),
     'camcorders' => array(
       'label' => t('Video Cameras'),
@@ -217,7 +215,7 @@ function _screen_scrape_get_num_available($url, $offset, $count) {
   
   return sprintf("%02s", $available);
   
-  //below code works locally bu not on dev site - cUrl problem
+  //below code -must include phpQuery-onefile.php- works locally but not on dev site - cUrl problem
    /* $available=0;
   // loads the page
   phpQuery::newDocumentFileHTML($url);
