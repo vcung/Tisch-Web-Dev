@@ -43,9 +43,10 @@
   padding-left: $padding-amount;
   word-break: keep-all;
  }
+
 .smallerBlueHeading{
   @extend .smallerHeading;
-  color: $inactive-bg;
+  color: $inactive_bg;
   //font-weight: normal;
   
 }
@@ -54,6 +55,7 @@
  @extend .smallerHeading;
   color: black;
 }
+
 .mainHeading{
    h2{
     @include adjust-font-size-to(18px);
@@ -133,10 +135,18 @@
  }
  
  //used for search forms of external services - like catalog
- .submitButton {
+ .submitButton{
+  //define top margin for unique placement in divs
+  background-image:url("../images/magGlassnypl.png");
+  background-repeat: no-repeat;
+  background-position: center; 
+background-size: 20px;
+background-color: $inactive-bg;
+   
+    text-indent: -9999px;
+
  //background-image:url("../images/searchButton.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
+    
     width: 50px;
     height: 40px;
     float: right;
@@ -144,7 +154,8 @@
     border: none;
     position: relative;
     z-index: 15;
-  }
+    }
+  
 /**
  * Wireframes.
  */
@@ -972,6 +983,9 @@ span.field-label {
 }
 
 #block-views-highlights-for-front-block {
+  @media all and (max-width: 550px){
+    display:none;
+  }
   clear: left;
   background-image:url("../images/largeGreenCorner.png");
   background-repeat: no-repeat;
@@ -1074,13 +1088,13 @@ span.field-label {
   background-color: white;
   
   &>div{
-    padding: $padding-amount;
+    //padding: $padding-amount;
   }
     
   
   h2{
-    @include adjust-font-size-to(14px);
-    padding: $padding-amount;
+   // @include adjust-font-size-to(14px);
+    //padding: $padding-amount;
     padding-bottom: 0px;
   }
   
@@ -1093,15 +1107,17 @@ span.field-label {
 }
 
 #block-panels-mini-happening-now {
-
+  //make orange heading
   @include orange_corner;
-  //margin-top: $vertical-amount;
   margin-bottom: $vertical-amount;
   @include box-shadow(gray 3px 3px 7px);
   background-color: white;
-   
+  @include no-decoration;
+ 
+ 
+ //give each block a border, except for last
  .pane-block {
-  margin-right: 2%;
+  margin-right: 1%;
   border-bottom: gray 1px solid;
   }
   & :last-child{
@@ -1112,11 +1128,100 @@ span.field-label {
 
   padding-left: 1%;
   padding-right: 1%;
- 
+  padding-top: 0;
+  padding-bottom: 0;
  //@media all and (min-width: 480px) and (max-width: 959px) {
   //padding: 0;
   //}
- }
+  
+  //for twitter box:
+  h2{
+    @extend .smallerBlueHeading;
+    margin-left: 3.5em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  }
+  .views-field{
+    display:inline-block;
+    vertical-align: top;
+  }
+  
+  
+    
+  .grayTwitterBird {
+    @extend .backgroundFontIcon;
+    @include no-decoration;
+    font-size: 200%;
+      //height: 100%;
+    a:link {
+      color: $dark-gray;
+    }
+    a:visited{
+      color: $dark-gray;
+    }
+    margin-top: -0.6em;
+  }
+  
+  .tweetContent{
+    //not adhering to display:inline block so floating
+    float: right; 
+    margin-left: 3em;
+    margin-top:-2em;
+  }
+
+ //for all posted dates in happening block
+  .posted {
+    margin-left: 3em;
+    text-transform: lowercase;
+    color: $footer-text-gray;
+    font-style: italic;
+    padding-bottom: 2%;
+  }
+
+.eventTitle{
+    margin-left: 2px;
+   //fix title when the columns get skinny mid-screen size
+    @media all and (min-width: 550px) and (max-width: 750px){
+      margin-left: 3em;
+      margin-top: -2em;
+    } 
+  }
+  .eventDateSquare{
+    max-height:40px;
+    max-width: 40px;
+    background-color: $active_bg;
+    @extend .white;
+    padding: 5px;
+    line-height: 1em;
+    text-align: center;
+    margin-bottom: 5%;
+    margin-top: -1em;
+    //max-width: 35px;
+    
+
+    .day{
+      font-weight: 900;
+      padding-top:5px;
+      margin-bottom: 0;
+      padding-bottom: 0;
+       margin-left: 3px;
+      //text-align: right;
+    }
+    .month{
+      font-size: 70%;
+      font-weight: 100;
+      margin-top:0;
+      padding-top: 0;
+      //text-align: center;
+    }
+  }
+  .happeningNewsTitle{
+    margin-left: 3em;
+  }
+  
+
 } 
 #block-panels-mini-search-box-for-side-pages{
   margin-bottom: $vertical-content-amount;
@@ -1444,7 +1549,10 @@ tr.selected td {
 }
 @media all and (min-width:800px){
   width: 48%;
-  float: left;
+  display: inline-block;
+  vertical-align: top;
+
+  
 
 
 }
@@ -1491,7 +1599,7 @@ tr.selected td {
   }
   }
   h3{
-    @extend .smallerBlueHeading;
+    @extend .smallerBlackHeading;
     margin-top: 0.5em;
     
   }
@@ -1698,7 +1806,7 @@ border-top: 2px solid $active_bg;
       //}
     //}
   //}
-#otherCatalogs{
+  #otherCatalogs{    
   float: right;
   margin: 1% 0 3% 0;
   [data-icon]:before{
@@ -1707,23 +1815,13 @@ border-top: 2px solid $active_bg;
   @include single-text-shadow;
    @include opacity(.5);
 
-}
-}
-
-#submit {
-    //@extend .submitButton;
-background-image:none;
-background-color: $inactive-bg;
-    margin-top: -56px;
-
-    #searchIcon{
-      float:right;
-    }
-    
-   //background: none repeat scroll 0 0 #104C80;
-   // border: medium none;
-    //color: #fff;
   }
+
+}
+
+
+  
+    
   input#searcharg {
     @extend .searchBox;
  
@@ -1739,6 +1837,10 @@ background-color: $inactive-bg;
     //margin-bottom: 5px;
   }
   
+  #submit{
+    @extend .submitButton;
+    margin-top: -56px;
+  }
 
   .help{
     float: right;
@@ -1768,10 +1870,9 @@ background-color: $inactive-bg;
     @extend .searchBox;
 
   }
-
-  &#submit{
-    //@extend .submitButton;
-    margin-top: -40px;
+  #submit{
+    @extend .submitButton;
+    margin-top: -41px;
   }
   #parameter {
     float: right;
@@ -1859,7 +1960,7 @@ background-color: $inactive-bg;
     background-color:none;
     background-image: none;
 
-    @media all and (max-width:480px){
+    @media all and (max-width:525px){
                 display: none;
                 }
       
@@ -1954,7 +2055,7 @@ background-color: $inactive-bg;
 
 .frontHours {
   @extend .backgroundFontIcon;
-  @media all and (max-width: 480px){
+  @media all and (max-width: 550px){
     display: none;
   }
 
@@ -2037,10 +2138,16 @@ background-color: $inactive-bg;
       @include single-text-shadow;
     //border-bottom: $heading-orange-border 1px solid;
     }
-
+.panel-panel {
+  //make the panels have small black headings and move heading over for icons
+   h2 {
+    //@extend .smallerBlackHeading;
+    
+   }
+}
 .field-content{
-  padding: 2%;
-  margin: 2%;
+  //padding: 2%;
+  //margin: 2%;
 }
 
 

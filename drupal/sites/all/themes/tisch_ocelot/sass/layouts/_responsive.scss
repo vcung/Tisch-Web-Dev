@@ -131,6 +131,10 @@ $zen-auto-include-item-base: false;
       @include zen-grid-item(3, 1);
       @include zen-nested-container(); // Since we're making every block in this region be a grid item.
       @include zen-clear();
+      //KB added margins around entire new row
+      margin-right: $padding-amount;
+      margin-left: $padding-amount;
+      
 
 
       //$zen-auto-include-item-base: true;
@@ -142,12 +146,12 @@ $zen-auto-include-item-base: false;
         //KB applied max width to enforce
         max-width: 32%;
         //KB added to reinforce for Firefox:
-        float: left;
+        //float: left;
         
       }
       /* Span 1 column, starting in the 1st column from left. */
       .block:nth-child(3n+1) {
-        //@include zen-grid-item(1, 1);
+        @include zen-grid-item(1, 1);
         @include zen-clear();
 
 
