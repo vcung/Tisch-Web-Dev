@@ -543,11 +543,12 @@ ul.menu li:hover > ul       { visibility: visible; }
 
   
 
-  background-color: $dark-gray;
+  //background-color: $dark-gray;
   }
   //styling for smaller screens, where the ask menu
   //drops down below the main menu
   @media all and (min-width:525px) and (max-width:850px){
+    background-color: $dark-gray;
         //float: left;
         //margin-top: 3em;
         @include adjust-font-size-to(14px);
@@ -566,20 +567,19 @@ ul.menu li:hover > ul       { visibility: visible; }
        }
  @media all and (min-width:850px) {
  //* Span 2 column, starting in 6th column from left. */
-  @include zen-clear();
+  
    $zen-column-count: 2;
   $zen-gutter-width: 1px;
   @include zen-grid-container;
    
   width: 28.80%;
   background-color: $dark-gray;
-   margin-bottom:3px;
+  margin-top: 2px;
+   margin-bottom:2px;
    //margin-left: 4px;
    margin-right:-7px;
-   margin-top: -3.6em;
-   margin-bottom: 2px;
-  float: right;
-  padding: 5px 0px 5px 0px;
+  overflow:hidden;
+ 
   
    text-align:center;
    @include adjust-font-size-to(12px);
@@ -592,17 +592,13 @@ ul.menu li:hover > ul       { visibility: visible; }
   //width: 99.5%;
   
   #ask{
+    @include zen-grid-item(2, 1);
     background-color: $dark-gray;
-   
-    //border: 3px solid black;
+    padding-bottom: 1%;
+    padding-top:0.75%;
+    border-bottom: 1px solid black;
     color: white;
-    hr{
-      border: 0;
-    height: 2px;
-    background: black;
-    margin:0px;
-    padding:0px;
-    }
+    
    
   }
 
@@ -612,24 +608,37 @@ ul.menu li:hover > ul       { visibility: visible; }
   #audtopic{/* Span 2 column,  */
 
   @include zen-grid-item(2, 1);
-  //background-color:gray;
+  @include zen-nested-container();
+  @include zen-clear();
+  background-color:orange;
+  border-right: 2px solid black;
+  border-left: 1px solid black;
+  width: 100%;
   //margin-top:15px;
 
 }
 
   #aud{
  @include zen-grid-item(1, 1);
- border: 5px black;
+ //@include zen-clear();
+ border-right: 1px black solid;
 background-color: $dark-gray;
- width:50%;
+padding-top: 1%;
+  padding-bottom: 0.75%;
+
+ 
   }
 
   #topic{
-  @include zen-grid-item(1, 2);  
+  @include zen-grid-item(1, 2); 
+  //@include zen-clear(); 
+  background-color: $dark-gray;
+  padding-top: 1%;
+  padding-bottom: 0.75%;
    color: white;
    //margin-left: 0.5px black;
    background-color: $dark-gray;
-   width: 50%;
+   
   
    a:link {
     color: white;
@@ -639,7 +648,6 @@ background-color: $dark-gray;
 
 }
 }
-
 
    
 
@@ -1137,7 +1145,7 @@ span.field-label {
   //for twitter box:
   h2{
     @extend .smallerBlueHeading;
-    margin-left: 3.5em;
+    margin-left: 3.6em;
     margin-bottom: 0;
     padding-bottom: 0;
   }
