@@ -14,7 +14,14 @@
  .shadow{
   @include single-text-shadow;
  }
+ .whiteCaptions{
+     color: white;
+     @include adjust-font-size-to(14px);
+     padding-left: 2%;
+     font-weight: 550;
+     line-height: 1em;
 
+  } 
  .whiteLink {
   a:link{
     color: white;
@@ -376,7 +383,7 @@ visibility:hidden;
  padding-right: 0px;
 }
 
-@media all and (min-width: 525px) and (max-width:850px){
+@media all and (min-width: 525px) and (max-width:875px){
     padding-left: 0px;
     margin-right: 0;
     margin-bottom: 3em;
@@ -461,7 +468,7 @@ visibility:hidden;
             }
 
           a:hover {
-             color: $tufts-text-blue;
+             color: black;
              background-color: $dark-gray;
           }
          } //end first    
@@ -497,7 +504,7 @@ visibility:hidden;
                text-transform: capitalize;
               }
             a:hover {
-               color:orange;
+              color:black;
                width: 92%;
               }
 
@@ -547,7 +554,7 @@ ul.menu li:hover > ul       { visibility: visible; }
   }
   //styling for smaller screens, where the ask menu
   //drops down below the main menu
-  @media all and (min-width:525px) and (max-width:850px){
+  @media all and (min-width:525px) and (max-width:875px){
     background-color: $dark-gray;
         //float: left;
         //margin-top: 3em;
@@ -565,7 +572,7 @@ ul.menu li:hover > ul       { visibility: visible; }
       }
         
        }
- @media all and (min-width:850px) {
+ @media all and (min-width:875px) {
  //* Span 2 column, starting in 6th column from left. */
   
    $zen-column-count: 2;
@@ -973,7 +980,7 @@ span.field-label {
 
 /**
  * Blocks.
- */
+ 
 
 /* Block wrapper. */
 .block {
@@ -994,46 +1001,47 @@ span.field-label {
   @media all and (max-width: 550px){
     display:none;
   }
+  //styling for as long as highlights block is showing
   clear: left;
+  @extend .mainHeading;
   background-image:url("../images/largeGreenCorner.png");
   background-repeat: no-repeat;
-  height: 200px;
-
-  @extend .mainHeading;
+  border-top: 6px solid $green_bg;
+  .views-row{
+       display: inline-block;
+       width: 32%;
+       //padding: 0 0.25% 0 0.25%;
+       vertical-align: top;
+       }
   h2{
     background-color: $green_bg;
     max-width: 200px;    
   }
-  border-top: 6px solid $green_bg;
 
-  .views-row{
-    display: inline-block;
-    width: 32%;
-    padding: 0 0.25% 0 0.25%;
+   @media all and (min-width: 750px){
+      
+    }
 
-  }
-  .whiteCaptions{
-     color: white;
-     @include adjust-font-size-to(14px);
-     padding-left: 2%;
-     font-weight: 550;
-     line-height: 1em;
-
-  }
   .highlight_headline{
     @extend .whiteCaptions;
-    margin-top: 5px;
+    @media all and (max-width: 800px){
+      color:black;
+      height:30px;
+      bottom: 0;
+    }
+    @media all and (min-width: 800px){
+    margin-top: 6px;
     margin-bottom: -25px;  
     position: relative;
-    
+    }
   }
   .views-field-field-highlight-image:after{
       @extend .thickChevron;
       content:'\00BB';
       color: white;
       float: right;
-      margin-top: -35px;
-      margin-right: 4%;
+      margin-top: -30px;
+      margin-right: 2%;
       z-index: 99;
       position: relative;
 
@@ -1042,8 +1050,15 @@ span.field-label {
 
     @extend .whiteCaptions;
     position: relative;
+    @media all and (min-width: 900px){
     margin-top: -40px;
-
+    max-width: 175px;
+    }
+   
+    @media all and (max-width: 900px){
+      margin-top: 0px;
+      color: black;
+    }
   }
 }
 
@@ -1096,7 +1111,7 @@ span.field-label {
   background-color: white;
   
   &>div{
-    //padding: $padding-amount;
+    padding: $padding-amount;
   }
     
   
@@ -1121,6 +1136,7 @@ span.field-label {
   @include box-shadow(gray 3px 3px 7px);
   background-color: white;
   @include no-decoration;
+
  
  
  //give each block a border, except for last
@@ -1551,19 +1567,21 @@ tr.selected td {
 
 .lowerMainContent {
 //margin: 0 0.5% 2% 0;
-@media all and (max-width:800px){
+@media all and (max-width:750px){
   width: 100%;
   margin-bottom: $vertical-amount;
 }
-@media all and (min-width:800px){
+@media all and (min-width:750px){
+
   width: 48%;
+  
   display: inline-block;
   vertical-align: top;
 
-  
-
-
+  //max-height: 250px;
 }
+ 
+
   //width: 48%;
   //max-height: 190px;
 @extend .blueBlockHeading;
@@ -1589,7 +1607,7 @@ tr.selected td {
   background-repeat: no-repeat;
     border-top: 2px solid $active_bg;
   margin-bottom: $vertical-amount;
-
+  
   
   //adjust background image for smaller screens
   @media all and (min-width:995px){
@@ -1628,7 +1646,9 @@ tr.selected td {
 #block-boxes-chat-front{
   @extend .lowerMainContent;
   padding-bottom: 2%;
-  //clear: right;
+   @media all and (max-width:750px){
+    display:none;
+  }
 }
 
 //chat box on side pages
@@ -1637,11 +1657,14 @@ tr.selected td {
  background-color: white;
  padding-bottom: 2%;
  @include box-shadow(gray 3px 3px 7px);
+ @media all and (max-width:750px){
+    display:none;
+  }
  
 }
 .lci_chat_load{
 border-top: 2px solid $active_bg;
-  @media all and (max-width: 800px){
+  @media all and (max-width: 750px){
   display:none;
   }
 
@@ -1681,6 +1704,7 @@ border-top: 2px solid $active_bg;
       margin-right: auto;
       margin-top: 0.7em;
       width: 90%;
+      border: 1px $active_bg solid;
     }
     textarea{
       display: block;
@@ -1689,6 +1713,7 @@ border-top: 2px solid $active_bg;
       width: 90%;
       //margin-bottom: 0.7em;
       resize:none;
+      border: 1px $active_bg solid;
     }
     }//end login field
   .lc_button {
@@ -1968,7 +1993,7 @@ border-top: 2px solid $active_bg;
     background-color:none;
     background-image: none;
 
-    @media all and (max-width:525px){
+    @media all and (max-width:550px){
                 display: none;
                 }
       
