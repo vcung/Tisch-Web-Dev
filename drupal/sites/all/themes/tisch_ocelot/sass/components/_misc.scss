@@ -7,22 +7,28 @@
  * Additional useful selectors can be found in Zen's online documentation.
  * https://drupal.org/node/1707736
  */
- .white {
-  color: white;
-  
+
+ 
+/**
+ * Miscellanious styling classes that are extended by other selectors in the document
+ */
+.whiteText {
+  color: white; 
  }
- .shadow{
+
+.shadow{
   @include single-text-shadow;
  }
- .whiteCaptions{
-     color: white;
-     @include adjust-font-size-to(14px);
-     padding-left: 2%;
-     font-weight: 550;
-     line-height: 1em;
 
-  } 
- .whiteLink {
+.whiteCaptions{
+  color: white;
+  @include adjust-font-size-to(14px);
+  padding-left: 2%;
+  font-weight: 550;
+  line-height: 1em;
+}
+
+.whiteLink {
   a:link{
     color: white;
     text-decoration:none;
@@ -30,9 +36,9 @@
   a:visited{
     color:white;
   }
- }
+}
 
- .blackLink{
+.blackLink{
   a:link{
     color: black;
     text-decoration:none;
@@ -40,31 +46,30 @@
   a:visited{
     color:black;
   }
- }
+}
  
- .smallerHeading{
+/*Headings that serve as titles to blocks in sidebars like within Happening Now section*/
+.smallerHeading{
   @include adjust-font-size-to (14px);
   text-transform: uppercase;
   margin-bottom: 0;
   padding-bottom: 0;
   padding-left: $padding-amount;
   word-break: keep-all;
- }
-
+}
 .smallerBlueHeading{
   @extend .smallerHeading;
-  color: $inactive_bg;
-  //font-weight: normal;
-  
+  color: $dark_blue_bg;
 }
-
 .smallerBlackHeading{
  @extend .smallerHeading;
   color: black;
 }
 
+/*heading that will get a block background that is either blue or green and may have some
+**additional background images*/
 .mainHeading{
-   h2{
+  h2{
     @include adjust-font-size-to(18px);
     font-weight: normal;
     text-transform: uppercase;
@@ -73,118 +78,86 @@
     line-height:1.6em;
     padding-left: 3px;
     color: white;
-   }
+  }
 }
+
+/*Provide heading for "Chat with a librarian" and "Top Resources"*/
 .blueBlockHeading{
-  
   @extend .mainHeading;
 
   h2{
-    
-    background-color: $active_bg;
-    
+    background-color: $blue_bg;
     overflow:hidden;
     white-space: nowrap;
-
     @media all and (max-width:995px){
-     
       @include adjust-font-size-to(16px);
       line-height:1.8em;
     }
-  
   }
 }
+
+/*Bring in web font icons*/
 .backgroundFontIcon {
   [data-icon]:before {
-  font-family: 'icomoon';
-  content: attr(data-icon);
-  speak: none;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
+    font-family: 'icomoon';
+    content: attr(data-icon);
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
+/*Containing areas for social media icons*/
 .socialMediaBoxes{
-    p{  
-      width: 10%;
-      text-align: center;
-      display: inline-block;
-      font-size: 200%;
-      //font-family: $icon;
-      padding: 5px;
-      margin: 2px;
-
-    }
+  p{  
+    width: 10%;
+    text-align: center;
+    display: inline-block;
+    font-size: 200%;
+    padding: 5px;
+    margin: 2px;
+  }
 }
 
+/*Bring in chevron from webfront icon family and make bigger*/
 .thickChevron{
-   //[data-icon]:before {
   font-family: '$base_font';
   content: attr(data-icon);
   font-size: $chevron-font-size;
 }
   
-  
-
-
- .searchBox{
- width: 100%;
+/*Used for search boxes that search external sources like library catalog*/
+.searchBox{
+  z-index: 5;
+  position: relative;
+  width: 100%;
   height:40px;
   margin: 0;
-  border: 1px solid $inactive-bg;
-  position: relative;
-  z-index: 5;
-
- }
+  border: 1px solid $dark_blue_bg;
+}
  
  //used for search forms of external services - like catalog
  .submitButton{
-  //define top margin for unique placement in divs
+  /*define top margin for unique placement in divs*/
+  float: right;
+  position: relative;
+  z-index: 15;
   background-image:url("../images/magGlassnypl.png");
   background-repeat: no-repeat;
   background-position: center; 
-background-size: 20px;
-background-color: $inactive-bg;
-   
-    text-indent: -9999px;
-
- //background-image:url("../images/searchButton.jpg");
-    
-    width: 50px;
-    height: 40px;
-    float: right;
-    background-color: $inactive-bg;
-    border: none;
-    position: relative;
-    z-index: 15;
-    }
-  
-/**
- * Wireframes.
- */
-.with-wireframes {
-  #header,
-  #main,
-  #content,
-  #navigation,
-  .region-sidebar-first,
-  .region-sidebar-second,
-  #footer,
-  .region-bottom {
-    outline: 1px solid #ccc;
-
-    @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-      .lt-ie8 & {
-        /* IE6/7 do not support the outline property. */
-        border: 1px solid #ccc;
-      }
-    }
-  }
+  background-size: 20px;
+  background-color: $dark_blue_bg; 
+  text-indent: -9999px;
+  width: 50px;
+  height: 40px;
+  background-color: $dark_blue_bg;
+  border: none;  
 }
+  
+
 
 /**
  * Accessibility features.
@@ -232,173 +205,157 @@ background-color: $inactive-bg;
  * Branding header.
  */
 
+/*push down to fit "Ask a Librarian" when it moves up to top for smallest screens*/
 #header{
-//push down to fit "Ask a Librarian"
-@media all and (max-width: 525px) {
-  margin-top: 1em;
-}
+  @media all and (max-width: 525px) {
+    margin-top: 1em;
+  }
 
-@media all and (max-width:600px) {
+  /*hide my account link in header at smaller screens*/
+  @media all and (max-width:600px) {
+    #myAccount{
+      @include element-invisible;
+    }
+  }
+  
   #myAccount{
-    @include element-invisible;
-  }
- }
-  
-#myAccount{
-
-  margin-top: 1.5em;
-  float:right;
-  color: white;
-
-  @extend .whiteLink;
-}
-
-  //site search in header
-#block-search-form { /* "Search form" block */
-visibility:hidden;
-
-@media all and (min-width:600px) {
-  /* Span 2 column, starting in 6th column from left. */
-  @include zen-clear();
-   $zen-column-count: 2;
-  $zen-gutter-width: 5px;
-  @include zen-grid-container;
-  width: 29%;
-  
-  float: right;
-  //position: absolute;
-  margin-right:-8px;
- visibility:visible;
- //float:right;
- input[type="text"], textarea {
-           margin: 0;
-           background-color: $header_bg_blue;
-           width: 100%;
-            height: 2em;
-            color: $header_search_black;
-            position: relative;
-            z-index: 2;
-            //margin-top: -30px;
-
-          }
-
-  .custom-search-button {
-    //margin-bottom: 1em;
-    //margin-right: 6em;
-    position: relative;
-    float: right;
-    //display: inline-block;
-    height: 2em;
-    z-index: 999;
-    margin-bottom: 0;
-    margin-top: -2em;
-  }
-   }
-  }
-}
-/* Wrapping link for logo. */
-.header__logo {
-  float: left; /* LTR */
-  margin: 0;
-  padding: 0;
-  margin-top: 0;
-}
-
-/* Logo image. */
-.header__logo-image {
-  margin-top: 1em;
-  vertical-align: bottom;
-  margin-bottom: -2em;
-}
-
-/* Wrapper for website name and slogan. */
-.header__name-and-slogan {
-  float: left;
-}
-
-/* The name of the website. */
-.header__site-name {
-  margin: 0;
-  @include adjust-font-size-to( $h1-font-size );
-}
-
-/* The link around the name of the website. */
-.header__site-link {
-  &:link,
-  &:visited {
-    color: #000;
-    text-decoration: none;
+    margin-top: 1.5em;
+    float:right;
+    color: white;
+    @extend .whiteLink;
   }
 
-  &:hover,
-  &:focus {
-    text-decoration: underline;
+  /*site search in header - custom search module "search form" block*/
+  #block-search-form { 
+    visibility:hidden;
+
+    /*at wider screens, fit within grid system*/
+    @media all and (min-width:600px) {
+      visibility:visible;
+      /* Span 2 column, starting in 6th column from left. */
+      @include zen-clear();
+      $zen-column-count: 2;
+      $zen-gutter-width: 5px;
+      @include zen-grid-container;
+      width: 29%;  
+      float: right;
+      margin-right:-8px;
+      input[type="text"], textarea {
+        z-index: 2;
+        position: relative;
+        margin: 0;
+        background-color: $header_bg_blue;
+        width: 100%;
+        height: 2em;
+        color: $header_search_black;  
+      }
+      .custom-search-button {
+        float: right;
+        position: relative;
+        z-index: 999;
+        height: 2em;
+        margin-bottom: 0;
+        margin-top: -2em;
+      }
+    }  
+  }
+
+
+  /* Wrapping link for logo. */
+  .header__logo {
+    float: left; /* LTR */
+    margin: 0;
+    padding: 0;
+    margin-top: 0;
+  }
+
+  /* Logo image. */
+  .header__logo-image {
+    margin-top: 1em;
+    vertical-align: bottom;
+    margin-bottom: -2em;
+  }
+
+  /* Wrapper for website name and slogan. */
+  .header__name-and-slogan {
+    float: left;
+  }
+
+  /* The name of the website. */
+  .header__site-name {
+    margin: 0;
+    @include adjust-font-size-to( $h1-font-size );
+  }
+
+  /* The link around the name of the website. */
+  .header__site-link {
+    &:link,
+    &:visited {
+      color: #000;
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  /* The slogan (or tagline) of a website. */
+  .header__site-slogan {
+    margin: 0;
+  }
+
+  /* The secondary menu (login, etc.) */
+  .header__secondary-menu {
+    float: right; /* LTR */
+  }
+
+  /* Wrapper for any blocks placed in the header region. */
+  .header__region {
+    /* Clear the logo. */
+    clear: both;
+  }
+  #site-slogan {
+    @media all and (max-width:775px) {
+      @include element-invisible;
+    }
+    @media all and (min-width:775px) {
+    /* The slogan (or tagline) of a website */
+      margin: 0 0 -3em 0;
+      padding-top: 3em;
+      font-size: 1em;
+      color: white;
+      font-weight: normal;
+    }
   }
 }
-
-/* The slogan (or tagline) of a website. */
-.header__site-slogan {
-  margin: 0;
-}
-
-/* The secondary menu (login, etc.) */
-.header__secondary-menu {
-  float: right; /* LTR */
-}
-
-/* Wrapper for any blocks placed in the header region. */
-.header__region {
-  /* Clear the logo. */
-  clear: both;
-}
-#site-slogan {
-@media all and (max-width:775px) {
-  
-    @include element-invisible;
-  }
- @media all and (min-width:775px) {
- /* The slogan (or tagline) of a website */
-  margin: 0 0 -3em 0;
-  padding-top: 3em;
-  font-size: 1em;
-  color: white;
-  font-weight: normal;
-}
-}
-
-
 /**
  * Navigation bar.
  */
+
+/*make sure "Ask a Librarian" bar can span entire nav header when it falls below the main menu.*/
 #navigation {
-  //make sure "Ask a Librarian" bar can span entire nav header when it
-  //falls below the main menu.
-
- @media all and (max-width: 525px) {
-  display: none;
- }
-
- @media all and (min-width: 525px) and (max-width:850px){
- 
- padding-right: 0px;
-}
-
-@media all and (min-width: 525px) and (max-width:875px){
+  background-color:black;  
+  margin-top: -24px;
+  @media all and (max-width: 525px) {
+    display: none;
+  }
+  @media all and (min-width: 525px) and (max-width:850px){
+  padding-right: 0;
+  }
+  @media all and (min-width: 525px) and (max-width:875px){
     padding-left: 0px;
     margin-right: 0;
     margin-bottom: 3em;
   }
-  margin-top: -24px;
+  
   /* Sometimes you want to prevent overlapping with main div. */
   /* overflow: hidden; */
 
   .block {
     margin-bottom: 0;
-  }
-
-  background-color:black;
-
-  //@include background-image(linear-gradient(#4d4d4d, black));
+  } 
 
   .block-menu .block__title,
   .block-menu-block .block__title {
@@ -408,255 +365,186 @@ visibility:hidden;
   /* Main menu and secondary menu links and menu block links. */
   .links,
   .menu {
-
-
     margin: 0;
     padding: 0;
     text-align: left; /* LTR */
-    
-     }
-     //first level
+  }
+  //first level
+  ul { 
+    position:relative;
 
-      ul { 
-        position:relative;
-
-      
-       li {
-       @media all and (max-width:525px){
-       display: none;
-        }
-       
-       @media all and (min-width:525px) and (max-width:700px){
-       @include adjust-font-size-to(14px);
-       
-       }
-       @media all and (min-width: 960px) {
-      float:left;
-      }
-      /* A simple method to get navigation links to appear in one line. */
-      //margin-right: 5px;
-      //padding-left:10px; 
-      //padding-right:10px;
-
+    li {
+      float: left;  
       list-style-image:none;
       list-style-type: none;
-      //margin-right: 5px;
-      //padding-top:10px;
-      //margin-top: 10px;
+      padding-left:0.5em; 
+      padding-right:0.5em; 
+      text-align:left;
+      height:100%;
+      @media all and (max-width:525px){
+        display: none;
+      } 
+      @media all and (min-width:525px) and (max-width:700px){
+        @include adjust-font-size-to(14px);   
+      }
+      @media all and (min-width: 960px) {
+        float:left;
+      }
       
-   padding-left:0.5em; 
-    padding-right:0.5em; 
-     float: left;  
-     text-align:left;
-     height:100%;
-     //padding-left: 1em;
-     
-          a {
-              
-              display: block;
-              padding-top: 0.75em;
+      a {
+        display: block;
+        padding-top: 0.75em;
+        padding-right: 0.5em;
+        padding-left: 0.5em;
+        padding-bottom: 0.6em;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      a:hover {
+        color: black;
+        background-color: $dark-gray;
+      }
+    } //end 1st li    
 
-              padding-right: 0.5em;
-              padding-left: 0.5em;
-              padding-bottom: 0.6em;
-              color: white;
-              text-decoration: none;
-              text-transform: uppercase;
-              //float: left;
-              //display: block;
-              
-            }
-
-          a:hover {
-             color: black;
-             background-color: $dark-gray;
-          }
-         } //end first    
-
-       li.hover, li:hover {position: relative; 
-                           }     
+    li.hover, li:hover {
+      position: relative; 
+    }     
           
-      //second level
-      ul{
-        visibility:hidden;
-        position: absolute; 
-        
-        width:200px;
-       z-index:9999;
+    /*second level dropdown menu*/
+    ul{
+      visibility:hidden;
+      z-index:9999;
+      position: absolute;   
+      width:200px;
+      li {
+        float: none;
+        margin-left: -1px;
+        background: black;
+        text-align: left;
+        width: 100%;
+        padding: 0.25em;
+        a {
+          display: block;  /* IE 6 & 7 Needs Inline Block */
+          width: 100%;
+          color: white;
+          text-transform: capitalize;
+        }
+        a:hover {
+          color:black;
+          width: 92%;
+        }
+      }//end 2nd li
+    }//end 2nd ul
+  }//end 1st ul
 
-        
-
-        li {
-            margin-left: -1px;
-            background: black;
-            float: none; 
-            //font-size:0.7em;
-            //padding:2%;
-            text-align: left;
-            width: 100%;
-            padding: 0.25em;
-
-           a {
-               width: 100%;
-               
-               color: white;
-               display: block;  /* IE 6 & 7 Needs Inline Block */
-               text-transform: capitalize;
-              }
-            a:hover {
-              color:black;
-               width: 92%;
-              }
-
-            
-           }//end 2nd li
-
-        }//end 2nd ul
-    }//end 1st ul
-
-ul.menu li:hover > ul       { visibility: visible; }
-}//end nav
-    //ul.menu ul ul           { left: 100%; top: 0; }
+  ul.menu li:hover > ul 
+  {
+  visibility: visible; 
+  }
+}//end navigation
+   
     
 #askHeader{
   @extend .backgroundFontIcon;
   @extend .whiteLink;
-  //float "Ask a Librarian" to the top for smaller screens
+  @include no-decoration;
+  /*float "Ask a Librarian" to the top for smaller screens*/
   @media all and (max-width: 525px) {
-  position: fixed;
-  top: 0;
-  background-color: black;
-  width: 100%;
-  margin-left:-10px;
-  padding-left: 2em;
-  max-height:40px;
-  
-   //display:none;
-   hr{
-   display:none;
- }
- //hide "I'm a..." and "My subject is "
- #audtopic{
-  @include element-invisible;
- }
-  
+    position: fixed;
+    top: 0;
+    background-color: black;
+    width: 100%;
+    margin-left:-10px;
+    padding-left: 2em;
+    max-height:40px;
+    hr{
+      display:none;
+    }
+    /*hide "I'm a..." and "My subject is " at smaller screens*/
+    #audtopic{
+      @include element-invisible;
+    }
   }
+    
   //styling for as long as the ask menu is showing
   @media all and (min-width:525px){
     float:right;
-  div {
-          display: inline;
-        } 
-
-  
-
-  //background-color: $dark-gray;
+    div {
+      display: inline;
+    } 
   }
-  //styling for smaller screens, where the ask menu
-  //drops down below the main menu
+
+  /*styling for smaller screens, where the ask menu drops down below the main menu*/
   @media all and (min-width:525px) and (max-width:875px){
     background-color: $dark-gray;
-        //float: left;
-        //margin-top: 3em;
-        @include adjust-font-size-to(14px);
-        width: 100%;
-        margin: 0 0 4% 0;
-        padding: 0 1%;
+    @include adjust-font-size-to(14px);
+    width: 100%;
+    margin: 0 0 4% 0;
+    padding: 0 1%;
+    div {
+      margin: 2% 0 4% 0;
+      padding-left: 6%;
+    }
+    hr {
+      display: none;
+    }        
+  }
 
-      div {
-        margin: 2% 0 4% 0;
-        padding-left: 6%;
-      }
-      hr {
-        display: none;
-      }
-        
-       }
- @media all and (min-width:875px) {
- //* Span 2 column, starting in 6th column from left. */
-  
-   $zen-column-count: 2;
-  $zen-gutter-width: 1px;
-  @include zen-grid-container;
-   
-  width: 28.80%;
-  background-color: $dark-gray;
-  margin-top: 2px;
-   margin-bottom:2px;
-   //margin-left: 4px;
-   margin-right:-7px;
-  overflow:hidden;
- 
-  
-   text-align:center;
-   @include adjust-font-size-to(12px);
-   line-height: 1.3em;
-
-     div {
-      display: inline;
-     }
- 
-  //width: 99.5%;
-  
-  #ask{
-    @include zen-grid-item(2, 1);
+  /*for wider screens, fit into grid system*/
+  @media all and (min-width:875px) {
+  //* Span 2 column, starting in 6th column from left. */
+    $zen-column-count: 2;
+    $zen-gutter-width: 1px;
+    @include zen-grid-container;
+    width: 28.80%;
     background-color: $dark-gray;
-    padding-bottom: 1%;
-    padding-top:0.75%;
-    border-bottom: 1px solid black;
-    color: white;
-    
-   
-  }
-
-
-
- 
-  #audtopic{/* Span 2 column,  */
-
-  @include zen-grid-item(2, 1);
-  @include zen-nested-container();
-  @include zen-clear();
-  background-color:orange;
-  border-right: 2px solid black;
-  border-left: 1px solid black;
-  width: 100%;
-  //margin-top:15px;
-
-}
-
-  #aud{
- @include zen-grid-item(1, 1);
- //@include zen-clear();
- border-right: 1px black solid;
-background-color: $dark-gray;
-padding-top: 1%;
-  padding-bottom: 0.75%;
+    margin-top: 2px;
+    margin-bottom:2px;
+    margin-right:-7px;
+    overflow:hidden;
+    text-align:center;
+    @include adjust-font-size-to(12px);
+    line-height: 1.3em;
+    div {
+      display: inline;
+    }
 
  
-  }
+    #ask{
+      @include zen-grid-item(2, 1);
+      background-color: $dark-gray;
+      padding-bottom: 1%;
+      padding-top:0.75%;
+      border-bottom: 1px solid black;
+      color: white;
+    }
+    #audtopic{/* Span 2 column,  */
+      @include zen-grid-item(2, 1);
+      @include zen-nested-container();
+      @include zen-clear();
+      background-color:orange;
+      border-right: 2px solid black;
+      border-left: 1px solid black;
+      width: 100%;
+    }
+    #aud{
+      @include zen-grid-item(1, 1);
+      border-right: 1px black solid;
+      background-color: $dark-gray;
+      padding-top: 1%;
+      padding-bottom: 0.75%;
+    }
+    #topic{
+      @include zen-grid-item(1, 2); 
+      background-color: $dark-gray;
+      padding-top: 1%;
+      padding-bottom: 0.75%;
+      color: white;
+    }//end topic
+  }//end media query
+}//end askHeader
 
-  #topic{
-  @include zen-grid-item(1, 2); 
-  //@include zen-clear(); 
-  background-color: $dark-gray;
-  padding-top: 1%;
-  padding-bottom: 0.75%;
-   color: white;
-   //margin-left: 0.5px black;
-   background-color: $dark-gray;
-   
-  
-   a:link {
-    color: white;
-    text-decoration:none;
-   }
-  }
-
-}
-}
-
-   
 
 
 /**
@@ -686,11 +574,11 @@ padding-top: 1%;
 .comment__title {      /* Comment title. */
   margin: 0;
 }
+
 /** 
 *  Hours
 **/
 #mobile-hours {
-  //background: $light-gray;
   text-transform: uppercase;
   margin: 2%;
   padding: 2%;
@@ -802,7 +690,10 @@ padding-top: 1%;
 /* Primary tabs. */
 .tabs-primary {
   @extend %tabs;
+  //added by KB so tabs would line up against content
+  margin-bottom:0; 
 }
+
 .tabs-primary__tab {
   @extend %tabs__tab;
   @include border-top-radius(4px);
@@ -989,79 +880,82 @@ span.field-label {
 
 .block-views {
   background-color: white;
-   @include box-shadow(gray 3px 3px 7px);
-
-   &>div{
+  @include box-shadow(gray 3px 3px 7px);
+  &>div{
     padding: $padding-amount;
-   }
-
+  }
 }
 
+
+/*Specific blocks*/
+
+/*View blocks used in the highlights section on front page*/
 #block-views-highlights-for-front-block {
+  /*hide on small screens*/
   @media all and (max-width: 550px){
     display:none;
   }
-  //styling for as long as highlights block is showing
+  /*styling for as long as highlights block is showing*/
   clear: left;
   @extend .mainHeading;
   background-image:url("../images/largeGreenCorner.png");
   background-repeat: no-repeat;
   border-top: 6px solid $green_bg;
   .views-row{
-       display: inline-block;
-       width: 32%;
-       //padding: 0 0.25% 0 0.25%;
-       vertical-align: top;
-       }
+    display: inline-block;
+    width: 32%;
+    vertical-align: top;
+  }
   h2{
     background-color: $green_bg;
     max-width: 200px;    
   }
-
-   @media all and (min-width: 750px){
-      
-    }
-
+  
+  /*style captions for the pictures, top headline, bottom tagline*/
   .highlight_headline{
     @extend .whiteCaptions;
+    /*on smaller screens, let the tagline rest on top of the photo*/
     @media all and (max-width: 800px){
       color:black;
       height:30px;
       bottom: 0;
     }
+    /*on wider screens, push the headline over the photo*/
     @media all and (min-width: 800px){
-    margin-top: 6px;
-    margin-bottom: -25px;  
-    position: relative;
+      margin-top: 6px;
+      margin-bottom: -25px;  
+      position: relative;
     }
   }
-  .views-field-field-highlight-image:after{
-      @extend .thickChevron;
-      content:'\00BB';
-      color: white;
-      float: right;
-      margin-top: -30px;
-      margin-right: 2%;
-      z-index: 99;
-      position: relative;
-
-    }
+ 
   .highlight_tagline{
-
     @extend .whiteCaptions;
     position: relative;
+    /*on wider screens float the tagline over the photo*/
     @media all and (min-width: 900px){
-    margin-top: -40px;
-    max-width: 175px;
+      margin-top: -40px;
+      max-width: 175px;
     }
-   
+    /*on smaller screens, let the tagline fall under the photo*/
     @media all and (max-width: 900px){
       margin-top: 0px;
       color: black;
     }
   }
+  /*insert chevron on top of pictures*/
+  .views-field-field-highlight-image:after{
+    @extend .thickChevron;
+    float: right;
+    z-index: 99;
+    position: relative;
+    content:'\00BB';
+    color: white;
+    margin-top: -30px;
+    margin-right: 2%;
+  }
 }
 
+/*Recently arrived block - might be replaced by different slider. Placeholder for now*/
 #block-views-recently-arrived-block-block {
   @include orange_corner;
   @media all and (max-width: 480px){
@@ -1070,36 +964,30 @@ span.field-label {
   
   @media all and (min-width: 960px) {
     visibility: visible;
-  
   }
 }
 
 #block-views-featured-resource-block-block{
   @include orange_corner;
   margin-top: 15px;
-   margin-bottom: $vertical-amount;
+  margin-bottom: $vertical-amount;
   
+  /*on mid-sized screens, make heading wider*/
   @media all and (min-width: 480px) and (max-width: 959px) {
-  h2{
-    width: 100%;
+    h2{
+      width: 100%;
+    }
   }
-  }
-
 }
-
+/*this is unfinished*/
 #block-views-find-books-in-tisch-block-block{
   float: right;
-  //margin-top: 0;
 }
 
 #block-views-feed-recently-arrived-block{
-   @include orange_corner;
-   margin-bottom: $vertical-amount;
-
-  //see views-styles for control styling
-  //div ~ div {padding: 2%;
-  //}
- 
+  @include orange_corner;
+  margin-bottom: $vertical-amount;
+//see views-styles for control styling
 }
 
 /*
@@ -1108,21 +996,13 @@ span.field-label {
 */
 
 .block-panels-mini{
-  background-color: white;
-  
+  background-color: white;  
   &>div{
     padding: $padding-amount;
   }
-    
-  
   h2{
-   // @include adjust-font-size-to(14px);
-    //padding: $padding-amount;
-    padding-bottom: 0px;
-  }
-  
-    //padding: $padding-amount;
-  
+    padding-bottom: 0;
+  } 
 }
 
 #block-panels-mini-call-number-infographic{
@@ -1137,65 +1017,58 @@ span.field-label {
   background-color: white;
   @include no-decoration;
 
- 
- 
  //give each block a border, except for last
- .pane-block {
-  margin-right: 1%;
-  border-bottom: gray 1px solid;
+  .pane-block {
+    margin-right: 1%;
+    border-bottom: gray 1px solid;
   }
-  & :last-child{
-   border-bottom: none;
+  &:last-child{
+    border-bottom: none;
   }
-
- & div {
-
-  padding-left: 1%;
-  padding-right: 1%;
-  padding-top: 0;
-  padding-bottom: 0;
- //@media all and (min-width: 480px) and (max-width: 959px) {
-  //padding: 0;
-  //}
-  
-  //for twitter box:
-  h2{
-    @extend .smallerBlueHeading;
-    margin-left: 3.6em;
-    margin-bottom: 0;
+  & div {
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 0;
     padding-bottom: 0;
-  }
+ 
+  /*for twitter box:*/
+    h2{
+      @extend .smallerBlueHeading;
+      margin-left: 3.6em;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
 
   }
   .views-field{
     display:inline-block;
     vertical-align: top;
   }
-  
-  
-    
+    /*bring in gray twitter web font icon*/
   .grayTwitterBird {
     @extend .backgroundFontIcon;
     @include no-decoration;
+    /*make flush with heading*/
+    margin-top: -0.6em;
     font-size: 200%;
-      //height: 100%;
     a:link {
       color: $dark-gray;
     }
     a:visited{
       color: $dark-gray;
     }
-    margin-top: -0.6em;
+  
   }
   
+  /*for the actual tweet*/
   .tweetContent{
     //not adhering to display:inline block so floating
     float: right; 
     margin-left: 3em;
-    margin-top:-2em;
+    margin-top:-1.75em;
   }
 
- //for all posted dates in happening block
+  //for all posted dates in happening block
   .posted {
     margin-left: 3em;
     text-transform: lowercase;
@@ -1204,53 +1077,49 @@ span.field-label {
     padding-bottom: 2%;
   }
 
-.eventTitle{
+  .eventTitle{
     margin-left: 2px;
-   //fix title when the columns get skinny mid-screen size
+    //fix title when the columns get skinny mid-screen size
     @media all and (min-width: 550px) and (max-width: 750px){
       margin-left: 3em;
       margin-top: -2em;
     } 
   }
+  /*make blue container for month and date*/
   .eventDateSquare{
     max-height:40px;
     max-width: 40px;
-    background-color: $active_bg;
-    @extend .white;
+    background-color: $blue_bg;
+    @extend .whiteText;
     padding: 5px;
     line-height: 1em;
     text-align: center;
     margin-bottom: 5%;
     margin-top: -1em;
-    //max-width: 35px;
-    
-
     .day{
       font-weight: 900;
       padding-top:5px;
       margin-bottom: 0;
       padding-bottom: 0;
-       margin-left: 3px;
-      //text-align: right;
+      margin-left: 3px;
     }
     .month{
       font-size: 70%;
       font-weight: 100;
       margin-top:0;
       padding-top: 0;
-      //text-align: center;
     }
   }
   .happeningNewsTitle{
     margin-left: 3em;
   }
-  
-
 } 
+
 #block-panels-mini-search-box-for-side-pages{
   margin-bottom: $vertical-content-amount;
   @include box-shadow(gray 3px 3px 7px);
 }
+
 /**
  * Menus.
  */
@@ -1563,71 +1432,51 @@ tr.drag-previous {
 tr.selected td {
   background: #ffc;
 }
+
+/*
+*
+*Specific pages
+
 /**front page**/
 
+/*Lower main content are 2 blocks side by side on wide screen home page*/
+/*on smaller screens, let them be be vertical*/
 .lowerMainContent {
-//margin: 0 0.5% 2% 0;
-@media all and (max-width:750px){
-  width: 100%;
-  margin-bottom: $vertical-amount;
-}
-@media all and (min-width:750px){
-
-  width: 48%;
-  
+  @media all and (max-width:750px){
+    width: 100%;
+    margin-bottom: $vertical-amount; 
+  }
+  /*line up horizontal for wider screens*/
+  @media all and (min-width:750px){
   display: inline-block;
   vertical-align: top;
-
-  //max-height: 250px;
-}
- 
-
-  //width: 48%;
-  //max-height: 190px;
-@extend .blueBlockHeading;
-  background-color: white;
-
-  h4 {
-    margin: 0px 0px 2px 0px;
-    
+  width: 48%;
   }
-
+  /*give them a blue block heading that includes background image, blueCorner that are manipulated
+   below in specific selectors*/
+  @extend .blueBlockHeading;
+  background-color: white;
+  h4 {
+    margin: 0 0 2px 0;    
+  }
   ul {
     list-style-type:none;
     margin: 0px 0px 1% 0px;
     padding:0px;
   }
 }
-
+/*For specific blocks in lowerMain Content*/
 /**Top Resources Box**/
 #block-boxes-top-resources{
   @extend .lowerMainContent;
-  //give corner image
+  /*give corner image specific to block because of resizing issues for smaller screens*/
   background-image:url("../images/blueCorner.png");
   background-repeat: no-repeat;
-    border-top: 2px solid $active_bg;
+  border-top: 2px solid $blue_bg;
   margin-bottom: $vertical-amount;
-  
-  
-  //adjust background image for smaller screens
-  @media all and (min-width:995px){
-    background-position: 158.5px -1px;
-  }
-  h2{
-    max-width: 157px;
-  }
-  //adjust background and font for larger screens
-  @media all and (max-width: 995px) {
-    background-position: 146.5px -1px;
-
-  h2{
-    max-width: 145px;
-  }
-  }
   h3{
     @extend .smallerBlackHeading;
     margin-top: 0.5em;
-    
   }
   @include no-decoration;
   ul li a {
@@ -1639,62 +1488,75 @@ tr.selected td {
     margin-left: 0;
     margin-right:1%;
   }
-  
- }
+
+  /*adjust background image for smaller screens*/
+  @media all and (min-width:995px){
+    background-position: 158.5px -1px;
+  }
+  h2{
+    max-width: 157px;
+  }
+  /*adjust background and font for larger screens*/
+  @media all and (max-width: 995px) {
+    background-position: 146.5px -1px;
+    h2{
+      max-width: 145px;
+    }
+  }
+}
+
 /**Chat Box**/
-//chat box on front page
+
+/*chat box on front page*/
 #block-boxes-chat-front{
   @extend .lowerMainContent;
   padding-bottom: 2%;
-   @media all and (max-width:750px){
+  @media all and (max-width:750px){
     display:none;
   }
 }
 
-//chat box on side pages
+/*chat box on side pages*/
 .sideChat{
   @extend .blueBlockHeading;
- background-color: white;
- padding-bottom: 2%;
- @include box-shadow(gray 3px 3px 7px);
- @media all and (max-width:750px){
+  background-color: white;
+  padding-bottom: 2%;
+  @include box-shadow(gray 3px 3px 7px);
+  @media all and (max-width:750px){
     display:none;
   }
- 
 }
+
+/*All chats boxes*/
+/*arrange blue corner background and deal with it at different screen widths*/
 .lci_chat_load{
-border-top: 2px solid $active_bg;
+  border-top: 2px solid $blue_bg;
   @media all and (max-width: 750px){
-  display:none;
+    display:none;
   }
-
-@media all and (min-width: 550px) {
-  overflow: auto; //keep chat button in
-  background-image:url("../images/blueCorner.png");
-  background-repeat: no-repeat;
+  @media all and (min-width: 750px) {
+    overflow: auto; //keep chat button in
+    background-image:url("../images/blueCorner.png");
+    background-repeat: no-repeat;
+    h2{
+      margin-top:0px;
+    }
+  }
   
-  h2{
-    margin-top:0px;
+  @media all and (min-width:750px) and (max-width:995px){
+    background-position: 211.5px -1px;
+    h2{ max-width:210px;
+    }
   }
-  //height: 210px;
-//adjust positioning of background image for bigger screens
-@media all and (min-width:710px) and (max-width:995px){
-  h2{ max-width:210px;
+
+  @media all and (min-width:995px){
+    background-position: 233.5px -1px;
+    h2{
+      max-width: 232px;
+    }
   }
-  background-position: 211.5px -1px;
-}
 
-@media all and (min-width:995px){
- h2{
-
-    
-    max-width: 232px;
-  }
-  background-position: 233.5px -1px;
-}
-
-  
-
+  /*adjust the input fields*/
   .login_field {
     padding:0.5em;
     input {
@@ -1704,62 +1566,51 @@ border-top: 2px solid $active_bg;
       margin-right: auto;
       margin-top: 0.7em;
       width: 90%;
-      border: 1px $active_bg solid;
+      border: 1px $blue_bg solid;
     }
     textarea{
       display: block;
       margin-left: auto;
       margin-right: auto;
       width: 90%;
-      //margin-bottom: 0.7em;
       resize:none;
-      border: 1px $active_bg solid;
+      border: 1px $blue_bg solid;
     }
-    }//end login field
+  }//end login field
+
   .lc_button {
-   background:$active_bg;
-   color: white;
-   border-radius: 2px;
-   cursor: pointer;
-   font-size: 15px;
-   font-weight: bold;
-   height: 2em;
-   padding: 3px 5px;
-   margin: 0 1em;
-   vertical-align: middle;
-   border:#85949B;
-   float: right;
+    background:$blue_bg;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    height: 2em;
+    padding: 3px 5px;
+    margin: 0 1em;
+    vertical-align: middle;
+    border:#85949B;
+    float: right;
   }
   .send_button {
-   margin:0.5em;
+    margin:0.5em;
   }
-
-
-}//end media query
 }//end lci
 
 /** Catalog Search**/
-#quicktabs-home_page_search_box {
-  @extend .backgroundFontIcon;
-
-  background: $active_bg;
-  border: 3px solid $inactive-bg;
-  background-image:url("../images/darkBlueCorner.png");
-  background-image-color: $inactive-bg;
-  background-repeat:no-repeat;
-  background-position: right bottom;
-}
-//override for node on front page.
 .node-3  {
   background-image: url("../images/background.png");
   box-shadow: none !important;
 }
 
-.item-list {
-  //height: 7.6em;  
-  //background: #fff;
-
-}
+#quicktabs-home_page_search_box {
+  @extend .backgroundFontIcon;
+  background: $blue_bg;
+  border: 3px solid $dark_blue_bg;
+  background-image:url("../images/darkBlueCorner.png");
+  background-image-color: $dark_blue_bg;
+  background-repeat:no-repeat;
+  background-position: right bottom;
   ul.quicktabs-tabs { 
     margin: 0;
     padding: 0;
@@ -1771,12 +1622,10 @@ border-top: 2px solid $active_bg;
       height: 2.5em;
       min-height: 2.6em;
       padding: 0;
-      background: $inactive_bg;
+      background: $dark_blue_bg;
       font-size: 1em;
       margin: 0px;
-
       a {
-
         color: $inactive_font;
         text-decoration: none;
         float: left;
@@ -1787,121 +1636,77 @@ border-top: 2px solid $active_bg;
         padding: 0 8px;
         text-decoration: none;
         position: relative;
-      }
-
-    }
+      }//end a
+    }//end li
     li.active {
-
-      background: $active_bg;
+      background: $blue_bg;
       box-shadow: none;
-
       a { 
-
         color: #fff;
         font-weight: normal;
-      }
-    }
-    .first {
-      //box-shadow: -3px -2px 2px 1px #062746 inset;
-      //float:left;
+      }//end a active
+    }//end li active
+  }//end ul
 
-    }
-    .last{
-      //box-shadow: 3px -2px 2px 1px #062746 inset;
-    //  float:right;
-
-    }
-    .last.active{
-  //    float: left;
-    }
-  }
-
-.quicktabs_main  {
-  @extend .white;
-  @extend .whiteLink;
-
-  clear: both;
-  padding: 20px 5px 0 5px;
-  position: relative;
-  background: $active_bg;
-  fieldset{
-    border: none;
-  }
-
-  //ul {
-    //float: right;
-    //li {
-
-      //a {
-        //color: #fff;
-        //text-decoration: none;
-        //font-size: 1.5em;
-      //}
-    //}
-  //}
-  #otherCatalogs{    
-  float: right;
-  margin: 1% 0 3% 0;
-  [data-icon]:before{
-  
-  color: white;
-  @include single-text-shadow;
-   @include opacity(.5);
-
-  }
-
-}
-
-
-  
-    
-  input#searcharg {
-    @extend .searchBox;
- 
-  //margin-top:100px;
-  //float: left;
-  }
-  input.radio{
-  //  float: right;
-    display: inline-block;
-  }
-  input#searchscope{
+  .quicktabs_main  {
+    @extend .whiteText;
+    @extend .whiteLink;
+    clear: both;
+    padding: 20px 5px 0 5px;
     position: relative;
-    //margin-bottom: 5px;
-  }
-  
-  #submit{
-    @extend .submitButton;
-    margin-top: -56px;
-  }
-
-  .help{
-    float: right;
-    margin-top: 1em;
-
-    ul {
-      @include horizontal-list;
-      @include no-bullets;
-      li {
-        margin-left: 1em;
-      }  
+    background: $blue_bg;
+    fieldset{
+      border: none;
     }
 
-  }
-}
+    #otherCatalogs{    
+      float: right;
+      margin: 1% 0 3% 0;
+      [data-icon]:before{
+        color: white;
+        @include single-text-shadow;
+        @include opacity(.5);
+      }//end data icon
+    }//end other catalogs
+
+    input#searcharg {
+      @extend .searchBox;
+    }
+    input.radio{
+      display: inline-block;
+    }
+    input#searchscope{
+      position: relative;
+    }
+    #submit{
+      @extend .submitButton;
+      margin-top: -56px;
+    }
+    .help{
+      float: right;
+      margin-top: 1em;
+      ul {
+        @include horizontal-list;
+        @include no-bullets;
+        li {
+          margin-left: 1em;
+        }  //end li
+      }//end ul
+    }//end help
+  }//end quicktabs main
+}//end quicktabs
+
 #boxes-box-catalog_searchbox_for_side{
-   
-   .boxes-box-content{
+  .boxes-box-content{
     color: $dark-gray;
     padding-top: 3%;
     background-color: lighten($light-gray, 25%);
     border: 1px solid $light-gray;
     padding-bottom: 5%;
-   }
+  }
 
   input#searcharg {
     @extend .searchBox;
-
   }
   #submit{
     @extend .submitButton;
@@ -1909,7 +1714,6 @@ border-top: 2px solid $active_bg;
   }
   #parameter {
     float: right;
-    
   }
   fieldset{
     border: none;
@@ -1917,49 +1721,18 @@ border-top: 2px solid $active_bg;
   .help{
     float: right;
     margin: 0 1em 0 0;
-      ul {
-        float: right;
-        //margin-right: -5em;
-        @include horizontal-list;
-        @include no-decoration;
+    ul {
+      float: right;
+      @include horizontal-list;
+      @include no-decoration;
+      li {
+        margin-left: 1em;
+      }//end li
+    }//end ul
+  }//end help
+}//end catalog search for side
 
-        li {
-          margin-left: 1em;
-        }
 
-      }
-  }
-}
-
-/*#searchtypes {
-  color: #fff;
-  font-size: 1em;
-  background-color:$active_bg;
-  margin-bottom: 5px;
-}
-.homeSearch {
-  input#searchscope{
-    margin-right: 5px;
-  }
-  
-  input#submit {
-  height:27px;
-  font-weight:bold;
-  margin-left: -5px;
-  }
-  
-}
-#searchtypes{
-  float:right;
-  //margin-top: -60px;
-  margin-right: 15%;
-}
-
-.sideSearch {
-  background-color: $light-gray;
-}
-
-*/
 /**
  * Progress bar.
  *
@@ -1984,110 +1757,83 @@ border-top: 2px solid $active_bg;
 
 
 .region-sidebar-first{
-
-  //margin-left:-1em;
-
-
   .block-menu-block {
-
     background-color:none;
     background-image: none;
-
     @media all and (max-width:550px){
-                display: none;
-                }
-      
+      display: none; 
+    }  
     text-transform: uppercase;
-
     ul {
       margin: 0 0 0 -10px;
       padding: 0px;
       color:black;
-      
       li:first-of-type{
           border-top: 1px solid #ccc;
-        }
-
+      }
       li{
+        float: left; 
         width: 100%;
         list-style-type:none;
         list-style-image:none;
         margin:0px;
-        //padding-top:0.5em;
-        //padding-bottom: 0.5em;
-
         border-bottom: 1px solid #ccc;
-                float: left;       
+        a {
+          display: inline-block;
+          color:black;
+          text-decoration: none;
+          width: 100%;
+          padding: 0.5em;
+          line-height: 1.25em;      
+        }
+        a:hover {
+          background-color: $light-gray;
+          font-weight: 550;
+        }//end a
+      }//end li
+    }//end ul
+  }//end block menu
 
-               a {
-                color:black;
-                text-decoration: none;
-                width: 100%;
-                padding: 0.5em;
-                line-height: 1.25em;
-                
-                display: inline-block; 
-               }
-               a:hover {
-                background-color: $light-gray;
-                font-weight: 550;
-               }
-      }
+  #frontLeftSide {
+    padding-top: $padding-amount;
+    @media all and (min-width: 1200px) { 
+      margin-left:-10px;
     }
-  }
-
-   #frontLeftSide {
-   padding-top: $padding-amount;
-
-   @media all and (min-width: 1200px) { 
-    margin-left:-10px;}
-   
-   //padding: 0;
-    
-  
-
-   div {
-    padding-top: $vertical-content-amount;
-    padding-left: $padding-amount;
-       h2{
+    div {
+      padding-top: $vertical-content-amount;
+      padding-left: $padding-amount;
+      background-color: $light-gray;
+      @include gray_corner;
+      margin-bottom: $vertical-amount;
+      margin-left:0px;
+      h2{
         @extend .smallerBlackHeading;
         margin-top: -2px;
-        
-       }
-       background-color: $light-gray;
-       color:black;
-
-       ul{
-        @include no-bullets
-       }
-      
-    .item-list{
-
-      //@extend no-decoration;
-      @extend .blackLink;
-      background-image:none;
+      }
+      background-color: $light-gray;
+      color:black;
       ul{
-        margin:0;
-        padding: 0;
+        @include no-bullets
       }
-      li{
-        padding:0;
-      }
-    }
-
-    background-color: $light-gray;
-    @include gray_corner;
-    
-    margin-bottom: $vertical-amount;
-    margin-left:0px;
-  }
-
-
-}
-}
+      .item-list{
+        @extend .blackLink;
+        background-image:none;
+        ul{
+          margin:0;
+          padding: 0;
+        }
+        li{
+          padding:0;
+        }
+      }//end itemList
+    }//end div
+  }//end frontLeftSide
+}//end sidebar
 
 .frontHours {
   @extend .backgroundFontIcon;
+  @extend .blackLink;
+  padding-bottom: 15%;
   @media all and (max-width: 550px){
     display: none;
   }
@@ -2098,20 +1844,16 @@ border-top: 2px solid $active_bg;
     background-position: top right;
   }
   p{
-  color: white;
-  margin:0;
-  padding:0;
+    color: white;
+    margin:0;
+    padding:0;
   }
-  @extend .blackLink;
-  padding-bottom: 15%;
-
-
 }
+
 .sideAsk{
   @extend .backgroundFontIcon;
   padding-bottom: 2%;
   @include gray_corner;
-
   h2{
     height: 25px;
     background-image: url("../images/chatBg.png");
@@ -2121,108 +1863,246 @@ border-top: 2px solid $active_bg;
   }
   ul{
     padding-left:$padding-amount;
-    
   }
 }
 
 #block-screen-scrape-available-technology{
-
+  padding-bottom: 7%;
   h2{
   background-image: url("../images/keyboard.png");
   background-repeat: no-repeat;
   background-position: top right;
-}
-  padding-bottom: 7%;
-}
-.screen-scrape__item-count {
-    @extend .white;
-    @extend .shadow;
   }
+}
+
+.screen-scrape__item-count {
+  @extend .whiteText;
+  @extend .shadow;
+}
 
 
 //end 1st sidebar
 //2nd sidebar:
 @media all and (min-width: 480px) and (max-width: 959px) {
-  .two-sidebars .region-sidebar-second .block
-  {
+  .two-sidebars .region-sidebar-second .block{
     padding-left: 0;
     padding-right: 0;
     margin-left: 1em; //need to change to be flush with first sidebar
-    //width: 33%;
     h2.block__title.block-title {
       background-color:blue;
     }
-    }
   }
- .region-sidebar-second {
-//@include adjust-font-size-to (12px);
+}
 
+.region-sidebar-second {
 
   .block-title{
-    //
- //@include background-image(linear-gradient($heading-orange, lighten($heading-orange, 20%)));
-   //@include adjust-font-size-to (20px);
-   //above didn't work, so resorting to:
-   
-   text-transform: uppercase;
-   font-weight:normal;
+    text-transform: uppercase;
+    font-weight:normal;
     padding-left: 1%;  
-      color: white;
-      @include single-text-shadow;
-    //border-bottom: $heading-orange-border 1px solid;
-    }
-.panel-panel {
-  //make the panels have small black headings and move heading over for icons
-   h2 {
-    //@extend .smallerBlackHeading;
+    color: white;
+    @include single-text-shadow;
     
-   }
-}
-.field-content{
-  //padding: 2%;
-  //margin: 2%;
+  }
 }
 
-
-}
 /***
 *   SPECIFIC NODES & CONTENT TYPES
 ***/
 
 /*KB added*/
 .node-basic-content {
-
+  background-color: white;
+  margin-bottom: $vertical-content-amount;
+  @include box-shadow(gray 3px 3px 7px);
   h2 {
     color: darken($tufts-classic, 20%);
     text-transform: uppercase;
     padding-left: $padding-amount;
     padding-right: 0;
-
   }
-  //display: inline;
-  background-color: white;
-  margin-bottom: $vertical-content-amount;
-  @include box-shadow(gray 3px 3px 7px);
-.field-name-body{
-   //background-color: white;
+  
+  .field-name-body{
    padding-left: $padding-amount;
    float: left;
-   //width: 100%;
+  }
+  .field-name-field-2nd-column-body{
+    /*at wider screens, float second content beside primary body field*/
+    @media all and (min-width: 480px) {
+      float: right;
+      z-index: -10;
+      padding-right: $padding-amount;
+      h5 {
+        padding-top: $base-line-height * 3;
+      }
+    }
+  }
 }
+
+/***
+ * FOOTER
+ ***/
+#footer {
+  width:100%;
+  margin-right:0;
+  .empty{
+    @extend .element-invisible;
+  }
+  @include adjust-font-size-to (12px);
+  line-height: 1.5em;
+  background-color: $footer-gray;
+  color: $footer-text-gray;
+  h3 {
+    @include adjust-font-size-to (13px);
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 5%;
+    padding-top: 0px;
+  }
   
+  ul {   
+    margin-top:0;
+    li a {
+      color: $footer-text-gray;
+      text-decoration: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+  }
+  /*style for when the footer is vertical*/
+  @media all and (max-width:600px){
+    div {
+      border-bottom: 2px solid $dark-gray;
+      margin-left:0;
+      padding-left:0;      
+    }  
+    div:last-child{
+      border-bottom:none;
+    }
+    h3{
+      margin-left:0;
+      padding-left:0;
+    }
+    .socialIcons p {
+      margin-bottom: 2em;  
+    }   
+  }
+  
+  div{
+    @include leader();
+  }
+  .socialIcons{
+    margin-left: 0px;
+    padding-left: 0px;
+    @extend .backgroundFontIcon;
+    @extend .socialMediaBoxes;
+    p{
+      color: white;
+      background-color: $dark-gray;
+    }
+      
+    a:link{
+      color: white;
+      text-decoration: none;
+    }
+    a:hover {
+      color: $heading-orange;
+    }
+    a:visited{
+      color: white;
+      text-decoration: none;
+    }
+  }
 
- 
-.field-name-field-2nd-column-body{
-  @media all and (min-width: 480px) {
+       
+  #footerLogo{
+    background-image: url("../images/tuftsLogo.jpg");
+    height: 150px;
+    background-repeat: no-repeat; }
+    padding-bottom: 2%;
+  }
 
-  float: right;
-  padding-right: $padding-amount;
-  z-index: -10;
-  h5 {
-     //color: green;
-     padding-top: $base-line-height * 3;
-   }
- }
-}
+  //fix width for logo area to not overlap the background image
+  @media all and (min-width:600px) and (max-width:710px){
+    #footerLogo{
+      min-width: 20%;
+    }
+  }
+  @media all and (min-width: 600px)  {
+    #footerContent{ 
+      margin-left:auto;
+      margin-right:auto;
+     @include zen-clear();
+     $zen-column-count: 7;
+    //$zen-gutter-width: 10px;
+    @include zen-grid-container;
+    width: 100%;
+    div {
+      margin-bottom: 5%;
+      p {
+        padding-left: 5%;
+      }
+      height: 150px;
+      border-right: 1px solid $dark-gray;
+    }
+    
+    div:last-child{
+      border-right:none;
+    }
+  
+    #footerLogo{/* Span 1 columns, starting in 1st column from left. */
+      @include zen-grid-item(1, 1);
+    }
+  
+    #otherFooterLibs {/* Span 1 columns, starting in 2nd column from left. */
+    @include zen-grid-item(2, 2);
+    }
 
+    #otherFooterTufts {/* Span 1 column, starting in 4th column from left. */
+    @include zen-grid-item(1, 4);
+    }
+  
+    #footerContact {/* Span 1 columns, starting in 2nd column from left. */
+      @include zen-grid-item(1, 5);
+      p.address{
+        margin:0px;
+      }
+      p {
+        margin:0.5em 0 0.5em 0;
+      }
+    }
+
+    #footerSocial {/* Span 2 columns, starting in 6th column from left. */
+      @include zen-grid-item(2, 6);
+      //give 1st icon a bigger margin once footer is horizontal
+      .socialIcons p:first-of-type{
+        margin-left: 5%;
+      }
+    }
+  }//endfooter large screen
+}//end footer
+
+/**
+ * Wireframes.
+ */
+.with-wireframes {
+  #header,
+  #main,
+  #content,
+  #navigation,
+  .region-sidebar-first,
+  .region-sidebar-second,
+  #footer,
+  .region-bottom {
+    outline: 1px solid #ccc;
+
+    @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+      .lt-ie8 & {
+        /* IE6/7 do not support the outline property. */
+        border: 1px solid #ccc;
+      }
+    }
+  }
 }

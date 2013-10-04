@@ -1,7 +1,7 @@
 3.2.9 (Media Mark)
-d191d1ff80c10f631f1994091f82bbf5e2066706
+199fd30cf366cf0c57862a273cf841dc56dbb2b7
 o:Sass::Tree::RootNode
-:@template"$3/**
+:@template""3/**
  * @file
  * Normalize.css is intended to be used as an alternative to CSS resets.
  *
@@ -143,7 +143,7 @@ a:link {
   color: $tufts-text-blue;
 }
 a:visited {
-color:$active_bg;
+color:$blue_bg;
 }
 a:hover,
 a:focus {
@@ -756,7 +756,7 @@ i}o;
 color;o;+	;"tufts-text-blue;@;iå;,"tufts_text_blue;";#;@;i ;	[ ;iå;ião;;["a:visited;o;;[o;;[o;
 ;0;o;;{ ;[o;	;["a;0;" ;iéo;%
 ;["visited;;&;'0;@Æ;ié;@Æ;ié;@Æ;ié;T;@;i ;	[o;;["
-color;o;+	;"active_bg;@;iè;,"active_bg;";#;@;i ;	[ ;iè;iéo;;["a:hover,
+color;o;+	;"blue_bg;@;iè;,"blue_bg;";#;@;i ;	[ ;iè;iéo;;["a:hover,
 a:focus;o;;[o;;[o;
 ;0;o;;{ ;[o;	;["a;0;" ;iío;%
 ;["

@@ -145,8 +145,7 @@ $zen-auto-include-item-base: false;
         @include zen-grid-item-base();
         //KB applied max width to enforce
         max-width: 32%;
-        //KB added to reinforce for Firefox:
-        //float: left;
+        
         
       }
       /* Span 1 column, starting in the 1st column from left. */
@@ -170,7 +169,7 @@ $zen-auto-include-item-base: false;
 
 /** KB changed the default 5 column layout to be 7, to account for 
  * slightly larger second sidebar.
- * Use 5 (now 6) grid columns for larger screens.
+ * Use 5 (now 7) grid columns for larger screens.
   * 
  */
 @media all and (min-width: 960px) {
