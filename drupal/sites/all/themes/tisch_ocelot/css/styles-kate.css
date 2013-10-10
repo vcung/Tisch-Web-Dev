@@ -1,0 +1,95 @@
+/**
+* @file
+*
+* Stylesheet for Kate's styles
+*
+* Styles are organized using the SMACSS technique. @see http://smacss.com/book/
+*/
+/* Import Sass mixins, variables, Compass modules, etc. */
+/*Take pause, play and arrow controls off of flexslider*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\0000318}}
+.noControls .flex-pauseplay a, #block-views-new-arrival-sliders-block .flex-pauseplay a {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\0000319}}
+.noControls .flex-direction-nav, #block-views-new-arrival-sliders-block .flex-direction-nav {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\0000322}}
+.noBorder, #block-views-new-arrival-sliders-block .flexslider {
+  border: none;
+  box-shadow: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\0000327}}
+#block-views-new-arrival-sliders-block {
+  background-image: url("../images/orangeCorner.png");
+  background-position: 0 2em;
+  background-repeat: no-repeat;
+}
+@media all and (min-width: 550px) and (max-width: 690px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\0000327}}
+  #block-views-new-arrival-sliders-block {
+    background-position: 0 1em;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/_mixins\.scss}line{font-family:\0000390}}
+#block-views-new-arrival-sliders-block h2.block__title {
+  background-color: #db6b0f;
+  font-size: 1em;
+  line-height: 1.5em;
+  line-height: 2em;
+  max-height: 35px;
+  text-shadow: rgba(0, 0, 0, 0.2) 1px 1px 0, rgba(0, 0, 0, 0.2) 2px 2px 0, rgba(0, 0, 0, 0.2) 3px 3px 0;
+  margin: 0;
+  padding: 0 .75em;
+}
+@media all and (min-width: 550px) and (max-width: 690px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/_mixins\.scss}line{font-family:\0000390}}
+  #block-views-new-arrival-sliders-block h2.block__title {
+    font-size: 1em;
+    line-height: 1.5em;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\0000329}}
+#block-views-new-arrival-sliders-block .view-content {
+  margin-top: 1em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\0000332}}
+#block-views-new-arrival-sliders-block .views-field {
+  margin: 0 1em;
+}
+
+/*
+* Overwrite flexslider module styles. See flexslider.css
+*/
+/* FlexSlider Necessary Styles
+*********************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\0000349}}
+.flexslider {
+  margin-top: 1em;
+  padding: 0;
+  border: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\0000350}}
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\0000351}}
+.flexslider .slides img {
+  width: auto;
+  display: block;
+}
+
+/* FlexSlider Default Theme
+*********************************/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\0000357}}
+.flexslider {
+  margin: 0 0 60px;
+  position: relative;
+}

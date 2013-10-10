@@ -15,7 +15,7 @@
     <div id="askHeader">
       <div id="ask">
       <a href=""><span  data-icon="&#xe00b;" aria-hidden="true"></span>  Ask a Librarian</a>
-      <hr>
+      <!--<hr>-->
     </div>
        <div id="audtopic">
         <div id="aud">

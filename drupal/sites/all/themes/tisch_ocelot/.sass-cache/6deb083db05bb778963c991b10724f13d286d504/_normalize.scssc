@@ -1,7 +1,7 @@
 3.2.9 (Media Mark)
-d191d1ff80c10f631f1994091f82bbf5e2066706
+199fd30cf366cf0c57862a273cf841dc56dbb2b7
 o:Sass::Tree::RootNode
-:@template"$3/**
+:@template""3/**
  * @file
  * Normalize.css is intended to be used as an alternative to CSS resets.
  *
@@ -143,7 +143,7 @@ a:link {
   color: $tufts-text-blue;
 }
 a:visited {
-color:$active_bg;
+color:$blue_bg;
 }
 a:hover,
 a:focus {
@@ -756,7 +756,7 @@ i}o;
 color;o;+	;"tufts-text-blue;@;iå;,"tufts_text_blue;";#;@;i ;	[ ;iå;ião;;["a:visited;o;;[o;;[o;
 ;0;o;;{ ;[o;	;["a;0;" ;iéo;%
 ;["visited;;&;'0;@Æ;ié;@Æ;ié;@Æ;ié;T;@;i ;	[o;;["
-color;o;+	;"active_bg;@;iè;,"active_bg;";#;@;i ;	[ ;iè;iéo;;["a:hover,
+color;o;+	;"blue_bg;@;iè;,"blue_bg;";#;@;i ;	[ ;iè;iéo;;["a:hover,
 a:focus;o;;[o;;[o;
 ;0;o;;{ ;[o;	;["a;0;" ;iío;%
 ;["
@@ -1010,14 +1010,14 @@ i~o;
 0 2px;@;";#;@;i ;	[ ;iÖo;
 
 ;;;["C/* Apply borders and padding that keep the vertical rhythm. */;@;	[ ;iÜo;;["border-color;o; ;;!;"#c0c0c0;@;";#;@;i ;	[ ;iáo;7;"apply-side-rhythm-border;8{"
-widtho;/;0[ ;1["px;i;@;2"1px;ià"
-lineso;/;0@T;1[ ;f0.34999999999999998 ff;@;2"	0.35;ià;@;	[ ;90;ià;:[o; 	;;!;"top;@;iào;7;"apply-side-rhythm-border;8{"
-widtho;/;0[ ;1["px;i;@;2"1px;iâ"
-lineso;/;0@T;1[ ;f0.65000000000000002 ÃÕ;@;2"	0.65;iâ;@;	[ ;90;iâ;:[o; 	;;!;"bottom;@;iâo;7;"apply-side-rhythm-border;8{"
-widtho;/;0[ ;1["px;i;@;2"1px;iä"
-lineso;/;0@T;1[ ;f0.65000000000000002 ÃÕ;@;2"	0.65;iä;@;	[ ;90;iä;:[o; 	;;!;"	left;@;iäo;7;"apply-side-rhythm-border;8{"
-widtho;/;0[ ;1["px;i;@;2"1px;iã"
-lineso;/;0@T;1[ ;f0.65000000000000002 ÃÕ;@;2"	0.65;iã;@;	[ ;90;iã;:[o; 	;;!;"
+lineso;/;0@T;1[ ;f0.34999999999999998 ff;@;2"	0.35;ià"
+widtho;/;0[ ;1["px;i;@;2"1px;ià;@;	[ ;90;ià;:[o; 	;;!;"top;@;iào;7;"apply-side-rhythm-border;8{"
+lineso;/;0@T;1[ ;f0.65000000000000002 ÃÕ;@;2"	0.65;iâ"
+widtho;/;0[ ;1["px;i;@;2"1px;iâ;@;	[ ;90;iâ;:[o; 	;;!;"bottom;@;iâo;7;"apply-side-rhythm-border;8{"
+lineso;/;0@T;1[ ;f0.65000000000000002 ÃÕ;@;2"	0.65;iä"
+widtho;/;0[ ;1["px;i;@;2"1px;iä;@;	[ ;90;iä;:[o; 	;;!;"	left;@;iäo;7;"apply-side-rhythm-border;8{"
+lineso;/;0@T;1[ ;f0.65000000000000002 ÃÕ;@;2"	0.65;iã"
+widtho;/;0[ ;1["px;i;@;2"1px;iã;@;	[ ;90;iã;:[o; 	;;!;"
 right;@;iã;iÑo;
 
 ;;;["º/**

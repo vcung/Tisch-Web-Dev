@@ -30,15 +30,10 @@
 
 }
 
-#main
- {
-	//@include background-image(linear-gradient(left, $tufts-classic, $tufts-info-blue));
-}
+
 
 #content {
-
-
-
+  /*given to provide white block and text shadow to titles of nodes*/
   .titleContainer{
     border-top: 2px $heading-orange solid;
     background-color:white;
@@ -61,218 +56,162 @@
     }
   }
   .title {
-
     background-color:white;
     margin-bottom: $vertical-content-amount;
 
   }
 
-  .tabs-primary{
-    
-     margin-bottom:0;
-    
-  }
-
-
-
 }
 
+/**
+ * Miscellanious styling classes that are extended by other selectors in the misc document
+ */
+.whiteText {
+  color: white; 
+ }
 
- 
+.shadow{
+  @include single-text-shadow;
+ }
 
+.whiteCaptions{
+  color: white;
+  @include adjust-font-size-to(14px);
+  padding-left: 2%;
+  font-weight: 550;
+  line-height: 1em;
+}
 
-
-
-/***
- * FOOTER
- ***/
-
-	#footer {
-
-    width:100%;
-    margin-right:0;
-  
-  //when footer drops to vertical list, give bottom border
-
-
-  .empty{
-    @extend .element-invisible;
-  }
- 
-  @include adjust-font-size-to (12px);
-  line-height: 1.5em;
-
-  background-color: $footer-gray;
-  color: $footer-text-gray;
-  
-
-    h3 {
-      @include adjust-font-size-to (13px);
+.whiteLink {
+  a:link{
     color: white;
-    text-transform: uppercase;
-    //font-weight:normal;
-    margin-bottom: 0px;
-    margin-top: 0px;
-      margin-left: 5%;
-      padding-top: 0px;
-     }
-  
-    ul {
-      
-      margin-top:0;
-    li a {
-      color: $footer-text-gray;
-        text-decoration: none;
-        margin-left: 0;
-        padding-left: 0;
-    //margin: 0;
-    //padding: 0;
-    }
+    text-decoration:none;
   }
-  //style for when the footer is vertical
-  @media all and (max-width:600px){
-    div {
-      border-bottom: 2px solid $dark-gray;
-      margin-left:0;
-      padding-left:0;
-      
-    }  
-     div:last-child{
-    border-bottom:none;
-    }
-    h3{
-      margin-left:0;
-      padding-left:0;
-    }
-    .socialIcons p {
-      margin-bottom: 2em;
-      
-    }
-    
-  }
-    div{
-      @include leader();
-    }
-  .socialIcons{
-      margin-left: 0px;
-      padding-left: 0px;
-      @extend .backgroundFontIcon;
-      @extend .socialMediaBoxes;
-      p{
-      color: white;
-      background-color: $dark-gray;
-      }
-      
-      a:link{
-        color: white;
-        text-decoration: none;
-      }
-      a:hover {
-        color: $heading-orange;
-      }
-      a:visited{
-        color: white;
-        text-decoration: none;
-      }
-    }
-
-       
-   #footerLogo{
-   background-image: url("../images/tuftsLogo.jpg");
-  
-
-   
-   //position: absolute;
-   height: 150px;
-   //background-position: top left;
-   background-repeat: no-repeat; }
-
-   padding-bottom: 2%;
-  }
-
-  //fix width for logo area to not overlap the background image
-@media all and (min-width:600px) and (max-width:710px){
-  #footerLogo{
-    min-width: 20%;
+  a:visited{
+    color:white;
   }
 }
-@media all and (min-width: 600px)  {
-   #footerContent{ 
-    margin-left:auto;
-    margin-right:auto;
-   @include zen-clear();
-   $zen-column-count: 7;
-  //$zen-gutter-width: 10px;
-  @include zen-grid-container;
-  width: 100%;
 
-  div {
-    
-    margin-bottom: 5%;
-    p {
-      padding-left: 5%;
-
-      }
-    height: 150px;
-    //padding-left: 10px;
-    border-right: 1px solid $dark-gray;
-    }
-    
-    div:last-child{
-    border-right:none;
-
-
-    //margin-right: 20px;
-    
-    }
-  
-  #footerLogo{/* Span 1 columns, starting in 1st column from left. */
-   
-  @include zen-grid-item(1, 1);
-
-  //height: 150px;
-  //width: 15%;
-   //margin-right: 30px;
-   
-   //background-size: 80%;
+.blackLink{
+  a:link{
+    color: black;
+    text-decoration:none;
   }
+  a:visited{
+    color:black;
+  }
+}
+ 
+/*Headings that serve as titles to blocks in sidebars like within Happening Now section*/
+.smallerHeading{
+  @include adjust-font-size-to (14px);
+  text-transform: uppercase;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-left: $padding-amount;
+  word-break: keep-all;
+}
+.smallerBlueHeading{
+  @extend .smallerHeading;
+  color: $dark_blue_bg;
+}
+.smallerBlackHeading{
+ @extend .smallerHeading;
+  color: black;
+}
+
+/*heading that will get a block background that is either blue or green and may have some
+**additional background images*/
+.mainHeading{
+  h2{
+    @include adjust-font-size-to(18px);
+    font-weight: normal;
+    text-transform: uppercase;
+    padding-top:0;
+    padding-bottom:0;
+    line-height:1.6em;
+    padding-left: 3px;
+    color: white;
+  }
+}
+
+/*Provide heading for "Chat with a librarian" and "Top Resources"*/
+.blueBlockHeading{
+  @extend .mainHeading;
+
+  h2{
+    background-color: $blue_bg;
+    overflow:hidden;
+    white-space: nowrap;
+    @media all and (max-width:995px){
+      @include adjust-font-size-to(16px);
+      line-height:1.8em;
+    }
+  }
+}
+
+/*Bring in web font icons*/
+.backgroundFontIcon {
+  [data-icon]:before {
+    font-family: 'icomoon';
+    content: attr(data-icon);
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+/*Containing areas for social media icons*/
+.socialMediaBoxes{
+  p{  
+    width: 10%;
+    text-align: center;
+    display: inline-block;
+    font-size: 200%;
+    padding: 5px;
+    margin: 2px;
+  }
+}
+
+/*Bring in chevron from webfront icon family and make bigger*/
+.thickChevron{
+  font-family: '$base_font';
+  content: attr(data-icon);
+  font-size: $chevron-font-size;
+}
   
-  #otherFooterLibs {/* Span 1 columns, starting in 2nd column from left. */
-  
-  @include zen-grid-item(2, 2);
+/*Used for search boxes that search external sources like library catalog*/
+.searchBox{
+  z-index: 5;
+  position: relative;
+  width: 100%;
+  height:40px;
+  margin: 0;
+  border: 1px solid $dark_blue_bg;
+}
+ 
+ //used for search forms of external services - like catalog
+ .submitButton{
+  /*define top margin for unique placement in divs*/
+  float: right;
+  position: relative;
+  z-index: 15;
+  background-image:url("../images/magGlassnypl.png");
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: 20px;
+  background-color: $dark_blue_bg; 
+  text-indent: -9999px;
+  width: 50px;
+  height: 40px;
+  background-color: $dark_blue_bg;
+  border: none;  
+}
  
 
-  //width: 25%;
-  }
 
-  #otherFooterTufts {/* Span 1 column, starting in 4th column from left. */
-  @include zen-grid-item(1, 4);
-  //width: 25%
-  }
-  
-  #footerContact {/* Span 1 columns, starting in 2nd column from left. */
-  @include zen-grid-item(1, 5);
-  p.address{
-    margin:0px;
-  }
-  p {
-    margin:0.5em 0 0.5em 0;
-  }
 
-  //width: 25%;
-  }
 
-  #footerSocial {/* Span 2 columns, starting in 6th column from left. */
-  //width: 25%;
-  @include zen-grid-item(2, 6);
-  //give 1st icon a bigger margin once footer is horizontal
-  .socialIcons p:first-of-type{
-        margin-left: 5%;
-      }
-  
-  }
-  
-
-}//endfooter large screen
-
-}//end footer
