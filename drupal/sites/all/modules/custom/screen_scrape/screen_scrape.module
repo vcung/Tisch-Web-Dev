@@ -4,11 +4,8 @@
  * @file
  * Screen Scrape custom module
  *
- * @todo Apply Drupal commenting standards
- *   see https://drupal.org/coding-standards/docs
  */
 
- 
 /**
  * Tisch Library data source URLs
  */
@@ -36,30 +33,35 @@ function _screen_scrape_list() {
       'url' => TISCH_IPAD_URL,
       'offset' => 0,
       'count' => '',
+	  'link' => '/equipment/ipads',
       ),
     'harddrives' => array(
       'label' => t('External Hard Drives'),
       'url' => TISCH_HARDDRIVES_URL,
       'offset' => 0,
       'count' => '',
+	  'link' => '/equipment/external-hard-drives',
       ),
     'laptops' => array(
       'label' => t('Laptops'),
       'url' => TISCH_LAPTOPS_URL,
       'offset' => 5,
       'count' => '',
+	  'link' => '/equipment/laptops',
       ),
     'bikes' => array(
       'label' => t('Bikes'),
       'url' => TISCH_BIKES_URL,
       'offset' => 0,
       'count' => 30,
+	  'link' => '/equipment/tufts-bikes',
       ),
     'camcorders' => array(
       'label' => t('Video Cameras'),
       'url' => TISCH_CAMCORDERS_URL,
       'offset' => 0,
       'count' => '',
+	  'link' => '/equipment/video-cameras',
       ),
     );
   return $feeds;
@@ -145,14 +147,13 @@ function _screen_scrape_block_html() {
   $output = '';
   foreach ($feeds as $key => $feed) {
    $variables['items'][] = array(
-      'data' => theme('screen_scrape_item', array('count' => variable_get('screen_scrape_' . $feed['label']), 'label' => $feed['label'])),
+      'data' => theme('screen_scrape_item', array('count' => variable_get('screen_scrape_' . $feed['label']), 'label' => $feed['label'], 'link' => $feed['link'])),
     );   
   }
   $output = theme('item_list', $variables); 
   
   return $output;
 }
-
 
 /**
  * Implements hook_theme()
@@ -175,7 +176,7 @@ function screen_scrape_theme($existing, $type, $theme, $path) {
  */
 function theme_screen_scrape_item($variables) {
   extract($variables);
-  $output = "<span class='screen-scrape__item-count'>$count</span> <span class='screen-scrape__item-label'>$label</span>";
+  $output = "<span class='screen-scrape__item-count'><a href='$link'>$count</a></span> <span class='screen-scrape__item-label'>$label</span>";
   return $output;
 }
 
@@ -214,7 +215,7 @@ function _screen_scrape_get_num_available($url, $offset, $count) {
   
   return sprintf("%02s", $available);
   
-  //below code works locally bu not on dev site - cUrl problem
+  //below code -must include phpQuery-onefile.php- works locally but not on dev site - cUrl problem
    /* $available=0;
   // loads the page
   phpQuery::newDocumentFileHTML($url);
