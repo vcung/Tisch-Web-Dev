@@ -5,3 +5,6 @@ sites/*/settings*.php
 sites/*/files
 sites/*/private
 sites/all/themes/selbert/.sass-cache
+
+# Ignore MAMP mysql file (added by KB)
+drupal/mysql
