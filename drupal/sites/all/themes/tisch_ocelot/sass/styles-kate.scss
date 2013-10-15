@@ -60,10 +60,19 @@
     margin-left:0.5em;
   }
 
+  .flex-control-paging li a:hover{
+    background:white;
+  }
+
+  .flex-control-paging li a.flex-active{
+    background:white;
+  }
+
   .flexslider .slides>li {
     
       margin-right: 0.25em;
   }
+
 
   .flexslider .slides>li:nth-of-type(even) {
       
@@ -94,7 +103,6 @@
     position: absolute;
     width: 50%;
     bottom: 107%;
-    color: yellow;
     left: 60%;
     
   }

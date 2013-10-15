@@ -89,31 +89,38 @@
   margin-left: 0.5em;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\0000363}}
+#block-views-new-arrival-sliders-block .flex-control-paging li a:hover {
+  background: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\0000367}}
+#block-views-new-arrival-sliders-block .flex-control-paging li a.flex-active {
+  background: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\0000371}}
 #block-views-new-arrival-sliders-block .flexslider .slides > li {
   margin-right: 0.25em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\0000368}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\0000377}}
 #block-views-new-arrival-sliders-block .flexslider .slides > li:nth-of-type(even) {
   margin-right: 0.5em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\0000373}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\0000382}}
 #block-views-new-arrival-sliders-block .views-field-field-image {
   width: 95%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\0000380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\0000389}}
 #block-views-new-arrival-sliders-block .views-field-title {
   color: #3e7bb3;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\0000386}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\0000395}}
 #block-views-new-arrival-sliders-block .flexslider {
   position: relative;
   margin: 0 0 60px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\0000393}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\00003102}}
 #block-views-new-arrival-sliders-block .flex-control-nav {
   position: absolute;
   width: 50%;
   bottom: 107%;
-  color: yellow;
   left: 60%;
 }
