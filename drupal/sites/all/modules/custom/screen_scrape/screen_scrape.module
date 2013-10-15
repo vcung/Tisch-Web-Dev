@@ -176,7 +176,7 @@ function screen_scrape_theme($existing, $type, $theme, $path) {
  */
 function theme_screen_scrape_item($variables) {
   extract($variables);
-  $output = "<span class='screen-scrape__item-count'><a href='$link'>$count</a></span> <span class='screen-scrape__item-label'>$label</span>";
+  $output = "<span class='screen-scrape__item-count'>$count</span> <span class='screen-scrape__item-label'><a href='$link'>$label</a></span>";
   return $output;
 }
 
