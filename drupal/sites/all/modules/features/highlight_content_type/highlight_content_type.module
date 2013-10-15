@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Highlight content type feature.
- */
-
-include_once 'highlight_content_type.features.inc';

@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Student Job content type feature.
- */
-
-include_once 'student_job_content_type.features.inc';
