@@ -13,6 +13,12 @@
 // Begin Kate's theme rules
 //=============================================================================
 
+/**TEMPORARY STYLES - to be deleted when moving back into main scss
+*
+*DO NOT CHANGE THESE!!!
+*
+*/
+//don't change
 .smallerHeading{
   @include adjust-font-size-to (14px);
   text-transform: uppercase;
@@ -21,15 +27,21 @@
   padding-left: $padding-amount;
   word-break: keep-all;
 }
+//don't change
 .smallerBlueHeading{
   @extend .smallerHeading;
   color: $dark_blue_bg;
 }
+//don't change
 .smallerBlackHeading{
  @extend .smallerHeading;
   color: black;
 }
 
+/*
+*
+* NEW STYLES, TO BE ADDED TO EXISTING SCSS FILE
+*/
 /*Take pause, play and arrow controls off of flexslider*/
 .noControls{
   .flex-pauseplay a {display: none;}
@@ -45,24 +57,47 @@
   @include orange_corner;
   .view-content{
     margin-top: 1em;
-  }
-  .views-field{
-  	margin: 0 1em;
-  }
-  .views-field-field-resource-type{
-   color: red;
-}
-.smallerBlueHeading{
-  @extend .smallerHeading;
-  color: $dark_blue_bg
-  }
-  @extend .noControls;
-  .flexslider{
-  	@extend .noBorder;
-  	margin: 0 0 60px; 	
-	position: relative; 
+    margin-left:0.5em;
   }
 
+  .flexslider .slides>li {
+    
+      margin-right: 0.25em;
+  }
+
+  .flexslider .slides>li:nth-of-type(even) {
+      
+      margin-right: 0.5em;
+  }
+  
+  .views-field-field-image{
+    width: 95%;
+    
+  }
+  .views-field-field-resource-type{
+   @extend .smallerBlueHeading;
+  } 
+  .views-field-title{
+    color: $tufts_text_blue;
+    //font-weight: bold;
+  }
+ 
+  /*override flexslider library defaults*/
+  .flexslider{
+    position: relative;
+    margin: 0 0 60px; 
+  	@extend .noBorder;
+    @extend .noControls;
+  }
+  
+  .flex-control-nav{
+    position: absolute;
+    width: 50%;
+    bottom: 107%;
+    color: yellow;
+    left: 60%;
+    
+  }
 }
 
 
