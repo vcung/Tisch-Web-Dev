@@ -106,6 +106,14 @@
     left: 60%;
     
   }
+  /*unicode for brackets on pager*/
+  .flex-control-nav:before{
+    content:'\2329';
+  }
+  .flex-control-nav:after{
+    content:'\232A';
+    font-weight: bold;
+  }
 }
 
 

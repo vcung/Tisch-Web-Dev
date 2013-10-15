@@ -58,6 +58,7 @@
   background-position: 0 2em;
   background-repeat: no-repeat;
   /*override flexslider library defaults*/
+  /*unicode for brackets on pager*/
 }
 @media all and (min-width: 550px) and (max-width: 690px) {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\0000356}}
@@ -123,4 +124,13 @@
   width: 50%;
   bottom: 107%;
   left: 60%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\00003110}}
+#block-views-new-arrival-sliders-block .flex-control-nav:before {
+  content: '\2329';
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Applications\/MAMP\/htdocs\/forSelbert\/Tisch-Web-Dev\/drupal\/sites\/all\/themes\/tisch_ocelot\/sass\/styles-kate\.scss}line{font-family:\00003113}}
+#block-views-new-arrival-sliders-block .flex-control-nav:after {
+  content: '\232A';
+  font-weight: bold;
 }
