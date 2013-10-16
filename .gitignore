@@ -10,3 +10,6 @@
 
 # Ignore database backups
 *.sql*
+
+# Ignore uploads direcotry
+/uploads
