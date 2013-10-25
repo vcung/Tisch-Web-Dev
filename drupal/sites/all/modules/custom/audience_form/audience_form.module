@@ -1,0 +1,123 @@
+<?php
+
+/**
+ * Implements hook_block_info()
+ */ 
+function audience_form_block_info() {
+   $blocks['audience_form'] = array(
+    'info' => t('Custom Audience Form'),
+   'cache' => DRUPAL_NO_CACHE,
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_view()
+ */ 
+function audience_form_block_view($delta = '') {
+  $block = array();
+  switch ($delta) {
+    case 'audience_form':
+      $block['subject'] = t("I'm a ...");
+      $block['content'] =  drupal_get_form('_build_audience_form');
+    break;
+  }
+  return $block;
+}
+
+/**
+*  Create a new form
+*/
+
+function _build_audience_form($form, $form_state) {
+//$form = array();
+//$form_state=array();
+
+ $default = !empty($form_state['values']['audience']) ? $form_state['values']['audience'] : '';
+$form ['askHeader'] = array(
+	'#class' => 'region region-navigation',
+	'#prefix' => '<div id="askHeader">',
+	'#suffix' => '</div>',
+);
+$form ['askHeader']['ask'] = array(
+	'#prefix' => '<div id="ask"><a href=""><span  data-icon="&#xe00b;" aria-hidden="true"></span>  Ask a Librarian</a><!--<hr>-->',
+//	'#title' => 'Ask a Librarian',
+//	'#href' => '',
+	'#suffix' => '</div>',
+);
+$form ['askHeader']['audtopic'] = array(
+	'#prefix' => '<div id="audtopic">',
+	'#suffix' => '</div>',
+);
+$form ['askHeader']['audtopic']['aud'] = array(
+	'#prefix' => "<div id='aud'><div id='aud-title'>I'm a...</div>",
+	'#title' => t("I'm a..."),
+	'#suffix' => '</div>',
+	
+);
+$form ['askHeader']['audtopic']['topic'] = array(
+	'#prefix' => "<div id='topic'><div id='topic-title'>My subject is...</div>",
+	'#title' => t("My subject is..."),
+	'#suffix' => '</div>',
+);
+   
+  $form['askHeader']['audtopic']['aud']['audience'] = array(
+    '#prefix' => '<div id="audience-div">',
+    '#suffix' => '</div>',
+	'#type' => 'select',
+	'#id' => 'audience-select',
+    '#options' => array(
+    '#undergrad' => t('Undergraduate'),
+    '#grad' => t('Graduate'),
+    '#engineer' => t('Engineering Student'),
+    '#faculty' => t('Faculty'),
+    '#staff' => t('Staff'),
+    '#alumni' => t('Alumni'),
+    '#visitor' => t('Visitor'),
+    '#disability' => t('Person with a Disability'),
+    '#other' => t('Other Type of User'),
+    ),
+	'#attributes'    => array(
+                'onchange' => 'goto_audience()'),
+/*	'#ajax' => array(
+      'callback' => '_audience_form_submit',
+      'wrapper' => 'audience-div',
+    // 'method' => 'replace',
+     // 'effect' => 'fade',
+    ),
+  */  
+  );
+    $form['askHeader']['audtopic']['topic']['subjects'] = array(
+    '#type' => 'select',
+	'#id' => 'subject-select',
+    '#options' => array(
+    '#arts' => t('Arts & Humanities'),
+    '#engineer' => t('Engineering'),
+    '#social' => t('Social Sciences'),
+    '#science' => t('Science'),
+    '#see_all' => t('See All Subjects'),
+    ),
+    '#prefix' => '<div id="topic-div">',
+    '#suffix' => '</div>',
+  );
+ 
+  $form['submit'] = array(
+    '#value' => 'Update',
+  '#callback' => 'audience_form_submit',
+  );
+
+  return $form;
+}
+function goto_audience(){
+}
+function _audience_form_submit($form, &$form_state) {
+	  $subject = $form_state['values']['subjects'];
+	  echo $subject;
+	  $form_state['redirect'] = 'my-path';
+      $form_state['rebuild'] = TRUE;
+
+}
+
+
+
+
